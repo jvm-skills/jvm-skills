@@ -81,6 +81,7 @@ Auto-appended by each iteration. Captures data for the blog post.
 - Open uncertainties: 1
 
 | 50 | How to Fetch Sequence Values with jOOQ           | 2022-03-01 | jooq-api       | sequences.md | added   | New topic file; nextval()/nextvals(n) across dialects, GENERATE_SERIES batch | | d8ddc5f |
+| 51 | Various Meanings of SQL's PARTITION BY Syntax     | 2022-02-24 | skip           | -          | skipped | Educational taxonomy of 5 PARTITION BY contexts; no actionable patterns | | 924e03a |
 
 ---
 **Run summary** (2026-02-20 18:59):
