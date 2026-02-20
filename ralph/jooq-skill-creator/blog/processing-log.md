@@ -29,6 +29,7 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 21 | How to Write a Derived Table in jOOQ             | 2023-02-24 | jooq-api       | derived-tables.md | added   | New topic; declare-before-use, field extraction for type safety       | | 3198aee |
 | 22 | The Performance Impact of SQL's FILTER Clause    | 2023-02-06 | sql-pattern    | aggregate-functions.md | added   | New topic; FILTER ~8% faster than CASE on PG 15                      | | ed1afbd |
 | 23 | Emulating Window Functions in MySQL 5.7          | 2023-01-20 | skip           | -          | skipped | MySQL 5.7 EOL workarounds; not relevant for modern databases         | | 24b28a4 |
+| 24 | Why You Should Execute jOOQ Queries With jOOQ    | 2023-01-18 | jooq-api       | anti-patterns.md | merged  | Core anti-pattern: don't extract SQL for JDBC/JPA; new core rule added | | 6a9a02c |
 
 ---
 **Run summary** (2026-02-20 18:28):

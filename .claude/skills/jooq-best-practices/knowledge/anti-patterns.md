@@ -167,3 +167,30 @@ Don't store dates as strings, money as floats, or IPs as integers. Use the prope
 **Source**: [jOOQ Official Docs — Don't do this](https://www.jooq.org/doc/3.20/manual/reference/dont-do-this/) (docs)
 
 If a natural key exists and is stable, use it. Not every table needs a serial/UUID primary key.
+
+---
+
+## Pattern: Don't extract jOOQ SQL to execute via JDBC or JPA
+**Source**: [Why You Should Execute jOOQ Queries With jOOQ](https://blog.jooq.org/why-you-should-execute-jooq-queries-with-jooq) (2023-01-18)
+
+Building queries with jOOQ DSL but executing them via JDBC, JdbcTemplate, or JPA loses most of jOOQ's value:
+
+- **Type-safe mapping**: `fetch(Records.mapping(MyDto::new))` with compile-time checked constructor refs
+- **Execution emulations**: MULTISET, ROW expressions, and batched connections only work through jOOQ's executor
+- **Stored procedures**: jOOQ generates type-safe wrappers — one call vs manual `CallableStatement` with positional parameter juggling
+- **Identity fetching**: `RETURNING`, `OUTPUT`, `FINAL TABLE` — jOOQ handles dialect differences automatically
+- **Import/Export**: built-in CSV, JSON, XML, HTML formatting
+- **R2DBC**: reactive execution with the same DSL — `Flux.from(ctx.select(...)).map(Records.mapping(...))`
+
+The only legitimate case for SQL extraction: using jOOQ for 2–3 dynamic queries in a JPA app where you need entity lifecycle management.
+
+```kotlin
+// BAD — loses type safety, emulations, mapping
+val sql = dsl.select(FILM.TITLE, multiset(...)).from(FILM).getSQL()
+jdbcTemplate.query(sql) { rs, _ -> ... } // manual mapping, MULTISET broken
+
+// GOOD — full jOOQ execution
+dsl.select(FILM.TITLE, multiset(...))
+    .from(FILM)
+    .fetch(Records.mapping(Film::new))
+```

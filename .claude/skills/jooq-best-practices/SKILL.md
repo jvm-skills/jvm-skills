@@ -41,3 +41,4 @@ Built from official docs + 783 blog articles (progressively updated).
 - Use `NOT EXISTS` instead of `NOT IN` with nullable columns
 - Prefer `UNION ALL` over `UNION` unless dedup is needed
 - Prefer `FILTER (WHERE ...)` over `CASE` in aggregates — more readable and faster on PostgreSQL
+- Always execute jOOQ queries through jOOQ — don't extract SQL for JDBC/JPA (loses MULTISET emulation, type-safe mapping, R2DBC)
