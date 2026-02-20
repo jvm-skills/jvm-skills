@@ -8,3 +8,11 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 2 | When SQL Meets Lambda Expressions                | 2025-03-27 | jooq-api       | array-operations.md | added   | Array lambdas (filter/map/match); PostgreSQL uses emulation          | |
 | 3 | Think About SQL MERGE in Terms of a RIGHT JOIN   | 2025-03-13 | sql-pattern    | merge-upsert.md | added   | New topic file; MERGE as RIGHT JOIN mental model, PG17 BY SOURCE     | | 08b86c9 |
 | 4 | Resisting the Urge to Document Everything Everyw… | 2025-02-28 | skip           | -          | skipped | Documentation philosophy / product management opinion piece          | | e476ffa |
+
+---
+**Run summary** (2026-02-20 18:28):
+- Iterations this run: 3
+- Duration: 1m 90s total
+- Articles processed so far: 4 / 747
+- Topic files: 5
+- Open uncertainties: 1
