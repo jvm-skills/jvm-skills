@@ -65,6 +65,29 @@ This avoids repeating the same expression in `SELECT`, `GROUP BY`, and `ORDER BY
 
 ---
 
+## Pattern: Exclude columns with asterisk().except()
+**Source**: [The Useful BigQuery * EXCEPT Syntax](https://blog.jooq.org/the-useful-bigquery-except-syntax) (2022-01-07)
+
+Use `asterisk().except(field)` to select all columns except specific ones. jOOQ emulates BigQuery's `* EXCEPT` syntax by expanding it to an explicit column list on databases that don't support it natively.
+
+Particularly useful when `LAST_UPDATE` or other audit columns interfere with `NATURAL JOIN`:
+
+```java
+Actor a = ACTOR.as("a");
+FilmActor fa = FILM_ACTOR.as("fa");
+
+ctx.select(a.ACTOR_ID, a.FIRST_NAME, a.LAST_NAME, count(fa.FILM_ID))
+   .from(select(asterisk().except(a.LAST_UPDATE)).from(a).asTable(a))
+   .naturalLeftOuterJoin(
+       select(asterisk().except(fa.LAST_UPDATE)).from(fa).asTable(fa))
+   .groupBy(a.ACTOR_ID, a.FIRST_NAME, a.LAST_NAME)
+   .fetch();
+```
+
+jOOQ resolves column references at render time and expands `* EXCEPT` into the full column list for dialects that lack native support.
+
+---
+
 ## Pattern: Simplify away unnecessary derived tables
 **Source**: [How to Write a Derived Table in jOOQ](https://blog.jooq.org/how-to-write-a-derived-table-in-jooq) (2023-02-24)
 

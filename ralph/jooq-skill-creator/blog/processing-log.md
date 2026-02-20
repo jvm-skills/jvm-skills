@@ -95,6 +95,8 @@ Auto-appended by each iteration. Captures data for the blog post.
 
 | 60 | Using jOOQ's DiagnosticsConnection to detect N… | 2022-01-11 | jooq-api       | logging.md | merged  | N+1 detection via DiagnosticsConnection; framework-agnostic            | | 39cab94 |
 
+| 61 | The Useful BigQuery * EXCEPT Syntax               | 2022-01-07 | jooq-api       | derived-tables.md | merged  | asterisk().except() for column exclusion; jOOQ emulates across dialects | | 760544f |
+
 ---
 **Run summary** (2026-02-20 18:59):
 - Iterations this run: 1
