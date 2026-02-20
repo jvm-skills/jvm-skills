@@ -36,6 +36,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [sequences.md](knowledge/sequences.md) — Fetching single/batch sequence values across dialects
 - [qom-traverser.md](knowledge/qom-traverser.md) — Query Object Model inspection, expression tree traversal, SQL transformation with $replace()
 - [spring-boot-config.md](knowledge/spring-boot-config.md) — DefaultConfigurationCustomizer for Spring Boot jOOQ configuration
+- [parser.md](knowledge/parser.md) — Parser ignore comment syntax for unsupported vendor SQL in migrations
 
 ## Core rules (always apply)
 

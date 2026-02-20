@@ -115,6 +115,8 @@ Auto-appended by each iteration. Captures data for the blog post.
 
 | 70 | Write C-Style Local Static Variables in Java 16  | 2021-10-22 | skip           | -          | skipped | Java language feature (JEP 395); no SQL/jOOQ content                 | | 65598fe |
 
+| 71 | The jOOQ Parser Ignore Comment Syntax            | 2021-10-19 | jooq-api       | parser.md  | added   | New topic file; ignore markers for unsupported vendor SQL in migrations | | 2e079ae |
+
 ---
 **Run summary** (2026-02-20 18:59):
 - Iterations this run: 1
