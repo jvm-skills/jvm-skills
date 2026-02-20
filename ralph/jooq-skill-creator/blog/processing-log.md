@@ -33,6 +33,7 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 25 | jOOQ's R2DBC LoggingConnection to log all SQL… | 2023-01-17 | jooq-api       | logging.md | added   | New topic file; R2DBC LoggingConnection proxy (since 3.18)            | | 45774fe |
 | 26 | When to Use jOOQ and When to Use Native SQL      | 2022-12-08 | jooq-api       | native-sql-strategy.md | added   | New topic file; hybrid approach: views/functions for complex static SQL | | 358c6d4 |
 | 27 | LATERAL is Your Friend to Create Local Column… | 2022-11-04 | sql-pattern    | derived-tables.md | merged  | LATERAL as local column variables; CROSS APPLY for SQL Server/Oracle  | | 87215bc |
+| 28 | Calling Procedures with Default Parameters us… | 2022-10-21 | jooq-api       | stored-procedures.md | added   | New topic; named param syntax for default args across 5 dialects      | | 8d59049 |
 
 ---
 **Run summary** (2026-02-20 18:28):

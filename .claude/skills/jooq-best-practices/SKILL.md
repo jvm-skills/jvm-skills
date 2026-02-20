@@ -28,6 +28,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [aggregate-functions.md](knowledge/aggregate-functions.md) — FILTER vs CASE in aggregates, performance considerations
 - [logging.md](knowledge/logging.md) — LoggingConnection for JDBC and R2DBC SQL statement logging
 - [native-sql-strategy.md](knowledge/native-sql-strategy.md) — When to use jOOQ DSL vs views/functions for complex static SQL
+- [stored-procedures.md](knowledge/stored-procedures.md) — Calling procedures with default/named parameters across dialects
 
 ## Core rules (always apply)
 
