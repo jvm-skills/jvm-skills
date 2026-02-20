@@ -9,6 +9,7 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 3 | Think About SQL MERGE in Terms of a RIGHT JOIN   | 2025-03-13 | sql-pattern    | merge-upsert.md | added   | New topic file; MERGE as RIGHT JOIN mental model, PG17 BY SOURCE     | | 08b86c9 |
 | 4 | Resisting the Urge to Document Everything Everyw… | 2025-02-28 | skip           | -          | skipped | Documentation philosophy / product management opinion piece          | | e476ffa |
 | 5 | jOOQ 3.20 released with ClickHouse, Databricks,… | 2025-02-20 | skip           | -          | skipped | Release announcement; features listed without actionable code patterns | | a17231e |
+| 6 | Emulating SQL FILTER with Oracle JSON Aggregate… | 2024-06-03 | skip           | -          | skipped | Oracle-specific FILTER emulation; PostgreSQL supports FILTER natively | | 3535c71 |
 
 ---
 **Run summary** (2026-02-20 18:28):
