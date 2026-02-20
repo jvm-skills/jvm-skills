@@ -11,6 +11,7 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 5 | jOOQ 3.20 released with ClickHouse, Databricks,… | 2025-02-20 | skip           | -          | skipped | Release announcement; features listed without actionable code patterns | | a17231e |
 | 6 | Emulating SQL FILTER with Oracle JSON Aggregate… | 2024-06-03 | skip           | -          | skipped | Oracle-specific FILTER emulation; PostgreSQL supports FILTER natively | | 3535c71 |
 | 7 | Getting Top 1 Values Per Group in Oracle         | 2024-03-01 | skip           | -          | skipped | Oracle-specific KEEP syntax and OBJECT types; not applicable to PG   | | 5303663 |
+| 8 | An Efficient Way to Check for Existence of Mult… | 2024-02-16 | sql-pattern    | anti-patterns.md | merged  | Extends EXISTS pattern: COUNT+LIMIT for N+ checks, ~2.5x on PG      | | 6ef9444 |
 
 ---
 **Run summary** (2026-02-20 18:28):

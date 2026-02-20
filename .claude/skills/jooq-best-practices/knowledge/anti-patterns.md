@@ -29,6 +29,30 @@ val exists = dsl.fetchExists(selectFrom(BOOK).where(BOOK.ID.eq(id)))
 
 ---
 
+## Pattern: Use COUNT(*) with LIMIT when checking for N+ rows
+**Source**: [An Efficient Way to Check for Existence of Multiple Values in SQL](https://blog.jooq.org/an-efficient-way-to-check-for-existence-of-multiple-values-in-sql) (2024-02-16)
+
+When you need `COUNT(*) >= N` (not just existence), wrap the query in a derived table with `LIMIT N` so the DB stops early. ~2.5x faster on PostgreSQL.
+
+```kotlin
+// BAD — scans all matching rows to count them
+dsl.select(
+    field(select(count()).from(ACTOR)
+        .join(FILM_ACTOR).using(ACTOR.ACTOR_ID)
+        .where(ACTOR.LAST_NAME.eq("WAHLBERG"))).ge(2))
+
+// GOOD — stops after finding N rows
+dsl.select(
+    field(select(count()).from(
+        select().from(ACTOR)
+            .join(FILM_ACTOR).using(ACTOR.ACTOR_ID)
+            .where(ACTOR.LAST_NAME.eq("WAHLBERG"))
+            .limit(2)
+    )).ge(2))
+```
+
+---
+
 ## Pattern: Avoid N+1 queries
 **Source**: [jOOQ Official Docs — Don't do this](https://www.jooq.org/doc/3.20/manual/reference/dont-do-this/) (docs)
 
