@@ -124,6 +124,36 @@ MULTISET uses correlated subqueries under the hood, which means the database exe
 
 ---
 
+## Pattern: Nest MULTISET into a Map instead of a List
+**Source**: [How to Typesafely Map a Nested SQL Collection into a Nested Java Map with jOOQ](https://blog.jooq.org/how-to-typesafely-map-a-nested-sql-collection-into-a-nested-java-map-with-jooq) (2022-05-09)
+**Since**: jOOQ 3.15
+
+Use `convertFrom` with `Records.intoMap()` to collect a 2-column MULTISET into a `Map<K, V>` instead of a `List`. The `Record2<K, V>` columns become map entries. Order is preserved (LinkedHashMap).
+
+```java
+record Film(String title, Map<LocalDate, BigDecimal> revenue) {}
+
+List<Film> result = ctx.select(
+        FILM.TITLE,
+        multiset(
+            select(
+                PAYMENT.PAYMENT_DATE.cast(LOCALDATE),
+                sum(PAYMENT.AMOUNT))
+            .from(PAYMENT)
+            .where(PAYMENT.rental().inventory().FILM_ID.eq(FILM.FILM_ID))
+            .groupBy(PAYMENT.PAYMENT_DATE.cast(LOCALDATE))
+            .orderBy(PAYMENT.PAYMENT_DATE.cast(LOCALDATE))
+        ).convertFrom(r -> r.collect(Records.intoMap()))
+    )
+    .from(FILM)
+    .orderBy(FILM.TITLE)
+    .fetch(Records.mapping(Film::new));
+```
+
+Fully type-safe: changing column types or the record constructor causes compile errors.
+
+---
+
 ## Pattern: Configure MULTISET emulation
 **Source**: [jOOQ Official Docs — MULTISET value constructor](https://www.jooq.org/doc/3.20/manual/sql-building/column-expressions/multiset-value-constructor/) (docs)
 **Since**: jOOQ 3.15
