@@ -46,6 +46,7 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 38 | Using H2 as a Test Database Product with jOOQ | 2022-08-19 | jooq-api       | anti-patterns.md | merged  | Don't mix H2 compat modes with jOOQ; use Testcontainers; new core rule | | 554b158 |
 | 39 | The Best Way to Call Stored Procedures from J… | 2022-07-28 | jooq-api       | stored-procedures.md | skipped | Patterns already covered by newer entries (#28, #37)                  | | cf96665 |
 | 40 | Create Dynamic Views with jOOQ 3.17's new Vi… | 2022-06-30 | jooq-api       | computed-columns.md | added   | New topic file; virtual computed columns as reusable expression "variables" | | fe62ae1 |
+| 41 | 3.17.0 Release with Computed Columns, Audit… | 2022-06-22 | skip           | -          | skipped | Release announcement; all features covered by dedicated articles (#34,#35,#40) | | d4fb0c5 |
 
 ---
 **Run summary** (2026-02-20 18:28):
