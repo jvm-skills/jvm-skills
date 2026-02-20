@@ -20,6 +20,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [multiset.md](knowledge/multiset.md) — Nested collections with MULTISET, JSON emulation
 - [fetching-mapping.md](knowledge/fetching-mapping.md) — RecordMapper, fetchMap, fetchGroups, ad-hoc converters
 - [array-operations.md](knowledge/array-operations.md) — Array lambda functions (filter, map, match) with PostgreSQL emulation
+- [merge-upsert.md](knowledge/merge-upsert.md) — SQL MERGE as RIGHT JOIN mental model, staging table sync patterns
 
 ## Core rules (always apply)
 

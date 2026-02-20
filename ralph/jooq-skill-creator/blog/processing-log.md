@@ -6,3 +6,4 @@ Auto-appended by each iteration. Captures data for the blog post.
 |---|--------------------------------------------------|------------|----------------|------------|---------|----------------------------------------------------------------------|--------|
 | 1 | Consider using JSON arrays instead of JSON objec… | 2025-08-11 | jooq-api       | multiset.md | added   | Internal MULTISET serialization: arrays ~80% faster than objects      | |
 | 2 | When SQL Meets Lambda Expressions                | 2025-03-27 | jooq-api       | array-operations.md | added   | Array lambdas (filter/map/match); PostgreSQL uses emulation          | |
+| 3 | Think About SQL MERGE in Terms of a RIGHT JOIN   | 2025-03-13 | sql-pattern    | merge-upsert.md | added   | New topic file; MERGE as RIGHT JOIN mental model, PG17 BY SOURCE     | | 08b86c9 |
