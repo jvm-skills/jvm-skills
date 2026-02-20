@@ -54,6 +54,7 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 46 | Setting the JDBC Statement.setFetchSize() to… | 2022-05-11 | skip           | -          | skipped | jOOQ internals benchmark; concluded setFetchSize(1) hurts perf, not implemented | | aba8302 |
 | 47 | How to Typesafely Map a Nested SQL Collection… | 2022-05-09 | jooq-api       | multiset.md | merged  | MULTISET into Map<K,V> via convertFrom + Records.intoMap() | | 9ba59a1 |
 | 48 | A Quick and Dirty Way to Concatenate Two Vagu… | 2022-05-04 | skip           | -          | skipped | Novelty NATURAL FULL JOIN trick; "quick and dirty", not a production pattern | | 7a01712 |
+| 49 | Nested Transactions in jOOQ                      | 2022-04-28 | jooq-api       | transactions.md | added   | New topic; NESTED savepoints, explicit API, R2DBC reactive transactions | | 5ec4f31 |
 
 ---
 **Run summary** (2026-02-20 18:28):

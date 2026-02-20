@@ -32,6 +32,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [type-system.md](knowledge/type-system.md) — jOOQ type hierarchy: DSLContext vs DSL, Result vs Cursor, Converter vs Binding, Condition as Field<Boolean>
 - [dml-returning.md](knowledge/dml-returning.md) — RETURNING data from INSERT/UPDATE/DELETE across dialects, data change delta tables
 - [computed-columns.md](knowledge/computed-columns.md) — Virtual client-side computed columns as reusable expressions, context-aware projections
+- [transactions.md](knowledge/transactions.md) — Explicit programmatic transactions, NESTED savepoints, R2DBC reactive transactions
 
 ## Core rules (always apply)
 
