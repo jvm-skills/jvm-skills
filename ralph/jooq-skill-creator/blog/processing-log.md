@@ -90,6 +90,8 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 56 | Approximating e With SQL                         | 2022-02-04 | skip           | -          | skipped | Mathematical curiosity using recursive CTEs; no actionable patterns   | | 343eaad |
 | 57 | Traversing jOOQ Expression Trees with the new… | 2022-02-02 | jooq-api       | qom-traverser.md | added   | New topic file; QOM accessors, Traverser API, $replace() for RLS/soft delete | | 6602da0 |
 
+| 58 | Detect Accidental Blocking Calls when Using R… | 2022-01-28 | skip           | -          | skipped | jOOQ internals: @Blocking annotation for R2DBC IDE warnings          | | 5ff5cc8 |
+
 ---
 **Run summary** (2026-02-20 18:59):
 - Iterations this run: 1
