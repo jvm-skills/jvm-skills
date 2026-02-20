@@ -84,6 +84,30 @@ List<PostDTO> result = ctx.select(
 
 ---
 
+## Pattern: Filter by nested collection contents using HAVING + boolOr
+**Source**: [How to Filter a SQL Nested Collection by a Value](https://blog.jooq.org/how-to-filter-a-sql-nested-collection-by-a-value) (2022-06-10)
+
+When using `multisetAgg()`, you can't filter in `WHERE` because the collection isn't formed yet. Instead, use `HAVING` with `boolOr().filterWhere()` to keep only groups where the nested collection contains a specific value.
+
+```java
+ctx.select(
+        FILM_ACTOR.film().TITLE,
+        multisetAgg(
+            FILM_ACTOR.actor().ACTOR_ID,
+            FILM_ACTOR.actor().FIRST_NAME,
+            FILM_ACTOR.actor().LAST_NAME))
+    .from(FILM_ACTOR)
+    .groupBy(FILM_ACTOR.film().TITLE)
+    .having(boolOr(trueCondition())
+        .filterWhere(FILM_ACTOR.actor().ACTOR_ID.eq(1)))
+    .orderBy(FILM_ACTOR.film().TITLE)
+    .fetch();
+```
+
+The SQL `HAVING bool_or(TRUE) FILTER (WHERE condition)` checks if any row in the group matches. This can be simplified to `HAVING bool_or(condition)`.
+
+---
+
 ## Pattern: Configure MULTISET emulation
 **Source**: [jOOQ Official Docs — MULTISET value constructor](https://www.jooq.org/doc/3.20/manual/sql-building/column-expressions/multiset-value-constructor/) (docs)
 **Since**: jOOQ 3.15
