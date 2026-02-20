@@ -161,3 +161,45 @@ Fully type-safe: changing column types or the record constructor causes compile 
 The `Settings.emulateMultiset` option controls serialization format: `DEFAULT`, `JSON`, `JSONB`, `XML`, or `NATIVE`. For PostgreSQL, `JSONB` is a good choice.
 
 ---
+
+## Pattern: MULTISET predicates for set comparison
+**Source**: [Use MULTISET Predicates to Compare Data Sets](https://blog.jooq.org/use-multiset-predicates-to-compare-data-sets) (2022-02-22)
+**Since**: jOOQ 3.15
+
+Compare entire data sets using MULTISET equality predicates. Unlike `ARRAY_AGG` which requires explicit ordering for comparison, MULTISET comparisons are order-independent (set semantics).
+
+**Correlated subquery approach** — find all films with the same actors as film 97:
+
+```java
+ctx.select(FILM.FILM_ID, FILM.TITLE)
+   .from(FILM)
+   .where(
+       multiset(select(FILM_ACTOR.ACTOR_ID)
+           .from(FILM_ACTOR)
+           .where(FILM_ACTOR.FILM_ID.eq(FILM.FILM_ID)))
+       .eq(multiset(select(FILM_ACTOR.ACTOR_ID)
+           .from(FILM_ACTOR)
+           .where(FILM_ACTOR.FILM_ID.eq(97L))))
+   )
+   .orderBy(FILM.FILM_ID)
+   .fetch();
+```
+
+**MULTISET_AGG approach** — same result using aggregation + implicit joins:
+
+```java
+ctx.select(FILM_ACTOR.FILM_ID, FILM_ACTOR.film().TITLE)
+   .from(FILM_ACTOR)
+   .groupBy(FILM_ACTOR.FILM_ID, FILM_ACTOR.film().TITLE)
+   .having(multisetAgg(FILM_ACTOR.ACTOR_ID).eq(multiset(
+        select(FILM_ACTOR.ACTOR_ID)
+        .from(FILM_ACTOR)
+        .where(FILM_ACTOR.FILM_ID.eq(97L))
+    )))
+   .orderBy(FILM_ACTOR.FILM_ID)
+   .fetch();
+```
+
+**Key advantage over ARRAY_AGG**: No `ORDER BY` needed — MULTISET uses set equality, so `{1,2,3}` equals `{3,1,2}`.
+
+---

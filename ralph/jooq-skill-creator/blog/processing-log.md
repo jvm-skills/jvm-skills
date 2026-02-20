@@ -82,6 +82,7 @@ Auto-appended by each iteration. Captures data for the blog post.
 
 | 50 | How to Fetch Sequence Values with jOOQ           | 2022-03-01 | jooq-api       | sequences.md | added   | New topic file; nextval()/nextvals(n) across dialects, GENERATE_SERIES batch | | d8ddc5f |
 | 51 | Various Meanings of SQL's PARTITION BY Syntax     | 2022-02-24 | skip           | -          | skipped | Educational taxonomy of 5 PARTITION BY contexts; no actionable patterns | | 924e03a |
+| 52 | Use MULTISET Predicates to Compare Data Sets      | 2022-02-22 | jooq-api       | multiset.md | merged  | MULTISET equality predicates for set comparison; order-independent vs ARRAY_AGG | | 2e92c45 |
 
 ---
 **Run summary** (2026-02-20 18:59):
