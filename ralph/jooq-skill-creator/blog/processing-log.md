@@ -42,6 +42,7 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 34 | jOOQ 3.17 Supports Implicit Join also in DML    | 2022-08-25 | jooq-api       | implicit-joins.md | merged  | DML path expressions in UPDATE/DELETE WHERE; correlated subquery emulation | | 6ee6ab3 |
 | 35 | A Condition is a Field                           | 2022-08-24 | jooq-api       | type-system.md | merged  | Condition extends Field<Boolean> since 3.17; no DSL.field() wrapper needed | | a18713f |
 | 36 | The Many Ways to Return Data From SQL DML        | 2022-08-23 | jooq-api       | dml-returning.md | added   | New topic file; RETURNING abstraction across 6+ dialects, delta tables | | c3ecc83 |
+| 37 | How to Integration Test Stored Procedures wi… | 2022-08-22 | jooq-api       | stored-procedures.md | merged  | Routines class + Testcontainers for type-safe proc testing            | | 88936c8 |
 
 ---
 **Run summary** (2026-02-20 18:28):
