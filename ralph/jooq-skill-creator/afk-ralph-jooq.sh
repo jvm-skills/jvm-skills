@@ -23,7 +23,7 @@ for ((i=1; i<=$1; i++)); do
   # Extract article title + action from last table row (ignore summary lines)
   last_row=$(grep '^|' blog/processing-log.md | grep -v '^|[-#]' | tail -1)
   article_title=$(echo "$last_row" | awk -F'|' '{gsub(/^[ \t]+|[ \t]+$/, "", $3); print $3}')
-  action=$(echo "$last_row" | awk -F'|' '{gsub(/^[ \t]+|[ \t]+$/, "", $7); print $7}' | sed 's/pped$/p/; s/ed$//')
+  action=$(echo "$last_row" | awk -F'|' '{gsub(/^[ \t]+|[ \t]+$/, "", $7); print $7}' | sed 's/pped$/p/; s/ged$/ge/; s/ed$//')
   commit_msg="jooq-${action:-process}: ${article_title:-iteration $i}"
 
   # Commit skill changes after each iteration

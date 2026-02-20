@@ -2,7 +2,7 @@
 
 You are building a jOOQ expert knowledge base by processing blog articles one at a time.
 Articles are sorted **newest-first** — this is critical for handling outdated info.
-Target version: **jOOQ 3.20** on **PostgreSQL**.
+Target version: **jOOQ 3.20**, covering **all supported databases**.
 
 ## Input
 
@@ -125,7 +125,7 @@ These highlights make good anecdotes for the blog post.
 
 - ONE article per invocation
 - Keep extractions concise — this is a reference, not a blog mirror
-- Target: jOOQ 3.20 on PostgreSQL — skip patterns that only apply to other dialects unless they're educational
+- Target: jOOQ 3.20 across all databases — note dialect-specific patterns with `**Dialect**: PostgreSQL / MySQL / etc.`
 - Always read existing topic files before writing to avoid duplicates
 - Only use jOOQ MCP tools when there's a conflict between articles or you suspect outdated syntax — not on every article
 - If an article is purely about SQL (no jOOQ-specific content), still extract it — SQL patterns are valuable when using jOOQ
