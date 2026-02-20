@@ -30,6 +30,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [native-sql-strategy.md](knowledge/native-sql-strategy.md) — When to use jOOQ DSL vs views/functions for complex static SQL
 - [stored-procedures.md](knowledge/stored-procedures.md) — Calling procedures with default/named parameters across dialects
 - [type-system.md](knowledge/type-system.md) — jOOQ type hierarchy: DSLContext vs DSL, Result vs Cursor, Converter vs Binding, Condition as Field<Boolean>
+- [dml-returning.md](knowledge/dml-returning.md) — RETURNING data from INSERT/UPDATE/DELETE across dialects, data change delta tables
 
 ## Core rules (always apply)
 

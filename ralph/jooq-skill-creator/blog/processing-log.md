@@ -41,6 +41,7 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 33 | Cannot resolve symbol 'VERSION_3_17' in jOOQ… | 2022-08-30 | jooq-api       | code-generator.md | merged  | Version compatibility check since 3.16; runtime >= codegen rule      | | cb39547 |
 | 34 | jOOQ 3.17 Supports Implicit Join also in DML    | 2022-08-25 | jooq-api       | implicit-joins.md | merged  | DML path expressions in UPDATE/DELETE WHERE; correlated subquery emulation | | 6ee6ab3 |
 | 35 | A Condition is a Field                           | 2022-08-24 | jooq-api       | type-system.md | merged  | Condition extends Field<Boolean> since 3.17; no DSL.field() wrapper needed | | a18713f |
+| 36 | The Many Ways to Return Data From SQL DML        | 2022-08-23 | jooq-api       | dml-returning.md | added   | New topic file; RETURNING abstraction across 6+ dialects, delta tables | | c3ecc83 |
 
 ---
 **Run summary** (2026-02-20 18:28):
