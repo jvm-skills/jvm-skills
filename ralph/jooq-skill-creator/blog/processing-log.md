@@ -14,6 +14,8 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 8 | An Efficient Way to Check for Existence of Mult… | 2024-02-16 | sql-pattern    | anti-patterns.md | merged  | Extends EXISTS pattern: COUNT+LIMIT for N+ checks, ~2.5x on PG      | | 6ef9444 |
 | 9 | A Hidden Benefit of Implicit Joins: Join Elimin… | 2024-01-10 | jooq-api       | implicit-joins.md | added   | New topic; path joins + auto join elimination (since 3.19)           | | 8abc86a |
 
+| 10 | jOOQ 3.19's new Explicit and Implicit to-many… | 2023-12-28 | jooq-api       | implicit-joins.md | merged  | 3 new patterns: explicit path joins, path correlation, MULTISET+paths | 48005b6 |
+
 ---
 **Run summary** (2026-02-20 18:28):
 - Iterations this run: 3

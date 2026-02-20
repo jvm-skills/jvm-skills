@@ -21,7 +21,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [fetching-mapping.md](knowledge/fetching-mapping.md) — RecordMapper, fetchMap, fetchGroups, ad-hoc converters
 - [array-operations.md](knowledge/array-operations.md) — Array lambda functions (filter, map, match) with PostgreSQL emulation
 - [merge-upsert.md](knowledge/merge-upsert.md) — SQL MERGE as RIGHT JOIN mental model, staging table sync patterns
-- [implicit-joins.md](knowledge/implicit-joins.md) — Implicit path joins with automatic join elimination
+- [implicit-joins.md](knowledge/implicit-joins.md) — Implicit/explicit path joins, join elimination, path correlation, to-many joins
 
 ## Core rules (always apply)
 
