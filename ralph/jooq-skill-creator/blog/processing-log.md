@@ -40,6 +40,7 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 32 | The Second Best Way to Fetch a Spring Data JP… | 2022-08-30 | jooq-api       | multiset.md | merged  | MULTISET+mapping() DTO projection & MULTISET_AGG pattern added       | | c61e6dc |
 | 33 | Cannot resolve symbol 'VERSION_3_17' in jOOQ… | 2022-08-30 | jooq-api       | code-generator.md | merged  | Version compatibility check since 3.16; runtime >= codegen rule      | | cb39547 |
 | 34 | jOOQ 3.17 Supports Implicit Join also in DML    | 2022-08-25 | jooq-api       | implicit-joins.md | merged  | DML path expressions in UPDATE/DELETE WHERE; correlated subquery emulation | | 6ee6ab3 |
+| 35 | A Condition is a Field                           | 2022-08-24 | jooq-api       | type-system.md | merged  | Condition extends Field<Boolean> since 3.17; no DSL.field() wrapper needed | | a18713f |
 
 ---
 **Run summary** (2026-02-20 18:28):

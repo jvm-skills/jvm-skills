@@ -83,3 +83,30 @@ dsl.selectFrom(ORDERS)
 ```
 
 ---
+
+## Pattern: Condition extends Field<Boolean> — use conditions as fields
+**Source**: [A Condition is a Field](https://blog.jooq.org/a-condition-is-a-field) (2022-08-24)
+**Since**: jOOQ 3.17
+
+Since jOOQ 3.17, `Condition` extends `Field<Boolean>`, matching the SQL standard where predicates are boolean value expressions. This means conditions can be used directly in SELECT, GROUP BY, ORDER BY, and PARTITION BY — no wrapping needed.
+
+```kotlin
+// Before 3.17 — required DSL.field() wrapper
+ctx.select(BOOK.ID, DSL.field(BOOK.ID.gt(2)).`as`("big_id"))
+   .from(BOOK)
+   .fetch()
+
+// Since 3.17 — condition used directly as a field
+ctx.select(BOOK.ID, BOOK.ID.gt(2).`as`("big_id"))
+   .from(BOOK)
+   .fetch()
+
+// Conditions in ORDER BY and GROUP BY
+ctx.selectFrom(BOOK)
+   .orderBy(BOOK.PUBLISHED.isTrue.desc())  // booleans first
+   .fetch()
+```
+
+Non-boolean-supporting dialects (e.g., Oracle) get automatic `CASE` emulation preserving three-valued logic.
+
+---

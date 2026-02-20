@@ -29,7 +29,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [logging.md](knowledge/logging.md) — LoggingConnection for JDBC and R2DBC SQL statement logging
 - [native-sql-strategy.md](knowledge/native-sql-strategy.md) — When to use jOOQ DSL vs views/functions for complex static SQL
 - [stored-procedures.md](knowledge/stored-procedures.md) — Calling procedures with default/named parameters across dialects
-- [type-system.md](knowledge/type-system.md) — jOOQ type hierarchy: DSLContext vs DSL, Result vs Cursor, Converter vs Binding, avoiding Step types
+- [type-system.md](knowledge/type-system.md) — jOOQ type hierarchy: DSLContext vs DSL, Result vs Cursor, Converter vs Binding, Condition as Field<Boolean>
 
 ## Core rules (always apply)
 
