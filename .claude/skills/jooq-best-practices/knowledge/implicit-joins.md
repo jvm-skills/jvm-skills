@@ -94,6 +94,63 @@ ctx.select(CUSTOMER.FIRST_NAME, CUSTOMER.address().city().NAME)
 
 ---
 
+## Pattern: Implicit joins within explicit JOIN ON clauses
+**Source**: [Using jOOQ's Implicit Join From Within the JOIN .. ON Clause](https://blog.jooq.org/using-jooqs-implicit-join-from-within-the-join-on-clause) (2022-09-13)
+**Since**: jOOQ 3.11
+
+Use implicit path expressions on a joined table's columns within the ON clause itself. jOOQ nests the implicit joins inside the explicit join structure, preserving SQL operator precedence.
+
+```java
+// Join pg_attribute explicitly, then use implicit paths in ON clause
+// to navigate pg_attribute → pg_class → pg_namespace
+Attributes isA = ATTRIBUTES.as("is_a");
+PgAttribute pgA = PG_ATTRIBUTE.as("pg_a");
+
+ctx.select(isA.UDT_SCHEMA, isA.UDT_NAME, isA.ATTRIBUTE_NAME, pgA.ATTNDIMS)
+   .from(isA)
+   .join(pgA)
+     .on(isA.ATTRIBUTE_NAME.eq(pgA.ATTNAME))
+     .and(isA.UDT_NAME.eq(pgA.pgClass().RELNAME))
+     .and(isA.UDT_SCHEMA.eq(pgA.pgClass().pgNamespace().NSPNAME))
+   .where(isA.DATA_TYPE.eq("ARRAY"))
+   .fetch();
+```
+
+jOOQ generates nested joins to preserve precedence — implicit joins become sub-joins of the explicit join:
+
+```sql
+FROM information_schema.attributes AS is_a
+  JOIN (
+    pg_catalog.pg_attribute AS pg_a
+      JOIN (pg_catalog.pg_class JOIN pg_catalog.pg_namespace
+              ON pg_class.relnamespace = pg_namespace.oid)
+        ON pg_a.attrelid = pg_class.oid
+  ) ON (is_a.attribute_name = pg_a.attname
+    AND is_a.udt_name = pg_class.relname
+    AND is_a.udt_schema = pg_namespace.nspname)
+```
+
+Requires **synthetic foreign keys** when the schema lacks real FKs (e.g., `pg_catalog` views):
+
+```xml
+<syntheticObjects>
+  <foreignKeys>
+    <foreignKey>
+      <tables>pg_attribute</tables>
+      <fields><field>attrelid</field></fields>
+      <referencedTable>pg_class</referencedTable>
+    </foreignKey>
+    <foreignKey>
+      <tables>pg_class</tables>
+      <fields><field>relnamespace</field></fields>
+      <referencedTable>pg_namespace</referencedTable>
+    </foreignKey>
+  </foreignKeys>
+</syntheticObjects>
+```
+
+---
+
 ## Pattern: Implicit join path correlation (correlated subqueries)
 **Source**: [jOOQ 3.19's new Explicit and Implicit to-many path joins](https://blog.jooq.org/jooq-3-19s-new-explicit-and-implicit-to-many-path-joins) (2023-12-28)
 **Since**: jOOQ 3.19
