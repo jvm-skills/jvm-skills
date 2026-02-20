@@ -88,6 +88,7 @@ Auto-appended by each iteration. Captures data for the blog post.
 
 | 55 | No More MultipleBagFetchException Thanks to M… | 2022-02-08 | jooq-api       | multiset.md | merged  | Cartesian product anti-pattern from multiple to-many JOINs; MULTISET avoids M×N duplication | | 47e965e |
 | 56 | Approximating e With SQL                         | 2022-02-04 | skip           | -          | skipped | Mathematical curiosity using recursive CTEs; no actionable patterns   | | 343eaad |
+| 57 | Traversing jOOQ Expression Trees with the new… | 2022-02-02 | jooq-api       | qom-traverser.md | added   | New topic file; QOM accessors, Traverser API, $replace() for RLS/soft delete | | 6602da0 |
 
 ---
 **Run summary** (2026-02-20 18:59):

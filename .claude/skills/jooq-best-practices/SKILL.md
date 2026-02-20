@@ -34,6 +34,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [computed-columns.md](knowledge/computed-columns.md) — Virtual client-side computed columns as reusable expressions, context-aware projections
 - [transactions.md](knowledge/transactions.md) — Explicit programmatic transactions, NESTED savepoints, R2DBC reactive transactions
 - [sequences.md](knowledge/sequences.md) — Fetching single/batch sequence values across dialects
+- [qom-traverser.md](knowledge/qom-traverser.md) — Query Object Model inspection, expression tree traversal, SQL transformation with $replace()
 
 ## Core rules (always apply)
 
