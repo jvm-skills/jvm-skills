@@ -19,6 +19,7 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 12 | jOOQ 3.19.0 Released with DuckDB, Trino, Oracl… | 2023-12-15 | skip           | -          | skipped | Release announcement; join path features already in implicit-joins.md | | ac37ffc |
 | 13 | Maven Coordinates of the most popular JDBC Dri… | 2023-12-13 | skip           | -          | skipped | Reference list of JDBC driver Maven coords; no patterns              | | 2493bdd |
 | 14 | To DAO or not to DAO                             | 2023-12-06 | jooq-api       | anti-patterns.md | merged  | Enriched N+1 entry: DAOs hide loops, prefer bulk SQL                 | | f063a3a |
+| 15 | JDBC Connection URLs of the Most Popular RDBMS   | 2023-12-01 | skip           | -          | skipped | Reference lookup table of JDBC URLs/drivers; no patterns             | | bdcfec0 |
 
 ---
 **Run summary** (2026-02-20 18:28):
@@ -26,4 +27,12 @@ Auto-appended by each iteration. Captures data for the blog post.
 - Duration: 1m 90s total
 - Articles processed so far: 4 / 747
 - Topic files: 5
+- Open uncertainties: 1
+
+---
+**Run summary** (2026-02-20 18:40):
+- Iterations this run: 11
+- Duration: 9m 541s total
+- Articles processed so far: 14 / 747
+- Topic files: 6
 - Open uncertainties: 1
