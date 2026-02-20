@@ -18,6 +18,7 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 11 | Workaround for MySQL's "can't specify target … | 2023-12-20 | skip           | -          | skipped | MySQL-only limitation; PostgreSQL not affected                        | | dd29204 |
 | 12 | jOOQ 3.19.0 Released with DuckDB, Trino, Oracl… | 2023-12-15 | skip           | -          | skipped | Release announcement; join path features already in implicit-joins.md | | ac37ffc |
 | 13 | Maven Coordinates of the most popular JDBC Dri… | 2023-12-13 | skip           | -          | skipped | Reference list of JDBC driver Maven coords; no patterns              | | 2493bdd |
+| 14 | To DAO or not to DAO                             | 2023-12-06 | jooq-api       | anti-patterns.md | merged  | Enriched N+1 entry: DAOs hide loops, prefer bulk SQL                 | | f063a3a |
 
 ---
 **Run summary** (2026-02-20 18:28):

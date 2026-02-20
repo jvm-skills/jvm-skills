@@ -53,10 +53,33 @@ dsl.select(
 
 ---
 
-## Pattern: Avoid N+1 queries
+## Pattern: Avoid N+1 queries — don't hide loops behind DAOs
 **Source**: [jOOQ Official Docs — Don't do this](https://www.jooq.org/doc/3.20/manual/reference/dont-do-this/) (docs)
+**Enriched by**: [To DAO or not to DAO](https://blog.jooq.org/to-dao-or-not-to-dao) (2023-12-06)
 
 Don't execute queries in loops. Use joins, MULTISET, or batch fetching instead.
+
+jOOQ's DAO API encourages N+1 patterns by making individual CRUD calls easy — the N+1 hides inside reusable `findByX()` methods called in loops. Prefer writing bulk SQL:
+
+```kotlin
+// BAD — DAO-style N+1: one query per account
+for (account in accountDao.findAll()) {
+    val txns = transactionDao.fetchByAccountId(account.id)
+    // ...
+}
+
+// GOOD — single bulk update with EXISTS
+dsl.update(TRANSACTION)
+    .set(TRANSACTION.SOME_COUNTER, TRANSACTION.SOME_COUNTER.plus(1))
+    .where(exists(
+        selectOne().from(ACCOUNT)
+            .where(ACCOUNT.ID.eq(TRANSACTION.ACCOUNT_ID))
+            .and(ACCOUNT.SOME_CONDITION)
+    ))
+    .execute()
+```
+
+Use DAOs (if at all) only as base classes for specialized repositories that still write proper SQL.
 
 ---
 
