@@ -31,6 +31,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [stored-procedures.md](knowledge/stored-procedures.md) — Calling procedures with default/named parameters across dialects
 - [type-system.md](knowledge/type-system.md) — jOOQ type hierarchy: DSLContext vs DSL, Result vs Cursor, Converter vs Binding, Condition as Field<Boolean>
 - [dml-returning.md](knowledge/dml-returning.md) — RETURNING data from INSERT/UPDATE/DELETE across dialects, data change delta tables
+- [computed-columns.md](knowledge/computed-columns.md) — Virtual client-side computed columns as reusable expressions, context-aware projections
 
 ## Core rules (always apply)
 
