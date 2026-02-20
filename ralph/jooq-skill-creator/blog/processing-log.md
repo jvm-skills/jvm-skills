@@ -87,6 +87,7 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 54 | jOOQ 3.16 and Java EE vs Jakarta EE              | 2022-02-14 | skip           | -          | skipped | jOOQ internals: javax→jakarta migration process, not actionable patterns | | 1352b2c |
 
 | 55 | No More MultipleBagFetchException Thanks to M… | 2022-02-08 | jooq-api       | multiset.md | merged  | Cartesian product anti-pattern from multiple to-many JOINs; MULTISET avoids M×N duplication | | 47e965e |
+| 56 | Approximating e With SQL                         | 2022-02-04 | skip           | -          | skipped | Mathematical curiosity using recursive CTEs; no actionable patterns   | | 343eaad |
 
 ---
 **Run summary** (2026-02-20 18:59):
