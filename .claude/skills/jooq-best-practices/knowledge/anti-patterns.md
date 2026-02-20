@@ -194,3 +194,31 @@ dsl.select(FILM.TITLE, multiset(...))
     .from(FILM)
     .fetch(Records.mapping(Film::new))
 ```
+
+---
+
+## Pattern: Don't use H2 compatibility modes with jOOQ
+**Source**: [Using H2 as a Test Database Product with jOOQ](https://blog.jooq.org/using-h2-as-a-test-database-product) (2022-08-19)
+
+H2's compatibility modes (e.g., `MODE=PostgreSQL`) are for **plain SQL only**. When using jOOQ, jOOQ already handles dialect translation — combining H2 compatibility modes with `SQLDialect.SQLSERVER` (or other non-H2 dialects) causes conflicts because jOOQ assumes actual vendor capabilities.
+
+**Rules:**
+- If you must use H2, configure `SQLDialect.H2` — never a different dialect on H2
+- Do **not** use H2 compatibility modes alongside jOOQ's dialect emulation
+- Prefer **Testcontainers** to run the actual target database for integration tests — eliminates compatibility issues entirely
+
+```kotlin
+// BAD — jOOQ assumes real SQL Server features on H2
+val dsl = DSL.using(h2Connection, SQLDialect.SQLSERVER)
+
+// GOOD — use the real dialect for H2
+val dsl = DSL.using(h2Connection, SQLDialect.H2)
+
+// BEST — use Testcontainers with the real database
+@Testcontainers
+class BookRepositoryTest {
+    @Container
+    val postgres = PostgreSQLContainer("postgres:16")
+    // jOOQ configured with SQLDialect.POSTGRES against real PostgreSQL
+}
+```

@@ -16,7 +16,7 @@ Built from official docs + 783 blog articles (progressively updated).
 ## Knowledge base
 
 <!-- This section is auto-updated by the Ralph processing loop -->
-- [anti-patterns.md](knowledge/anti-patterns.md) — 15 "don't do this" rules from official docs (schema + SQL + jOOQ API)
+- [anti-patterns.md](knowledge/anti-patterns.md) — 16 "don't do this" rules: schema, SQL, jOOQ API, H2 compatibility modes
 - [multiset.md](knowledge/multiset.md) — Nested collections with MULTISET, JSON emulation
 - [fetching-mapping.md](knowledge/fetching-mapping.md) — RecordMapper, fetchMap, fetchGroups, ad-hoc converters
 - [array-operations.md](knowledge/array-operations.md) — Array lambda functions (filter, map, match) with PostgreSQL emulation
@@ -47,3 +47,4 @@ Built from official docs + 783 blog articles (progressively updated).
 - Prefer `UNION ALL` over `UNION` unless dedup is needed
 - Prefer `FILTER (WHERE ...)` over `CASE` in aggregates — more readable and faster on PostgreSQL
 - Always execute jOOQ queries through jOOQ — don't extract SQL for JDBC/JPA (loses MULTISET emulation, type-safe mapping, R2DBC)
+- Test against the real target database (via Testcontainers), not H2 with compatibility modes
