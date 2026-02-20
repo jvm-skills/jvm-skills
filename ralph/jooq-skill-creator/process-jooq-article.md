@@ -6,14 +6,14 @@ Target version: **jOOQ 3.20** on **PostgreSQL**.
 
 ## Input
 
-- Articles list: `scripts/ralph/jooq-skill-creator/blog/jooq_blog_articles.jsonl` — one JSON object per line: `{url, title, description, date, tags, processed}`
+- Articles list: `ralph/jooq-skill-creator/blog/jooq_blog_articles.jsonl` — one JSON object per line: `{url, title, description, date, tags, processed}`
 - Knowledge base: `.claude/skills/jooq-best-practices/knowledge/`
 - Skill file: `.claude/skills/jooq-best-practices/SKILL.md`
 - Uncertainties log: `.claude/skills/jooq-best-practices/UNCERTAINTIES.md`
 
 ## Your task
 
-1. **Find the first unprocessed article** using Bash: `grep -n '"processed":false' scripts/ralph/jooq-skill-creator/blog/jooq_blog_articles.jsonl | head -1` — this returns the line number and article JSON. Use the line number as the article index.
+1. **Find the first unprocessed article** using Bash: `grep -n '"processed":false' ralph/jooq-skill-creator/blog/jooq_blog_articles.jsonl | head -1` — this returns the line number and article JSON. Use the line number as the article index.
 2. **If no unprocessed articles remain**, output `<promise>COMPLETE</promise>` and stop
 3. **Fetch the full article** using WebFetch on the article's URL
 4. **Classify** the article into one of:
@@ -27,9 +27,9 @@ Target version: **jOOQ 3.20** on **PostgreSQL**.
    - If the topic file exists, read it first before writing
    - Write concise best-practice nuggets following the Topic File Format below
    - Do NOT dump the entire article — extract only actionable patterns
-8. **Mark processed**: use Bash with `sed` to update the line in-place: `sed -i '' 'LINEs/\"processed\":false/\"processed\":true/' scripts/ralph/jooq-skill-creator/blog/jooq_blog_articles.jsonl` (replace LINE with the line number from step 1)
+8. **Mark processed**: use Bash with `sed` to update the line in-place: `sed -i '' 'LINEs/\"processed\":false/\"processed\":true/' ralph/jooq-skill-creator/blog/jooq_blog_articles.jsonl` (replace LINE with the line number from step 1)
 9. **Update the skill**: read and update `.claude/skills/jooq-best-practices/SKILL.md` (see Skill Update below)
-10. **Log for blog post**: append a row to `scripts/ralph/jooq-skill-creator/blog/processing-log.md` (see Blog Log below)
+10. **Log for blog post**: append a row to `ralph/jooq-skill-creator/blog/processing-log.md` (see Blog Log below)
 11. **Report** what you did: article title, classification, which topic file was updated (or "skipped")
 
 ## Outdated Info Strategy
@@ -102,7 +102,7 @@ After writing to a topic file, update `.claude/skills/jooq-best-practices/SKILL.
 
 ## Blog log
 
-After each article (including skips), append one row to `scripts/ralph/jooq-skill-creator/blog/processing-log.md`:
+After each article (including skips), append one row to `ralph/jooq-skill-creator/blog/processing-log.md`:
 
 ```
 | {iteration#} | {article title (truncated to 50 chars)} | {date} | {classification} | {topic file or "-"} | {added/merged/skipped/superseded} | {brief note if interesting} | |
@@ -110,7 +110,7 @@ After each article (including skips), append one row to `scripts/ralph/jooq-skil
 
 Count the iteration number by counting existing rows in the table.
 
-Also capture noteworthy events in a separate `scripts/ralph/jooq-skill-creator/blog/highlights.md` file (create if missing, append):
+Also capture noteworthy events in a separate `ralph/jooq-skill-creator/blog/highlights.md` file (create if missing, append):
 - First time a topic file is created (new topic discovered)
 - When an older article contradicts a newer one (evolution example)
 - When MCP was consulted to resolve a conflict

@@ -2,10 +2,13 @@
 # Setup Docker sandbox for jOOQ skill creator with MCP access
 set -e
 
+cd "$(dirname "$0")"
 SANDBOX_NAME="claude-ralph-jooq"
-PROJECT_DIR=~/IdeaProjects/PhotoQuest
+PROJECT_DIR="$(cd ../.. && pwd)"
 
 echo "=== Setting up sandbox: $SANDBOX_NAME ==="
+echo "Project dir: $PROJECT_DIR"
+
 if docker sandbox ls 2>/dev/null | grep -q "$SANDBOX_NAME"; then
   echo "Sandbox '$SANDBOX_NAME' already exists, reusing it."
 else
@@ -25,9 +28,9 @@ docker sandbox network proxy "$SANDBOX_NAME" \
 
 echo ""
 echo "=== Sandbox ready ==="
-echo "Run:"
-echo "  docker sandbox run $SANDBOX_NAME -- ./scripts/ralph/jooq-skill-creator/ralph-jooq-once.sh"
-echo "  docker sandbox run $SANDBOX_NAME -- ./scripts/ralph/jooq-skill-creator/afk-ralph-jooq.sh 50"
+echo "Run Ralph:"
+echo "  ./ralph-jooq-once.sh"
+echo "  ./afk-ralph-jooq.sh 50"
 echo ""
 echo "Manage:"
 echo "  docker sandbox ls"
