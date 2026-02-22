@@ -121,10 +121,12 @@ Auto-appended by each iteration. Captures data for the blog post.
 
 | 73 | Using Testcontainers to Generate jOOQ Code       | 2021-08-27 | jooq-api       | code-generator.md | merged  | Testcontainers JDBC URL + Flyway for build-time code gen             | | c4fd099 |
 
+| 74 | Using jOOQ to write vendor agnostic SQL with… | 2021-08-26 | jooq-api       | parser.md  | merged  | Parsing connection/data source for automatic dialect translation in JPA | |
+
 ---
 **Run summary** (2026-02-20 18:59):
-- Iterations this run: 1
+- Iterations this run: 2
 - Duration: 0m 0s total
-- Articles processed so far: 24 / 747
+- Articles processed so far: 25 / 747
 - Topic files: 10
 - Open uncertainties: 1
