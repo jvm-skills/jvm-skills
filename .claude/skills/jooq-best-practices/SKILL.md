@@ -37,6 +37,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [qom-traverser.md](knowledge/qom-traverser.md) — Query Object Model inspection, expression tree traversal, SQL transformation with $replace()
 - [spring-boot-config.md](knowledge/spring-boot-config.md) — DefaultConfigurationCustomizer for Spring Boot jOOQ config; MySQL allowMultiQueries flag
 - [parser.md](knowledge/parser.md) — Parser ignore comments, parsing connection for automatic dialect translation
+- [result-formatting.md](knowledge/result-formatting.md) — ASCII chart output, formatChart() for console visualization
 
 ## Core rules (always apply)
 
