@@ -28,7 +28,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [aggregate-functions.md](knowledge/aggregate-functions.md) — FILTER vs CASE in aggregates, functional dependencies in GROUP BY, table-level grouping
 - [logging.md](knowledge/logging.md) — LoggingConnection for SQL logging, DiagnosticsConnection for N+1 detection
 - [native-sql-strategy.md](knowledge/native-sql-strategy.md) — When to use jOOQ DSL vs views/functions for complex static SQL
-- [stored-procedures.md](knowledge/stored-procedures.md) — Calling procedures with default/named parameters across dialects
+- [stored-procedures.md](knowledge/stored-procedures.md) — Calling procedures with default/named parameters; vendor-agnostic anonymous blocks and procedural logic
 - [type-system.md](knowledge/type-system.md) — jOOQ type hierarchy: DSLContext vs DSL, Result vs Cursor, Converter vs Binding, Condition as Field<Boolean>
 - [dml-returning.md](knowledge/dml-returning.md) — RETURNING data from INSERT/UPDATE/DELETE across dialects, data change delta tables
 - [computed-columns.md](knowledge/computed-columns.md) — Virtual client-side computed columns as reusable expressions, context-aware projections

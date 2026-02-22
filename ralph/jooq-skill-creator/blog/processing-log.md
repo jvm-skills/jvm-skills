@@ -130,3 +130,4 @@ Auto-appended by each iteration. Captures data for the blog post.
 - Articles processed so far: 25 / 747
 - Topic files: 10
 - Open uncertainties: 1
+| 75 | Vendor Agnostic, Dynamic Procedural Logic wi… | 2021-08-25 | jooq-api       | stored-procedures.md | merged  | Vendor-agnostic anonymous blocks, WHILE loops, CREATE PROCEDURE across dialects | | 09fe63b |
