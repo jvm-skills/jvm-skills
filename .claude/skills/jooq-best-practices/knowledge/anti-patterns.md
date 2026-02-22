@@ -170,6 +170,40 @@ If a natural key exists and is stable, use it. Not every table needs a serial/UU
 
 ---
 
+## Pattern: Use .eq() not .equals() for jOOQ comparisons
+**Source**: [10 Things You Didn't Know About jOOQ](https://blog.jooq.org/10-things-you-didnt-know-about-jooq) (2021-08-20)
+
+jOOQ fields have `.eq()`, `.ne()`, `.lt()`, `.le()`, `.gt()`, `.ge()` comparison methods. Using Java's `.equals()` compiles but calls the wrong overload (Java Object equality, not SQL comparison) and produces a `Boolean` not a `Condition`.
+
+```kotlin
+// BAD — compiles but wrong: .equals() is Java Object method, not SQL comparison
+.where(USER.NAME.equals(userName))
+
+// GOOD — SQL comparison returning a Condition
+.where(USER.NAME.eq(userName))
+```
+
+---
+
+## Pattern: Use noCondition() for dynamic SQL building
+**Source**: [10 Things You Didn't Know About jOOQ](https://blog.jooq.org/10-things-you-didnt-know-about-jooq) (2021-08-20)
+
+Build dynamic conditions functionally with `noCondition()` (a no-op condition). Avoid mutating intermediate query-builder step objects with `where()` after construction.
+
+```kotlin
+// BAD — mutable approach: mutates the step object
+val s = dsl.select(T.A, T.B).from(T)
+if (something) s.where(T.C.eq(1))  // mutation, easy to miss bugs
+
+// GOOD — functional approach: compose conditions
+var c: Condition = noCondition()
+if (something) c = c.and(T.C.eq(1))
+if (somethingElse) c = c.and(T.D.gt(0))
+dsl.select(T.A, T.B).from(T).where(c).fetch()
+```
+
+---
+
 ## Pattern: Don't extract jOOQ SQL to execute via JDBC or JPA
 **Source**: [Why You Should Execute jOOQ Queries With jOOQ](https://blog.jooq.org/why-you-should-execute-jooq-queries-with-jooq) (2023-01-18)
 

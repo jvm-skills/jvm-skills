@@ -16,7 +16,7 @@ Built from official docs + 783 blog articles (progressively updated).
 ## Knowledge base
 
 <!-- This section is auto-updated by the Ralph processing loop -->
-- [anti-patterns.md](knowledge/anti-patterns.md) — 16 "don't do this" rules: schema, SQL, jOOQ API, H2 compatibility modes
+- [anti-patterns.md](knowledge/anti-patterns.md) — 18 "don't do this" rules: schema, SQL, jOOQ API, H2 compatibility modes; .eq() vs .equals(); noCondition() for dynamic SQL
 - [multiset.md](knowledge/multiset.md) — Nested collections with MULTISET, JSON emulation
 - [fetching-mapping.md](knowledge/fetching-mapping.md) — RecordMapper, fetchMap, fetchGroups, ad-hoc converters
 - [array-operations.md](knowledge/array-operations.md) — Array lambda functions (filter, map, match) with PostgreSQL emulation
