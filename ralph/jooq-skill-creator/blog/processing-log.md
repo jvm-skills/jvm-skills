@@ -134,3 +134,4 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 76 | MySQL's allowMultiQueries flag with JDBC and… | 2021-08-23 | jooq-api       | spring-boot-config.md | added  | MySQL/MariaDB must set allowMultiQueries=true for jOOQ multi-stmt features | | 7e3a39e |
 | 77 | 10 Things You Didn't Know About jOOQ         | 2021-08-20 | jooq-api       | anti-patterns.md | added  | .eq() vs .equals() anti-pattern; noCondition() for dynamic SQL building | | 259914e |
 | 78 | Formatting ASCII Charts With jOOQ            | 2021-08-19 | jooq-api       | result-formatting.md | added  | New topic: formatChart() for ASCII bar charts in console | | dbb5a51 |
+| 79 | Standard SQL/JSON – The Sobering Parts       | 2021-07-27 | jooq-api       | sql-json.md (new) | added  | New topic: dialect pitfalls — MySQL type degradation, Oracle CLOB, GROUP_CONCAT truncation, NULL semantics | | 42d215e |

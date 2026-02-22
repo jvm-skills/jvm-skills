@@ -38,6 +38,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [spring-boot-config.md](knowledge/spring-boot-config.md) — DefaultConfigurationCustomizer for Spring Boot jOOQ config; MySQL allowMultiQueries flag
 - [parser.md](knowledge/parser.md) — Parser ignore comments, parsing connection for automatic dialect translation
 - [result-formatting.md](knowledge/result-formatting.md) — ASCII chart output, formatChart() for console visualization
+- [sql-json.md](knowledge/sql-json.md) — SQL/JSON dialect pitfalls: MySQL type degradation, Oracle CLOB, GROUP_CONCAT truncation, NULL semantics
 
 ## Core rules (always apply)
 

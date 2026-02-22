@@ -35,3 +35,7 @@ Noteworthy events during blog article processing — good anecdotes for the blog
 ## New topic file: result-formatting.md (article #78)
 **Article**: [Formatting ASCII Charts With jOOQ](https://blog.jooq.org/formatting-ascii-charts-with-jooq) (2021-08-19)
 First article covering jOOQ's `formatChart()` utility — a little-known feature for rendering Result objects as ASCII stacked bar charts in console applications, configurable via `ChartFormat` (dimensions, value columns, custom shade chars, 100% stacked mode).
+
+## Article 79 — New topic: sql-json.md
+**Article**: [Standard SQL/JSON – The Sobering Parts](https://blog.jooq.org/standard-sql-json-the-sobering-parts) (2021-07-27)
+New topic file `sql-json.md` created. The article is a sobering inventory of SQL/JSON standard implementation failures across all major databases — MySQL type degradation, Oracle RETURNING CLOB verbosity, GROUP_CONCAT truncation, and NULL semantics divergence. Actionable takeaway: always prefer jOOQ's DSL (and MULTISET) over raw SQL/JSON to avoid writing these workarounds manually.
