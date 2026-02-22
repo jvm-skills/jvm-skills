@@ -20,3 +20,17 @@ public class JooqConfig {
 The callback receives the mutable `DefaultConfiguration` during initialization — you can change settings, add listeners, register converters, etc.
 
 ---
+
+## Pattern: Enable allowMultiQueries for MySQL/MariaDB
+**Source**: [MySQL's allowMultiQueries flag with JDBC and jOOQ](https://blog.jooq.org/mysqls-allowmultiqueries-flag-with-jdbc-and-jooq) (2021-08-23)
+**Dialect**: MySQL / MariaDB
+
+jOOQ internally generates multi-statement batches for several MySQL features: `GROUP_CONCAT` max-length adjustment, `CREATE OR REPLACE` emulation (DROP + CREATE), `FOR UPDATE WAIT` timeout, and anonymous procedural blocks (temp stored proc + call + drop). This requires enabling `allowMultiQueries=true` on the JDBC URL.
+
+```
+spring.datasource.url=jdbc:mysql://localhost:3306/mydb?allowMultiQueries=true
+```
+
+This is safe to enable when using jOOQ's DSL (no SQL injection risk), but keep in mind it only removes one layer of defense — parameterized queries remain the primary safeguard.
+
+---

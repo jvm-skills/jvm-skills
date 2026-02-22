@@ -35,7 +35,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [transactions.md](knowledge/transactions.md) — Explicit programmatic transactions, NESTED savepoints, R2DBC reactive transactions
 - [sequences.md](knowledge/sequences.md) — Fetching single/batch sequence values across dialects
 - [qom-traverser.md](knowledge/qom-traverser.md) — Query Object Model inspection, expression tree traversal, SQL transformation with $replace()
-- [spring-boot-config.md](knowledge/spring-boot-config.md) — DefaultConfigurationCustomizer for Spring Boot jOOQ configuration
+- [spring-boot-config.md](knowledge/spring-boot-config.md) — DefaultConfigurationCustomizer for Spring Boot jOOQ config; MySQL allowMultiQueries flag
 - [parser.md](knowledge/parser.md) — Parser ignore comments, parsing connection for automatic dialect translation
 
 ## Core rules (always apply)

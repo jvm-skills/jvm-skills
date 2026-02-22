@@ -131,3 +131,4 @@ Auto-appended by each iteration. Captures data for the blog post.
 - Topic files: 10
 - Open uncertainties: 1
 | 75 | Vendor Agnostic, Dynamic Procedural Logic wi… | 2021-08-25 | jooq-api       | stored-procedures.md | merged  | Vendor-agnostic anonymous blocks, WHILE loops, CREATE PROCEDURE across dialects | | 09fe63b |
+| 76 | MySQL's allowMultiQueries flag with JDBC and… | 2021-08-23 | jooq-api       | spring-boot-config.md | added  | MySQL/MariaDB must set allowMultiQueries=true for jOOQ multi-stmt features | | 7e3a39e |
