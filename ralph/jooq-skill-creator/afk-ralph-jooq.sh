@@ -11,11 +11,13 @@ cd "$(dirname "$0")"
 unset CLAUDECODE
 
 START_TIME=$(date +%s)
+ITERATIONS=0
 
 for ((i=1; i<=$1; i++)); do
+  ((ITERATIONS++))
   echo "=== Iteration $i/$1 ==="
 
-  result=$(docker sandbox run claude-ralph-jooq -- --dangerously-skip-permissions --add-dir ~/.claude/skills -p \
+  result=$(docker sandbox run claude-ralph-jooq -- --dangerously-skip-permissions --model claude-sonnet-4-6 --add-dir ~/.claude/skills -p \
     "@ralph/jooq-skill-creator/process-jooq-article.md")
 
   echo "$result"
@@ -41,7 +43,7 @@ for ((i=1; i<=$1; i++)); do
   fi
 
   if [[ "$result" == *"<promise>COMPLETE</promise>"* ]]; then
-    echo "All articles processed after $i iterations."
+    echo "All articles processed after $ITERATIONS iterations."
     break
   fi
 
@@ -57,13 +59,13 @@ ARTICLES_FILE=blog/jooq_blog_articles.jsonl
 PROCESSED=$(grep -c '"processed":true' "$ARTICLES_FILE" || echo 0)
 REMAINING=$(grep -c '"processed":false' "$ARTICLES_FILE" || echo 0)
 TOPIC_FILES=$(ls ../../.claude/skills/jooq-best-practices/knowledge/*.md 2>/dev/null | wc -l | tr -d ' ')
-UNCERTAINTIES=$(grep -c "^## " ../../.claude/skills/jooq-best-practices/UNCERTAINTIES.md 2>/dev/null || echo 0)
+UNCERTAINTIES=$(sed -n '/^```/,/^```/!p' ../../.claude/skills/jooq-best-practices/UNCERTAINTIES.md 2>/dev/null | grep -c "^## " || echo 0)
 
 cat >> blog/processing-log.md << EOF
 
 ---
 **Run summary** ($(date '+%Y-%m-%d %H:%M')):
-- Iterations this run: $i
+- Iterations this run: $ITERATIONS
 - Duration: ${MINUTES}m ${ELAPSED}s total
 - Articles processed so far: $PROCESSED / $(( PROCESSED + REMAINING ))
 - Topic files: $TOPIC_FILES
@@ -72,4 +74,4 @@ EOF
 
 echo ""
 echo "=== Summary ==="
-echo "Iterations: $i | Duration: ${MINUTES}m | Processed: $PROCESSED | Remaining: $REMAINING | Topics: $TOPIC_FILES | Uncertainties: $UNCERTAINTIES"
+echo "Iterations: $ITERATIONS | Duration: ${MINUTES}m | Processed: $PROCESSED | Remaining: $REMAINING | Topics: $TOPIC_FILES | Uncertainties: $UNCERTAINTIES"

@@ -12,5 +12,5 @@ if [ ! -f "$ARTICLES" ]; then
 fi
 
 unset CLAUDECODE
-docker sandbox run claude-ralph-jooq -- --dangerously-skip-permissions --add-dir ~/.claude/skills -p \
+docker sandbox run claude-ralph-jooq -- --dangerously-skip-permissions --model claude-sonnet-4-6 --add-dir ~/.claude/skills -p \
   "@ralph/jooq-skill-creator/process-jooq-article.md"
