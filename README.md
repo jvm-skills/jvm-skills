@@ -27,9 +27,9 @@ Install a skill, and your AI assistant knows:
 
 ## Current State
 
-### jOOQ Best Practices (mature)
+### jOOQ Best Practices (In Progress)
 
-The first skill is a comprehensive jOOQ 3.20 knowledge base.
+The first skill is a jOOQ 3.20 knowledge base.
 
 Built from 79 processed articles out of 747 scraped from `blog.jooq.org`, with more being added continuously by [Ralph](#ralph-the-skill-builder).
 
