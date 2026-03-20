@@ -27,6 +27,30 @@ ctx.select(
 
 ---
 
+## Pattern: SQL Server FOR XML / FOR JSON — jOOQ translates to other RDBMS
+**Source**: [Using SQL Server FOR XML and FOR JSON Syntax on Other RDBMS With jOOQ](https://blog.jooq.org/using-sql-server-for-xml-and-for-json-syntax-on-other-rdbms-with-jooq) (2020-05-05)
+**Since**: jOOQ 3.14
+**Dialect**: SQL Server / PostgreSQL / Oracle / DB2 / MySQL / MariaDB
+
+SQL Server's `FOR XML` (RAW, AUTO, PATH modes) and `FOR JSON PATH` syntaxes are proprietary, but jOOQ 3.14 can parse them and emit equivalent standard SQL/XML or SQL/JSON for other databases — enabling cross-database portability.
+
+**FOR XML modes:**
+- `RAW` — flat XML with one element per row, columns as attributes
+- `AUTO` — hierarchy inferred from join order (tables become nested elements)
+- `PATH` — explicit XML paths via slash-separated column aliases (`a.first_name AS [author/first_name]`)
+
+**FOR JSON PATH** — same as PATH mode but produces JSON; use dot-notation for nesting (`a.first_name AS [author.first_name]`)
+
+**Modifiers** (portable via jOOQ DSL):
+- `ROOT('name')` — wraps output in a named root element/object
+- `ELEMENTS` — XML: emit child elements instead of attributes
+- `INCLUDE_NULL_VALUES` — JSON: include null keys instead of omitting them
+- `WITHOUT_ARRAY_WRAPPER` — JSON: emit object(s) without outer array
+
+Use the **jOOQ DSL** to write these queries — jOOQ emits the correct native syntax per dialect, or falls back to standard `XMLAGG(XMLELEMENT(...))` / `JSON_ARRAYAGG(JSON_OBJECT(...))` equivalents.
+
+---
+
 ## Pattern: SQL/JSON support is highly inconsistent across vendors — prefer jOOQ DSL
 **Source**: [Standard SQL/JSON – The Sobering Parts](https://blog.jooq.org/standard-sql-json-the-sobering-parts) (2021-07-27)
 **Since**: jOOQ 3.14
