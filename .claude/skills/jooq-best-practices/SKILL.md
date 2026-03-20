@@ -30,7 +30,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [native-sql-strategy.md](knowledge/native-sql-strategy.md) — When to use jOOQ DSL vs views/functions for complex static SQL
 - [stored-procedures.md](knowledge/stored-procedures.md) — Calling procedures with default/named parameters; vendor-agnostic anonymous blocks, while_/for_ loops, and cross-dialect procedural logic
 - [type-system.md](knowledge/type-system.md) — jOOQ type hierarchy: DSLContext vs DSL, Result vs Cursor, Converter vs Binding, AlwaysInlineBinding for skewed enums, Condition as Field<Boolean>; Oracle BINARY_DOUBLE vs NUMBER performance
-- [dml-returning.md](knowledge/dml-returning.md) — RETURNING data from INSERT/UPDATE/DELETE across dialects, data change delta tables
+- [dml-returning.md](knowledge/dml-returning.md) — RETURNING data from INSERT/UPDATE/DELETE across dialects, data change delta tables, set-based vs row-by-row DML performance, Oracle aggregate RETURNING
 - [computed-columns.md](knowledge/computed-columns.md) — Virtual client-side computed columns as reusable expressions, context-aware projections; DB-side GENERATED ALWAYS AS columns for constant FK values
 - [transactions.md](knowledge/transactions.md) — Explicit programmatic transactions, NESTED savepoints, R2DBC reactive transactions
 - [sequences.md](knowledge/sequences.md) — Fetching single/batch sequence values across dialects

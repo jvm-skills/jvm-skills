@@ -225,3 +225,4 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 140 | How to Use jOOQ's UpdatableRecord for CRU… | 2018-11-05 | jooq-api       | updatable-record.md (new) | added   | New topic: UpdatableRecord changed() delta tracking, DB DEFAULT on INSERT, avoid POJO round-trips | | e1ca120 |
 | 141 | Imperative Loop or Functional Stream Pipe… | 2018-10-29 | skip           | -          | skipped | Java performance opinion piece; no jOOQ or SQL content | | 77d3be3 |
 | 142 | Writing Custom Aggregate Functions in SQL… | 2018-10-09 | sql-pattern    | aggregate-functions.md | added   | Custom UDAFs in Oracle (ODCI) and PostgreSQL (CREATE AGGREGATE); Java 8 Collector analogy | | a7cfc7d |
+| 143 | How to Use SQL UPDATE .. RETURNING to Run… | 2018-09-26 | sql-pattern    | dml-returning.md | added   | Set-based UPDATE 2.5–7x faster than row-by-row; Oracle aggregate functions in RETURNING clause | | 6020cf8 |

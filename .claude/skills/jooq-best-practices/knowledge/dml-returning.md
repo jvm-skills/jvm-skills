@@ -67,6 +67,53 @@ SELECT * FROM inserted
 
 ---
 
+## Pattern: Set-based UPDATE instead of row-by-row loops
+**Source**: [How to Use SQL UPDATE .. RETURNING to Run DML More Efficiently](https://blog.jooq.org/how-to-use-sql-update-returning-to-run-dml-more-efficiently) (2018-09-26)
+
+Avoid iterating rows and updating one-by-one ("slow-by-slow"). A single set-based UPDATE is ~2.5–7x faster and creates less lock contention:
+
+```sql
+-- BAD: row-by-row loop (PL/SQL / application-side)
+FOR r IN (SELECT * FROM t WHERE category = 1) LOOP
+  UPDATE t SET counter = counter + 1 WHERE id = r.id;
+END LOOP;
+
+-- GOOD: single set-based UPDATE
+UPDATE t SET counter = NVL(counter, 0) + 1 WHERE category = 1;
+```
+
+In jOOQ:
+```kotlin
+ctx.update(T)
+   .set(T.COUNTER, nvl(T.COUNTER, 0).plus(1))
+   .where(T.CATEGORY.eq(1))
+   .execute()
+```
+
+**Caveat**: When many concurrent processes read the same rows, row-by-row may reduce lock contention. Prefer set-based by default; benchmark before choosing row-by-row.
+
+---
+
+## Pattern: Aggregate functions inside RETURNING (Oracle)
+**Source**: [How to Use SQL UPDATE .. RETURNING to Run DML More Efficiently](https://blog.jooq.org/how-to-use-sql-update-returning-to-run-dml-more-efficiently) (2018-09-26)
+**Dialect**: Oracle, Firebird
+
+Oracle allows aggregate functions in the `RETURNING` clause of a DML statement, letting you capture summary info without a follow-up SELECT:
+
+```sql
+UPDATE t
+SET counter = NVL(counter, 0) + 1
+WHERE category = 1
+RETURNING
+  LISTAGG(text, ', ') WITHIN GROUP (ORDER BY text),
+  COUNT(*)
+INTO v_text, v_updated_count;
+```
+
+PostgreSQL achieves the same via a CTE with `RETURNING` + aggregation in the outer query. SQL Server's `OUTPUT` clause does **not** support aggregates.
+
+---
+
 ## Pattern: JDBC RETURN_GENERATED_KEYS limitations
 **Source**: [The Many Ways to Return Data From SQL DML](https://blog.jooq.org/the-many-ways-to-return-data-from-sql-dml) (2022-08-23)
 
