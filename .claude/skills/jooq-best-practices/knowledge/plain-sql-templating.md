@@ -66,6 +66,35 @@ Disabling quoting via `RenderQuotedNames.EXPLICIT_DEFAULT_UNQUOTED` reintroduces
 
 ---
 
+## Pattern: Text blocks for readable multi-line plain SQL
+**Source**: [Using Java 13+ Text Blocks for Plain SQL with jOOQ](https://blog.jooq.org/using-java-13-text-blocks-for-plain-sql-with-jooq) (2020-03-05)
+**Since**: Java 13 (preview), Java 15 (stable)
+
+Use Java/Kotlin multi-line strings to write plain SQL inline without concatenation. jOOQ accepts these wherever it accepts a `String`. Combine with `{0}` placeholders to inject jOOQ `Field`/`Condition` expressions into otherwise-static SQL.
+
+```kotlin
+// Readable multi-line plain SQL
+ctx.fetch("""
+    SELECT table_schema, count(*)
+    FROM information_schema.tables
+    GROUP BY table_schema
+    ORDER BY table_schema
+    """)
+
+// Mix text blocks with {0} template placeholders for dynamic field injection
+val groupBy = field("table_schema")
+ctx.fetch("""
+    SELECT {0}, count(*), row_number() OVER (ORDER BY {0}) AS rn
+    FROM information_schema.tables
+    GROUP BY {0}
+    ORDER BY {0}
+    """, groupBy)
+```
+
+Use text blocks for **static or near-static** vendor-specific SQL that's awkward in the DSL. For fully dynamic queries prefer the DSL for type safety.
+
+---
+
 ## Pattern: keyword() for consistent keyword rendering
 **Source**: [What's a "String" in the jOOQ API?](https://blog.jooq.org/whats-a-string-in-the-jooq-api) (2020-04-03)
 

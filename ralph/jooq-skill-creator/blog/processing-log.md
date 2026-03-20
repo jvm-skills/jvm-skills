@@ -180,3 +180,4 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 104 | The Many Flavours of the Arcane SQL MER… | 2020-04-10 | sql-pattern    | merge-upsert.md | added  | FULL JOIN in USING clause for full sync; AND in WHEN clauses + CASE emulation; Oracle WHERE/DELETE variant | | f295fff |
 | 105 | What's a "String" in the jOOQ API?      | 2020-04-03 | jooq-api       | plain-sql-templating.md | added   | New topic file; val() vs inline(), @PlainSQL injection safety, name() identifiers, keyword() rendering | | 762a794 |
 | 106 | Create Empty Optional SQL Clauses with jOOQ | 2020-03-06 | jooq-api | dynamic-sql.md | added | New topic file; noCondition/trueCondition/falseCondition, conditional fields, conditional JOINs, conditional UNIONs | | 6b36336 |
+| 107 | Using Java 13+ Text Blocks for Plain SQL… | 2020-03-05 | jooq-api | plain-sql-templating.md | added | Text blocks for multi-line plain SQL; combining text blocks with {0} template placeholders | | 813fd5c |
