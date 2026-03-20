@@ -128,6 +128,31 @@ If you need DISTINCT, it often means a missing join condition or a flawed query.
 
 ---
 
+## Pattern: DISTINCT is not a function — parentheses don't limit its scope
+**Source**: [SQL DISTINCT is not a function](https://blog.jooq.org/sql-distinct-is-not-a-function) (2020-03-02)
+
+A common misconception: `SELECT DISTINCT (col1), col2` looks like DISTINCT applies only to `col1`, but the parentheses are purely cosmetic. DISTINCT is a keyword that always applies to the **entire result set** — it deduplicates all columns combined. Both of these are identical:
+
+```sql
+SELECT DISTINCT (emp_id), fname, name FROM emp;
+SELECT DISTINCT  emp_id,  fname, name FROM emp;
+```
+
+jOOQ's `selectDistinct()` enforces this correctly — no API exists to apply DISTINCT to a subset of columns (because SQL doesn't support it).
+
+**PostgreSQL exception**: `DISTINCT ON (col)` is a vendor extension that keeps one row per distinct value of specific columns (requires `ORDER BY` to be deterministic):
+
+```kotlin
+// PostgreSQL only — keep one row per id, ordered by fname
+dsl.selectDistinctOn(listOf(EMP.ID))
+    .select(EMP.ID, EMP.FNAME, EMP.NAME)
+    .from(EMP)
+    .orderBy(EMP.ID, EMP.FNAME, EMP.NAME)
+    .fetch()
+```
+
+---
+
 ## Pattern: Avoid NATURAL JOIN and JOIN USING
 **Source**: [jOOQ Official Docs — Don't do this](https://www.jooq.org/doc/3.20/manual/reference/dont-do-this/) (docs)
 

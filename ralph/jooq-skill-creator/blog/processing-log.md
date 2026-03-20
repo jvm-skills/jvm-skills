@@ -183,3 +183,13 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 107 | Using Java 13+ Text Blocks for Plain SQL… | 2020-03-05 | jooq-api | plain-sql-templating.md | added | Text blocks for multi-line plain SQL; combining text blocks with {0} template placeholders | | 813fd5c |
 | 108 | Never Concatenate Strings With jOOQ     | 2020-03-04 | jooq-api       | plain-sql-templating.md | merged  | Custom DSL wrapper pattern encapsulating plain SQL templates; supersedes string concatenation anti-pattern | | 6df4b5b |
 | 109 | 5 Ways to Better Understand SQL by Addi… | 2020-03-03 | sql-pattern    | set-operations.md | added   | INTERSECT precedence over UNION/EXCEPT; multi-column row() IN predicates | | df47faf |
+
+| 110 | SQL DISTINCT is not a function                   | 2020-03-02 | sql-pattern    | anti-patterns.md | merged  | DISTINCT applies to full projection; parentheses are cosmetic; DISTINCT ON for PostgreSQL | | 6486b7b |
+
+---
+**Run summary** (2026-03-20 23:33):
+- Iterations this run: 20
+- Duration: 40m 2437s total
+- Articles processed so far: 108 / 716
+- Topic files: 28
+- Open uncertainties: 1
