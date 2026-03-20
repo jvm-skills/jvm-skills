@@ -198,3 +198,4 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 113 | Stop Mapping Stuff in Your Middleware. Use SQ... | 2019-11-13 | jooq-api | anti-patterns.md | added | Architectural anti-pattern: don't map rows→objects→JSON when SQL can produce JSON directly | | 4c9ba5b |
 | 114 | A Guide to SQL Naming Conventions             | 2019-10-29 | sql-pattern    | naming-conventions.md | added | New topic file; deterministic aliasing algorithm, semantic type prefixes, singular/plural | | | 1cd4073 |
 | 115 | Dogfooding in Product Development            | 2019-10-25 | skip           | -          | skipped | jOOQ internal development process opinion piece                      | | 8138a41 |
+| 116 | A Quick Trick to Make a Java Stream Constructi… | 2019-09-30 | skip           | -          | skipped | Java Stream API article; no SQL/jOOQ content                         | | db1a9b0 |
