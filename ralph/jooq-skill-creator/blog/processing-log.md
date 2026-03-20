@@ -213,3 +213,4 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 128 | The Difference Between SQL's JOIN .. ON Cl… | 2019-04-09 | sql-pattern    | join-patterns.md | added   | New topic: ON vs WHERE predicate placement in outer joins | | aaba705 |
 | 129 | The Cost of Useless Surrogate Keys in Relati… | 2019-03-26 | sql-pattern    | anti-patterns.md | merged  | Enriched doc-seeded stub with clustered-index perf impact (~50% slower on InnoDB/SQL Server) and dialect comparison | | c67058e |
 | 130 | Calculating Weighted Averages When Joining… | 2019-03-15 | sql-pattern    | aggregate-functions.md | added   | join-multiplication distortion; weighted avg fix and pre-aggregate alternative | | 1e650d2 |
+| 131 | How to Statically Override the Default Sett… | 2019-03-14 | jooq-api       | spring-boot-config.md | merged  | Static jooq-settings.xml classpath override; RenderNameStyle superseded by RenderQuotedNames (3.12+) | | a458273 |

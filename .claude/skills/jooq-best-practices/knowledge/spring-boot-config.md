@@ -62,3 +62,22 @@ This is safe to enable when using jOOQ's DSL (no SQL injection risk), but keep i
 Commercial distributions must be hosted in your own Artifactory/Nexus after downloading from the jOOQ website — they are not on Maven Central.
 
 ---
+
+## Pattern: Static classpath-based Settings override
+**Source**: [How to Statically Override the Default Settings in jOOQ](https://blog.jooq.org/how-to-statically-override-the-default-settings-in-jooq) (2019-03-14)
+
+Override jOOQ `Settings` without code by placing a `jooq-settings.xml` file on the classpath at `/jooq-settings.xml`, or point to a custom path via the system property `-Dorg.jooq.settings`.
+
+```xml
+<!-- /jooq-settings.xml on classpath -->
+<settings xmlns="http://www.jooq.org/xsd/jooq-runtime-3.11.0.xsd">
+  <renderNameStyle>AS_IS</renderNameStyle>
+  <renderSchema>false</renderSchema>
+</settings>
+```
+
+Useful for environment-specific config (e.g. suppress schema qualification, change identifier quoting) without changing application code.
+
+> **Supersedes**: `RenderNameStyle.AS_IS` from this article — use `withRenderQuotedNames(RenderQuotedNames.EXPLICIT_DEFAULT_UNQUOTED)` in jOOQ 3.12+ (see [DefaultConfigurationCustomizer pattern](https://blog.jooq.org/how-to-customise-a-jooq-configuration-that-is-injected-using-spring-boot))
+
+---
