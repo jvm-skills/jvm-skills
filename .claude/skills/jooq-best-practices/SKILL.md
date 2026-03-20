@@ -20,7 +20,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [multiset.md](knowledge/multiset.md) — Nested collections with MULTISET, JSON emulation
 - [fetching-mapping.md](knowledge/fetching-mapping.md) — RecordMapper, fetchMap, fetchGroups, collect() with JDK Collectors, ad-hoc converters, dot-notation alias for nested class mapping, fetchSize() for JDBC fetch size
 - [array-operations.md](knowledge/array-operations.md) — Array lambda functions (filter, map, match) with PostgreSQL emulation
-- [merge-upsert.md](knowledge/merge-upsert.md) — SQL MERGE as RIGHT JOIN mental model, full sync with FULL JOIN in USING clause, AND conditions in WHEN clauses, Oracle/SQL Server dialect variants
+- [merge-upsert.md](knowledge/merge-upsert.md) — SQL MERGE as RIGHT JOIN mental model, full sync with FULL JOIN in USING clause, AND conditions in WHEN clauses, Oracle/SQL Server dialect variants, ORA-38104 workarounds
 - [implicit-joins.md](knowledge/implicit-joins.md) — Implicit/explicit path joins, join elimination, path correlation, to-many joins, ON-clause paths, synthetic FKs
 - [code-generator.md](knowledge/code-generator.md) — Code generator configuration: visibility modifiers, custom strategies, TVP wrappers, version compatibility, forced types (incl. MySQL TINYINT(1)→Boolean), embedded types, schema mapping, Testcontainers code generation, LiquibaseDatabase, Meta.migrateTo() schema diffing
 - [hierarchical-queries.md](knowledge/hierarchical-queries.md) — Records.intoHierarchy() collector, recursive CTEs for tree structures

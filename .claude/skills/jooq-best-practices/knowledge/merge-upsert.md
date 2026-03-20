@@ -70,6 +70,39 @@ WHEN MATCHED THEN UPDATE SET
 
 ---
 
+## Pattern: Oracle ORA-38104 — Updating ON Clause Columns
+**Source**: [How to Work Around ORA-38104](https://blog.jooq.org/how-to-work-around-ora-38104-columns-referenced-in-the-on-clause-cannot-be-updated) (2019-01-02)
+**Dialect**: Oracle
+
+Oracle forbids updating columns referenced in the MERGE ON clause (`ORA-38104`). Workarounds (prefer #1 or #2 for production; avoid #3):
+
+**1. Row value expression** — wrap in a row tuple with a dummy literal (preserves index usage):
+```sql
+ON (t.id = s.id OR (t.user_name, 'dummy') = (s.user_name, 'dummy'))
+WHEN MATCHED THEN UPDATE SET t.user_name = s.user_name
+```
+
+**2. NVL() derived table** — alias the column via NVL so the parser doesn't see the link:
+```sql
+MERGE INTO (
+  SELECT id, nvl(user_name, null) n, score FROM person
+) t
+USING source s
+ON (t.id = s.id OR t.n = s.user_name)
+WHEN MATCHED THEN UPDATE SET t.user_name = s.user_name
+```
+
+**3. WHERE clause** (changes semantics, fewer indexes used):
+```sql
+ON (t.id = s.id)
+WHEN MATCHED THEN UPDATE SET t.user_name = s.user_name
+WHERE t.user_name = s.user_name
+```
+
+> These exploit Oracle parser limitations; reserve for one-off migrations, not steady-state production code, as Oracle may close these loopholes.
+
+---
+
 ## Pattern: Oracle MERGE — WHERE Instead of AND, Combined UPDATE+DELETE
 **Source**: [The Many Flavours of the Arcane SQL MERGE Statement](https://blog.jooq.org/the-many-flavours-of-the-arcane-sql-merge-statement) (2020-04-10)
 **Dialect**: Oracle
