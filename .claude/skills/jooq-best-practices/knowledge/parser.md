@@ -66,6 +66,15 @@ configuration.derive(ParseListener.onParseCondition(ctx -> {
 
 ---
 
+## Pattern: jOOQ SQL Translation Tool for static SQL
+**Source**: [Translating Stored Procedures Between Dialects](https://blog.jooq.org/translating-stored-procedures-between-dialects) (2021-02-10)
+
+For one-off or static SQL/procedural translation between dialects, use the online tool at **https://www.jooq.org/translate/** instead of the programmatic parsing API. Useful for migrating legacy stored procedures or ad-hoc dialect conversion without writing Java code.
+
+The standalone CLI/parser can also be integrated with legacy JDBC applications for batch SQL migration.
+
+---
+
 ## Pattern: IN list padding to reduce execution plan cache contention
 **Source**: [Use IN List Padding to Your JDBC Application to Avoid Cursor Cache Contention Problems](https://blog.jooq.org/use-in-list-padding-to-your-jdbc-application-to-avoid-cursor-cache-contention-problems) (2021-04-22)
 **Dialect**: Oracle, SQL Server (most critical; helps any DB with query plan caching)

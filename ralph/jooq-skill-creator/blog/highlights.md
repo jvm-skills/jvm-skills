@@ -46,3 +46,4 @@ New topic file `sql-json.md` created. The article is a sobering inventory of SQL
 
 ## New topic file: pagination.md (article #90, 2026-03-20)
 Article "Calculating Pagination Metadata Without Extra Roundtrips in SQL" (2021-03-11) introduced a new topic. The pattern embeds total-row count, page number, actual page size, and last-page flag directly into the paginated result set using `COUNT(*) OVER()` in nested derived tables — eliminating the classic second `SELECT COUNT(*)` roundtrip.
+- **#92**: Uncertainty logged — older article (2021-02-10) uses `var()` for block variable declaration while newer article (2021-08-25) uses `variable()`. Likely an API rename; current entries prefer `variable()` as the newer convention.

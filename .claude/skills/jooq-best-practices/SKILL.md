@@ -28,7 +28,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [aggregate-functions.md](knowledge/aggregate-functions.md) — FILTER vs CASE in aggregates, functional dependencies in GROUP BY, table-level grouping
 - [logging.md](knowledge/logging.md) — LoggingConnection for SQL logging, DiagnosticsConnection for N+1 detection, ExecuteListener/CallbackExecuteListener for lifecycle hooks, DefaultConnection as JDBC proxy
 - [native-sql-strategy.md](knowledge/native-sql-strategy.md) — When to use jOOQ DSL vs views/functions for complex static SQL
-- [stored-procedures.md](knowledge/stored-procedures.md) — Calling procedures with default/named parameters; vendor-agnostic anonymous blocks and procedural logic
+- [stored-procedures.md](knowledge/stored-procedures.md) — Calling procedures with default/named parameters; vendor-agnostic anonymous blocks, while_/for_ loops, and cross-dialect procedural logic
 - [type-system.md](knowledge/type-system.md) — jOOQ type hierarchy: DSLContext vs DSL, Result vs Cursor, Converter vs Binding, AlwaysInlineBinding for skewed enums, Condition as Field<Boolean>
 - [dml-returning.md](knowledge/dml-returning.md) — RETURNING data from INSERT/UPDATE/DELETE across dialects, data change delta tables
 - [computed-columns.md](knowledge/computed-columns.md) — Virtual client-side computed columns as reusable expressions, context-aware projections
@@ -36,7 +36,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [sequences.md](knowledge/sequences.md) — Fetching single/batch sequence values across dialects
 - [qom-traverser.md](knowledge/qom-traverser.md) — Query Object Model inspection, expression tree traversal, SQL transformation with $replace()
 - [spring-boot-config.md](knowledge/spring-boot-config.md) — DefaultConfigurationCustomizer for Spring Boot jOOQ config; MySQL allowMultiQueries flag
-- [parser.md](knowledge/parser.md) — Parser ignore comments, parsing connection for dialect translation and IN list padding
+- [parser.md](knowledge/parser.md) — Parser ignore comments, parsing connection for dialect translation, IN list padding, online SQL translation tool
 - [result-formatting.md](knowledge/result-formatting.md) — ASCII chart output, formatChart() for console visualization
 - [sql-json.md](knowledge/sql-json.md) — SQL/JSON dialect pitfalls: MySQL type degradation, Oracle CLOB, GROUP_CONCAT truncation, NULL semantics
 - [r2dbc-reactive.md](knowledge/r2dbc-reactive.md) — R2DBC setup, reactive query execution with Flux/Mono, automatic connection lifecycle management

@@ -75,3 +75,22 @@ ctx.begin(call(unquotedName("p"))).execute();
 **Use cases**: multi-vendor product deployments, runtime-generated procedural logic, environments with limited DDL privileges.
 
 ---
+
+## Pattern: FOR loop in anonymous blocks
+**Source**: [Translating Stored Procedures Between Dialects](https://blog.jooq.org/translating-stored-procedures-between-dialects) (2021-02-10)
+**Since**: jOOQ 3.12
+
+Use `for_().in(start, end).loop()` for integer range iteration in anonymous blocks. jOOQ emits a native `FOR` loop on dialects that support it (Oracle, PostgreSQL) and emulates it with a `WHILE` loop elsewhere (Db2, MySQL):
+
+```java
+Variable<Integer> i = variable(unquotedName("i"), INTEGER);
+ctx.begin(
+    for_(i).in(1, 10).loop(
+        insertInto(T).columns(T.COL).values(i)
+    )
+).execute();
+```
+
+Produces native `FOR I IN 1..10 LOOP` on PostgreSQL/Oracle; emulated `WHILE` with manual increment on Db2/MySQL.
+
+---
