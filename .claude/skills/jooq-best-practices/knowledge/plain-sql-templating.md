@@ -95,6 +95,27 @@ Use text blocks for **static or near-static** vendor-specific SQL that's awkward
 
 ---
 
+## Pattern: Wrap plain SQL templates in custom DSL helpers
+**Source**: [Never Concatenate Strings With jOOQ](https://blog.jooq.org/never-concatenate-strings-with-jooq) (2020-03-04)
+
+When you repeatedly use vendor-specific plain SQL, hide the template behind a typed helper function. This keeps `@PlainSQL` usage contained and gives callers a type-safe API.
+
+```kotlin
+// INSTEAD of repeating the template everywhere:
+field("cool_function(1, {0}, 3)", MY_TABLE.MY_COLUMN)
+
+// Encapsulate in a helper:
+fun coolFunction(f: Field<*>): Field<String> =
+    DSL.field("cool_function(1, {0}, 3)", String::class.java, f)
+
+// Caller is now fully type-safe:
+coolFunction(MY_TABLE.MY_COLUMN)
+```
+
+> **Supersedes**: Raw string concatenation like `field("cool_function(1, " + MY_TABLE.MY_COLUMN + ", 3)")` which calls `toString()` without dialect awareness and opens SQL injection vectors.
+
+---
+
 ## Pattern: keyword() for consistent keyword rendering
 **Source**: [What's a "String" in the jOOQ API?](https://blog.jooq.org/whats-a-string-in-the-jooq-api) (2020-04-03)
 
