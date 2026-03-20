@@ -113,6 +113,28 @@ Apply via forced types in the code generator so every use of that column automat
 
 ---
 
+## Pattern: BINARY_DOUBLE for Oracle analytical computations
+**Source**: [Oracle's BINARY_DOUBLE Can Be Much Faster Than NUMBER](https://blog.jooq.org/oracles-binary_double-can-be-much-faster-than-number) (2019-09-11)
+**Dialect**: Oracle
+
+Oracle's `NUMBER` type uses arbitrary-precision arithmetic (like `BigDecimal`), making it very slow for mathematical computations (logarithms, exponentials, trigonometry). `BINARY_DOUBLE` (IEEE 754) can be **100x+ faster** for analytical workloads.
+
+Use jOOQ's `.cast()` for on-the-fly conversion without schema changes — only ~3x slower than native `BINARY_DOUBLE`, far better than uncast `NUMBER`:
+
+```kotlin
+// Cast to BINARY_DOUBLE inline — good compromise without schema changes
+dsl.select(DSL.sum(DSL.ln(MEASUREMENTS.VALUE.cast(SQLDataType.DOUBLE))))
+   .from(MEASUREMENTS)
+   .fetch()
+```
+
+Rules:
+- **Keep `NUMBER`** for monetary/transactional data (requires exact decimal precision)
+- **Use `BINARY_DOUBLE` storage** for columns used only in analytics/scientific calculations
+- **Use inline `CAST`** when you can't migrate the schema but need computation speed
+
+---
+
 ## Pattern: Condition extends Field<Boolean> — use conditions as fields
 **Source**: [A Condition is a Field](https://blog.jooq.org/a-condition-is-a-field) (2022-08-24)
 **Since**: jOOQ 3.17
