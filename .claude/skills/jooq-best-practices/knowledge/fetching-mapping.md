@@ -34,6 +34,7 @@ val booksByAuthor: Map<Long, List<BookRecord>> = dsl.selectFrom(BOOK).fetchGroup
 
 ## Pattern: Ad-hoc converters for field-level transformation
 **Source**: [jOOQ Official Docs — Ad-hoc Converter](https://www.jooq.org/doc/3.20/manual/sql-execution/fetching/) (docs)
+**Since**: jOOQ 3.15
 
 Convert individual fields inline without a global converter.
 
@@ -41,6 +42,36 @@ Convert individual fields inline without a global converter.
 dsl.select(BOOK.TITLE, BOOK.PUBLISHED_IN.convertFrom { Year.of(it) })
     .from(BOOK)
     .fetch()
+```
+
+---
+
+## Pattern: Directional ad-hoc converters — convertFrom / convertTo / convert
+**Source**: [Ad-hoc Data Type Conversion with jOOQ 3.15](https://blog.jooq.org/ad-hoc-data-type-conversion-with-jooq-3-15) (2021-07-20)
+**Since**: jOOQ 3.15
+
+Choose the right direction when you don't need a full code-generation `Converter`:
+
+- **`convertFrom`** — read-only, for SELECT projections
+- **`convertTo`** — write-only, for DML values and WHERE predicates
+- **`convert`** — bidirectional, when the field appears in both directions
+
+Ideal for dynamic schemas where code generation configuration isn't available.
+
+```kotlin
+val height: Field<BigDecimal> = field(name("furniture", "height"), NUMERIC)
+
+// SELECT — transform DB value to domain type
+val result = ctx.select(height.convertFrom(::Dimension)).from(furniture).fetch()
+
+// INSERT — convert domain type back to DB type
+ctx.insertInto(furniture)
+    .columns(height.convertTo(Dimension::value))
+    .values(Dimension(BigDecimal.ONE))
+    .execute()
+
+// Bidirectional — field used in both SELECT and WHERE
+val dimField = height.convert(Dimension.class, ::Dimension, Dimension::value)
 ```
 
 ---
