@@ -65,3 +65,28 @@ configuration.derive(ParseListener.onParseCondition(ctx -> {
 **Use cases**: JPA `createNativeQuery()`, Hibernate `@Formula`, Spring Data `@Query(nativeQuery = true)` — all get dialect translation without changing application code.
 
 ---
+
+## Pattern: IN list padding to reduce execution plan cache contention
+**Source**: [Use IN List Padding to Your JDBC Application to Avoid Cursor Cache Contention Problems](https://blog.jooq.org/use-in-list-padding-to-your-jdbc-application-to-avoid-cursor-cache-contention-problems) (2021-04-22)
+**Dialect**: Oracle, SQL Server (most critical; helps any DB with query plan caching)
+
+When an application generates IN list queries with varying parameter counts, each distinct count produces a separate cache entry. Under high load this causes **cursor cache contention** and can saturate execution plan caches.
+
+**Solution**: pad IN lists to the nearest power of 2, repeating the last value. Reduces distinct query shapes from N to log₂(N).
+
+**Enable globally in jOOQ DSL**:
+```java
+DSLContext ctx = DSL.using(connection, dialect, new Settings().withInListPadding(true));
+```
+
+**Retrofit existing JDBC code** using `parsingConnection()` — no application changes needed:
+```java
+DSLContext ctx = DSL.using(connection, dialect);
+ctx.settings().setInListPadding(true);
+Connection paddedConnection = ctx.parsingConnection();
+// hand paddedConnection to legacy JDBC code — padding applied transparently
+```
+
+> **Note**: Padding is a workaround. Prefer array types or temporary tables when the database supports them — they avoid the variable-length bind parameter problem entirely.
+
+---

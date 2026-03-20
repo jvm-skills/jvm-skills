@@ -162,3 +162,5 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 85 | How to Prevent Execution Plan Troubles whe… | 2021-06-04 | jooq-api       | type-system.md | added  | AlwaysInlineBinding pattern: inline skewed enum values to avoid bind peeking / bad execution plans | | dea261f |
 | 86 | Use ResultQuery.collect() to Implement Pow… | 2021-05-17 | jooq-api       | fetching-mapping.md | added  | collect() + Collectors.mapping() for direct bean projection; left-join null-children pattern superseded by MULTISET | | af1de8f |
 | 87 | How to Get an RDBMS Server Version with SQL | 2021-05-12 | skip           | -          | skipped | Narrow reference cheat-sheet for querying DB version metadata; no actionable DSL or SQL patterns | | ed7ee9f |
+| 88 | Use IN List Padding to Avoid Cursor Cache Con… | 2021-04-22 | jooq-api       | parser.md | added  | IN list padding via Settings.withInListPadding(true); parsingConnection() for transparent JDBC retrofit | |
+| 89 | Never Again Forget to Call .execute() in j… | 2021-03-30 | jooq-api       | anti-patterns.md | added  | @CheckReturnValue annotation; IDE warning for missing .execute() on DML/DDL | | 5b573db |

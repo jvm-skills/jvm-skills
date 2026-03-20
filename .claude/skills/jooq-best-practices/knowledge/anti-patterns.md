@@ -231,6 +231,28 @@ dsl.select(FILM.TITLE, multiset(...))
 
 ---
 
+## Pattern: Never forget to call .execute() on DML/DDL
+**Source**: [Never Again Forget to Call .execute() in jOOQ](https://blog.jooq.org/never-again-forget-to-call-execute-in-jooq) (2021-03-30)
+
+jOOQ's fluent DSL makes it easy to build a complete DML/DDL statement without actually running it. The statement is only sent to the DB when you call the terminal method.
+
+```kotlin
+// BAD — builds the query but never executes it (silent no-op)
+ctx.insertInto(T)
+   .columns(T.A, T.B)
+   .values(1, 2)
+
+// GOOD — .execute() actually runs the statement
+ctx.insertInto(T)
+   .columns(T.A, T.B)
+   .values(1, 2)
+   .execute()
+```
+
+jOOQ annotates all relevant API methods with `@CheckReturnValue` (JSR-305 style). Enable IntelliJ IDEA's **"Result of method call ignored"** inspection to get IDE warnings whenever you forget the terminal method.
+
+---
+
 ## Pattern: Don't use H2 compatibility modes with jOOQ
 **Source**: [Using H2 as a Test Database Product with jOOQ](https://blog.jooq.org/using-h2-as-a-test-database-product) (2022-08-19)
 
