@@ -221,3 +221,4 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 136 | How to Work Around ORA-38104: Columns refere… | 2019-01-02 | sql-pattern    | merge-upsert.md | added   | Oracle ORA-38104 workarounds: row value expr, NVL derived table, WHERE clause | | a747294 |
 | 137 | How to Unit Test Your Annotation Processor… | 2018-12-07 | skip           | -          | skipped | About jOOR reflection library for annotation processor testing; not jOOQ SQL | | 75b3d79 |
 | 138 | How to Create a Good MCVE (Minimal Comple… | 2018-11-22 | skip           | -          | skipped | Bug reporting process guide; not jOOQ API or SQL patterns | | 2a98486 |
+| 139 | How to Aggregate an Archive Log's Deltas… | 2018-11-16 | sql-pattern    | temporal-tables.md (new) | added   | New topic: delta-to-snapshot via ROW_NUMBER; SQL:2011 temporal table alternatives | | 20cf8e5 |

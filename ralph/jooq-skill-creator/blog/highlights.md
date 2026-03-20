@@ -68,3 +68,7 @@ First entry in `join-patterns.md` — a foundational SQL correctness rule: predi
 ## Iteration 129 — Doc-seeded entry enriched by blog post
 **Article**: [The Cost of Useless Surrogate Keys in Relationship Tables](https://blog.jooq.org/the-cost-of-useless-surrogate-keys-in-relationship-tables) (2019-03-26)
 The `anti-patterns.md` entry *"Don't add unnecessary surrogate keys"* was seeded from the official docs as a one-liner. This article added the critical context: relationship/junction tables specifically, benchmarked ~50% slower on clustered-index databases (MySQL InnoDB, SQL Server), and the dialect nuance (PostgreSQL/Oracle heap tables are unaffected).
+
+## Iteration 139 — New topic file: temporal-tables.md
+**Article**: [How to Aggregate an Archive Log's Deltas into a Snapshot with SQL](https://blog.jooq.org/how-to-aggregate-an-archive-logs-deltas-into-a-snapshot-with-sql) (2018-11-16)
+First article covering historical data / temporal patterns — created `temporal-tables.md`. The delta-to-snapshot pattern using `ROW_NUMBER OVER (PARTITION BY attribute ORDER BY ts DESC)` is a classic archive log technique applicable across all RDBMS. Also documents SQL:2011 native temporal table support (SQL Server 2016+, Oracle Flashback, MariaDB 10.3.4+) as modern alternatives.

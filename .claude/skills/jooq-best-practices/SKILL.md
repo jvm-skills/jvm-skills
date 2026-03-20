@@ -46,6 +46,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [dynamic-sql.md](knowledge/dynamic-sql.md) — noCondition/trueCondition/falseCondition for optional predicates, conditional SELECT fields, conditional JOINs, conditional UNION branches
 - [naming-conventions.md](knowledge/naming-conventions.md) — Table aliasing algorithm, semantic type prefixes, singular/plural consistency
 - [window-functions.md](knowledge/window-functions.md) — DISTINCT ON emulation with FIRST_VALUE; LAST_VALUE IGNORE NULLS for gap-filling; cumulative percentage with nested SUM aggregates
+- [temporal-tables.md](knowledge/temporal-tables.md) — Delta-to-snapshot reconstruction with ROW_NUMBER; SQL:2011 temporal tables (SQL Server, Oracle, MariaDB)
 - [predicates.md](knowledge/predicates.md) — Quantified LIKE ANY / LIKE ALL predicates replacing verbose OR chains
 - [join-patterns.md](knowledge/join-patterns.md) — ON clause vs WHERE clause semantics in outer joins; predicate placement rules
 
