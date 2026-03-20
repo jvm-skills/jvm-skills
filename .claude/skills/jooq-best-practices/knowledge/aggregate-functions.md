@@ -48,3 +48,36 @@ ctx.select(AUTHOR.ID, AUTHOR.NAME, count(BOOK.ID))
 **Dialect note**: Functional dependency recognition supported in CockroachDB, H2, HSQLDB, MariaDB, MySQL, PostgreSQL, SQLite, YugabyteDB. Other dialects (Db2, Oracle, SQL Server, Firebird) require all projected columns in GROUP BY explicitly — jOOQ handles this transparently when using table-level grouping.
 
 ---
+
+## Pattern: Simulate REDUCE aggregation via recursive CTE
+**Source**: [Implementing a generic REDUCE aggregate function with SQL](https://blog.jooq.org/implementing-a-generic-reduce-aggregate-function-with-sql) (2021-02-08)
+**Dialect**: PostgreSQL (uses `ARRAY_AGG`, `UNNEST ... WITH ORDINALITY`)
+
+SQL has no built-in REDUCE/fold aggregate (like Java's `Stream.reduce()`). Emulate it with `ARRAY_AGG` to preserve ordered values, `UNNEST ... WITH ORDINALITY` to generate stable row indexes, then a recursive CTE to fold left across the indexed elements.
+
+```sql
+-- Multiply all values in a group: equivalent to Stream.reduce((i, j) -> i * j)
+WITH t(grp, i) AS (VALUES ('A', 2), ('A', 4), ('A', 3))
+SELECT grp, (
+    WITH u AS (
+        SELECT i, o FROM UNNEST(ARRAY_AGG(t.i)) WITH ORDINALITY AS u(i, o)
+    ),
+    RECURSIVE r(i, o) AS (
+        SELECT i, o FROM u WHERE o = 1
+        UNION ALL
+        SELECT r.i * u.i, u.o FROM u JOIN r ON u.o = r.o + 1
+    )
+    SELECT i FROM r ORDER BY o DESC LIMIT 1
+)
+FROM t
+GROUP BY grp;
+```
+
+Key building blocks:
+- `ARRAY_AGG(col)` — collects group values into an array
+- `UNNEST(...) WITH ORDINALITY AS u(val, pos)` — expands array to rows with 1-based index; avoids window functions for ordering
+- Recursive CTE with `UNION ALL` — applies the binary operation step-by-step, seeding from `pos = 1`
+
+Wrap in a correlated subquery in `FROM` to allow `GROUP BY` in the outer query and return per-group results.
+
+---

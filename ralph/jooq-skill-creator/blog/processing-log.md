@@ -167,3 +167,4 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 90 | Calculating Pagination Metadata Without Ex… | 2021-03-11 | jooq-api       | pagination.md (new) | added  | Single-query pagination metadata via COUNT(*) OVER() in nested derived tables; no extra COUNT roundtrip | | 833818b |
 | 91 | Simulating Latency with SQL / JDBC | 2021-02-15 | jooq-api | logging.md | added | CallbackExecuteListener for uniform latency hooks; DefaultConnection/DefaultPreparedStatement as JDBC proxies | | 88e26ac |
 | 92 | Translating Stored Procedures Between Dial… | 2021-02-10 | jooq-api       | stored-procedures.md, parser.md | added  | for_().in() loop pattern; SQL translation tool reference; logged uncertainty on var() vs variable() | | 638a0d3 |
+| 93 | Implementing a generic REDUCE aggregate fun… | 2021-02-08 | sql-pattern    | aggregate-functions.md | added  | Simulating REDUCE/fold via recursive CTE + ARRAY_AGG + WITH ORDINALITY (PostgreSQL-specific) | | 24e2968 |
