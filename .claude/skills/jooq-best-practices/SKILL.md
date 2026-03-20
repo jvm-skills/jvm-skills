@@ -44,6 +44,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [set-operations.md](knowledge/set-operations.md) — Table diff with EXCEPT/UNION vs FULL JOIN USING; NULL-safe comparison with IS NOT DISTINCT FROM; row value expression NULL semantics; INTERSECT precedence over UNION/EXCEPT; multi-column row() IN predicates
 - [plain-sql-templating.md](knowledge/plain-sql-templating.md) — val() vs inline() (bind vs literal), plain SQL field/table/condition templates with SQL injection safety, name() for identifiers, keyword() for consistent rendering, text blocks for multi-line plain SQL, custom DSL wrapper helpers to encapsulate plain SQL templates
 - [dynamic-sql.md](knowledge/dynamic-sql.md) — noCondition/trueCondition/falseCondition for optional predicates, conditional SELECT fields, conditional JOINs, conditional UNION branches
+- [naming-conventions.md](knowledge/naming-conventions.md) — Table aliasing algorithm, semantic type prefixes, singular/plural consistency
 
 ## Core rules (always apply)
 

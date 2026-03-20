@@ -190,9 +190,10 @@ Auto-appended by each iteration. Captures data for the blog post.
 **Run summary** (2026-03-20 23:33):
 - Iterations this run: 20
 - Duration: 40m 2437s total
-- Articles processed so far: 108 / 716
-- Topic files: 28
+- Articles processed so far: 109 / 716
+- Topic files: 29
 - Open uncertainties: 1
 | 5 | Use the jOOQ-Refaster Module for Automatic Migr… | 2020-02-25 | jooq-api       | fetching-mapping.md | merged  | Refaster module removed in 3.15; extracted fetchSize() pattern; fetchExists already covered | | e33bae7 |
 | 111 | jOOQ 3.13 Released with More API and Tooling fo… | 2020-02-14 | jooq-api | code-generator.md | added | LiquibaseDatabase for offline code gen; Meta.migrateTo() for programmatic schema diffing | | 80962a3 |
 | 113 | Stop Mapping Stuff in Your Middleware. Use SQ... | 2019-11-13 | jooq-api | anti-patterns.md | added | Architectural anti-pattern: don't map rows→objects→JSON when SQL can produce JSON directly | | 4c9ba5b |
+| 114 | A Guide to SQL Naming Conventions             | 2019-10-29 | sql-pattern    | naming-conventions.md | added | New topic file; deterministic aliasing algorithm, semantic type prefixes, singular/plural | | | 1cd4073 |
