@@ -49,6 +49,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [temporal-tables.md](knowledge/temporal-tables.md) — Delta-to-snapshot reconstruction with ROW_NUMBER; SQL:2011 temporal tables (SQL Server, Oracle, MariaDB)
 - [predicates.md](knowledge/predicates.md) — Quantified LIKE ANY / LIKE ALL predicates replacing verbose OR chains
 - [join-patterns.md](knowledge/join-patterns.md) — ON clause vs WHERE clause semantics in outer joins; predicate placement rules
+- [updatable-record.md](knowledge/updatable-record.md) — UpdatableRecord CRUD: changed() delta tracking, DB DEFAULT support, avoid POJO round-trips
 
 ## Core rules (always apply)
 

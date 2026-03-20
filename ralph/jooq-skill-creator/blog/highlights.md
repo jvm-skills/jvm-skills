@@ -72,3 +72,7 @@ The `anti-patterns.md` entry *"Don't add unnecessary surrogate keys"* was seeded
 ## Iteration 139 — New topic file: temporal-tables.md
 **Article**: [How to Aggregate an Archive Log's Deltas into a Snapshot with SQL](https://blog.jooq.org/how-to-aggregate-an-archive-logs-deltas-into-a-snapshot-with-sql) (2018-11-16)
 First article covering historical data / temporal patterns — created `temporal-tables.md`. The delta-to-snapshot pattern using `ROW_NUMBER OVER (PARTITION BY attribute ORDER BY ts DESC)` is a classic archive log technique applicable across all RDBMS. Also documents SQL:2011 native temporal table support (SQL Server 2016+, Oracle Flashback, MariaDB 10.3.4+) as modern alternatives.
+
+## Iteration 140 — New topic: updatable-record.md
+**Article**: [How to Use jOOQ's UpdatableRecord for CRUD to Apply a Delta](https://blog.jooq.org/how-to-use-jooqs-updatablerecord-for-crud-to-apply-a-delta) (2018-11-05)
+First coverage of jOOQ's UpdatableRecord API. Key insight: the `changed()` flag distinction between explicit NULL and undefined/absent values is lost when routing through POJOs — a subtle footgun for partial update APIs (e.g., JSON PATCH semantics).
