@@ -159,3 +159,4 @@ Auto-appended by each iteration. Captures data for the blog post.
 - Topic files: 24
 - Open uncertainties: 0
 0
+| 85 | How to Prevent Execution Plan Troubles whe… | 2021-06-04 | jooq-api       | type-system.md | added  | AlwaysInlineBinding pattern: inline skewed enum values to avoid bind peeking / bad execution plans | | dea261f |

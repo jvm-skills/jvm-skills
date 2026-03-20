@@ -84,6 +84,35 @@ dsl.selectFrom(ORDERS)
 
 ---
 
+## Pattern: AlwaysInlineBinding for skewed enum columns
+**Source**: [How to Prevent Execution Plan Troubles when Querying Skewed Data, with jOOQ](https://blog.jooq.org/how-to-prevent-execution-plan-troubles-when-querying-skewed-data-with-jooq) (2021-06-04)
+
+When a column has **highly skewed data distribution** (e.g., a `ProcessingState` enum with 99% `EXECUTED` and 0.01% `PROCESSING`), bind variables cause bind peeking issues: the optimizer picks a plan based on the first value it sees, producing wrong plans for all other values.
+
+Use a custom `Binding` that always renders the value inline (as a literal) instead of as a `?` placeholder:
+
+```java
+class AlwaysInlineBinding<T> extends DefaultBinding<T, T> {
+    public AlwaysInlineBinding(DataType<T> type) {
+        super(DefaultBinding.binding(type));
+    }
+
+    @Override
+    public void sql(BindingSQLContext<T> ctx) throws SQLException {
+        ctx.render().visit(inline(ctx.value()));
+    }
+
+    @Override
+    public void set(BindingSetStatementContext<T> ctx) throws SQLException {}
+}
+```
+
+Apply via forced types in the code generator so every use of that column automatically inlines. Keeps bind variables as the default everywhere else — only override for enum/status columns where skewness is a known problem.
+
+> **See also**: Forced types pattern in `code-generator.md` for wiring the binding to all matching columns automatically.
+
+---
+
 ## Pattern: Condition extends Field<Boolean> — use conditions as fields
 **Source**: [A Condition is a Field](https://blog.jooq.org/a-condition-is-a-field) (2022-08-24)
 **Since**: jOOQ 3.17
