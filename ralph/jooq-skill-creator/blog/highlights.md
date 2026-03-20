@@ -43,3 +43,6 @@ New topic file `r2dbc-reactive.md` created. The foundational R2DBC setup article
 ## Article 79 — New topic: sql-json.md
 **Article**: [Standard SQL/JSON – The Sobering Parts](https://blog.jooq.org/standard-sql-json-the-sobering-parts) (2021-07-27)
 New topic file `sql-json.md` created. The article is a sobering inventory of SQL/JSON standard implementation failures across all major databases — MySQL type degradation, Oracle RETURNING CLOB verbosity, GROUP_CONCAT truncation, and NULL semantics divergence. Actionable takeaway: always prefer jOOQ's DSL (and MULTISET) over raw SQL/JSON to avoid writing these workarounds manually.
+
+## New topic file: pagination.md (article #90, 2026-03-20)
+Article "Calculating Pagination Metadata Without Extra Roundtrips in SQL" (2021-03-11) introduced a new topic. The pattern embeds total-row count, page number, actual page size, and last-page flag directly into the paginated result set using `COUNT(*) OVER()` in nested derived tables — eliminating the classic second `SELECT COUNT(*)` roundtrip.
