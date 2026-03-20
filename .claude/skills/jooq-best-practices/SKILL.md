@@ -39,6 +39,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [parser.md](knowledge/parser.md) — Parser ignore comments, parsing connection for automatic dialect translation
 - [result-formatting.md](knowledge/result-formatting.md) — ASCII chart output, formatChart() for console visualization
 - [sql-json.md](knowledge/sql-json.md) — SQL/JSON dialect pitfalls: MySQL type degradation, Oracle CLOB, GROUP_CONCAT truncation, NULL semantics
+- [r2dbc-reactive.md](knowledge/r2dbc-reactive.md) — R2DBC setup, reactive query execution with Flux/Mono, automatic connection lifecycle management
 
 ## Core rules (always apply)
 

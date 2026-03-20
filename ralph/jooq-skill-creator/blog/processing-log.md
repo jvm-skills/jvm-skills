@@ -137,6 +137,8 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 79 | Standard SQL/JSON – The Sobering Parts       | 2021-07-27 | jooq-api       | sql-json.md (new) | added  | New topic: dialect pitfalls — MySQL type degradation, Oracle CLOB, GROUP_CONCAT truncation, NULL semantics | | 42d215e |
 | 80 | Ad-hoc Data Type Conversion with jOOQ 3.15  | 2021-07-20 | jooq-api       | fetching-mapping.md | added  | convertFrom/convertTo/convert directional API; enriches existing docs stub | | 0b941fe |
 
+| 81 | Reactive SQL with jOOQ 3.15 and R2DBC        | 2021-07-15 | jooq-api       | r2dbc-reactive.md (new) | added  | New topic: R2DBC ConnectionFactory setup, Flux-based execution, automatic connection lifecycle | | 1f26f17 |
+
 ---
 **Run summary** (2026-02-22 11:57):
 - Iterations this run: 6

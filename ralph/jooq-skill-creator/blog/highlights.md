@@ -36,6 +36,10 @@ Noteworthy events during blog article processing — good anecdotes for the blog
 **Article**: [Formatting ASCII Charts With jOOQ](https://blog.jooq.org/formatting-ascii-charts-with-jooq) (2021-08-19)
 First article covering jOOQ's `formatChart()` utility — a little-known feature for rendering Result objects as ASCII stacked bar charts in console applications, configurable via `ChartFormat` (dimensions, value columns, custom shade chars, 100% stacked mode).
 
+## Article #81 — New topic file: r2dbc-reactive.md
+**Article**: [Reactive SQL with jOOQ 3.15 and R2DBC](https://blog.jooq.org/reactive-sql-with-jooq-3-15-and-r2dbc) (2021-07-15)
+New topic file `r2dbc-reactive.md` created. The foundational R2DBC setup article (jOOQ 3.15) — covers `ConnectionFactory` configuration, `Publisher<R>` query execution wrapped in `Flux`/`Mono`, and automatic connection lifecycle management. Complements the R2DBC transaction patterns already in `transactions.md` (from a newer 2022 article). Note: at publication time (2021), transactions were "pending" — now covered by `transactionPublisher()` since jOOQ 3.17.
+
 ## Article 79 — New topic: sql-json.md
 **Article**: [Standard SQL/JSON – The Sobering Parts](https://blog.jooq.org/standard-sql-json-the-sobering-parts) (2021-07-27)
 New topic file `sql-json.md` created. The article is a sobering inventory of SQL/JSON standard implementation failures across all major databases — MySQL type degradation, Oracle RETURNING CLOB verbosity, GROUP_CONCAT truncation, and NULL semantics divergence. Actionable takeaway: always prefer jOOQ's DSL (and MULTISET) over raw SQL/JSON to avoid writing these workarounds manually.
