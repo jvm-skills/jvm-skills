@@ -208,3 +208,4 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 123 | How to Fetch All Current Identity Values in… | 2019-07-16 | skip           | -          | skipped | Oracle PL/SQL internals (EXECUTE IMMEDIATE, dict views); no actionable jOOQ/SQL patterns | | a875f5d |
 | 124 | How to Use jOOQ's Commercial Distributions wi… | 2019-06-26 | jooq-api       | spring-boot-config.md | added   | Maven exclusion pattern for switching Spring Boot starter to commercial jOOQ editions | | c400cb6 |
 | 125 | How to Write a Simple, yet Extensible API | 2019-06-06 | skip           | -          | skipped | General Java API design opinion piece; no jOOQ-specific or SQL patterns | | ecfdcb9 |
+| 126 | Using IGNORE NULLS With SQL Window Function… | 2019-04-24 | sql-pattern    | window-functions.md | added   | LAST_VALUE IGNORE NULLS for forward-filling gaps in sparse time-series data | | 3b765b5 |

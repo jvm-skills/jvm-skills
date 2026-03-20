@@ -45,7 +45,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [plain-sql-templating.md](knowledge/plain-sql-templating.md) — val() vs inline() (bind vs literal), plain SQL field/table/condition templates with SQL injection safety, name() for identifiers, keyword() for consistent rendering, text blocks for multi-line plain SQL, custom DSL wrapper helpers to encapsulate plain SQL templates
 - [dynamic-sql.md](knowledge/dynamic-sql.md) — noCondition/trueCondition/falseCondition for optional predicates, conditional SELECT fields, conditional JOINs, conditional UNION branches
 - [naming-conventions.md](knowledge/naming-conventions.md) — Table aliasing algorithm, semantic type prefixes, singular/plural consistency
-- [window-functions.md](knowledge/window-functions.md) — DISTINCT ON emulation with FIRST_VALUE for cross-dialect portability
+- [window-functions.md](knowledge/window-functions.md) — DISTINCT ON emulation with FIRST_VALUE; LAST_VALUE IGNORE NULLS for gap-filling
 - [predicates.md](knowledge/predicates.md) — Quantified LIKE ANY / LIKE ALL predicates replacing verbose OR chains
 
 ## Core rules (always apply)

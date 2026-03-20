@@ -33,3 +33,29 @@ Add `DSL.selectDistinct()` on the outer query to collapse duplicate rows produce
 **Note**: jOOQ supports PostgreSQL's `DISTINCT ON` natively via `selectDistinct(...).on(...)` for PostgreSQL targets. Use the `FIRST_VALUE` approach when targeting multiple dialects.
 
 ---
+
+## Pattern: Forward-fill gaps with LAST_VALUE IGNORE NULLS
+**Source**: [Using IGNORE NULLS With SQL Window Functions to Fill Gaps](https://blog.jooq.org/using-ignore-nulls-with-sql-window-functions-to-fill-gaps) (2019-04-24)
+
+To forward-fill missing values in sparse time-series data, generate the full date range and join it with the sparse data, then use `LAST_VALUE(col) IGNORE NULLS` to carry forward the most recent non-null value.
+
+```kotlin
+// Generate date range (PostgreSQL: use generate_series; Oracle: CONNECT BY)
+// Then left-join and use lastValue with ignoreNulls
+
+ctx.select(
+    dates.VALUE_DATE,
+    DSL.lastValue(T.VALUE).ignoreNulls()
+        .over(DSL.orderBy(dates.VALUE_DATE))
+)
+.from(dates)
+.leftJoin(T).on(dates.VALUE_DATE.eq(T.VALUE_DATE))
+.orderBy(dates.VALUE_DATE)
+.fetch()
+```
+
+`IGNORE NULLS` skips null values in the window, so the function returns the last seen non-null value rather than null for gap rows.
+
+**Dialect**: Supported in DB2, H2, Informix, Oracle, Redshift, Sybase SQL Anywhere, Teradata. For PostgreSQL/SQL Server, use recursive CTEs as fallback.
+
+---
