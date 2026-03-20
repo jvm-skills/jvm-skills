@@ -177,3 +177,4 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 100 | Use NATURAL FULL JOIN to compare two tab… | 2020-08-05 | sql-pattern    | set-operations.md (new) | added  | Table diff: EXCEPT/UNION vs FULL JOIN USING; NULL-safe IS NOT DISTINCT FROM; row value NULL semantics | | eb3809e |
 | 101 | Could we Have a Language That Hides Col… | 2020-07-22 | skip           | -          | skipped | Java/APL language opinion piece about array initialisation; no SQL or jOOQ content | | f2eafe1 |
 | 103 | Using SQL Server FOR XML and FOR JSON Syntax on | 2020-05-05 | jooq-api | sql-json.md | added | SQL Server FOR XML/JSON cross-dialect translation, jOOQ 3.14 emits native or standard SQL | | e1ba903 |
+| 104 | The Many Flavours of the Arcane SQL MER… | 2020-04-10 | sql-pattern    | merge-upsert.md | added  | FULL JOIN in USING clause for full sync; AND in WHEN clauses + CASE emulation; Oracle WHERE/DELETE variant | | f295fff |

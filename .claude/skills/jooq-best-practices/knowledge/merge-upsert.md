@@ -27,3 +27,61 @@ WHEN NOT MATCHED BY SOURCE THEN DELETE
 This full-sync pattern replaces DELETE + INSERT or complex upsert logic for staging table scenarios.
 
 ---
+
+## Pattern: Full Sync with FULL JOIN in USING Clause
+**Source**: [The Many Flavours of the Arcane SQL MERGE Statement](https://blog.jooq.org/the-many-flavours-of-the-arcane-sql-merge-statement) (2020-04-10)
+
+Use a FULL JOIN in the USING clause to expose all three row states (insert/update/delete) in a single MERGE, making the full sync pattern fully explicit:
+
+```sql
+MERGE INTO prices AS p
+USING (
+  SELECT COALESCE(p.product_id, s.product_id) AS product_id, s.price
+  FROM prices AS p
+  FULL JOIN staging AS s ON p.product_id = s.product_id
+) AS s
+ON (p.product_id = s.product_id)
+WHEN MATCHED AND s.price IS NULL THEN DELETE
+WHEN MATCHED AND p.price != s.price THEN UPDATE SET
+  price = s.price,
+  price_date = CURRENT_DATE,
+  update_count = update_count + 1
+WHEN NOT MATCHED THEN INSERT (product_id, price, price_date, update_count)
+  VALUES (s.product_id, s.price, CURRENT_DATE, 0)
+```
+
+Each source row matches exactly one WHEN clause (evaluated in order). Structure conditions to be mutually exclusive for correctness.
+
+---
+
+## Pattern: AND Conditions in WHEN Clauses (Dialect Emulation)
+**Source**: [The Many Flavours of the Arcane SQL MERGE Statement](https://blog.jooq.org/the-many-flavours-of-the-arcane-sql-merge-statement) (2020-04-10)
+
+Most dialects support `WHEN MATCHED AND <predicate>` for conditional updates. For databases without AND support, jOOQ emulates with CASE:
+
+```sql
+-- Emulated for dialects without AND support:
+WHEN MATCHED THEN UPDATE SET
+  price = CASE WHEN p.price != s.price THEN s.price ELSE p.price END,
+  update_count = CASE WHEN p.price != s.price THEN update_count + 1 ELSE update_count END
+```
+
+**Dialects with native AND**: Db2, Derby, Firebird, H2, HSQLDB, Oracle, SQL Server, Sybase SQL Anywhere, Teradata, Vertica.
+
+---
+
+## Pattern: Oracle MERGE — WHERE Instead of AND, Combined UPDATE+DELETE
+**Source**: [The Many Flavours of the Arcane SQL MERGE Statement](https://blog.jooq.org/the-many-flavours-of-the-arcane-sql-merge-statement) (2020-04-10)
+**Dialect**: Oracle
+
+Oracle uses `WHERE` instead of `AND` in WHEN clauses and combines UPDATE and DELETE:
+
+```sql
+WHEN MATCHED THEN
+  UPDATE SET price = s.price WHERE p.price != s.price
+  DELETE WHERE s.price IS NULL
+```
+
+The DELETE fires only on rows that were just updated (not on other matched rows). Vertica omits DELETE support entirely.
+
+---
