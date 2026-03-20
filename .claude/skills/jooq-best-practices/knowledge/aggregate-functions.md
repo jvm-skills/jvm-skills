@@ -184,6 +184,46 @@ GROUP BY rating;
 
 ---
 
+## Pattern: Custom user-defined aggregate functions
+**Source**: [Writing Custom Aggregate Functions in SQL Just Like a Java 8 Stream Collector](https://blog.jooq.org/writing-custom-aggregate-functions-in-sql) (2018-10-09)
+
+When standard aggregates (COUNT, SUM, AVG, MIN, MAX) are insufficient, databases let you define custom aggregates — analogous to Java 8 `Stream.Collector` with supplier, accumulator, combiner, and finisher phases.
+
+**PostgreSQL**: Use `CREATE AGGREGATE` with `SFUNC` (accumulator), `STYPE` (state type), and `FINALFUNC` (finisher):
+
+```sql
+-- State type tracking (max, second_max)
+CREATE TYPE second_max_state AS (max NUMERIC, second_max NUMERIC);
+
+CREATE FUNCTION second_max_accumulate(state second_max_state, val NUMERIC)
+RETURNS second_max_state AS $$
+  SELECT CASE
+    WHEN val > state.max THEN ROW(val, state.max)
+    WHEN val > state.second_max THEN ROW(state.max, val)
+    ELSE state
+  END
+$$ LANGUAGE sql;
+
+CREATE AGGREGATE second_max(NUMERIC) (
+    SFUNC    = second_max_accumulate,
+    STYPE    = second_max_state,
+    FINALFUNC = (s) -> s.second_max
+);
+```
+
+**Oracle**: Implement the `ODCIAggregate` interface (`ODCIAggregateInitialize`, `ODCIAggregateIterate`, `ODCIAggregateMerge`, `ODCIAggregateTerminate`). Oracle custom aggregates automatically work as window functions too.
+
+Call via jOOQ using `DSL.aggregate()` or plain SQL templating:
+
+```kotlin
+// Call a custom aggregate via plain SQL
+ctx.select(
+    field("second_max({0})", Int::class.java, FILM.LENGTH)
+).from(FILM).fetch()
+```
+
+---
+
 ## Pattern: Weighted averages to fix join-multiplication distortion
 **Source**: [Calculating Weighted Averages When Joining Tables in SQL](https://blog.jooq.org/calculating-weighted-averages-when-joining-tables-in-sql) (2019-03-15)
 

@@ -224,3 +224,4 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 139 | How to Aggregate an Archive Log's Deltas… | 2018-11-16 | sql-pattern    | temporal-tables.md (new) | added   | New topic: delta-to-snapshot via ROW_NUMBER; SQL:2011 temporal table alternatives | | 20cf8e5 |
 | 140 | How to Use jOOQ's UpdatableRecord for CRU… | 2018-11-05 | jooq-api       | updatable-record.md (new) | added   | New topic: UpdatableRecord changed() delta tracking, DB DEFAULT on INSERT, avoid POJO round-trips | | e1ca120 |
 | 141 | Imperative Loop or Functional Stream Pipe… | 2018-10-29 | skip           | -          | skipped | Java performance opinion piece; no jOOQ or SQL content | | 77d3be3 |
+| 142 | Writing Custom Aggregate Functions in SQL… | 2018-10-09 | sql-pattern    | aggregate-functions.md | added   | Custom UDAFs in Oracle (ODCI) and PostgreSQL (CREATE AGGREGATE); Java 8 Collector analogy | | a7cfc7d |
