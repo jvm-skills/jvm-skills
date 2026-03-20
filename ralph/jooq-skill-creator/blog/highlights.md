@@ -56,3 +56,7 @@ Article "Calculating Pagination Metadata Without Extra Roundtrips in SQL" (2021-
 Created a new topic file covering the four ways Strings enter the jOOQ API: bind values (val()), literals (inline()), plain SQL templates (field/table/condition with @PlainSQL injection warning), names/identifiers (name()), and keywords (keyword()). The SQL injection safety note for plain SQL templates is a key security best practice.
 - **#106**: New topic `dynamic-sql.md` created — "Create Empty Optional SQL Clauses with jOOQ" (2020-03-06). Existing `anti-patterns.md` already had a `noCondition()` entry from a 2021 article; this older article was richer and warranted its own topic file with conditional SELECT fields, conditional JOINs, and `falseCondition()` for UNION short-circuiting.
 - **#114**: New topic file `naming-conventions.md` created from "A Guide to SQL Naming Conventions" (2019-10-29) — the deterministic table aliasing algorithm (first 4 letters / first 2 of each word / first of each word based on underscore count) is a practical pattern for large schemas with 500+ tables.
+
+## New topic file: predicates.md
+**Article**: [Quantified LIKE ANY predicates in jOOQ 3.12](https://blog.jooq.org/quantified-like-any-predicates-in-jooq-3-12) (2019-09-05)
+`predicates.md` created — jOOQ 3.12 introduced `like(any(...))` and `like(all(...))` to replace verbose OR chains of LIKE conditions, with cross-dialect emulation. First dedicated predicates topic file.

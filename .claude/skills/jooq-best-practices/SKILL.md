@@ -46,6 +46,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [dynamic-sql.md](knowledge/dynamic-sql.md) — noCondition/trueCondition/falseCondition for optional predicates, conditional SELECT fields, conditional JOINs, conditional UNION branches
 - [naming-conventions.md](knowledge/naming-conventions.md) — Table aliasing algorithm, semantic type prefixes, singular/plural consistency
 - [window-functions.md](knowledge/window-functions.md) — DISTINCT ON emulation with FIRST_VALUE for cross-dialect portability
+- [predicates.md](knowledge/predicates.md) — Quantified LIKE ANY / LIKE ALL predicates replacing verbose OR chains
 
 ## Core rules (always apply)
 
