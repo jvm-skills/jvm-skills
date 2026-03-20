@@ -110,3 +110,37 @@ Key building blocks:
 Wrap in a correlated subquery in `FROM` to allow `GROUP BY` in the outer query and return per-group results.
 
 ---
+
+## Pattern: Weighted averages to fix join-multiplication distortion
+**Source**: [Calculating Weighted Averages When Joining Tables in SQL](https://blog.jooq.org/calculating-weighted-averages-when-joining-tables-in-sql) (2019-03-15)
+
+When joining a one-to-many relationship (e.g. transactions → line items), the "one" side rows are duplicated for each matching row on the "many" side. Plain `AVG()` on a duplicated column is incorrect — transactions with more line items get over-weighted.
+
+**Fix option 1**: Divide by the duplication factor (when row count is known):
+
+```sql
+-- t.lines stores the line count per transaction
+SELECT
+  sum(l.profit)                                  AS total_profit,
+  sum(t.price / t.lines) / count(DISTINCT t.id)  AS avg_price_per_transaction
+FROM lines l
+JOIN transactions t ON t.id = l.transaction_id
+```
+
+**Fix option 2**: Pre-aggregate the many side first, then join 1-to-1:
+
+```sql
+SELECT
+  sum(l.profit_per_transaction) AS total_profit,
+  avg(t.price)                  AS avg_price_per_transaction
+FROM (
+  SELECT transaction_id, sum(profit) AS profit_per_transaction
+  FROM lines
+  GROUP BY transaction_id
+) l
+JOIN transactions t ON t.id = l.transaction_id
+```
+
+Option 2 is generally safer — it produces a true 1-to-1 join, so all standard aggregates work correctly without adjustment.
+
+---
