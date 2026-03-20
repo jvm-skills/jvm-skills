@@ -217,3 +217,4 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 132 | How to Calculate a Cumulative Percentage in… | 2019-02-14 | sql-pattern    | window-functions.md | added   | Cumulative % via SUM OVER ORDER BY / SUM OVER (); nested sum(sum()) trick | | fafd59e |
 | 133 | Lesser Known jOOλ Features: Useful Collect… | 2019-02-11 | skip           | -          | skipped | Article is about jOOλ stream library, not jOOQ SQL DSL               | | b986427 |
 | 134 | How to Emulate PERCENTILE_DISC in MySQL and… | 2019-01-28 | sql-pattern    | aggregate-functions.md | added   | Emulate PERCENTILE_DISC via PERCENT_RANK+FIRST_VALUE across all RDBMS with window function support | | 8bf0d1d |
+| 135 | Calculate Percentiles to Learn About Data… | 2019-01-22 | sql-pattern    | aggregate-functions.md | added   | PERCENTILE_DISC for skew detection; B-tree index implications | | 66c17b2 |

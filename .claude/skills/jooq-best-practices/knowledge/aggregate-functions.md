@@ -111,6 +111,30 @@ Wrap in a correlated subquery in `FROM` to allow `GROUP BY` in the outer query a
 
 ---
 
+## Pattern: Use PERCENTILE_DISC to detect data skew
+**Source**: [Calculate Percentiles to Learn About Data Set Skew in SQL](https://blog.jooq.org/calculate-percentiles-to-learn-about-data-set-skew-in-sql) (2019-01-22)
+
+Use `PERCENTILE_DISC` at regular intervals (0%, 25%, 50%, 75%, 100%) to reveal whether a column's data is uniformly distributed or skewed. Skewed distributions matter for query planning: a range predicate on a skewed column returns wildly different row counts depending on which part of the range is queried, making cardinality estimates unreliable and B-tree indexes less useful.
+
+```sql
+-- Profile distribution of a numeric column
+SELECT
+  percentile_disc(0.00) WITHIN GROUP (ORDER BY amount) AS "0%",
+  percentile_disc(0.25) WITHIN GROUP (ORDER BY amount) AS "25%",
+  percentile_disc(0.50) WITHIN GROUP (ORDER BY amount) AS "50%",
+  percentile_disc(0.75) WITHIN GROUP (ORDER BY amount) AS "75%",
+  percentile_disc(1.00) WITHIN GROUP (ORDER BY amount) AS "100%"
+FROM payment;
+-- Uniform: evenly spaced values → B-tree index efficient
+-- Skewed: values cluster at one end → range queries vary wildly in row count
+```
+
+**Dialect**: Native aggregate form in Oracle, PostgreSQL. SQL Server supports only the window function form.
+
+When skew is detected, consider histogram statistics, optimizer hints, or avoiding bind-variable reuse for that column.
+
+---
+
 ## Pattern: Emulate PERCENTILE_DISC where not natively supported
 **Source**: [How to Emulate PERCENTILE_DISC in MySQL and Other RDBMS](https://blog.jooq.org/how-to-emulate-percentile_disc-in-mysql-and-other-rdbms) (2019-01-28)
 **Since**: jOOQ 3.11 (native support in some dialects)
