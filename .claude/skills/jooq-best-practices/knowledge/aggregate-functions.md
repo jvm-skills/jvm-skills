@@ -49,6 +49,35 @@ ctx.select(AUTHOR.ID, AUTHOR.NAME, count(BOOK.ID))
 
 ---
 
+## Pattern: Prefer COUNT(*) over COUNT(1)
+**Source**: [What's Faster? COUNT(*) or COUNT(1)?](https://blog.jooq.org/whats-faster-count-or-count1) (2019-09-19)
+
+Always use `COUNT(*)` rather than `COUNT(1)`. They produce identical results, but `COUNT(*)` is slightly faster on PostgreSQL (~10%) and equal on MySQL/Oracle/SQL Server. The difference: `COUNT(expr)` checks each argument for NULL, adding overhead that `COUNT(*)` avoids via optimization.
+
+Critical semantic difference: `COUNT(column)` counts only non-NULL rows — useful when LEFT JOINing or counting conditional subsets:
+
+```kotlin
+// COUNT(*) counts all rows including NULL-filled LEFT JOIN rows
+// COUNT(column) returns 0 for actors with no films (correct behavior)
+ctx.select(ACTOR.FIRST_NAME, count(FILM.FILM_ID))
+    .from(ACTOR)
+    .leftJoin(FILM_ACTOR).on(FILM_ACTOR.ACTOR_ID.eq(ACTOR.ACTOR_ID))
+    .leftJoin(FILM).on(FILM.FILM_ID.eq(FILM_ACTOR.FILM_ID))
+    .groupBy(ACTOR.ACTOR_ID)
+    .fetch()
+
+// Conditional counts in a single query
+ctx.select(
+    count(),  // COUNT(*)
+    count(case_().when(ACTOR.FIRST_NAME.like("A%"), inline(1))),
+    count(case_().when(ACTOR.FIRST_NAME.like("%A"), inline(1)))
+).from(ACTOR).fetch()
+```
+
+> **Note**: In jOOQ, `count()` (no argument) generates `COUNT(*)`.
+
+---
+
 ## Pattern: Simulate REDUCE aggregation via recursive CTE
 **Source**: [Implementing a generic REDUCE aggregate function with SQL](https://blog.jooq.org/implementing-a-generic-reduce-aggregate-function-with-sql) (2021-02-08)
 **Dialect**: PostgreSQL (uses `ARRAY_AGG`, `UNNEST ... WITH ORDINALITY`)
