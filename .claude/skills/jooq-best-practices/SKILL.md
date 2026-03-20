@@ -35,7 +35,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [transactions.md](knowledge/transactions.md) — Explicit programmatic transactions, NESTED savepoints, R2DBC reactive transactions
 - [sequences.md](knowledge/sequences.md) — Fetching single/batch sequence values across dialects
 - [qom-traverser.md](knowledge/qom-traverser.md) — Query Object Model inspection, expression tree traversal, SQL transformation with $replace()
-- [spring-boot-config.md](knowledge/spring-boot-config.md) — DefaultConfigurationCustomizer for Spring Boot jOOQ config; MySQL allowMultiQueries flag
+- [spring-boot-config.md](knowledge/spring-boot-config.md) — DefaultConfigurationCustomizer for Spring Boot jOOQ config; MySQL allowMultiQueries flag; switching to commercial editions (exclude OSS, add org.jooq.pro)
 - [parser.md](knowledge/parser.md) — Parser ignore comments, parsing connection for dialect translation, IN list padding, Oracle implicit-join-to-ANSI-JOIN transformation, online SQL translation tool
 - [result-formatting.md](knowledge/result-formatting.md) — ASCII chart output, formatChart() for console visualization
 - [sql-json.md](knowledge/sql-json.md) — jsonObject/jsonArrayAgg nesting pattern (3.14, superseded by MULTISET 3.15+); dialect pitfalls: MySQL type degradation, Oracle CLOB, GROUP_CONCAT truncation, NULL semantics

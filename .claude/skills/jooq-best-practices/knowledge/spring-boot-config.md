@@ -34,3 +34,31 @@ spring.datasource.url=jdbc:mysql://localhost:3306/mydb?allowMultiQueries=true
 This is safe to enable when using jOOQ's DSL (no SQL injection risk), but keep in mind it only removes one layer of defense — parameterized queries remain the primary safeguard.
 
 ---
+
+## Pattern: Using commercial jOOQ edition with Spring Boot
+**Source**: [How to Use jOOQ's Commercial Distributions with Spring Boot](https://blog.jooq.org/how-to-use-jooqs-commercial-distributions-with-spring-boot) (2019-06-26)
+
+`spring-boot-starter-jooq` pulls the open-source edition by default. To use a commercial edition, exclude the OSS artifact and add the commercial one explicitly. Commercial group IDs: `org.jooq.trial` (trial), `org.jooq.pro` (Professional/Express/Enterprise).
+
+```xml
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-jooq</artifactId>
+  <exclusions>
+    <exclusion>
+      <groupId>org.jooq</groupId>
+      <artifactId>jooq</artifactId>
+    </exclusion>
+  </exclusions>
+</dependency>
+
+<dependency>
+  <groupId>org.jooq.pro</groupId>
+  <artifactId>jooq</artifactId>
+  <version>${jooq.version}</version>
+</dependency>
+```
+
+Commercial distributions must be hosted in your own Artifactory/Nexus after downloading from the jOOQ website — they are not on Maven Central.
+
+---
