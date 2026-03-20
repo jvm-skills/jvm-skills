@@ -175,3 +175,4 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 98 | Nesting Collections With jOOQ 3.14's SQL… | 2020-10-09 | jooq-api       | fetching-mapping.md, sql-json.md | added  | Dot-notation alias nesting + jsonObject/jsonArrayAgg pattern (superseded by MULTISET 3.15+) | | 40e881d |
 | 99 | Having "constant" columns in foreign keys | 2020-09-10 | sql-pattern    | computed-columns.md | added  | GENERATED ALWAYS AS for constant FK columns; useful for single-table inheritance discriminators | | 580a008 |
 | 100 | Use NATURAL FULL JOIN to compare two tab… | 2020-08-05 | sql-pattern    | set-operations.md (new) | added  | Table diff: EXCEPT/UNION vs FULL JOIN USING; NULL-safe IS NOT DISTINCT FROM; row value NULL semantics | | eb3809e |
+| 101 | Could we Have a Language That Hides Col… | 2020-07-22 | skip           | -          | skipped | Java/APL language opinion piece about array initialisation; no SQL or jOOQ content | | f2eafe1 |
