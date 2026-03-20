@@ -278,6 +278,40 @@ jOOQ annotates all relevant API methods with `@CheckReturnValue` (JSR-305 style)
 
 ---
 
+## Pattern: Don't map relational data to objects in middleware when the output is JSON/XML
+**Source**: [Stop Mapping Stuff in Your Middleware. Use SQL's XML or JSON Operators Instead](https://blog.jooq.org/stop-mapping-stuff-in-your-middleware-use-sqls-xml-or-json-operators-instead) (2019-11-13)
+
+When a service's sole purpose is producing JSON/XML from the database, avoid the pipeline: rows → entity objects → DTOs → JSON serialization. Each step adds code, error surface, and maintenance burden without adding value.
+
+Instead, use SQL's native JSON/XML operators (via jOOQ's DSL) to build the nested structure directly in the query:
+
+```kotlin
+// BAD — unnecessary entity/DTO round-trip for JSON output
+val actors = dsl.selectFrom(ACTOR).fetch().map { ActorDto(it.firstName, it.lastName,
+    dsl.selectFrom(FILM_ACTOR).where(...).map { FilmDto(it.title) }) }
+return ObjectMapper().writeValueAsString(actors) // N+1 + wasted allocations
+
+// GOOD — JSON built entirely in SQL, one round-trip
+dsl.select(
+    jsonObject(
+        key("firstName").value(ACTOR.FIRST_NAME),
+        key("lastName").value(ACTOR.LAST_NAME),
+        key("films").value(jsonArrayAgg(jsonObject("title", FILM.TITLE))
+            .orderBy(FILM.TITLE))
+    )
+).from(ACTOR)
+ .join(FILM_ACTOR).on(ACTOR.ACTOR_ID.eq(FILM_ACTOR.ACTOR_ID))
+ .join(FILM).on(FILM_ACTOR.FILM_ID.eq(FILM.FILM_ID))
+ .groupBy(ACTOR.ACTOR_ID)
+ .fetch()
+```
+
+**Rule**: "Don't go mapping that stuff in the middleware if you're not consuming it in the middleware." If only the HTTP client consumes the final JSON, the database should produce it.
+
+> Use jOOQ's `jsonObject`/`jsonArrayAgg` (3.14+) or `MULTISET` (3.15+, preferred) — see [sql-json.md](sql-json.md) and [multiset.md](multiset.md).
+
+---
+
 ## Pattern: Don't use H2 compatibility modes with jOOQ
 **Source**: [Using H2 as a Test Database Product with jOOQ](https://blog.jooq.org/using-h2-as-a-test-database-product) (2022-08-19)
 

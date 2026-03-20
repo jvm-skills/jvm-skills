@@ -195,3 +195,4 @@ Auto-appended by each iteration. Captures data for the blog post.
 - Open uncertainties: 1
 | 5 | Use the jOOQ-Refaster Module for Automatic Migr… | 2020-02-25 | jooq-api       | fetching-mapping.md | merged  | Refaster module removed in 3.15; extracted fetchSize() pattern; fetchExists already covered | | e33bae7 |
 | 111 | jOOQ 3.13 Released with More API and Tooling fo… | 2020-02-14 | jooq-api | code-generator.md | added | LiquibaseDatabase for offline code gen; Meta.migrateTo() for programmatic schema diffing | | 80962a3 |
+| 113 | Stop Mapping Stuff in Your Middleware. Use SQ... | 2019-11-13 | jooq-api | anti-patterns.md | added | Architectural anti-pattern: don't map rows→objects→JSON when SQL can produce JSON directly | | 4c9ba5b |
