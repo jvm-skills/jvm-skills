@@ -142,7 +142,9 @@ Auto-appended by each iteration. Captures data for the blog post.
 ---
 **Run summary** (2026-02-22 11:57):
 - Iterations this run: 6
+| 82 | 3.15.0 Release with Support for R2DBC, Nested RO… | 2021-07-06 | skip           | -          | skipped | Release announcement; all actionable content (R2DBC, MULTISET) already covered by newer articles | | 1e36065 |
+
 - Duration: 6m 404s total
-- Articles processed so far: 79 / 747
+- Articles processed so far: 80 / 747
 - Topic files: 23
 - Open uncertainties: 1
