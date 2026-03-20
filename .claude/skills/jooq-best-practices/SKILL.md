@@ -22,7 +22,7 @@ Built from official docs + 783 blog articles (progressively updated).
 - [array-operations.md](knowledge/array-operations.md) — Array lambda functions (filter, map, match) with PostgreSQL emulation
 - [merge-upsert.md](knowledge/merge-upsert.md) — SQL MERGE as RIGHT JOIN mental model, full sync with FULL JOIN in USING clause, AND conditions in WHEN clauses, Oracle/SQL Server dialect variants
 - [implicit-joins.md](knowledge/implicit-joins.md) — Implicit/explicit path joins, join elimination, path correlation, to-many joins, ON-clause paths, synthetic FKs
-- [code-generator.md](knowledge/code-generator.md) — Code generator configuration: visibility modifiers, custom strategies, TVP wrappers, version compatibility, forced types, embedded types, schema mapping, Testcontainers code generation, LiquibaseDatabase, Meta.migrateTo() schema diffing
+- [code-generator.md](knowledge/code-generator.md) — Code generator configuration: visibility modifiers, custom strategies, TVP wrappers, version compatibility, forced types (incl. MySQL TINYINT(1)→Boolean), embedded types, schema mapping, Testcontainers code generation, LiquibaseDatabase, Meta.migrateTo() schema diffing
 - [hierarchical-queries.md](knowledge/hierarchical-queries.md) — Records.intoHierarchy() collector, recursive CTEs for tree structures
 - [derived-tables.md](knowledge/derived-tables.md) — Derived table declaration, type-safe column refs, simplification, LATERAL as local variables, asterisk().except()
 - [aggregate-functions.md](knowledge/aggregate-functions.md) — FILTER vs CASE in aggregates, functional dependencies in GROUP BY, table-level grouping, REDUCE simulation via recursive CTE

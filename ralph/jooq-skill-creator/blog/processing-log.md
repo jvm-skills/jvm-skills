@@ -199,3 +199,4 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 114 | A Guide to SQL Naming Conventions             | 2019-10-29 | sql-pattern    | naming-conventions.md | added | New topic file; deterministic aliasing algorithm, semantic type prefixes, singular/plural | | | 1cd4073 |
 | 115 | Dogfooding in Product Development            | 2019-10-25 | skip           | -          | skipped | jOOQ internal development process opinion piece                      | | 8138a41 |
 | 116 | A Quick Trick to Make a Java Stream Constructi… | 2019-09-30 | skip           | -          | skipped | Java Stream API article; no SQL/jOOQ content                         | | db1a9b0 |
+| 117 | How to Map MySQL's TINYINT(1) to Boolean in jO… | 2019-09-27 | jooq-api       | code-generator.md | added   | MySQL forced type: includeTypes regex maps TINYINT(1) → boolean (since 3.12) | | 6293c91 |

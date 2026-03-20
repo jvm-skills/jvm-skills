@@ -80,6 +80,26 @@ To disable the check (not recommended):
 
 ---
 
+## Pattern: Map MySQL TINYINT(1) to Boolean via forced types
+**Source**: [How to Map MySQL's TINYINT(1) to Boolean in jOOQ](https://blog.jooq.org/how-to-map-mysqls-tinyint1-to-boolean-in-jooq) (2019-09-27)
+**Since**: jOOQ 3.12
+**Dialect**: MySQL / MariaDB
+
+MySQL has no native `BOOLEAN` type — `BOOL` is an alias for `TINYINT(1)`. Use a forced type with `<includeTypes>` regex to rewrite `TINYINT(1)` columns to Java `boolean` during code generation:
+
+```xml
+<forcedTypes>
+  <forcedType>
+    <name>BOOLEAN</name>
+    <includeTypes>(?i:TINYINT\(1\))</includeTypes>
+  </forcedType>
+</forcedTypes>
+```
+
+This enables type-safe predicates like `where(T.ACTIVE)` instead of treating the column as numeric.
+
+---
+
 ## Pattern: Forced types for auto-applying converters
 **Source**: [Why You Should Use jOOQ With Code Generation](https://blog.jooq.org/why-you-should-use-jooq-with-code-generation) (2021-12-06)
 
