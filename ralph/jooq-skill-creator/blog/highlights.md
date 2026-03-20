@@ -49,3 +49,7 @@ Article "Calculating Pagination Metadata Without Extra Roundtrips in SQL" (2021-
 - **#92**: Uncertainty logged — older article (2021-02-10) uses `var()` for block variable declaration while newer article (2021-08-25) uses `variable()`. Likely an API rename; current entries prefer `variable()` as the newer convention.
 
 - **#100**: New topic file created! `set-operations.md` — table comparison patterns (EXCEPT/UNION vs FULL JOIN USING, NULL-safe IS NOT DISTINCT FROM). First article milestone: 100 articles processed.
+
+## Iteration 105 — New topic: plain-sql-templating.md
+**Article**: What's a "String" in the jOOQ API? (2020-04-03)
+Created a new topic file covering the four ways Strings enter the jOOQ API: bind values (val()), literals (inline()), plain SQL templates (field/table/condition with @PlainSQL injection warning), names/identifiers (name()), and keywords (keyword()). The SQL injection safety note for plain SQL templates is a key security best practice.

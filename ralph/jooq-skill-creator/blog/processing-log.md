@@ -178,3 +178,4 @@ Auto-appended by each iteration. Captures data for the blog post.
 | 101 | Could we Have a Language That Hides Col… | 2020-07-22 | skip           | -          | skipped | Java/APL language opinion piece about array initialisation; no SQL or jOOQ content | | f2eafe1 |
 | 103 | Using SQL Server FOR XML and FOR JSON Syntax on | 2020-05-05 | jooq-api | sql-json.md | added | SQL Server FOR XML/JSON cross-dialect translation, jOOQ 3.14 emits native or standard SQL | | e1ba903 |
 | 104 | The Many Flavours of the Arcane SQL MER… | 2020-04-10 | sql-pattern    | merge-upsert.md | added  | FULL JOIN in USING clause for full sync; AND in WHEN clauses + CASE emulation; Oracle WHERE/DELETE variant | | f295fff |
+| 105 | What's a "String" in the jOOQ API?      | 2020-04-03 | jooq-api       | plain-sql-templating.md | added   | New topic file; val() vs inline(), @PlainSQL injection safety, name() identifiers, keyword() rendering | | 762a794 |
