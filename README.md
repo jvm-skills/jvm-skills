@@ -4,6 +4,8 @@
 
 **[jvmskills.com](https://jvmskills.com)** — AI coding skills from the engineers who build the JVM ecosystem.
 
+![jvmskills.com preview](site/preview.png)
+
 Skills are opinionated best-practice guides that AI coding tools (Claude Code, Cursor, Copilot, etc.) use as context when writing code. The directory helps JVM developers discover, evaluate, and adopt high-quality skills for their stack.
 
 ## Why?
