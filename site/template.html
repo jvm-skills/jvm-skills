@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jvm-skills — Curated AI Coding Skills for JVM Developers</title>
+  <meta name="description" content="Discover the best AI coding skills for JVM projects. Curated best-practice guides for Claude Code, Cursor, Copilot and more. Spring Boot, jOOQ, JPA, Testcontainers and beyond.">
+  <meta name="keywords" content="JVM, Java, Kotlin, AI coding, skills, Claude Code, Cursor, Copilot, Spring Boot, jOOQ">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jvmskills.com">
+  <meta property="og:title" content="jvm-skills — AI Coding Skills for JVM Developers">
+  <meta property="og:description" content="Curated directory of the best AI coding skills for JVM projects. Expert-authored best-practice guides for your AI coding tools.">
+  <meta property="og:image" content="https://jvmskills.com/og-image.png">
+  <meta property="og:site_name" content="jvm-skills">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="jvm-skills — AI Coding Skills for JVM Developers">
+  <meta name="twitter:description" content="Curated directory of the best AI coding skills for JVM projects.">
+  <meta name="twitter:image" content="https://jvmskills.com/og-image.png">
+
+  <!-- Favicon: terminal prompt -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230d1117'/%3E%3Ctext x='4' y='23' font-family='monospace' font-size='20' font-weight='bold' fill='%2300ff41'%3E%3E_%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='22' fill='%230d1117'/%3E%3Ctext x='20' y='130' font-family='monospace' font-size='120' font-weight='bold' fill='%2300ff41'%3E%3E_%3C/text%3E%3C/svg%3E">
+
+  <!-- Prevent theme flash: apply stored preference before paint -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('jvmskills-theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ══════════════════════════════════════════════
+       CSS CUSTOM PROPERTIES
+       ══════════════════════════════════════════════ */
+    :root {
+      --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'SF Mono', monospace;
+      --font-body: 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
+
+      /* Phosphor green terminal palette */
+      --green: #00ff41;
+      --green-dim: #00cc33;
+      --green-glow: rgba(0, 255, 65, 0.15);
+      --green-glow-strong: rgba(0, 255, 65, 0.3);
+      --amber: #ffb020;
+      --cyan: #00d4ff;
+      --red: #ff5f57;
+      --yellow: #febc2e;
+      --green-dot: #28c840;
+      --magenta: #ff79c6;
+
+      /* Timing */
+      --transition-fast: 150ms ease;
+      --transition-base: 250ms ease;
+      --transition-slow: 400ms ease;
+    }
+
+    /* Dark theme (default) */
+    [data-theme="dark"] {
+      --bg-primary: #0a0e14;
+      --bg-secondary: #0d1117;
+      --bg-card: #111820;
+      --bg-card-hover: #151d27;
+      --bg-titlebar: #1a2233;
+      --bg-input: #0d1117;
+      --border: #1e2d3d;
+      --border-hover: #2a3f55;
+      --text-primary: #c9d1d9;
+      --text-secondary: #8b949e;
+      --text-muted: #484f58;
+      --badge-expert-bg: rgba(0, 255, 65, 0.12);
+      --badge-expert-text: #00ff41;
+      --badge-curated-bg: rgba(255, 176, 32, 0.12);
+      --badge-curated-text: #ffb020;
+      --badge-community-bg: rgba(0, 212, 255, 0.12);
+      --badge-community-text: #00d4ff;
+      --scanline-opacity: 0.03;
+      --glow-opacity: 1;
+    }
+
+    /* Light theme */
+    [data-theme="light"] {
+      --bg-primary: #f0f2f5;
+      --bg-secondary: #ffffff;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f6f8fa;
+      --bg-titlebar: #e8ecf0;
+      --bg-input: #ffffff;
+      --border: #d0d7de;
+      --border-hover: #a8b3c0;
+      --text-primary: #1f2328;
+      --text-secondary: #57606a;
+      --text-muted: #8b949e;
+      --green: #006d1f;
+      --green-dim: #005a19;
+      --green-glow: rgba(0, 109, 31, 0.08);
+      --green-glow-strong: rgba(0, 109, 31, 0.15);
+      --amber: #9a6700;
+      --cyan: #0369a1;
+      --magenta: #b8266a;
+      --badge-expert-bg: rgba(0, 109, 31, 0.1);
+      --badge-expert-text: #006d1f;
+      --badge-curated-bg: rgba(154, 103, 0, 0.1);
+      --badge-curated-text: #9a6700;
+      --badge-community-bg: rgba(3, 105, 161, 0.1);
+      --badge-community-text: #0369a1;
+      --scanline-opacity: 0;
+      --glow-opacity: 0;
+    }
+
+    /* ══════════════════════════════════════════════
+       RESET & BASE
+       ══════════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+      transition: background var(--transition-base), color var(--transition-base);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* CRT scanline overlay (dark mode only) */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, var(--scanline-opacity)) 2px,
+        rgba(0, 0, 0, var(--scanline-opacity)) 4px
+      );
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    a { color: var(--green); text-decoration: none; transition: color var(--transition-fast); }
+    a:hover { color: var(--cyan); }
+    a:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; border-radius: 2px; }
+
+    /* Skip to content */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 16px;
+      background: var(--green);
+      color: var(--bg-primary);
+      padding: 8px 16px;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 600;
+      z-index: 10000;
+      border-radius: 0 0 4px 4px;
+      transition: top var(--transition-fast);
+    }
+    .skip-link:focus {
+      top: 0;
+      outline: none;
+    }
+
+    /* ══════════════════════════════════════════════
+       LAYOUT
+       ══════════════════════════════════════════════ */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ══════════════════════════════════════════════
+       HEADER / NAV
+       ══════════════════════════════════════════════ */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+
+    .logo {
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--green);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+    .logo:hover { color: var(--green); }
+    .logo .prompt-char {
+      opacity: 0.5;
+      font-weight: 400;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .github-link {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      transition: all var(--transition-fast);
+    }
+    .github-link:hover {
+      color: var(--text-primary);
+      border-color: var(--border-hover);
+      background: var(--bg-card);
+    }
+    .github-link svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .submit-skill-link {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--bg-primary);
+      background: var(--green);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border: 1px solid var(--green);
+      border-radius: 4px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all var(--transition-fast);
+    }
+    .submit-skill-link:hover {
+      background: var(--green-dim);
+      border-color: var(--green-dim);
+    }
+
+    /* Theme toggle */
+    .theme-toggle {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 6px 10px;
+      cursor: pointer;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      transition: all var(--transition-fast);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .theme-toggle:hover {
+      color: var(--amber);
+      border-color: var(--border-hover);
+      background: var(--bg-card);
+    }
+    .theme-toggle:focus-visible {
+      outline: 2px solid var(--green);
+      outline-offset: 2px;
+    }
+
+    /* ══════════════════════════════════════════════
+       HERO
+       ══════════════════════════════════════════════ */
+    .hero {
+      padding: 64px 0 48px;
+      text-align: center;
+    }
+
+    .hero-terminal {
+      display: inline-block;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      text-align: left;
+      max-width: 600px;
+      width: 100%;
+      margin-bottom: 24px;
+      box-shadow: 0 0 40px var(--green-glow);
+    }
+
+    .hero-titlebar {
+      background: var(--bg-titlebar);
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-titlebar .dots {
+      display: flex;
+      gap: 6px;
+    }
+    .hero-titlebar .dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .hero-titlebar .dots span:nth-child(1) { background: var(--red); }
+    .hero-titlebar .dots span:nth-child(2) { background: var(--yellow); }
+    .hero-titlebar .dots span:nth-child(3) { background: var(--green-dot); }
+    .hero-titlebar .title-text {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-body {
+      padding: 24px 20px;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    .hero-line {
+      display: block;
+      margin-bottom: 4px;
+    }
+    .hero-line .prompt-symbol {
+      color: var(--green);
+      margin-right: 8px;
+      user-select: none;
+    }
+    .hero-line .cmd { color: var(--cyan); }
+    .hero-line .flag { color: var(--amber); }
+    .hero-line .string { color: var(--green); }
+    .hero-line .comment {
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    .hero-output {
+      color: var(--text-secondary);
+      padding-left: 20px;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .cursor-blink {
+      display: inline-block;
+      width: 8px;
+      height: 1.1em;
+      background: var(--green);
+      vertical-align: text-bottom;
+      animation: blink 1s step-end infinite;
+      opacity: var(--glow-opacity);
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    .hero-tagline {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Typewriter effect */
+    .typewriter {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: none;
+      animation: typewriter 1.5s steps(44, end) 0.5s both;
+      display: inline;
+    }
+
+    @keyframes typewriter {
+      from { max-width: 0; }
+      to { max-width: 100%; }
+    }
+
+    /* ══════════════════════════════════════════════
+       FILTER BAR
+       ══════════════════════════════════════════════ */
+    .filter-bar {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+
+    .search-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .search-prompt {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--green);
+      margin-right: 8px;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    .search-input {
+      flex: 1;
+      background: var(--bg-input);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 8px 12px;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--text-primary);
+      caret-color: var(--green);
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    .search-input::placeholder {
+      color: var(--text-muted);
+    }
+    .search-input:focus {
+      outline: none;
+      border-color: var(--green-dim);
+      box-shadow: 0 0 0 3px var(--green-glow);
+    }
+
+    .filter-groups {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .filter-label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+    }
+
+    .filter-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .filter-chip {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      background: transparent;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      white-space: nowrap;
+    }
+    .filter-chip:hover {
+      border-color: var(--border-hover);
+      color: var(--text-primary);
+      background: var(--bg-card);
+    }
+    .filter-chip:focus-visible {
+      outline: 2px solid var(--green);
+      outline-offset: 1px;
+    }
+    .filter-chip[aria-pressed="true"],
+    .filter-chip.active {
+      border-color: var(--green-dim);
+      color: var(--green);
+      background: var(--green-glow);
+    }
+    .filter-chip[aria-pressed="true"]:hover,
+    .filter-chip.active:hover {
+      background: var(--green-glow-strong);
+    }
+
+    .results-count {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+    .results-count .count-num {
+      color: var(--green);
+      font-weight: 600;
+    }
+    .clear-filters {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      margin-left: 12px;
+      transition: color var(--transition-fast);
+    }
+    .clear-filters:hover { color: var(--amber); }
+    .clear-filters:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+
+    /* ══════════════════════════════════════════════
+       CATEGORY SECTIONS
+       ══════════════════════════════════════════════ */
+    .category-section {
+      margin-bottom: 48px;
+    }
+    .category-section.hidden {
+      display: none;
+    }
+
+    .category-header {
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .category-header .prompt {
+      color: var(--green);
+    }
+    .category-header .ls-marker {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    /* ══════════════════════════════════════════════
+       SKILL CARDS
+       ══════════════════════════════════════════════ */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 16px;
+    }
+
+    .skill-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      transition: all var(--transition-base);
+      animation: cardReveal 0.4s ease both;
+    }
+    .skill-card:hover {
+      border-color: var(--border-hover);
+      background: var(--bg-card-hover);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+    .skill-card.hidden {
+      display: none;
+    }
+
+    @keyframes cardReveal {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card-titlebar {
+      background: var(--bg-titlebar);
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+    }
+
+    .card-dots {
+      display: flex;
+      gap: 5px;
+    }
+    .card-dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+    .card-dots span:nth-child(1) { background: var(--red); }
+    .card-dots span:nth-child(2) { background: var(--yellow); }
+    .card-dots span:nth-child(3) { background: var(--green-dot); }
+
+    .card-title {
+      color: var(--text-muted);
+      margin-left: 4px;
+    }
+
+    .card-body {
+      padding: 16px;
+    }
+
+    .skill-name {
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .skill-name a {
+      color: var(--text-primary);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+    .skill-name a:hover { color: var(--green); }
+    .skill-name a::after {
+      content: ' ↗';
+      font-size: 0.8em;
+      opacity: 0;
+      transition: opacity var(--transition-fast);
+    }
+    .skill-card:hover .skill-name a::after {
+      opacity: 0.5;
+    }
+
+    .skill-description {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-bottom: 12px;
+    }
+
+    .skill-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+    }
+
+    .trust-badge {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 3px;
+      letter-spacing: 0.04em;
+    }
+    .trust-badge.official {
+      background: var(--badge-expert-bg);
+      color: var(--badge-expert-text);
+    }
+    .trust-badge.curated {
+      background: var(--badge-curated-bg);
+      color: var(--badge-curated-text);
+    }
+    .trust-badge.community {
+      background: var(--badge-community-bg);
+      color: var(--badge-community-text);
+    }
+
+    .skill-author {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    .skill-languages {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .skill-languages span {
+      padding: 1px 6px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      color: var(--text-secondary);
+      color: var(--cyan);
+      border-color: rgba(0, 212, 255, 0.2);
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+    }
+    .skill-tags span {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      padding: 1px 6px;
+      background: var(--bg-titlebar);
+      border-radius: 2px;
+    }
+
+    /* ══════════════════════════════════════════════
+       FOOTER
+       ══════════════════════════════════════════════ */
+    footer {
+      margin-top: 40px;
+      padding: 32px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .footer-terminal {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 2;
+    }
+    .footer-terminal .green { color: var(--green); }
+    .footer-terminal .cyan { color: var(--cyan); }
+    .footer-terminal .amber { color: var(--amber); }
+    .footer-terminal a {
+      color: var(--text-secondary);
+    }
+    .footer-terminal a:hover {
+      color: var(--green);
+    }
+
+    .footer-build {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      margin-top: 16px;
+      opacity: 0.6;
+    }
+
+    /* ══════════════════════════════════════════════
+       EMPTY STATE
+       ══════════════════════════════════════════════ */
+    .no-results {
+      text-align: center;
+      padding: 60px 20px;
+      display: none;
+    }
+    .no-results.visible {
+      display: block;
+    }
+    .no-results-text {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .no-results-hint {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      opacity: 0.6;
+    }
+
+    /* ══════════════════════════════════════════════
+       RESPONSIVE
+       ══════════════════════════════════════════════ */
+    @media (max-width: 768px) {
+      .hero { padding: 40px 0 32px; }
+      .hero-body { font-size: 0.8rem; padding: 16px; }
+      .hero-tagline { font-size: 0.95rem; }
+
+      .filter-groups { gap: 12px; }
+      .filter-group { width: 100%; }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .header-inner { height: 48px; }
+      .logo { font-size: 1rem; }
+
+      .github-link .gh-text { display: none; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 12px; }
+      .filter-bar { padding: 14px; }
+      .search-prompt { display: none; }
+      .hero-terminal { border-radius: 0; border-left: none; border-right: none; }
+    }
+
+    /* ══════════════════════════════════════════════
+       REDUCED MOTION
+       ══════════════════════════════════════════════ */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .cursor-blink { animation: none; opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <header role="banner">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="jvm-skills home">
+        <span class="prompt-char">$</span> jvm-skills
+      </a>
+      <div class="header-actions">
+        <a href="https://github.com/jvm-skills/jvm-skills/issues/new?template=submit-skill.yml&title=%5BSkill%5D+My+Skill+Name" class="submit-skill-link" aria-label="Submit a new skill">
+          + Submit Skill
+        </a>
+        <a href="https://github.com/jvm-skills/jvm-skills" class="github-link" aria-label="View on GitHub">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          <span class="gh-text">GitHub</span>
+        </a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme" type="button">
+          <span class="theme-icon" aria-hidden="true">◐</span>
+          <span class="theme-label">theme</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container">
+
+      <!-- ═══════════ HERO ═══════════ -->
+      <section class="hero" aria-label="Introduction">
+        <div class="hero-terminal" role="img" aria-label="Terminal showing jvm-skills commands">
+          <div class="hero-titlebar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <span class="title-text">jvm-skills — bash</span>
+          </div>
+          <div class="hero-body">
+            <span class="hero-line">
+              <span class="prompt-symbol">$</span>
+              <span class="cmd">cat</span> <span class="string">README.md</span>
+            </span>
+            <span class="hero-output">Curated AI coding skills for JVM developers.</span>
+            <span class="hero-output">Expert-authored. Tool-agnostic. Opinionated.</span>
+            <span class="hero-line" style="margin-top: 8px;">
+              <span class="prompt-symbol">$</span>
+              <span class="cmd">ls</span> <span class="flag">-la</span> <span class="string">skills/</span>
+            </span>
+            <span class="hero-output">database/ web/ infrastructure/ testing/ architecture/ workflow/</span>
+            <span class="hero-line" style="margin-top: 8px;">
+              <span class="prompt-symbol">$</span> <span class="cursor-blink"></span>
+            </span>
+          </div>
+        </div>
+        <p class="hero-tagline">
+          Best-practice guides that make your AI coding tools actually write idiomatic JVM code.
+          Browse skills below, or <a href="https://github.com/jvm-skills/jvm-skills/blob/main/CONTRIBUTING.md">contribute your own</a>.
+        </p>
+      </section>
+
+      <!-- ═══════════ FILTERS ═══════════ -->
+      <section class="filter-bar" aria-label="Filter skills" role="search">
+        <div class="search-row">
+          <label for="searchInput" class="search-prompt" aria-hidden="true">$ grep</label>
+          <input
+            type="search"
+            id="searchInput"
+            class="search-input"
+            placeholder="search skills..."
+            aria-label="Search skills by name, description, author, or tags"
+            autocomplete="off"
+          >
+        </div>
+
+        <div class="filter-groups">
+          <div class="filter-group" role="group" aria-labelledby="filter-lang-label">
+            <span class="filter-label" id="filter-lang-label">--lang</span>
+            <div class="filter-options">
+              <button class="filter-chip" data-filter="lang" data-value="kotlin" aria-pressed="false" type="button">kotlin</button>
+              <button class="filter-chip" data-filter="lang" data-value="java" aria-pressed="false" type="button">java</button>
+            </div>
+          </div>
+
+          <div class="filter-group" role="group" aria-labelledby="filter-trust-label">
+            <span class="filter-label" id="filter-trust-label">--trust</span>
+            <div class="filter-options">
+              <button class="filter-chip" data-filter="trust" data-value="official" aria-pressed="false" type="button">official</button>
+              <button class="filter-chip" data-filter="trust" data-value="curated" aria-pressed="false" type="button">curated</button>
+              <button class="filter-chip" data-filter="trust" data-value="community" aria-pressed="false" type="button">community</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="results-count" role="status" aria-live="polite">
+          <span class="count-num" id="resultCount">0</span> skills found
+          <button class="clear-filters" id="clearFilters" type="button" style="display:none;">clear filters</button>
+        </div>
+      </section>
+
+      <!-- ═══════════ SKILL CARDS (injected by build script) ═══════════ -->
+      <div id="skillsContainer" aria-label="Skill listings">
+        {{SKILL_CARDS}}
+      </div>
+
+      <!-- ═══════════ EMPTY STATE ═══════════ -->
+      <div class="no-results" id="noResults" role="status">
+        <p class="no-results-text">$ grep: no matches found</p>
+        <p class="no-results-hint">Try adjusting your filters or search term.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-terminal">
+        <span class="green">$</span> <span class="cyan">echo</span> <span class="amber">"Want to add a skill?"</span><br>
+        Fork the repo → add a YAML file → <a href="https://github.com/jvm-skills/jvm-skills/blob/main/CONTRIBUTING.md">open a PR</a><br>
+        <br>
+        <span class="green">$</span> Curated by <a href="https://github.com/tschuehly">Thomas Schilling</a>
+        &middot; <a href="https://github.com/jvm-skills/jvm-skills">source</a>
+        &middot; <a href="https://github.com/jvm-skills/jvm-skills/blob/main/LICENSE">license</a>
+      </div>
+      <div class="footer-build">
+        built {{GENERATED_DATE}} // jvmskills.com
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════ JAVASCRIPT ═══════════ -->
+  <script>
+    (function () {
+      'use strict';
+
+      // ── Theme Toggle ──────────────────────────────
+      const html = document.documentElement;
+      const themeBtn = document.getElementById('themeToggle');
+      const themeIcon = themeBtn.querySelector('.theme-icon');
+
+      function getPreferredTheme() {
+        const stored = localStorage.getItem('jvmskills-theme');
+        if (stored) return stored;
+        // Default to dark — only switch to light if user explicitly prefers it
+        return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      }
+
+      function setTheme(theme) {
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('jvmskills-theme', theme);
+        themeIcon.textContent = theme === 'dark' ? '◐' : '◑';
+        themeBtn.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`);
+      }
+
+      setTheme(getPreferredTheme());
+
+      themeBtn.addEventListener('click', function () {
+        const current = html.getAttribute('data-theme');
+        setTheme(current === 'dark' ? 'light' : 'dark');
+      });
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+        if (!localStorage.getItem('jvmskills-theme')) {
+          setTheme(e.matches ? 'dark' : 'light');
+        }
+      });
+
+      // ── Filtering ─────────────────────────────────
+      const searchInput = document.getElementById('searchInput');
+      const clearBtn = document.getElementById('clearFilters');
+      const resultCount = document.getElementById('resultCount');
+      const noResults = document.getElementById('noResults');
+      const container = document.getElementById('skillsContainer');
+      const cards = Array.from(container.querySelectorAll('.skill-card'));
+      const sections = Array.from(container.querySelectorAll('.category-section'));
+      const chips = Array.from(document.querySelectorAll('.filter-chip'));
+
+      // Active filters
+      var filters = {
+        search: '',
+        lang: [],
+        trust: []
+      };
+
+      // Read filters from URL hash
+      function readHash() {
+        var hash = window.location.hash.slice(1);
+        if (!hash) return;
+        var params = new URLSearchParams(hash);
+        filters.search = params.get('q') || '';
+        filters.lang = params.get('lang') ? params.get('lang').split(',') : [];
+        filters.trust = params.get('trust') ? params.get('trust').split(',') : [];
+
+        // Update UI
+        searchInput.value = filters.search;
+        chips.forEach(function (chip) {
+          var filterType = chip.getAttribute('data-filter');
+          var value = chip.getAttribute('data-value');
+          var arr = filters[filterType === 'lang' ? 'lang' : 'trust'];
+          var active = arr.indexOf(value) !== -1;
+          chip.setAttribute('aria-pressed', active ? 'true' : 'false');
+          chip.classList.toggle('active', active);
+        });
+      }
+
+      // Write filters to URL hash
+      function writeHash() {
+        var params = new URLSearchParams();
+        if (filters.search) params.set('q', filters.search);
+        if (filters.lang.length) params.set('lang', filters.lang.join(','));
+        if (filters.trust.length) params.set('trust', filters.trust.join(','));
+        var str = params.toString();
+        history.replaceState(null, '', str ? '#' + str : window.location.pathname);
+      }
+
+      function applyFilters() {
+        var query = filters.search.toLowerCase();
+        var visibleCount = 0;
+        var hasActiveFilters = query || filters.lang.length || filters.trust.length;
+
+        cards.forEach(function (card) {
+          var langs = (card.getAttribute('data-languages') || '').split(',');
+          var trust = card.getAttribute('data-trust') || '';
+          var tags = (card.getAttribute('data-tags') || '').split(',');
+          var name = (card.querySelector('.skill-name') || {}).textContent || '';
+          var desc = (card.querySelector('.skill-description') || {}).textContent || '';
+          var author = (card.querySelector('.skill-author') || {}).textContent || '';
+
+          var searchText = (name + ' ' + desc + ' ' + author + ' ' + tags.join(' ')).toLowerCase();
+          var matchSearch = !query || searchText.indexOf(query) !== -1;
+
+          var matchLang = !filters.lang.length || filters.lang.some(function (l) { return langs.indexOf(l) !== -1; });
+          var matchTrust = !filters.trust.length || filters.trust.indexOf(trust) !== -1;
+
+          var visible = matchSearch && matchLang && matchTrust;
+          card.classList.toggle('hidden', !visible);
+          if (visible) visibleCount++;
+        });
+
+        // Hide empty category sections
+        sections.forEach(function (section) {
+          var visibleCards = section.querySelectorAll('.skill-card:not(.hidden)');
+          section.classList.toggle('hidden', visibleCards.length === 0);
+        });
+
+        resultCount.textContent = visibleCount;
+        noResults.classList.toggle('visible', visibleCount === 0);
+        clearBtn.style.display = hasActiveFilters ? 'inline' : 'none';
+
+        writeHash();
+      }
+
+      // Search input
+      var searchTimeout;
+      searchInput.addEventListener('input', function () {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(function () {
+          filters.search = searchInput.value.trim();
+          applyFilters();
+        }, 150);
+      });
+
+      // Filter chips
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          var filterType = chip.getAttribute('data-filter');
+          var value = chip.getAttribute('data-value');
+          var key = filterType === 'lang' ? 'lang' : 'trust';
+          var arr = filters[key];
+          var idx = arr.indexOf(value);
+
+          if (idx === -1) {
+            arr.push(value);
+            chip.setAttribute('aria-pressed', 'true');
+            chip.classList.add('active');
+          } else {
+            arr.splice(idx, 1);
+            chip.setAttribute('aria-pressed', 'false');
+            chip.classList.remove('active');
+          }
+
+          applyFilters();
+        });
+      });
+
+      // Clear filters
+      clearBtn.addEventListener('click', function () {
+        filters = { search: '', lang: [], trust: [] };
+        searchInput.value = '';
+        chips.forEach(function (chip) {
+          chip.setAttribute('aria-pressed', 'false');
+          chip.classList.remove('active');
+        });
+        applyFilters();
+        searchInput.focus();
+      });
+
+      // Hash change
+      window.addEventListener('hashchange', function () {
+        readHash();
+        applyFilters();
+      });
+
+      // Init
+      readHash();
+      applyFilters();
+
+    })();
+  </script>
+</body>
+</html>
