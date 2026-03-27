@@ -674,6 +674,125 @@
       font-size: 0.8rem;
     }
 
+    .copy-install {
+      margin-left: auto;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      background: transparent;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: color var(--transition-fast), border-color var(--transition-fast);
+      white-space: nowrap;
+    }
+    .copy-install:hover {
+      color: var(--green);
+      border-color: var(--green-dim);
+    }
+    .copy-install.copied {
+      color: var(--green);
+      border-color: var(--green-dim);
+    }
+
+    /* ── Install modal ── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-overlay[aria-hidden="false"] {
+      display: flex;
+    }
+    .modal {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      width: 90%;
+      max-width: 600px;
+      overflow: hidden;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+    }
+    .modal-titlebar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      background: var(--bg-titlebar);
+      border-bottom: 1px solid var(--border);
+    }
+    .modal-title {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+    .modal-close {
+      margin-left: auto;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 0 4px;
+      line-height: 1;
+    }
+    .modal-close:hover { color: var(--text-primary); }
+    .modal-body {
+      padding: 20px;
+    }
+    .modal-hint {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+    .modal-code-wrap {
+      position: relative;
+    }
+    .modal-code {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      line-height: 1.5;
+      color: var(--green);
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 14px;
+      padding-right: 70px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      margin: 0;
+    }
+    .modal-copy {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      padding: 4px 10px;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      background: var(--bg-secondary);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: color var(--transition-fast), border-color var(--transition-fast);
+    }
+    .modal-copy:hover {
+      color: var(--green);
+      border-color: var(--green-dim);
+    }
+    .modal-copy.copied {
+      color: var(--green);
+      border-color: var(--green-dim);
+    }
+
     .skill-languages {
       font-family: var(--font-mono);
       font-size: 0.7rem;
@@ -1000,13 +1119,6 @@
 
         <div class="vision-grid">
           <div class="vision-card">
-            <h3 class="vision-card-title">Depth over installs</h3>
-            <p class="vision-card-text">
-              General directories list skills with 9.8K installs that just say "use Spring Boot best practices" — something Claude already does. Every skill here teaches the AI something it wouldn't know on its own.
-            </p>
-          </div>
-
-          <div class="vision-card">
             <h3 class="vision-card-title">One-liner bootstrap</h3>
             <p class="vision-card-text">
               <code>curl -fsSL jvmskills.com/install | sh</code> — auto-detects your stack from build files, picks matching skills, and generates AI config. Zero dependencies.
@@ -1033,6 +1145,24 @@
 
     </div>
   </main>
+
+  <!-- ═══════════ INSTALL MODAL ═══════════ -->
+  <div class="modal-overlay" id="installModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-labelledby="modalTitle">
+      <div class="modal-titlebar">
+        <span class="card-dots"><span></span><span></span><span></span></span>
+        <span class="modal-title" id="modalTitle">install skill</span>
+        <button class="modal-close" id="modalClose" type="button" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-hint">Paste this into your AI coding agent:</p>
+        <div class="modal-code-wrap">
+          <pre class="modal-code" id="modalCode"></pre>
+          <button class="modal-copy" id="modalCopy" type="button">copy</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ═══════════ FOOTER ═══════════ -->
   <footer role="contentinfo">
@@ -1220,6 +1350,44 @@
         });
         applyFilters();
         searchInput.focus();
+      });
+
+      // Install modal
+      var modal = document.getElementById('installModal');
+      var modalCode = document.getElementById('modalCode');
+      var modalCopy = document.getElementById('modalCopy');
+      var modalClose = document.getElementById('modalClose');
+
+      function openModal(text) {
+        modalCode.textContent = text;
+        modalCopy.textContent = 'copy';
+        modalCopy.classList.remove('copied');
+        modal.setAttribute('aria-hidden', 'false');
+      }
+      function closeModal() {
+        modal.setAttribute('aria-hidden', 'true');
+      }
+
+      document.addEventListener('click', function (e) {
+        var btn = e.target.closest('.copy-install');
+        if (btn) openModal(btn.getAttribute('data-install'));
+      });
+      modalClose.addEventListener('click', closeModal);
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) closeModal();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') closeModal();
+      });
+      modalCopy.addEventListener('click', function () {
+        navigator.clipboard.writeText(modalCode.textContent).then(function () {
+          modalCopy.textContent = 'copied!';
+          modalCopy.classList.add('copied');
+          setTimeout(function () {
+            modalCopy.textContent = 'copy';
+            modalCopy.classList.remove('copied');
+          }, 2000);
+        });
       });
 
       // Hash change

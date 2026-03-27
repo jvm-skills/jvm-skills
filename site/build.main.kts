@@ -73,12 +73,18 @@ val skillCards = buildString {
             append("""<div class="card-body">""")
             append("\n")
             val skillUrl = if (skillPath.isNotEmpty()) "https://github.com/${htmlEscape(repo)}/blob/main/${htmlEscape(skillPath)}" else "https://github.com/${htmlEscape(repo)}"
+            val skillDir = if (skillPath.contains("/")) skillPath.substringBeforeLast("/") else ""
+            val skillDirUrl = if (skillDir.isNotEmpty()) "https://github.com/$repo/tree/main/$skillDir" else "https://github.com/$repo"
+            val skillSlug = if (skillDir.isNotEmpty()) skillDir.substringAfterLast("/") else repo.substringAfterLast("/")
+            val installText = "Fetch the skill from $skillDirUrl and save all files to .claude/skills/$skillSlug/"
+
             append("""<h3 class="skill-name"><a href="$skillUrl">${htmlEscape(name)}</a></h3>""")
             append("\n")
             append("""<p class="skill-description">${htmlEscape(description)}</p>""")
             append("\n")
             append("""<div class="skill-meta">""")
             append("""<span class="skill-author">by ${htmlEscape(author)}</span>""")
+            append("""<button class="copy-install" data-install="${htmlEscape(installText)}" type="button" title="Copy install instruction">install</button>""")
             append("</div>\n")
             append("""<div class="skill-languages">$langsHtml</div>""")
             append("\n")
