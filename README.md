@@ -10,6 +10,8 @@ Skills are opinionated best-practice guides that AI coding tools (Claude Code, C
 
 AI coding tools are only as good as their context. Without guidance, they generate code that *works* but doesn't follow the patterns a senior engineer would use. jvm-skills fills that gap with strongly opinionated best practices.
 
+General skill directories exist (playbooks.com, skills.sh, skillsdirectory.com), but they're not focused on a specific ecosystem — and many of the top-installed skills are surprisingly shallow. The most popular Spring Boot skill on skills.sh has 9.8K installs and just tells the AI to "use Spring Boot best practices." That's not a skill — Claude already does that without one. jvm-skills only lists skills that teach the AI something it wouldn't know on its own.
+
 ## Browse Skills
 
 Visit **[jvmskills.com](https://jvmskills.com)** to browse all skills, filter by AI tool, language, and category.
