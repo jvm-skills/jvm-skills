@@ -29,9 +29,6 @@ jobs:
       - name: Build site
         run: kotlin site/build.main.kts
 
-      - name: Add CNAME
-        run: echo "jvmskills.com" > dist/CNAME
-
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
