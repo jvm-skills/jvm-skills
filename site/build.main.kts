@@ -191,7 +191,10 @@ if (blogDir.isDirectory) {
         blogPosts.add(BlogPost(
             title = fm["title"]?.toString() ?: mdFile.nameWithoutExtension,
             slug = fm["slug"]?.toString() ?: mdFile.nameWithoutExtension,
-            date = fm["date"]?.toString() ?: "",
+            date = when (val d = fm["date"]) {
+                is java.util.Date -> java.text.SimpleDateFormat("yyyy-MM-dd").apply { timeZone = java.util.TimeZone.getTimeZone("UTC") }.format(d)
+                else -> d?.toString() ?: ""
+            },
             author = fm["author"]?.toString() ?: "",
             description = fm["description"]?.toString() ?: "",
             skills = (fm["skills"] as? List<*>)?.map { it.toString() } ?: emptyList(),
@@ -283,15 +286,19 @@ val output = template
 distDir.mkdirs()
 outputFile.writeText(output)
 
-// Patch generated date into blog files
+// Patch generated date into blog files (date only, no time)
+val generatedDateOnly = DateTimeFormatter.ofPattern("yyyy-MM-dd")
+    .withZone(ZoneOffset.UTC)
+    .format(Instant.now())
+
 if (blogPosts.isNotEmpty()) {
     val blogIndexFile = File(blogDistDir, "index.html")
-    blogIndexFile.writeText(blogIndexFile.readText().replace("{{GENERATED_DATE}}", generatedDate))
+    blogIndexFile.writeText(blogIndexFile.readText().replace("{{GENERATED_DATE}}", generatedDateOnly))
 
     for (post in blogPosts) {
         val postFile = File(blogDistDir, "${post.slug}/index.html")
         if (postFile.exists()) {
-            postFile.writeText(postFile.readText().replace("{{GENERATED_DATE}}", generatedDate))
+            postFile.writeText(postFile.readText().replace("{{GENERATED_DATE}}", generatedDateOnly))
         }
     }
 }

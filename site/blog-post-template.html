@@ -120,15 +120,23 @@
 
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
+    /* ── Progress bar ── */
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: var(--green);
+      z-index: 200;
+      transition: width 50ms linear;
+    }
+
     /* ── Header ── */
     header {
-      position: sticky;
-      top: 0;
       z-index: 100;
       background: var(--bg-secondary);
       border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
     }
 
     .header-inner {
@@ -458,7 +466,7 @@
   </style>
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
 
   <header role="banner">
     <div class="container header-inner">
@@ -549,6 +557,18 @@
           setTheme(e.matches ? 'dark' : 'light');
         }
       });
+
+      // Reading progress
+      var progressBar = document.getElementById('progressBar');
+      var article = document.querySelector('.blog-article');
+      window.addEventListener('scroll', function () {
+        var articleTop = article.offsetTop;
+        var articleHeight = article.offsetHeight;
+        var scrollY = window.scrollY || window.pageYOffset;
+        var windowHeight = window.innerHeight;
+        var progress = Math.min(100, Math.max(0, (scrollY - articleTop + windowHeight) / articleHeight * 100));
+        progressBar.style.width = progress + '%';
+      }, { passive: true });
     })();
   </script>
 </body>
