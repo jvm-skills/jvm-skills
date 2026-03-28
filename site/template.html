@@ -968,6 +968,20 @@
       color: var(--green);
     }
 
+    /* ── Submit Skill CTA ── */
+    .submit-cta {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      text-align: center;
+      padding: 16px 0;
+    }
+
+    .submit-cta a {
+      color: var(--green);
+      font-weight: 600;
+    }
+
     /* ══════════════════════════════════════════════
        RESPONSIVE
        ══════════════════════════════════════════════ */
@@ -986,6 +1000,8 @@
       .logo { font-size: 1rem; }
 
       .github-link .gh-text { display: none; }
+      .submit-skill-link { display: none; }
+      .theme-toggle .theme-label { display: none; }
     }
 
     @media (max-width: 480px) {
@@ -1101,10 +1117,14 @@
         </p>
       </section>
 
+      <p class="submit-cta">Know what works in production? <a href="https://github.com/jvm-skills/jvm-skills/issues/new?template=submit-skill.yml&title=%5BSkill%5D+My+Skill+Name">+ Submit a skill</a></p>
+
       <!-- ═══════════ SKILL CARDS (injected by build script) ═══════════ -->
       <div id="skillsContainer" aria-label="Skill listings">
         {{SKILL_CARDS}}
       </div>
+
+      <p class="submit-cta">Missing a skill for your stack? <a href="https://github.com/jvm-skills/jvm-skills/issues/new?template=submit-skill.yml&title=%5BSkill%5D+My+Skill+Name">+ Submit a skill</a></p>
 
       <!-- ═══════════ EMPTY STATE ═══════════ -->
       <div class="no-results" id="noResults" role="status">
