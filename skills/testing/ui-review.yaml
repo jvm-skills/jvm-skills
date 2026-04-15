@@ -1,0 +1,24 @@
+name: UI Review
+description: >-
+  Verify UI/UX by running Playwright tests and reviewing screenshots.
+  Spawns a ui-review subagent to check layouts, user flows, and visual
+  correctness. Iterates until the page looks right.
+repo: jvm-skills/jvm-skills
+skill_path: ".claude/skills/ui-review/SKILL.md"
+category: testing
+languages:
+  - kotlin
+  - java
+  - groovy
+trust: curated
+author: jvm-skills
+version: "1.1.0"
+last_updated: "2026-04-15"
+scope: focused
+tech:
+  - playwright
+tags:
+  - ui
+  - testing
+  - screenshots
+  - visual-review
