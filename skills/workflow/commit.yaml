@@ -11,8 +11,8 @@ languages:
   - groovy
 trust: curated
 author: jvm-skills
-version: "1.0.0"
-last_updated: "2026-03-27"
+version: "1.0.1"
+last_updated: "2026-04-13"
 scope: focused
 tech: []
 tags:
