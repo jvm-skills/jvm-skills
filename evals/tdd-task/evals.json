@@ -1,0 +1,51 @@
+{
+  "skill_name": "tdd-task",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "PHO-378: The subdomain validation is broken — subdomains starting with a hyphen like '-rene-hochzeit' are accepted but shouldn't be. The HTML pattern in WebsiteSettingsComponent.html allows it, and the backend in WeddingOnboarding.kt has no format validation at all (only a prohibited list). Fix both: reject subdomains that start or end with a hyphen, on frontend and backend. The subdomain should be a valid DNS label.",
+      "expected_output": "A failing test for subdomain validation (e.g. in WeddingOnboardingTest), then backend fix in WeddingOnboarding.kt saveWebsiteSettings, then frontend fix in WebsiteSettingsComponent.html regex pattern, verified in browser",
+      "expectations": [
+        "A test is written BEFORE any fix — it sends a subdomain like '-rene-hochzeit' and asserts rejection",
+        "The test fails first (confirming the bug exists)",
+        "Backend validation is added in WeddingOnboarding.kt to reject subdomains starting/ending with hyphens",
+        "The HTML pattern attribute in WebsiteSettingsComponent.html is updated to reject leading/trailing hyphens",
+        "The test passes after the fix",
+        "A commit is made at the end"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "PHO-369: Make the date format selectable per event. Currently the date format is hardcoded as 'd. MMMM yyyy' (German) everywhere — in CardService, CardOrderService, PaymentSuccessComponent, Theme.kt. Add a dateFormat column to the EVENT table, a dropdown in the wedding settings UI where the couple can pick their preferred format (e.g. 'dd.MM.yyyy', 'd. MMMM yyyy', 'MMMM d, yyyy'), and use it wherever the event date is displayed or printed on cards.",
+      "expected_output": "DB migration for dateFormat column, test for date format selection and rendering, service changes to use dynamic format, UI dropdown in settings, verified on card preview",
+      "expectations": [
+        "A DB migration adds a dateFormat column to the EVENT table",
+        "A test is written BEFORE implementation — e.g. testing that CardService uses the event's chosen format",
+        "The test fails first",
+        "The date format preference is stored and retrieved correctly",
+        "At least CardService and CardOrderService use the dynamic format instead of hardcoded",
+        "A UI dropdown is added to the wedding settings page",
+        "UI/UX is verified via ui-review subagent (checks that dropdown looks good and UX works)",
+        "A commit is made at the end"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "PHO-351: When the wedding date is less than 9 days away, printed cards can't be delivered in time. In the SelectPlan wizard, detect this and offer the PHOTOSAFARI_DIGITAL plan instead. Show a warning message explaining that printing and shipping takes 7-10 business days so we recommend the digital version. The check should use the same threshold as DelayedCardOrderService.calculateScheduledTime (< 14 days). If the user picks a printed plan anyway, show a confirmation that delivery is not guaranteed.",
+      "expected_output": "Test for date proximity logic and plan suggestion, backend check in SelectPlanComponent, frontend warning in SelectPlanComponent.html/SelectPlanWizardComponent.html, verified in browser",
+      "expectations": [
+        "A test is written BEFORE implementation — e.g. testing that a wedding 10 days away triggers the digital suggestion",
+        "The test fails first",
+        "The proximity check uses the wedding date and a 14-day threshold",
+        "The SelectPlan UI shows a warning when the wedding is too close for printing",
+        "PHOTOSAFARI_DIGITAL is suggested or auto-selected for close dates",
+        "The warning message mentions shipping time (7-10 business days)",
+        "UI/UX is verified via ui-review subagent (checks warning banner and confirmation modal look good and UX works)",
+        "A commit is made at the end"
+      ],
+      "files": []
+    }
+  ]
+}

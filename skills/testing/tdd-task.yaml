@@ -1,0 +1,24 @@
+name: TDD Task
+description: >-
+  Implement a feature or fix a bug using strict TDD — write a failing test
+  first, then implement the minimum to pass, refactor, verify, and commit.
+  Enforces the red-green-refactor cycle with mandatory gates.
+repo: jvm-skills/jvm-skills
+skill_path: ".claude/skills/tdd-task/SKILL.md"
+category: testing
+languages:
+  - kotlin
+  - java
+trust: curated
+author: jvm-skills
+version: "1.2.0"
+last_updated: "2026-04-15"
+eval: evals/tdd-task/benchmark.json
+scope: focused
+tech:
+  - spring-boot
+tags:
+  - tdd
+  - testing
+  - red-green-refactor
+  - workflow

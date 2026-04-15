@@ -1,0 +1,222 @@
+{
+  "metadata": {
+    "skill_name": "tdd-task",
+    "skill_path": ".claude/skills/tdd-task/SKILL.md",
+    "project": "PhotoQuest",
+    "executor_model": "claude-opus-4-6",
+    "analyzer_model": "claude-opus-4-6",
+    "timestamp": "2026-03-30T14:30:00Z",
+    "evals_run": [1, 2, 3],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "Subdomain Validation",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 10,
+        "failed": 0,
+        "total": 10,
+        "time_seconds": 377.3,
+        "tokens": 52645,
+        "tool_calls": 25,
+        "errors": 1
+      },
+      "expectations": [
+        {"text": "A test is written BEFORE any fix", "passed": true, "evidence": "Test created in Step 3 (Red) before implementation in Step 4 (Green)"},
+        {"text": "The test fails first (confirming the bug exists)", "passed": true, "evidence": "Compile failed: Unresolved reference validateSubdomain"},
+        {"text": "Backend validation added in WeddingOnboarding.kt", "passed": true, "evidence": "validateSubdomain() with DNS regex added"},
+        {"text": "HTML pattern updated to reject leading/trailing hyphens", "passed": true, "evidence": "Pattern requires alphanumeric start"},
+        {"text": "The test passes after the fix", "passed": true, "evidence": "ALL 18 PASSED"},
+        {"text": "A commit is made at the end", "passed": true, "evidence": "Committed with descriptive message"},
+        {"text": "Tests use parameterized approach", "passed": true, "evidence": "@ParameterizedTest + @ValueSource for all groups"},
+        {"text": "Error messages are in German", "passed": true, "evidence": "3 distinct German error messages"},
+        {"text": "No unrelated files or changes", "passed": true, "evidence": "Exactly 3 files, all relevant"},
+        {"text": "DNS label RFC rules followed", "passed": true, "evidence": "Max 63 chars, alphanumeric + hyphens regex"}
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "Subdomain Validation",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6,
+        "passed": 6,
+        "failed": 4,
+        "total": 10,
+        "time_seconds": 249.5,
+        "tokens": 43424,
+        "tool_calls": 19,
+        "errors": 1
+      },
+      "expectations": [
+        {"text": "A test is written BEFORE any fix", "passed": false, "evidence": "Tests added in Step 6, after fixes in Steps 3-5"},
+        {"text": "The test fails first", "passed": false, "evidence": "No red-run step documented"},
+        {"text": "Backend validation added in WeddingOnboarding.kt", "passed": true, "evidence": "isValidSubdomain() with correct regex"},
+        {"text": "HTML pattern updated to reject leading/trailing hyphens", "passed": true, "evidence": "Pattern requires alphanumeric start"},
+        {"text": "The test passes after the fix", "passed": true, "evidence": "All 8 tests PASSED"},
+        {"text": "A commit is made at the end", "passed": false, "evidence": "No commit step in transcript"},
+        {"text": "Tests use parameterized approach", "passed": false, "evidence": "8 individual @Test methods, no @ParameterizedTest"},
+        {"text": "Error messages are in German", "passed": true, "evidence": "German error messages present"},
+        {"text": "No unrelated files or changes", "passed": true, "evidence": "4 files, all relevant"},
+        {"text": "DNS label RFC rules followed", "passed": true, "evidence": "Max 63 chars, alphanumeric + hyphens"}
+      ],
+      "notes": ["Tests written after implementation — TDD order inverted", "Also fixed availability check endpoint (bonus)"]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "Date Format Selectability",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.67,
+        "passed": 8,
+        "failed": 4,
+        "total": 12,
+        "time_seconds": 707.8,
+        "tokens": 92665,
+        "tool_calls": 57,
+        "errors": 3
+      },
+      "expectations": [
+        {"text": "DB migration adds dateFormat column", "passed": true, "evidence": "V18__add_date_format.sql created"},
+        {"text": "Test written BEFORE implementation", "passed": true, "evidence": "Red phase: Too many arguments for getLocalizedDateString()"},
+        {"text": "Test fails first", "passed": true, "evidence": "Compile error confirmed red phase"},
+        {"text": "Date format stored and retrieved correctly", "passed": true, "evidence": "Full chain: EventSettings → EventRepository → DB round-trip test"},
+        {"text": "CardService and CardOrderService use dynamic format", "passed": true, "evidence": "Both query EVENT.DATE_FORMAT from DB"},
+        {"text": "UI dropdown added", "passed": true, "evidence": "select with th:each and th:selected"},
+        {"text": "UI/UX verified via ui-review", "passed": false, "evidence": "Incorrectly dismissed as requiring Playwright"},
+        {"text": "Commit made at end", "passed": false, "evidence": "Left 'pending user request'"},
+        {"text": "Tests cover multiple formats", "passed": true, "evidence": "3 distinct patterns tested"},
+        {"text": "All 5 hardcoded locations updated", "passed": true, "evidence": "Theme, CardService, CardOrderService, PaymentSuccess, WeddingEventDetails"},
+        {"text": "No unrelated files or changes", "passed": false, "evidence": "Diff includes lint config deletions, session.html, and other feature changes"},
+        {"text": "Dropdown shows date previews", "passed": false, "evidence": "Shows raw pattern strings, not formatted examples"}
+      ],
+      "notes": ["Commit skipped with excuse", "ui-review misunderstood as requiring Playwright"]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "Date Format Selectability",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.42,
+        "passed": 5,
+        "failed": 7,
+        "total": 12,
+        "time_seconds": 375.1,
+        "tokens": 62780,
+        "tool_calls": 44,
+        "errors": 1
+      },
+      "expectations": [
+        {"text": "DB migration adds dateFormat column", "passed": true, "evidence": "V18__event_date_format.sql created"},
+        {"text": "Test written BEFORE implementation", "passed": false, "evidence": "No behavioral test written at all"},
+        {"text": "Test fails first", "passed": false, "evidence": "No test exists to fail"},
+        {"text": "Date format stored and retrieved correctly", "passed": true, "evidence": "Full chain implemented"},
+        {"text": "CardService and CardOrderService use dynamic format", "passed": true, "evidence": "Both use Theme.formatterFor()"},
+        {"text": "UI dropdown added", "passed": true, "evidence": "select with th:each"},
+        {"text": "UI/UX verified via ui-review", "passed": false, "evidence": "No visual verification"},
+        {"text": "Commit made at end", "passed": false, "evidence": "No git commands in transcript"},
+        {"text": "Tests cover multiple formats", "passed": false, "evidence": "No new tests written"},
+        {"text": "All 5 hardcoded locations updated", "passed": true, "evidence": "All 5 files updated"},
+        {"text": "No unrelated files or changes", "passed": false, "evidence": "jOOQ regeneration side effects"},
+        {"text": "Dropdown shows date previews", "passed": false, "evidence": "Shows raw pattern strings"}
+      ],
+      "notes": ["Zero tests written", "jOOQ codegen introduced unrelated changes"]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "Plan Proximity Warning",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.83,
+        "passed": 10,
+        "failed": 2,
+        "total": 12,
+        "time_seconds": 518.2,
+        "tokens": 92590,
+        "tool_calls": 42,
+        "errors": 2
+      },
+      "expectations": [
+        {"text": "Test written BEFORE implementation", "passed": true, "evidence": "Compile failure: Unresolved reference isDeliveryNotGuaranteed (8 occurrences)"},
+        {"text": "Test fails first", "passed": true, "evidence": "Compilation failed in red phase"},
+        {"text": "Proximity check uses 14-day threshold", "passed": true, "evidence": "DELIVERY_THRESHOLD_DAYS = 14L"},
+        {"text": "SelectPlan UI shows warning", "passed": true, "evidence": "Warning banner with x-show and data-testid"},
+        {"text": "PHOTOSAFARI_DIGITAL suggested for close dates", "passed": true, "evidence": "recommendedPlan() returns PHOTOSAFARI_DIGITAL"},
+        {"text": "Warning mentions 7-10 business days", "passed": true, "evidence": "7-10 Werktage in both banner and modal"},
+        {"text": "UI/UX verified via ui-review", "passed": false, "evidence": "No browser verification occurred"},
+        {"text": "Commit made at end", "passed": false, "evidence": "No commit step in transcript"},
+        {"text": "Edge cases covered (14 days, null, past)", "passed": true, "evidence": "All 3 edge cases tested"},
+        {"text": "data-testid attributes added", "passed": true, "evidence": "4 data-testid attributes on warning and modal"},
+        {"text": "No unrelated changes", "passed": true, "evidence": "3 files, all relevant"},
+        {"text": "Modal has German cancel/proceed", "passed": true, "evidence": "Abbrechen / Trotzdem wählen"}
+      ],
+      "notes": ["ui-review skipped — claimed backend-only", "Alpine.js modal flow untested"]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "Plan Proximity Warning",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.58,
+        "passed": 7,
+        "failed": 5,
+        "total": 12,
+        "time_seconds": 394.2,
+        "tokens": 73089,
+        "tool_calls": 36,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Test written BEFORE implementation", "passed": false, "evidence": "No test written at any point"},
+        {"text": "Test fails first", "passed": false, "evidence": "No test exists"},
+        {"text": "Proximity check uses 14-day threshold", "passed": true, "evidence": "PRINTING_LEAD_TIME_DAYS = 14L"},
+        {"text": "SelectPlan UI shows warning", "passed": true, "evidence": "Warning banner with x-show"},
+        {"text": "PHOTOSAFARI_DIGITAL suggested for close dates", "passed": true, "evidence": "Auto-selected in completeWizard()"},
+        {"text": "Warning mentions 7-10 business days", "passed": true, "evidence": "7-10 Werktage in banner and modal"},
+        {"text": "UI/UX verified via ui-review", "passed": false, "evidence": "No ui-review invoked"},
+        {"text": "Commit made at end", "passed": false, "evidence": "No commit step"},
+        {"text": "Edge cases covered", "passed": false, "evidence": "No tests written at all"},
+        {"text": "data-testid attributes added", "passed": true, "evidence": "confirm-printed-plan testid added"},
+        {"text": "No unrelated changes", "passed": true, "evidence": "2 files, all relevant"},
+        {"text": "Modal has German cancel/proceed", "passed": true, "evidence": "Abbrechen / Trotzdem wählen"}
+      ],
+      "notes": ["Zero tests written", "Implementation quality is solid despite no TDD"]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 0.83, "stddev": 0.14, "min": 0.67, "max": 1.0},
+      "time_seconds": {"mean": 534.4, "stddev": 136.1, "min": 377.3, "max": 707.8},
+      "tokens": {"mean": 79300, "stddev": 18883, "min": 52645, "max": 92665}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.53, "stddev": 0.08, "min": 0.42, "max": 0.6},
+      "time_seconds": {"mean": 339.6, "stddev": 64.0, "min": 249.5, "max": 394.2},
+      "tokens": {"mean": 59764, "stddev": 12237, "min": 43424, "max": 73089}
+    },
+    "delta": {
+      "pass_rate": "+0.30",
+      "time_seconds": "+194.8",
+      "tokens": "+19536"
+    }
+  },
+  "notes": [
+    "TDD discipline is the primary differentiator: with-skill runs always write tests first; 2/3 without-skill runs wrote zero tests",
+    "Commit step failed in 4/6 runs (both with-skill eval-2 and eval-3, all without-skill) — skill should enforce this more strongly",
+    "ui-review assertion failed universally (0/6 runs) — structurally difficult in sandbox/worktree without running app",
+    "Implementation quality is comparable — without-skill runs produce correct, clean code; the difference is workflow discipline (TDD, commits, verification)",
+    "With-skill uses ~57% more time and ~33% more tokens on average, primarily for writing and running tests",
+    "The with-skill run for eval-1 (subdomain validation) achieved a perfect 10/10 — a focused bug fix is the ideal TDD task",
+    "Eval-2 (date format) is the hardest task — both configurations missed the date preview UX detail"
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "metadata": {
+    "skill_name": "tdd-task",
+    "skill_path": ".claude/skills/tdd-task/SKILL.md",
+    "project": "PhotoQuest",
+    "executor_model": "claude-opus-4-6",
+    "analyzer_model": "claude-opus-4-6",
+    "timestamp": "2026-03-30T16:00:00Z",
+    "evals_run": [1, 2, 3],
+    "runs_per_configuration": 1,
+    "iteration": 2,
+    "changes_from_iteration_1": "Step 3 (Red): stub-first approach for assertion errors instead of compile errors. Step 6 (Verify): .html = UI change, never backend-only. Step 8 (Commit): mandatory, not optional."
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "Subdomain Validation",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 10,
+        "failed": 0,
+        "total": 10,
+        "time_seconds": 405.5,
+        "tokens": 55772,
+        "tool_calls": 42,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Test written BEFORE fix", "passed": true, "evidence": "Parameterized test with -rene-hochzeit written after stub, before implementation"},
+        {"text": "Test fails with ASSERTION ERRORS (stub-first)", "passed": true, "evidence": "6 AssertionError: Expecting code to raise a throwable"},
+        {"text": "Backend validation in WeddingOnboarding.kt", "passed": true, "evidence": "validateSubdomain() added"},
+        {"text": "HTML pattern updated", "passed": true, "evidence": "Requires alphanumeric start"},
+        {"text": "Test passes after fix", "passed": true, "evidence": "14/14 pass"},
+        {"text": "Commit made", "passed": true, "evidence": "Fix subdomain validation: reject hyphens at start/end"},
+        {"text": "Parameterized tests", "passed": true, "evidence": "@ParameterizedTest + @ValueSource"},
+        {"text": "German error messages", "passed": true, "evidence": "Ungültige Subdomain, Ungültiges Format"},
+        {"text": "No unrelated changes", "passed": true, "evidence": "4 relevant files only"},
+        {"text": "DNS RFC rules", "passed": true, "evidence": "Max 63 chars, alphanumeric + hyphens regex"}
+      ],
+      "notes": ["Also fixed checkSubdomainAvailability endpoint (bonus)"]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "Subdomain Validation",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6,
+        "passed": 6,
+        "failed": 4,
+        "total": 10,
+        "time_seconds": 249.5,
+        "tokens": 43424,
+        "tool_calls": 19,
+        "errors": 1
+      },
+      "expectations": [
+        {"text": "Test written BEFORE fix", "passed": false, "evidence": "Tests added after fixes"},
+        {"text": "Test fails with ASSERTION ERRORS (stub-first)", "passed": false, "evidence": "No red-run step"},
+        {"text": "Backend validation in WeddingOnboarding.kt", "passed": true, "evidence": "isValidSubdomain() added"},
+        {"text": "HTML pattern updated", "passed": true, "evidence": "Requires alphanumeric start"},
+        {"text": "Test passes after fix", "passed": true, "evidence": "8/8 pass"},
+        {"text": "Commit made", "passed": false, "evidence": "No commit"},
+        {"text": "Parameterized tests", "passed": false, "evidence": "Individual @Test methods"},
+        {"text": "German error messages", "passed": true, "evidence": "German messages present"},
+        {"text": "No unrelated changes", "passed": true, "evidence": "4 relevant files"},
+        {"text": "DNS RFC rules", "passed": true, "evidence": "Max 63 chars, correct regex"}
+      ],
+      "notes": ["Reused from iteration-1"]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "Date Format Selectability",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.75,
+        "passed": 9,
+        "failed": 3,
+        "total": 12,
+        "time_seconds": 600.1,
+        "tokens": 90995,
+        "tool_calls": 89,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "DB migration adds dateFormat column", "passed": true, "evidence": "V18__add_date_format.sql"},
+        {"text": "Test written BEFORE implementation", "passed": true, "evidence": "Stub-first in RED phase"},
+        {"text": "Test fails with ASSERTION ERRORS (stub-first)", "passed": true, "evidence": "2/5 failed with assertion errors"},
+        {"text": "Date format stored and retrieved", "passed": true, "evidence": "EventRepository + CurrentEvent updated"},
+        {"text": "CardService and CardOrderService dynamic", "passed": true, "evidence": "Both confirmed in diff"},
+        {"text": "UI dropdown added", "passed": true, "evidence": "select with th:each"},
+        {"text": "UI/UX verified via ui-review", "passed": false, "evidence": "No browser verification"},
+        {"text": "Commit made", "passed": true, "evidence": "PHO-369: Add selectable date format per event"},
+        {"text": "Tests cover multiple formats", "passed": true, "evidence": "3 patterns tested"},
+        {"text": "All 5 hardcoded locations updated", "passed": true, "evidence": "All 5 confirmed"},
+        {"text": "No unrelated changes", "passed": false, "evidence": "jOOQ regeneration side effects"},
+        {"text": "Dropdown shows date previews", "passed": false, "evidence": "Hardcoded static strings, not computed from event.date"}
+      ],
+      "notes": ["Commit now made (was skipped in v1)", "Assertion errors in RED (was compile errors in v1)"]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "Date Format Selectability",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.42,
+        "passed": 5,
+        "failed": 7,
+        "total": 12,
+        "time_seconds": 375.1,
+        "tokens": 62780,
+        "tool_calls": 44,
+        "errors": 1
+      },
+      "expectations": [
+        {"text": "DB migration adds dateFormat column", "passed": true, "evidence": "V18 created"},
+        {"text": "Test written BEFORE implementation", "passed": false, "evidence": "No test written"},
+        {"text": "Test fails with ASSERTION ERRORS (stub-first)", "passed": false, "evidence": "No test exists"},
+        {"text": "Date format stored and retrieved", "passed": true, "evidence": "Full chain implemented"},
+        {"text": "CardService and CardOrderService dynamic", "passed": true, "evidence": "Both use Theme.formatterFor()"},
+        {"text": "UI dropdown added", "passed": true, "evidence": "select with th:each"},
+        {"text": "UI/UX verified via ui-review", "passed": false, "evidence": "No verification"},
+        {"text": "Commit made", "passed": false, "evidence": "No commit"},
+        {"text": "Tests cover multiple formats", "passed": false, "evidence": "No tests"},
+        {"text": "All 5 hardcoded locations updated", "passed": true, "evidence": "All 5 updated"},
+        {"text": "No unrelated changes", "passed": false, "evidence": "jOOQ side effects"},
+        {"text": "Dropdown shows date previews", "passed": false, "evidence": "Raw pattern strings"}
+      ],
+      "notes": ["Reused from iteration-1"]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "Plan Proximity Warning",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.83,
+        "passed": 10,
+        "failed": 2,
+        "total": 12,
+        "time_seconds": 542.9,
+        "tokens": 83196,
+        "tool_calls": 74,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Test written BEFORE implementation", "passed": true, "evidence": "Red phase with assertion failures"},
+        {"text": "Test fails with ASSERTION ERRORS (stub-first)", "passed": true, "evidence": "Stub returned false, 4 tests failed with assertion errors"},
+        {"text": "Proximity check uses 14-day threshold", "passed": true, "evidence": "ChronoUnit.DAYS.between with 14-day constant"},
+        {"text": "SelectPlan UI shows warning", "passed": true, "evidence": "Warning banner with data-testid"},
+        {"text": "PHOTOSAFARI_DIGITAL suggested", "passed": true, "evidence": "Auto-suggested for close dates"},
+        {"text": "Warning mentions 7-10 business days", "passed": true, "evidence": "7-10 Werktage in banner and modal"},
+        {"text": "UI/UX verified via ui-review", "passed": false, "evidence": "No browser verification"},
+        {"text": "Commit made", "passed": false, "evidence": "No commit in transcript"},
+        {"text": "Edge cases covered", "passed": true, "evidence": "14 days, null, past, today"},
+        {"text": "data-testid attributes", "passed": true, "evidence": "delivery-warning, delivery-confirmation-dialog"},
+        {"text": "No unrelated changes", "passed": true, "evidence": "3 files only"},
+        {"text": "German modal options", "passed": true, "evidence": "Digitale Version wählen / Trotzdem bestellen"}
+      ],
+      "notes": ["Stub-first RED working (was compile errors in v1)", "Commit still missed in this eval"]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "Plan Proximity Warning",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.58,
+        "passed": 7,
+        "failed": 5,
+        "total": 12,
+        "time_seconds": 394.2,
+        "tokens": 73089,
+        "tool_calls": 36,
+        "errors": 0
+      },
+      "expectations": [
+        {"text": "Test written BEFORE implementation", "passed": false, "evidence": "No test written"},
+        {"text": "Test fails with ASSERTION ERRORS (stub-first)", "passed": false, "evidence": "No test exists"},
+        {"text": "Proximity check uses 14-day threshold", "passed": true, "evidence": "PRINTING_LEAD_TIME_DAYS = 14L"},
+        {"text": "SelectPlan UI shows warning", "passed": true, "evidence": "Warning banner"},
+        {"text": "PHOTOSAFARI_DIGITAL suggested", "passed": true, "evidence": "Auto-selected in completeWizard()"},
+        {"text": "Warning mentions 7-10 business days", "passed": true, "evidence": "7-10 Werktage"},
+        {"text": "UI/UX verified via ui-review", "passed": false, "evidence": "No verification"},
+        {"text": "Commit made", "passed": false, "evidence": "No commit"},
+        {"text": "Edge cases covered", "passed": false, "evidence": "No tests"},
+        {"text": "data-testid attributes", "passed": true, "evidence": "confirm-printed-plan added"},
+        {"text": "No unrelated changes", "passed": true, "evidence": "2 files only"},
+        {"text": "German modal options", "passed": true, "evidence": "Abbrechen / Trotzdem wählen"}
+      ],
+      "notes": ["Reused from iteration-1"]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {"mean": 0.86, "stddev": 0.10, "min": 0.75, "max": 1.0},
+      "time_seconds": {"mean": 516.2, "stddev": 80.3, "min": 405.5, "max": 600.1},
+      "tokens": {"mean": 76654, "stddev": 15288, "min": 55772, "max": 90995}
+    },
+    "without_skill": {
+      "pass_rate": {"mean": 0.53, "stddev": 0.08, "min": 0.42, "max": 0.6},
+      "time_seconds": {"mean": 339.6, "stddev": 64.0, "min": 249.5, "max": 394.2},
+      "tokens": {"mean": 59764, "stddev": 12237, "min": 43424, "max": 73089}
+    },
+    "delta": {
+      "pass_rate": "+0.33",
+      "time_seconds": "+176.6",
+      "tokens": "+16890"
+    }
+  },
+  "iteration_comparison": {
+    "iteration_1_with_skill": {"mean_pass_rate": 0.83},
+    "iteration_2_with_skill": {"mean_pass_rate": 0.86},
+    "improvement": "+0.03",
+    "details": {
+      "eval_1": {"v1": 1.0, "v2": 1.0, "delta": "0 (both perfect)"},
+      "eval_2": {"v1": 0.67, "v2": 0.75, "delta": "+0.08 (commit now passes)"},
+      "eval_3": {"v1": 0.83, "v2": 0.83, "delta": "0 (same score, but RED quality improved)"}
+    },
+    "qualitative_improvements": [
+      "RED phase now uses assertion errors instead of compile errors in all 3 evals",
+      "Commit made in 2/3 evals (was 1/3 in v1)",
+      "ui-review still universally skipped — structural issue with sandbox/worktree environment"
+    ]
+  },
+  "notes": [
+    "Stub-first RED phase is working: all 3 v2 runs show assertion errors, not compile errors",
+    "Commit improved from 1/3 to 2/3 — eval-3 still missed it despite MANDATORY wording",
+    "ui-review failed in all 6 runs across both iterations — this is a structural limitation (no running app in worktree sandbox), not a skill instruction issue",
+    "jOOQ codegen side effects (eval-2) are unavoidable when running flywayMigrate + jooqCodegen — consider excluding generated files from the 'unrelated changes' assertion",
+    "Date preview assertion is very hard — neither iteration got it right with computed previews from the actual event date",
+    "Without-skill baseline is unchanged (reused from iteration-1)"
+  ]
+}
