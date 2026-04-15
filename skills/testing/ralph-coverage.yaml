@@ -1,0 +1,26 @@
+name: Ralph Coverage
+description: >-
+  Run an autonomous Ralph loop that improves test coverage by iteratively
+  picking the least-covered class, writing meaningful tests for it, and
+  committing — one class per iteration until a target threshold is reached.
+  Ships a single-run script and a headless N-iteration loop.
+repo: jvm-skills/jvm-skills
+skill_path: ".claude/skills/ralph-coverage/SKILL.md"
+category: testing
+languages:
+  - kotlin
+  - java
+trust: curated
+author: jvm-skills
+version: "1.0.0"
+last_updated: "2026-04-15"
+scope: focused
+tech:
+  - gradle
+  - kover
+  - ralph
+tags:
+  - coverage
+  - ralph
+  - autonomous
+  - tdd
