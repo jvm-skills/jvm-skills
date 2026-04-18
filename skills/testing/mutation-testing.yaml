@@ -1,0 +1,29 @@
+name: Mutation Testing (pitest)
+description: >-
+  Bootstrap pitest via the info.solidsoft.pitest Gradle plugin with Kotlin-sane
+  defaults, run scoped mutation tests derived from git diff, interpret surviving
+  mutants from mutations.xml, triage likely-equivalent mutants (logger gates,
+  unreachable loop bounds, null-elvis on non-nullable values) into a separate
+  bucket, and drive a kill-survivor workflow that hands each likely-killable
+  survivor to /tdd-task. Non-intrusive — mutates bytecode, no production-code
+  changes required.
+repo: jvm-skills/jvm-skills
+skill_path: ".claude/skills/mutation-testing/SKILL.md"
+category: testing
+languages:
+  - kotlin
+  - java
+trust: official
+author: jvm-skills
+version: "0.4.0"
+last_updated: "2026-04-18"
+scope: focused
+tech:
+  - gradle
+  - pitest
+  - junit5
+tags:
+  - mutation-testing
+  - pitest
+  - test-quality
+  - tdd
