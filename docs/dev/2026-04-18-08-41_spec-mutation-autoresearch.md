@@ -164,7 +164,7 @@ The picker skips:
 
 **Pre-loop viability check.** If every class in the initial scope has zero `LIKELY_KILLABLE` survivors (strengthen AND add-new-test queues empty globally), abort with a "no work to do — expand scope or relax archetypes" message rather than iterate through empty packages. Overnight loops must fail-fast on this, not burn hours re-running a picker that can never find work.
 
-**`targetClasses` glob rule.** Never use a trailing `*` when scoping the per-iteration rerun. Use the exact FQN (e.g. `com.example.MediaSubmission`), not a prefix glob (`com.example.MediaSubmission*`) — the latter matches sibling classes like `MediaSubmissionService` and inflates scope. Validate that the configured `targetClasses` resolves to exactly one class before invoking pitest.
+**`targetClasses` scoping rule.** Never use a trailing `*` on the package+class prefix (`com.example.MediaSubmission*`) — it matches sibling top-level classes (`MediaSubmissionService`) and inflates scope. Also don't use the bare FQN alone — Kotlin emits synthetic classes for nested data classes (`Foo$Page`) and lambdas (`Foo$methodName$1`), and `targetClasses = {"com.example.Foo"}` won't match them. The correct form is **`FQN` + `FQN$*` together**: `{"com.example.Foo", "com.example.Foo$*"}`. Validate before invoking pitest that the configured set resolves to exactly one top-level class plus its nested/synthetic children.
 
 ### 8.2 Ralph iteration prompt (shell-composed)
 
@@ -430,4 +430,4 @@ tags:
 - **US-31**: As a **developer starting an overnight run whose triage output was produced with `fullMutationMatrix=false`**, the shell script aborts with instructions to rerun pitest with the flag on, rather than silently fall back to the add-new-test queue and skip the strengthen branch entirely.
 - **US-32**: As a **Ralph iteration**, I gate the ratchet on parsing `mutations.xml` (killed-count delta, target status transition, no regressions), not on pitest's Gradle exit code — because narrow single-class reruns legitimately trip `coverageThreshold` / `mutationThreshold` on valid, well-scoped kills.
 - **US-33**: As a **developer starting a session where every class in the initial scope already has zero `LIKELY_KILLABLE` survivors**, the shell script aborts with "no work to do — expand scope or relax archetypes" rather than iterate through empty packages burning API budget.
-- **US-34**: As a **Ralph iteration**, I target pitest with the exact class FQN (not a trailing-`*` prefix glob) so `MediaSubmission` doesn't accidentally also match `MediaSubmissionService` and inflate the rerun cost.
+- **US-34**: As a **Ralph iteration**, I target pitest with the class FQN AND its nested/synthetic children (`{FQN, FQN$*}`) — never with a trailing-`*` prefix glob (which catches sibling top-level classes) and never with the bare FQN alone (which misses Kotlin-emitted synthetic lambda / inner-data-class bytecode).

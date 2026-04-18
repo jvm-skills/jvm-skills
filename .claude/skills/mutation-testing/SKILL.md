@@ -292,10 +292,17 @@ For each survivor, delegate to `/tdd-task` with a prompt like:
 After `/tdd-task` returns, verify with a scoped pitest rerun:
 
 ```kotlin
-// Narrow targetClasses to a single FQN, not a glob.
-// `MediaSubmission*` also matches MediaSubmissionService — inflates scope.
+// Narrow targetClasses to the single class AND its nested/synthetic classes.
+// `MediaSubmission*` matches sibling top-level classes (MediaSubmissionService)
+// and inflates scope. Bare `MediaSubmission` misses inner classes
+// ($Page data class) and lambdas ($getPhotoSubmissions$1.map — synthetic
+// classes emitted by `kotlinc` for `.let { }`, `.map { }`, etc.).
+// Use the class FQN AND `<FQN>$*` together.
 pitest {
-    targetClasses.set(setOf("com.example.pkg.MediaSubmission"))
+    targetClasses.set(setOf(
+        "com.example.pkg.MediaSubmission",
+        "com.example.pkg.MediaSubmission\$*",
+    ))
     targetTests.set(setOf("com.example.pkg.MediaSubmissionTest"))
 }
 ```
