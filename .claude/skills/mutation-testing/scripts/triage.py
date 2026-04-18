@@ -35,6 +35,8 @@ LOGGER_CALL = re.compile(
 )
 NULL_ELVIS_THROW = re.compile(r"\?:\s*throw\b")
 LOOP_HEADER = re.compile(r"^\s*(for|while|do)\b|^\s*\}\s*while\b")
+JUNIT5_CLASS = re.compile(r"\[class:([^\]]+)\]")
+JUNIT5_METHOD = re.compile(r"\[method:([^\]]+?)\]")
 
 CONDITIONAL_MUTATORS = {
     "ConditionalsBoundary",
@@ -55,10 +57,40 @@ class Survivor:
     description: str
     bucket: str
     reason: str
+    covering_tests: list[str]
 
 
 def short_mutator(fqn: str) -> str:
     return fqn.rsplit(".", 1)[-1].replace("Mutator", "")
+
+
+def parse_covering_tests(raw: str | None) -> list[str]:
+    """Parse pitest's `<coveringTests>` / `<succeedingTests>` payload.
+
+    Format (fullMutationMatrix=true, junit5): each entry is
+        <classFQN>.[engine:junit-jupiter]/[class:<classFQN>]/[method:<name>()]
+    separated by `|`. Returns `ShortClass.methodName` pairs for display.
+    Falls back to the raw entry if the junit5 ID pattern doesn't match
+    (e.g. junit4 or older pitest versions).
+    """
+    if not raw:
+        return []
+    out: list[str] = []
+    for item in raw.split("|"):
+        item = item.strip()
+        if not item:
+            continue
+        cls_match = JUNIT5_CLASS.search(item)
+        method_match = JUNIT5_METHOD.search(item)
+        if cls_match and method_match:
+            short_cls = cls_match.group(1).rsplit(".", 1)[-1]
+            method = method_match.group(1).strip()
+            if method.endswith("()"):
+                method = method[:-2]
+            out.append(f"{short_cls}.{method}")
+        else:
+            out.append(item)
+    return out
 
 
 def resolve_source(src_root: Path, source_file: str, class_fqn: str) -> Path | None:
@@ -120,15 +152,22 @@ def classify(mutation: ET.Element, src_root: Path) -> Survivor | None:
     line = int(mutation.findtext("lineNumber", "0"))
     description = mutation.findtext("description", "")
 
+    # Prefer <succeedingTests> — the matrix of tests that ran and let this
+    # mutant live (present when fullMutationMatrix=true). Fall back to
+    # <coveringTests> (line-coverage based).
+    covering = parse_covering_tests(
+        mutation.findtext("succeedingTests") or mutation.findtext("coveringTests")
+    )
+
     path = resolve_source(src_root, source_file, fqn)
     if not path or line < 1:
         return Survivor(source_file, line, fqn, method, mutator, description,
-                        "AMBIGUOUS", "source file not resolved")
+                        "AMBIGUOUS", "source file not resolved", covering)
 
     lines = path.read_text().splitlines()
     if line > len(lines):
         return Survivor(source_file, line, fqn, method, mutator, description,
-                        "AMBIGUOUS", f"line {line} out of range ({len(lines)} lines)")
+                        "AMBIGUOUS", f"line {line} out of range ({len(lines)} lines)", covering)
     line_text = lines[line - 1]
     stripped = line_text.strip()
 
@@ -137,21 +176,21 @@ def classify(mutation: ET.Element, src_root: Path) -> Survivor | None:
         "RemoveConditional_EQUAL_IF", "RemoveConditional_EQUAL_ELSE",
     }:
         return Survivor(source_file, line, fqn, method, mutator, description,
-                        "LIKELY_EQUIVALENT", "archetype C: null-elvis throw on value non-nullable in practice")
+                        "LIKELY_EQUIVALENT", "archetype C: null-elvis throw on value non-nullable in practice", covering)
 
     # Archetype A — logger-gate
     if mutator in CONDITIONAL_MUTATORS and stripped.startswith("if "):
         if body_is_logger_only(lines, line - 1):
             return Survivor(source_file, line, fqn, method, mutator, description,
-                            "LIKELY_EQUIVALENT", "archetype A: logger-gate conditional")
+                            "LIKELY_EQUIVALENT", "archetype A: logger-gate conditional", covering)
 
     # Archetype B — loop bound
     if mutator in CONDITIONAL_MUTATORS and LOOP_HEADER.match(line_text):
         return Survivor(source_file, line, fqn, method, mutator, description,
-                        "LIKELY_EQUIVALENT", "archetype B: loop-bound comparison")
+                        "LIKELY_EQUIVALENT", "archetype B: loop-bound comparison", covering)
 
     return Survivor(source_file, line, fqn, method, mutator, description,
-                    "LIKELY_KILLABLE", "no archetype matched")
+                    "LIKELY_KILLABLE", "no archetype matched", covering)
 
 
 def main(argv: list[str]) -> int:
@@ -194,7 +233,14 @@ def main(argv: list[str]) -> int:
             for e in sorted(entries, key=lambda s: (s.file, s.line, s.mutator)):
                 f.write(f"- `{e.file}:{e.line}` **{e.mutator}** — {e.description}\n")
                 f.write(f"  - in `{e.fqn.rsplit('.', 1)[-1]}.{e.method}()`\n")
-                f.write(f"  - reason: {e.reason}\n\n")
+                f.write(f"  - reason: {e.reason}\n")
+                if e.covering_tests:
+                    f.write("  - covering tests:\n")
+                    for t in e.covering_tests:
+                        f.write(f"    - `{t}`\n")
+                else:
+                    f.write("  - covering tests: _none named — enable `fullMutationMatrix=true` in `pitest {}`_\n")
+                f.write("\n")
 
     json_path.write_text(json.dumps(
         {bucket: [asdict(s) for s in entries] for bucket, entries in buckets.items()},

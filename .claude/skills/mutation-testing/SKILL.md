@@ -242,26 +242,27 @@ python3 .claude/skills/mutation-testing/scripts/triage.py \
 
 It reads the mutations XML, opens each survivor's source line, applies archetypes A/B/C, and writes `triage.md` + `triage.json` next to the mutations file.
 
-**Output:** write to `build/reports/pitest/triage.md` (or stdout) in this shape:
+**Output:** `triage.md` (human) and `triage.json` (machine) next to mutations.xml. Each survivor carries the source pointer, archetype reason, **and the names of the tests that covered but didn't kill it** (extracted from `<succeedingTests>` / `<coveringTests>`). Covering-test names require `fullMutationMatrix=true` in the bootstrap block; otherwise the script prints a hint to enable it.
+
+Shape:
 
 ```markdown
 # Triage of <N> survivors
 
 ## LIKELY_KILLABLE (<count>)
-- UserCleanupService.kt:58 VoidMethodCall — removed call to deleteS3Files
-  covering tests: UserCleanupServiceTest.`hardDeleteUser removes user and all owned data`
-  archetype: none matched
+
+- `UserCleanupService.kt:58` **VoidMethodCall** — removed call to deleteS3Files
+  - in `UserCleanupService.hardDeleteUser()`
+  - reason: no archetype matched
+  - covering tests:
+    - `UserCleanupServiceTest.hardDeleteUser removes user and all owned data`
 
 ## LIKELY_EQUIVALENT (<count>)
-- AnonymousUserCleanupJob.kt:70 ConditionalsBoundary — changed > to >=
-  archetype: A (logger-gate) — body is only `logger.info(...)`
-- AnonymousUserCleanupJob.kt:68 ConditionalsBoundary — changed < to <=
-  archetype: B (unreachable loop bound, maxBatches=10 × 10000-row limit)
 
-## AMBIGUOUS (<count>)
-- SomeClass.kt:42 MATH — replaced + with -
-  covering tests: SomeClassTest.`...`
-  reason: no archetype matched; needs human review
+- `AnonymousUserCleanupJob.kt:70` **ConditionalsBoundary** — changed > to >=
+  - reason: archetype A — logger-gate conditional
+- `AnonymousUserCleanupJob.kt:68` **ConditionalsBoundary** — changed < to <=
+  - reason: archetype B — loop-bound comparison
 ```
 
 The `suspected-equivalent.md` set is **durable** — it accumulates across sessions, not per-run. A mutant that's triaged as equivalent once stays in that list unless the source line changes (detected by re-running triage when the line's content differs).
@@ -276,24 +277,46 @@ The `suspected-equivalent.md` set is **durable** — it accumulates across sessi
 
 ### 5. Kill a survivor
 
+**Inverted TDD cycle.** Unlike a normal `/tdd-task` RED → GREEN cycle, a mutation-kill test is written **against production code that is already correct**. The test should pass on the first run. The RED → GREEN proof comes from the **scoped pitest rerun** (see verify step below): the mutant flips from `SURVIVED` to `KILLED`. A `/tdd-task` agent that tries to force a red-first state here will waste iterations — pass this expectation in the prompt.
+
 For each survivor, delegate to `/tdd-task` with a prompt like:
 
 > Kill mutation: `<mutator>` at `<file>:<line>` in `<mutatedClass>.<mutatedMethod>`.
 > Description: `<description>`.
-> Currently covered by: `<coveringTests>`.
-> Write a test that fails when the described mutation is applied to the original code, and passes otherwise. **Do not assert the raw mutated value or operator** — assert the observable behavior. Prefer strengthening assertions in the covering test; if that isn't natural, add a new sibling test case.
+> Currently covered by: `<coveringTests>` (from triage.md).
+> Spell out both behaviors: what the original code returns and what the mutated code would return for the chosen input. The assertion must distinguish the two.
+> **Do not assert the raw mutated value or operator** — assert the observable behavior on a specific input.
+> Prefer strengthening assertions in the covering test; if that isn't natural, add a new sibling test case.
+> The test is expected to pass against current production code — don't force a red-first state. RED proof comes from the pitest rerun below.
 
-After `/tdd-task` returns, verify:
+After `/tdd-task` returns, verify with a scoped pitest rerun:
 
-```bash
-./gradlew pitest -Ppitest.targetClasses=<single-fqn> -Ppitest.targetTests=<single-fqn>
+```kotlin
+// Narrow targetClasses to a single FQN, not a glob.
+// `MediaSubmission*` also matches MediaSubmissionService — inflates scope.
+pitest {
+    targetClasses.set(setOf("com.example.pkg.MediaSubmission"))
+    targetTests.set(setOf("com.example.pkg.MediaSubmissionTest"))
+}
 ```
 
-The target mutant should flip to `KILLED`, and no previously-killed mutant in the same class should regress. If both hold, delegate to `/commit`. If the new test asserts a tautology (literally references the mutated operator/constant), reject and retry with a stronger prompt.
+```bash
+./gradlew pitest
+```
+
+Parse `build/reports/pitest/mutations.xml` directly — **do not rely on the Gradle exit code**. Pitest exits non-zero when line coverage falls below `coverageThreshold` (typical on narrow single-class scopes), but the XML is still valid. The skill only cares about three facts:
+
+1. The target mutation's `status` is now `KILLED`.
+2. No previously-`KILLED` mutation in the same class flipped to `SURVIVED`.
+3. The class's `killed_count` strictly increased.
+
+If all three hold, delegate to `/commit`. If the new test asserts a tautology (literally references the mutated operator/constant, or only checks a value trivially equal to the mutation's replacement), reject and retry with a stronger prompt. If the rerun shows the mutation still alive, read the committed assertions and ask: did the test actually exercise an input where mutated vs original diverge? Tightening the input data usually kills it.
+
+A quick awk / xmllint / Python one-liner on mutations.xml is enough — pitest 1.19 writes attributes with single quotes (`status='SURVIVED'`), so grep patterns using double quotes will silently match nothing.
 
 ### Fallbacks when dependencies aren't installed
 
-- **No `/tdd-task`**: follow inline TDD — (1) write a failing test that targets the behavior, (2) run `/test-gradle --tests <pattern>` or `./gradlew test --tests ...` to confirm red, (3) the test should already pass against unmutated code, so run once more and confirm green, (4) run scoped pitest to confirm the mutant died.
+- **No `/tdd-task`**: follow the inline inverted-TDD checklist — (1) identify the behavioral input where original and mutated code diverge, (2) add a test asserting the correct behavior on that input (it passes immediately against current code), (3) run `./gradlew test --tests <pattern>` and confirm green, (4) run scoped pitest and confirm the mutant moved SURVIVED → KILLED. The initial RED step from classic TDD does not apply — production code is correct; RED proof comes from the pitest rerun.
 - **No `/commit`**: `git add src/test && git commit -m "test(mutation): kill <mutator> at <file>:<line>"`.
 - **No `/test-gradle`**: `./gradlew test --tests <fully-qualified-test-pattern>`.
 
