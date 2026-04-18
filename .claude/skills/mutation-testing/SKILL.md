@@ -134,7 +134,7 @@ After applying the diff, run `./gradlew pitest` once to generate the baseline. *
 
 ### 2. Scoped run (on a change)
 
-Derive target classes from `git diff`:
+Derive target classes from `git diff` and pass them to the wired `pitestScope` property (see §5 for the wiring). The `info.solidsoft.pitest` plugin does NOT honor `-Ppitest.targetClasses` natively — a raw CLI flag with that name will silently be ignored and pitest will run against whatever the `pitest { }` block has hard-coded.
 
 ```bash
 BASE=$(git merge-base HEAD origin/main 2>/dev/null || git merge-base HEAD main)
@@ -148,16 +148,14 @@ if [ -z "$CHANGED" ]; then
   exit 1
 fi
 
-./gradlew pitest \
-  -Ppitest.targetClasses="$CHANGED" \
-  -Ppitest.targetTests="$CHANGED"
+./gradlew pitest -PpitestScope="$CHANGED"
 ```
 
 Aborting on empty match is deliberate — **never silently fall back to whole-codebase** on a scoped run.
 
-For Groovy-DSL projects, the command flags are identical.
+For Groovy-DSL projects, the wiring and flag are identical (same `findProperty` API).
 
-For multi-module, prefix with the module path: `./gradlew :module-name:pitest -P...`.
+For multi-module, prefix with the module path: `./gradlew :module-name:pitest -PpitestScope=...`. Wire the property in each module's `pitest { }` block.
 
 ### 3. Interpret survivors
 
@@ -230,6 +228,10 @@ eventCleanup.hardDeleteEvent(eventId ?: throw IllegalStateException("eventId is 
 //                           ^-- eventId is jOOQ-fetched primary key, never null in practice
 ```
 
+**Archetype D — branch-identity (partial-kill residual).** An `if (cond) { X } else { Y }` where `X` and `Y` produce the same observable output when `cond` is false. Classic example: `if (list.isNotEmpty()) { repo.fetch(list).associateBy { it.id } } else { emptyMap() }` — when `list` is empty, `fetch([])` returns empty and `associateBy` on empty yields `emptyMap`, so the IF-branch is indistinguishable from the ELSE-branch for the "empty" case. `RemoveConditional_EQUAL_IF` mutations on this line survive any test because flipping the branch doesn't change the observable output.
+
+Detecting this archetype statically is hard — it requires knowing that the IF-branch operation is idempotent over the identity input of the ELSE-branch. The script can't match it reliably from source alone. **This archetype is surfaced dynamically**: when a single strengthened test kills the `EQUAL_ELSE` mutation on a line but leaves the `EQUAL_IF` mutation (or vice versa) surviving, the surviving mutation is a strong candidate for `LIKELY_EQUIVALENT`. Promote it after 2 failed targeted kill attempts (not 3, since the signal is stronger than blind failure) and skip it in future iterations.
+
 Anything that matches no archetype is `AMBIGUOUS` by default — **bias toward ambiguity, not toward equivalence**, so real gaps don't get silently excluded.
 
 **Implementation.** A ready-to-use triage script lives at `scripts/triage.py` in this skill directory. Run:
@@ -289,17 +291,39 @@ For each survivor, delegate to `/tdd-task` with a prompt like:
 > Prefer strengthening assertions in the covering test; if that isn't natural, add a new sibling test case.
 > The test is expected to pass against current production code — don't force a red-first state. RED proof comes from the pitest rerun below.
 
-After `/tdd-task` returns, verify with a scoped pitest rerun. **Override `targetClasses` / `targetTests` via Gradle `-P` flags — do not edit `build.gradle.kts` for per-iteration scope changes**. The `info.solidsoft.pitest` plugin reads `pitest.targetClasses` and `pitest.targetTests` project properties and they take precedence over the block:
+After `/tdd-task` returns, verify with a scoped pitest rerun. **Override scope via Gradle `-P` flags — do not edit `build.gradle.kts` for per-iteration scope changes.** The `info.solidsoft.pitest` plugin does NOT read `-Ppitest.targetClasses` natively; you must wire a custom property into the `pitest { }` block. Pick a name like `pitestScope`:
 
-```bash
-./gradlew pitest \
-  -Ppitest.targetClasses='com.example.pkg.MediaSubmission,com.example.pkg.MediaSubmission$*' \
-  -Ppitest.targetTests='com.example.pkg.MediaSubmissionTest'
+```kotlin
+pitest {
+    pitestVersion.set("1.19.0")
+    val scopeProp: String? = project.findProperty("pitestScope") as String?
+    val testsProp: String? = project.findProperty("pitestTests") as String?
+    val defaultScope = setOf("com.example.*")
+    val scopeFqns = scopeProp?.split(",")?.map { it.trim() }?.filter { it.isNotEmpty() }
+    targetClasses.set(
+        // Auto-expand each FQN to `{FQN, FQN$*}` so Kotlin-emitted nested
+        // and synthetic classes (`Foo$Page`, `Foo$methodName$1`) are included.
+        scopeFqns?.flatMap { listOf(it, "$it\$*") }?.toSet() ?: defaultScope
+    )
+    targetTests.set(
+        testsProp?.split(",")?.map { it.trim() }?.filter { it.isNotEmpty() }?.toSet()
+            ?: scopeFqns?.toSet()
+            ?: defaultScope
+    )
+    // ... rest of the block stays stable
+}
 ```
 
-The scoping set must include both the class FQN AND `FQN$*` — Kotlin emits synthetic classes for nested data classes (`Foo$Page`) and lambdas (`Foo$methodName$1`), and the bare FQN alone doesn't match them. `FQN*` (prefix glob without the `$`) is the opposite mistake: it also matches sibling top-level classes (`MediaSubmissionService`) and inflates scope. In the shell, escape or single-quote the `$` to prevent the shell from expanding it.
+Then the per-iteration rerun is:
 
-Keep the `pitest { }` block in `build.gradle.kts` pinned to a stable, broad default (the module-level package you actually CI against). Treat per-iteration scopes as transient CLI overrides.
+```bash
+./gradlew pitest -PpitestScope='com.example.pkg.MediaSubmission'
+```
+
+Scoping rules:
+- **Include nested/synthetic classes.** Kotlin emits synthetic bytecode for nested data classes (`Foo$Page`) and lambdas (`Foo$methodName$1`, `.let { }`, `.map { }`). The bare FQN alone doesn't match them — without `$*` you will miss mutations inside inner classes and lambda bodies.
+- **Don't use the prefix glob `FQN*`** (without `$`). It also matches sibling top-level classes (`MediaSubmissionService`) and inflates scope.
+- Keep the `pitest { }` block pinned to a stable, broad default (the module-level package you CI against). Treat per-iteration scopes as transient CLI overrides that never land in git.
 
 ```bash
 ./gradlew pitest
