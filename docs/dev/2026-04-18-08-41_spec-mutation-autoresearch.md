@@ -128,6 +128,8 @@ First-run preconditions — the shell script aborts unless all are true:
 | Both queues empty for current class | Advance to next class in the package. |
 | Both queues globally empty | Emit `<promise>COMPLETE</promise>`; shell loop exits. |
 | Pitest scoped rerun fails (compile error / flake) | Retry once; on second failure, revert iteration with reason. |
+| Pitest scoped rerun exits non-zero because of coverage/mutation/test-strength thresholds, but `mutations.xml` was written and parses | Proceed with ratchet. Thresholds are calibrated for module-wide runs; narrow single-class reruns often trip them. See §8.3. |
+| Both queues empty across the entire initial scope at session start | Abort with "no work to do — expand scope or relax archetypes". Do not iterate through empty packages. See §8.1 pre-loop viability check. |
 | Flaky test fails green suite | Retry suite once; on second failure, revert. Flakes tracked in `progress.json`; >3 flakes → quarantine test for session. |
 | Guard trips (tautology / weakening) | Revert iteration. Do not retry same target this session. |
 | `git reset --hard HEAD` would discard user work | Can't happen — clean-start precondition. Script still double-checks `git status` before every reset. |
@@ -144,10 +146,12 @@ First-run preconditions — the shell script aborts unless all are true:
 
 ### 8.1 Scope picker
 
-Two queues, populated from the **triage output** (`build/reports/pitest/triage.md`), filtered to `LIKELY_KILLABLE` only:
+Two queues, populated from the **triage output** (`build/reports/pitest/triage.json` — machine-readable, preferred over `triage.md`), filtered to `LIKELY_KILLABLE` only:
 
 - **Strengthen queue**: LIKELY_KILLABLE tests with ≥1 surviving covered mutant. Ordered by (a) number of LIKELY_KILLABLE survivors the test covers (desc), (b) class name.
 - **Add-new-test queue**: LIKELY_KILLABLE mutants with `status=NO_COVERAGE`. Ordered by (a) number of such mutants in the class (desc), (b) line number.
+
+**Input requirement — `mutation-testing` v0.5+.** The strengthen queue's primary key is `test:<FQN>`, built by inverting the `coveringTests` list on each survivor. Requires triage output to name covering tests per survivor (emitted when `fullMutationMatrix=true` is set in `pitest {}`; triage.py exposes them in `triage.json.covering_tests` as of `mutation-testing` v0.5). If the triage output was produced against a pitest run with `fullMutationMatrix=false`, the strengthen queue cannot be built — **abort with instructions to re-run pitest with the flag on**, rather than fall through to add-new-test and silently skip the higher-leverage queue.
 
 `LIKELY_EQUIVALENT` mutants are **never** fed to the loop — they're an input to `suspected-equivalent.md`, not a target. `AMBIGUOUS` mutants are deferred to human review; the loop does not touch them either.
 
@@ -158,7 +162,9 @@ The picker skips:
 - Tests in `blacklisted_flakes`.
 - Mutants in `equivalent_candidates` with ≥3 cross-session failures.
 
-Never loads `targetClasses` globs that match >1 class per pitest invocation — bounds scoped-rerun cost.
+**Pre-loop viability check.** If every class in the initial scope has zero `LIKELY_KILLABLE` survivors (strengthen AND add-new-test queues empty globally), abort with a "no work to do — expand scope or relax archetypes" message rather than iterate through empty packages. Overnight loops must fail-fast on this, not burn hours re-running a picker that can never find work.
+
+**`targetClasses` glob rule.** Never use a trailing `*` when scoping the per-iteration rerun. Use the exact FQN (e.g. `com.example.MediaSubmission`), not a prefix glob (`com.example.MediaSubmission*`) — the latter matches sibling classes like `MediaSubmissionService` and inflates scope. Validate that the configured `targetClasses` resolves to exactly one class before invoking pitest.
 
 ### 8.2 Ralph iteration prompt (shell-composed)
 
@@ -193,6 +199,8 @@ Per iteration, record `baseline_killed_count` for the class from the latest pite
 5. All guards (§9) pass? (no → revert)
 
 Only on all-yes: `/commit`.
+
+**Coverage-threshold exit is not a pitest failure.** Pitest exits non-zero when `coverageThreshold` / `mutationThreshold` / `testStrengthThreshold` aren't met — common on narrow single-class reruns since the thresholds are calibrated for whole-module runs. **The XML is still written and valid in this case.** The ratchet must gate on parsing `mutations.xml` and comparing killed-counts, not on the Gradle exit code. §7.4 edge case table updated accordingly: "scoped pitest exits non-zero but `mutations.xml` is newer than the iteration start and parses cleanly → proceed with ratchet". Only treat the rerun as a true failure when (a) the XML is missing, (b) it's older than the iteration start (pitest didn't write it), or (c) it doesn't parse.
 
 ### 8.4 Mode: `add-sibling` (strengthen branch default)
 
@@ -414,8 +422,12 @@ tags:
 - **US-23**: As a **skill author**, I run the eval suite comparing add-sibling vs append-assertions modes on a 30-test + 10-NO_COVERAGE seed and get a benchmark JSON with throughput, kill-rate-per-minute, and human-rubric regression counts.
 - **US-24**: As a **skill author**, the adversarial evals confirm the tautology guard and the weakening guard trip on deliberately-weak survivors.
 - **US-25**: As a **Ralph iteration**, I never invoke `/fix` — a survivor that indicates a real production bug is surfaced via `PRODUCTION_BUG_SUSPECTED.md` for manual decision, not auto-patched.
-- **US-26**: As a **Ralph iteration without `/tdd-task` installed**, I follow the inline TDD checklist in SKILL.md.
+- **US-26**: As a **Ralph iteration without `/tdd-task` installed**, I follow the inline inverted-TDD checklist in SKILL.md — the test passes against current-correct production code; the RED→GREEN proof comes from the scoped pitest rerun flipping the mutant from SURVIVED to KILLED, not from an initial red state.
 - **US-27**: As a **developer**, when both queues are globally empty, the iteration emits `<promise>COMPLETE</promise>` and the shell loop exits early with a "no survivors remaining" summary.
 - **US-28**: As a **Ralph iteration**, I read `build/reports/pitest/triage.md` (the `mutation-testing` v0.3 triage output) and iterate **only** over `LIKELY_KILLABLE` targets — `LIKELY_EQUIVALENT` and `AMBIGUOUS` mutants are never picked.
 - **US-29**: As a **developer** with no triage output (or one staler than `mutations.xml`), the shell script refuses to loop and invokes `/mutation-testing` triage first, then exits so I can review `triage.md` before kicking off autoresearch.
 - **US-30**: As a **Ralph iteration** that fails to kill a `LIKELY_KILLABLE` mutant three times across sessions, I promote it to `LIKELY_EQUIVALENT` by appending it to `suspected-equivalent.md` with the reason "no killing test found after 3 attempts"; the next triage run pre-excludes it.
+- **US-31**: As a **developer starting an overnight run whose triage output was produced with `fullMutationMatrix=false`**, the shell script aborts with instructions to rerun pitest with the flag on, rather than silently fall back to the add-new-test queue and skip the strengthen branch entirely.
+- **US-32**: As a **Ralph iteration**, I gate the ratchet on parsing `mutations.xml` (killed-count delta, target status transition, no regressions), not on pitest's Gradle exit code — because narrow single-class reruns legitimately trip `coverageThreshold` / `mutationThreshold` on valid, well-scoped kills.
+- **US-33**: As a **developer starting a session where every class in the initial scope already has zero `LIKELY_KILLABLE` survivors**, the shell script aborts with "no work to do — expand scope or relax archetypes" rather than iterate through empty packages burning API budget.
+- **US-34**: As a **Ralph iteration**, I target pitest with the exact class FQN (not a trailing-`*` prefix glob) so `MediaSubmission` doesn't accidentally also match `MediaSubmissionService` and inflate the rerun cost.
