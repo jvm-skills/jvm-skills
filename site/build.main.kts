@@ -10,6 +10,11 @@ import java.io.File
 import java.time.Instant
 import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
+import java.awt.Color
+import java.awt.Font
+import java.awt.RenderingHints
+import java.awt.image.BufferedImage
+import javax.imageio.ImageIO
 
 val siteDir = __FILE__.absoluteFile.parentFile
 val rootDir = siteDir.parentFile
@@ -240,6 +245,71 @@ data class BlogPost(
     val htmlContent: String
 )
 
+fun generateOgImage(post: BlogPost, outputFile: File) {
+    val width = 1200
+    val height = 630
+    val image = BufferedImage(width, height, BufferedImage.TYPE_INT_RGB)
+    val g = image.createGraphics()
+
+    g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON)
+    g.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON)
+
+    // Background
+    g.color = Color.decode("#0a0e14")
+    g.fillRect(0, 0, width, height)
+
+    // Decorative logo ">_"
+    g.color = Color.decode("#00ff41")
+    g.font = Font("Monospaced", Font.BOLD, 60)
+    g.drawString(">_", 60, 100)
+
+    // Website name
+    g.color = Color.decode("#8b949e")
+    g.font = Font("Monospaced", Font.PLAIN, 24)
+    g.drawString("jvmskills.com / blog", 160, 92)
+
+    // Title
+    g.color = Color.decode("#c9d1d9")
+    val titleFont = Font("SansSerif", Font.BOLD, 72)
+    g.font = titleFont
+    
+    val padding = 100
+    val maxTextWidth = width - 2 * padding
+    val words = post.title.split(" ")
+    val lines = mutableListOf<String>()
+    var currentLine = StringBuilder()
+    val metrics = g.fontMetrics
+
+    for (word in words) {
+        val testLine = if (currentLine.isEmpty()) word else "$currentLine $word"
+        if (metrics.stringWidth(testLine) < maxTextWidth) {
+            currentLine = StringBuilder(testLine)
+        } else {
+            lines.add(currentLine.toString())
+            currentLine = StringBuilder(word)
+        }
+    }
+    if (currentLine.isNotEmpty()) lines.add(currentLine.toString())
+
+    // Vertical center adjustment
+    val totalHeight = lines.size * (metrics.height + 10)
+    var y = (height - totalHeight) / 2 + metrics.ascent
+
+    for (line in lines) {
+        g.drawString(line, padding, y)
+        y += metrics.height + 10
+    }
+
+    // Author and Date
+    g.color = Color.decode("#8b949e")
+    g.font = Font("SansSerif", Font.PLAIN, 32)
+    g.drawString("${post.author} • ${post.date}", padding, height - 100)
+
+    g.dispose()
+    outputFile.parentFile.mkdirs()
+    ImageIO.write(image, "png", outputFile)
+}
+
 val mdParser = Parser.builder().build()
 val mdRenderer = HtmlRenderer.builder().build()
 
@@ -343,6 +413,7 @@ if (blogPosts.isNotEmpty()) {
         val postDir = File(blogDistDir, post.slug)
         postDir.mkdirs()
         File(postDir, "index.html").writeText(postHtml)
+        generateOgImage(post, File(postDir, "og.png"))
     }
 
     // Generate blog listing page
