@@ -216,13 +216,14 @@ val skillCards = buildString {
                     deltaStr
                 }
                 val evalUrl = "/evals/${evalSummary.slug}/"
-                append("""<a href="$evalUrl" class="skill-eval-badge" title="Skill eval: ${withPct}% pass rate with skill vs ${withoutPct}% baseline">""")
+                append("""<a href="$evalUrl" aria-label="View evaluation details for ${htmlEscape(skill.name)}">""")
+                append("""<button class="skill-eval-badge" type="button" title="Skill eval: ${withPct}% pass rate with skill vs ${withoutPct}% baseline">""")
                 append("""<span class="eval-label">eval</span>""")
                 append("""<span class="eval-pass">${withPct}%</span>""")
                 append("""<span class="eval-vs">vs ${withoutPct}%</span>""")
                 append("""<span class="eval-delta">($deltaPct)</span>""")
                 append("""<span class="eval-count">${evalSummary.evalsCount} tests</span>""")
-                append("</a>\n")
+                append("""</button></a>\n""")
             }
 
             append("</div>\n</article>\n")
@@ -391,7 +392,7 @@ if (blogPosts.isNotEmpty()) {
                     val skillUrl = if (skill.skillPath.isNotEmpty()) "https://github.com/${htmlEscape(skill.repo)}/blob/main/${htmlEscape(skill.skillPath)}" else "https://github.com/${htmlEscape(skill.repo)}"
                     val langsHtml = skill.languages.joinToString("") { """<span>$it</span>""" }
                     append("""<div class="related-skill-card">""")
-                    append("""<h4><a href="$skillUrl">${htmlEscape(skill.name)}</a></h4>""")
+                    append("""<h4><a href="$skillUrl" aria-label="View skill ${htmlEscape(skill.name)}"><button class="nav-link" type="button" style="padding: 4px 8px; font-size: 0.75rem; border: none; width: 100%; justify-content: flex-start;">${htmlEscape(skill.name)}</button></a></h4>""")
                     append("""<p>${htmlEscape(skill.description.take(120))}${if (skill.description.length > 120) "..." else ""}</p>""")
                     append("""<div class="skill-langs">$langsHtml</div>""")
                     append("""</div>""")
@@ -423,7 +424,7 @@ if (blogPosts.isNotEmpty()) {
             val tagsHtml = post.tags.joinToString("") { """<span>${htmlEscape(it)}</span>""" }
             append("""<li class="blog-post-entry">""")
             append("""<div class="blog-post-entry-date">${post.date}</div>""")
-            append("""<h2 class="blog-post-entry-title"><a href="/blog/${post.slug}/">${htmlEscape(post.title)}</a></h2>""")
+            append("""<h2 class="blog-post-entry-title"><a href="/blog/${post.slug}/" aria-label="Read ${htmlEscape(post.title)}"><button class="nav-link" type="button" style="border: none; padding: 4px 0; font-size: inherit; text-align: left; background: transparent; cursor: pointer; width: 100%; justify-content: flex-start;">${htmlEscape(post.title)}</button></a></h2>""")
             append("""<p class="blog-post-entry-desc">${htmlEscape(post.description)}</p>""")
             append("""<div class="blog-post-entry-tags">$tagsHtml</div>""")
             append("""</li>""")

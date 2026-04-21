@@ -221,6 +221,11 @@
       color: var(--text-muted);
       margin-bottom: 32px;
       display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      padding: 0;
     }
     .blog-back:hover { color: var(--green); }
 
@@ -499,7 +504,9 @@
   <main id="main-content">
     <div class="container">
       <article class="blog-article">
-        <a href="/blog/" class="blog-back">&larr; back to blog</a>
+        <a href="/blog/" aria-label="Back to blog list">
+          <button class="blog-back" type="button">&larr; back to blog</button>
+        </a>
 
         <header class="blog-header">
           <h1 class="blog-title">{{POST_TITLE}}</h1>

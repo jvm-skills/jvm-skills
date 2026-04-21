@@ -700,6 +700,7 @@
       text-decoration: none;
       color: var(--text-secondary);
       transition: border-color var(--transition-fast), background var(--transition-fast);
+      cursor: pointer;
     }
     .skill-eval-badge:hover {
       border-color: rgba(0, 255, 65, 0.35);
@@ -1103,7 +1104,6 @@
     }
 
     .cta-button {
-      display: inline-block;
       font-family: var(--font-mono);
       font-size: 0.75rem;
       font-weight: 500;
@@ -1113,6 +1113,10 @@
       background: var(--green);
       color: var(--bg-primary);
       transition: opacity var(--transition-fast);
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+      border: 1px solid var(--green);
     }
 
     .cta-button:hover {
@@ -1287,9 +1291,15 @@
           <p>Not just prompting — structured skills, automated evals, feedback loops that catch bugs before they ship.</p>
           <p>I help JVM teams get there, or I join yours and ship products end-to-end. Full lifecycle, founder experience.</p>
           <div class="hiring-ctas">
-            <a href="https://www.linkedin.com/in/tschuehly/" class="cta-button">Connect on LinkedIn</a>
-            <a href="https://github.com/tschuehly" class="cta-button cta-secondary">GitHub</a>
-            <a href="mailto:thomas@photoquest.wedding" class="cta-button cta-secondary">Mail me</a>
+            <a href="https://www.linkedin.com/in/tschuehly/" aria-label="Connect on LinkedIn">
+              <button class="cta-button" type="button">Connect on LinkedIn</button>
+            </a>
+            <a href="https://github.com/tschuehly" aria-label="GitHub Profile">
+              <button class="cta-button cta-secondary" type="button">GitHub</button>
+            </a>
+            <a href="mailto:thomas@photoquest.wedding" aria-label="Send email">
+              <button class="cta-button cta-secondary" type="button">Mail me</button>
+            </a>
           </div>
         </div>
       </details>
