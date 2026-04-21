@@ -1,10 +1,10 @@
 ---
-title: "A Real Bug, The Nine-Step Loop — The tdd-task Skill Walked Through"
+title: "The 9-Step TDD Loop: Making AI Development Predictable and Proven"
 slug: tdd-task-skill-walkthrough
 date: 2026-04-21
 draft: false
 author: Thomas Schilling
-description: "Last week a PhotoQuest customer got 80 wedding cards printed with tasks she had already rejected. This post walks through the tdd-task skill step by step as I used it to fix the bug — plan, clarify, red, green, refactor, verify, commit."
+description: "A disciplined 9-step TDD loop that forces AI agents to prove bugs before fixing them. See how we’re bringing rigorous software engineering standards to AI-driven development."
 skills:
   - testing/tdd-task
   - testing/test-gradle
