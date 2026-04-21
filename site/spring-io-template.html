@@ -150,6 +150,11 @@
       border: 1px solid var(--border);
       border-radius: 4px;
       transition: all var(--transition-fast);
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      background: transparent;
+      cursor: pointer;
     }
     .nav-link:hover { color: var(--text-primary); border-color: var(--border-hover); background: var(--bg-card); }
     .nav-link.active { color: var(--green); border-color: var(--green); }
@@ -267,6 +272,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      text-decoration: none;
     }
     .btn:hover { background: var(--green-glow); color: var(--green); }
     .btn.primary {
@@ -587,8 +593,12 @@
         <span class="prompt-char">$</span> jvm-skills
       </a>
       <div class="header-actions">
-        <a href="/" class="nav-link">Skills</a>
-        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="/" aria-label="Skills">
+          <button class="nav-link" type="button">Skills</button>
+        </a>
+        <a href="/blog/" aria-label="Blog">
+          <button class="nav-link" type="button">Blog</button>
+        </a>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" type="button">
           <span class="theme-icon" aria-hidden="true">◐</span>
           <span>theme</span>
@@ -617,11 +627,21 @@
         <p class="lead">Every team that doesn't adopt agentic engineering will be out-shipped by one that does — at a fraction of the cost, in a fraction of the time, with more quality.</p>
         <p class="sub">I spent the last four months refining an agentic engineering loop on a production SaaS. With the right tools and structure, the code is better than what I write by hand. I can bring that to your team.</p>
         <div class="cta-row">
-          <a class="btn primary" href="mailto:thomas@jvmskills.com?subject=Free%20agentic%20engineering%20audit&body=Hey%20there%2C%0A%0AI'm%20working%20at%20%5Bcompany%5D%20as%20%5Brole%5D.%20I'm%20interested%20in%20the%20audit.">Get a free audit</a>
-          <a class="btn" href="slides/">View the slides ↗</a>
-          <a class="btn" href="https://www.linkedin.com/in/tschuehly/">Connect on LinkedIn</a>
-          <a class="btn ghost" href="#talk-toolbelt">Spring I/O toolbelt ↓</a>
-          <a class="btn ghost" href="#offer">What I do ↓</a>
+          <a href="mailto:thomas@jvmskills.com?subject=Free%20agentic%20engineering%20audit&body=Hey%20there%2C%0A%0AI'm%20working%20at%20%5Bcompany%5D%20as%20%5Brole%5D.%20I'm%20interested%20in%20the%20audit." aria-label="Get a free audit">
+            <button class="btn primary" type="button">Get a free audit</button>
+          </a>
+          <a href="slides/" aria-label="View the slides">
+            <button class="btn" type="button">View the slides ↗</button>
+          </a>
+          <a href="https://www.linkedin.com/in/tschuehly/" aria-label="Connect on LinkedIn">
+            <button class="btn" type="button">Connect on LinkedIn</button>
+          </a>
+          <a href="#talk-toolbelt" aria-label="Spring I/O toolbelt">
+            <button class="btn ghost" type="button">Spring I/O toolbelt ↓</button>
+          </a>
+          <a href="#offer" aria-label="What I do">
+            <button class="btn ghost" type="button">What I do ↓</button>
+          </a>
         </div>
       </div>
     </section>

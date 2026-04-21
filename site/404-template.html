@@ -128,6 +128,11 @@
       border: 1px solid var(--border);
       border-radius: 4px;
       transition: all var(--transition-fast);
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      background: transparent;
+      cursor: pointer;
     }
     .nav-link:hover { color: var(--text-primary); border-color: var(--border-hover); background: var(--bg-card); }
     .theme-toggle {
@@ -242,6 +247,10 @@
       color: var(--text-primary);
       background: var(--bg-primary);
       transition: all var(--transition-fast);
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      cursor: pointer;
     }
     .action-btn:hover {
       border-color: var(--green);
@@ -277,8 +286,12 @@
         <span class="prompt-char">$</span> jvm-skills
       </a>
       <div class="header-actions">
-        <a href="/" class="nav-link">Skills</a>
-        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="/" aria-label="Skills">
+          <button class="nav-link" type="button">Skills</button>
+        </a>
+        <a href="/blog/" aria-label="Blog">
+          <button class="nav-link" type="button">Blog</button>
+        </a>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" type="button">
           <span class="theme-icon" aria-hidden="true">◐</span>
           <span>theme</span>
@@ -306,10 +319,18 @@
           </div>
 
           <div class="actions">
-            <a href="/" class="action-btn primary">cd ~/</a>
-            <a href="/blog/" class="action-btn">ls blog/</a>
-            <a href="/spring-io-2026/" class="action-btn">ls spring-io-2026/</a>
-            <a href="https://github.com/jvm-skills/jvm-skills" class="action-btn">git remote</a>
+            <a href="/" aria-label="Home">
+              <button class="action-btn primary" type="button">cd ~/</button>
+            </a>
+            <a href="/blog/" aria-label="Blog">
+              <button class="action-btn" type="button">ls blog/</button>
+            </a>
+            <a href="/spring-io-2026/" aria-label="Spring I/O 2026">
+              <button class="action-btn" type="button">ls spring-io-2026/</button>
+            </a>
+            <a href="https://github.com/jvm-skills/jvm-skills" aria-label="GitHub Repository">
+              <button class="action-btn" type="button">git remote</button>
+            </a>
           </div>
         </div>
       </div>
