@@ -1,0 +1,23 @@
+name: Hibernate JPA Validator
+description: >-
+  Reviews Hibernate/JPA code in the spirit of Hypersistence Optimizer:
+  identifier strategies, entity mappings, association and fetch design,
+  N+1 detection, query optimization, batch processing, transactions and
+  locking, Spring Data JPA anti-patterns, schema migrations, and Hibernate
+  6 features. Runs the full checklist on every entity review.
+repo: adityamparikh/hibernate-jpa-validator-skill
+skill_path: SKILL.md
+category: database
+tools:
+  - claude
+languages:
+  - java
+trust: community
+author: Aditya Parikh
+tags:
+  - hibernate
+  - jpa
+  - orm
+  - database
+  - performance
+  - validation
