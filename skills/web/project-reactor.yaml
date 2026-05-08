@@ -1,0 +1,27 @@
+name: Project Reactor
+description: >-
+  Expert guidance for Project Reactor on the JVM: operator selection
+  (Mono, Flux, flatMap vs concatMap, switchMap, zip, expand), schedulers
+  and threading, backpressure tuning, Reactor Context propagation
+  (MDC, Micrometer, Spring Security), blocking-to-reactive bridging,
+  R2DBC patterns and reactive transactions, WebClient/reactor-netty
+  configuration, Kotlin coroutine/Flow interop, testing with StepVerifier,
+  and debugging with checkpoint/log/ReactorDebugAgent/BlockHound.
+repo: adityamparikh/project-reactor-skill
+skill_path: SKILL.md
+category: web
+tools:
+  - claude
+languages:
+  - java
+  - kotlin
+trust: community
+author: Aditya Parikh
+tags:
+  - reactor
+  - reactive
+  - webflux
+  - mono
+  - flux
+  - r2dbc
+  - webclient
