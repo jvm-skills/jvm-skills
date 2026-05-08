@@ -1,0 +1,26 @@
+name: Spring Boot 4 Migration
+description: >-
+  Migrates Spring Boot 3.x applications to 4.x and tracks 4.x minor-version
+  changes. Covers build/starter changes, Jackson 3, Spring Security 7,
+  Spring Framework 7, observability (OpenTelemetry/Micrometer), property and
+  package relocations, testing (JUnit 6, Testcontainers 2, MockitoBean), HTTP
+  clients, resilience, AOT/native, and API versioning. Includes all-at-once
+  and gradual upgrade strategies with compatibility bridges and a verification
+  script.
+repo: adityamparikh/spring-boot-4-migration-skill
+skill_path: SKILL.md
+category: framework
+tools:
+  - claude
+languages:
+  - java
+  - kotlin
+  - groovy
+trust: community
+author: Aditya Parikh
+tags:
+  - spring-boot
+  - migration
+  - spring-framework
+  - spring-security
+  - jackson
