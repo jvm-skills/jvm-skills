@@ -7,7 +7,7 @@ import java.io.File
 import kotlin.system.exitProcess
 
 val requiredFields = listOf("name", "description", "repo", "category", "languages", "trust", "author")
-val validCategories = setOf("database", "web", "infrastructure", "testing", "architecture", "workflow")
+val validCategories = setOf("framework", "language", "database", "testing", "fullstack", "web", "workflow", "tool")
 val validTrust = setOf("official", "curated", "community")
 
 val rootDir = __FILE__.absoluteFile.parentFile.parentFile
