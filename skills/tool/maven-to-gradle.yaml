@@ -1,0 +1,20 @@
+name: MavenToGradle
+description: >-
+  Migrates Maven JVM projects to Gradle Kotlin DSL with version catalogs,
+  covering single-module and multi-module builds, Spring Boot parent POMs,
+  Maven profiles, dependency scope mapping, BOM imports, annotation processors,
+  plugin mappings, and dual-build overlay mode.
+repo: adityamparikh/maven-to-gradle
+skill_path: SKILL.md
+category: tool
+tools:
+  - claude
+languages:
+  - kotlin
+  - java
+trust: community
+author: Aditya Parikh
+tags:
+  - build
+  - maven
+  - gradle
