@@ -1,0 +1,223 @@
+login,repo,path,reason,reasoning,first_seen,last_seen
+martinfrancois,java-optionals-skill,AGENTS.md,already-listed,EXCLUDE: skills/language/optional-java.yaml,2026-06-26,2026-06-26
+martinfrancois,java-optionals-skill,skills/java-optionals/SKILL.md,already-listed,EXCLUDE: skills/language/optional-java.yaml,2026-06-26,2026-06-26
+martinfrancois,java-streams-skill,AGENTS.md,already-listed,EXCLUDE: skills/language/streams-java.yaml,2026-06-26,2026-06-26
+martinfrancois,java-streams-skill,skills/java-streams/SKILL.md,already-listed,EXCLUDE: skills/language/streams-java.yaml,2026-06-26,2026-06-26
+asm0dey,java-version-checker,.tessl/tiles/tessl-labs/intent-integrity-kit/skills/iikit-00-constitution/SKILL.md,boilerplate,Tessl intent-integrity-kit / tile template,2026-06-26,2026-06-26
+asm0dey,java-version-checker,.tessl/tiles/tessl-labs/intent-integrity-kit/skills/iikit-01-specify/SKILL.md,boilerplate,Tessl intent-integrity-kit / tile template,2026-06-26,2026-06-26
+asm0dey,java-version-checker,.tessl/tiles/tessl-labs/intent-integrity-kit/skills/iikit-02-clarify/SKILL.md,boilerplate,Tessl intent-integrity-kit / tile template,2026-06-26,2026-06-26
+asm0dey,java-version-checker,.tessl/tiles/tessl-labs/intent-integrity-kit/skills/iikit-03-plan/SKILL.md,boilerplate,Tessl intent-integrity-kit / tile template,2026-06-26,2026-06-26
+asm0dey,java-version-checker,.tessl/tiles/tessl-labs/intent-integrity-kit/skills/iikit-04-checklist/SKILL.md,boilerplate,Tessl intent-integrity-kit / tile template,2026-06-26,2026-06-26
+asm0dey,java-version-checker,.tessl/tiles/tessl-labs/intent-integrity-kit/skills/iikit-05-testify/SKILL.md,boilerplate,Tessl intent-integrity-kit / tile template,2026-06-26,2026-06-26
+asm0dey,java-version-checker,.tessl/tiles/tessl-labs/intent-integrity-kit/skills/iikit-06-tasks/SKILL.md,boilerplate,Tessl intent-integrity-kit / tile template,2026-06-26,2026-06-26
+asm0dey,java-version-checker,.tessl/tiles/tessl-labs/intent-integrity-kit/skills/iikit-07-analyze/SKILL.md,boilerplate,Tessl intent-integrity-kit / tile template,2026-06-26,2026-06-26
+asm0dey,java-version-checker,.tessl/tiles/tessl-labs/intent-integrity-kit/skills/iikit-08-implement/SKILL.md,boilerplate,Tessl intent-integrity-kit / tile template,2026-06-26,2026-06-26
+asm0dey,java-version-checker,.tessl/tiles/tessl-labs/intent-integrity-kit/skills/iikit-09-taskstoissues/SKILL.md,boilerplate,Tessl intent-integrity-kit / tile template,2026-06-26,2026-06-26
+asm0dey,java-version-checker,.tessl/tiles/tessl-labs/intent-integrity-kit/skills/iikit-core/SKILL.md,boilerplate,Tessl intent-integrity-kit / tile template,2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.claude/skills/openspec-apply-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.claude/skills/openspec-archive-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.claude/skills/openspec-bulk-archive-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.claude/skills/openspec-continue-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.claude/skills/openspec-explore/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.claude/skills/openspec-ff-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.claude/skills/openspec-new-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.claude/skills/openspec-onboard/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.claude/skills/openspec-sync-specs/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.claude/skills/openspec-verify-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.github/skills/openspec-apply-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.github/skills/openspec-archive-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.github/skills/openspec-bulk-archive-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.github/skills/openspec-continue-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.github/skills/openspec-explore/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.github/skills/openspec-ff-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.github/skills/openspec-new-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.github/skills/openspec-onboard/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.github/skills/openspec-sync-specs/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.github/skills/openspec-verify-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.windsurf/skills/openspec-apply-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.windsurf/skills/openspec-archive-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.windsurf/skills/openspec-bulk-archive-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.windsurf/skills/openspec-continue-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.windsurf/skills/openspec-explore/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.windsurf/skills/openspec-ff-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.windsurf/skills/openspec-new-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.windsurf/skills/openspec-onboard/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.windsurf/skills/openspec-sync-specs/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.windsurf/skills/openspec-verify-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,calliope-md,.github/skills/openspec-apply-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,calliope-md,.github/skills/openspec-archive-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,calliope-md,.github/skills/openspec-explore/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,calliope-md,.github/skills/openspec-propose/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,flink-sql-playground,.github/skills/openspec-apply-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,flink-sql-playground,.github/skills/openspec-archive-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,flink-sql-playground,.github/skills/openspec-explore/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+gAmUssA,flink-sql-playground,.github/skills/openspec-propose/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,training-assistant,.codex/skills/openspec-apply-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,training-assistant,.codex/skills/openspec-archive-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,training-assistant,.codex/skills/openspec-continue-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,training-assistant,.codex/skills/openspec-explore/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,training-assistant,.codex/skills/openspec-new-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,training-assistant,.codex/skills/openspec-propose/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,training-assistant,.github/skills/openspec-apply-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,training-assistant,.github/skills/openspec-archive-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,training-assistant,.github/skills/openspec-continue-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,training-assistant,.github/skills/openspec-explore/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,training-assistant,.github/skills/openspec-new-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,training-assistant,.github/skills/openspec-propose/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,victor-macos-addons,.claude/skills/openspec-apply-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,victor-macos-addons,.claude/skills/openspec-archive-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,victor-macos-addons,.claude/skills/openspec-explore/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,victor-macos-addons,.claude/skills/openspec-propose/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,victor-macos-addons,.codex/skills/openspec-apply-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,victor-macos-addons,.codex/skills/openspec-archive-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,victor-macos-addons,.codex/skills/openspec-explore/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,victor-macos-addons,.codex/skills/openspec-propose/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,victor-macos-addons,.github/skills/openspec-apply-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,victor-macos-addons,.github/skills/openspec-archive-change/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,victor-macos-addons,.github/skills/openspec-explore/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+victorrentea,victor-macos-addons,.github/skills/openspec-propose/SKILL.md,boilerplate,OpenSpec change-workflow template (duplicated set),2026-06-26,2026-06-26
+jamesward,agent-integration-demo,src/main/resources/myskills/dogs/SKILL.md,demo,demo/workshop repo,2026-06-26,2026-06-26
+myfear,modernization-demo,.bob/rules-code/AGENTS.md,demo,demo/workshop repo,2026-06-26,2026-06-26
+myfear,the-main-thread,cleardesk-skills/src/main/resources/skills/dev-ops/SKILL.md,demo,newsletter/fictional-company content-pipeline demo skills,2026-06-26,2026-06-26
+myfear,the-main-thread,cleardesk-skills/src/main/resources/skills/finance-ops/SKILL.md,demo,newsletter/fictional-company content-pipeline demo skills,2026-06-26,2026-06-26
+myfear,the-main-thread,cleardesk-skills/src/main/resources/skills/support-triage/SKILL.md,demo,newsletter/fictional-company content-pipeline demo skills,2026-06-26,2026-06-26
+myfear,the-main-thread,nebulatrack-testdata/.bob/skills/synthetic-test-data/SKILL.md,demo,newsletter/fictional-company content-pipeline demo skills,2026-06-26,2026-06-26
+myfear,the-main-thread,sbom-demo/.agents/skills/article-reviewer/SKILL.md,demo,newsletter/fictional-company content-pipeline demo skills,2026-06-26,2026-06-26
+myfear,the-main-thread,sbom-demo/.agents/skills/authentic-voice/SKILL.md,demo,newsletter/fictional-company content-pipeline demo skills,2026-06-26,2026-06-26
+myfear,the-main-thread,sbom-demo/.agents/skills/main-thread-publishing-pack/SKILL.md,demo,newsletter/fictional-company content-pipeline demo skills,2026-06-26,2026-06-26
+myfear,the-main-thread,sbom-demo/.agents/skills/main-thread-tutorial-structure/SKILL.md,demo,newsletter/fictional-company content-pipeline demo skills,2026-06-26,2026-06-26
+myfear,the-main-thread,vaultflow/AGENTS.md,demo,newsletter/fictional-company content-pipeline demo skills,2026-06-26,2026-06-26
+myfear,the-main-thread,vaultflow/CLAUDE.md,demo,newsletter/fictional-company content-pipeline demo skills,2026-06-26,2026-06-26
+myfear,the-main-thread,verdictiq/AGENTS.md,demo,newsletter/fictional-company content-pipeline demo skills,2026-06-26,2026-06-26
+myfear,the-main-thread,verdictiq/CLAUDE.md,demo,newsletter/fictional-company content-pipeline demo skills,2026-06-26,2026-06-26
+tzolov,playground-flight-booking,docs/AGENTS.md,demo,demo/workshop repo,2026-06-26,2026-06-26
+tzolov,voxxeddays2026-demo,13-agents-skills/src/main/resources/.claude/skills/ai-tutor/SKILL.md,demo,demo/workshop repo,2026-06-26,2026-06-26
+tzolov,voxxeddays2026-demo,13-agents-skills/src/main/resources/.claude/skills/pdf/SKILL.md,demo,demo/workshop repo,2026-06-26,2026-06-26
+tzolov,voxxeddays2026-demo,16-agents-subagent/src/main/resources/skills/ai-tutor/SKILL.md,demo,demo/workshop repo,2026-06-26,2026-06-26
+tzolov,voxxeddays2026-demo,18-a2a/subagent-a2a-demo/src/main/resources/skills/travel-planner/SKILL.md,demo,demo/workshop repo,2026-06-26,2026-06-26
+AdamBien,airails,bce/bce/SKILL.md,jvm-collection,Adam Bien airails Java skill 'bce' — promote-worthy,2026-06-26,2026-06-26
+AdamBien,airails,bce/continuous-testing/SKILL.md,jvm-collection,Adam Bien airails Java skill 'continuous-testing' — promote-worthy,2026-06-26,2026-06-26
+AdamBien,airails,bce/java-cli-app/SKILL.md,jvm-collection,Adam Bien airails Java skill 'java-cli-app' — promote-worthy,2026-06-26,2026-06-26
+AdamBien,airails,bce/microprofile-server/SKILL.md,jvm-collection,Adam Bien airails Java skill 'microprofile-server' — promote-worthy,2026-06-26,2026-06-26
+AdamBien,airails,bce/sbce/SKILL.md,jvm-collection,Adam Bien airails Java skill 'sbce' — promote-worthy,2026-06-26,2026-06-26
+AdamBien,airails,bce/showtime/SKILL.md,jvm-collection,Adam Bien airails Java skill 'showtime' — promote-worthy,2026-06-26,2026-06-26
+AdamBien,airails,java/java-cli-script/SKILL.md,jvm-collection,Adam Bien airails Java skill 'java-cli-script' — promote-worthy,2026-06-26,2026-06-26
+AdamBien,airails,java/java-distiller/SKILL.md,jvm-collection,Adam Bien airails Java skill 'java-distiller' — promote-worthy,2026-06-26,2026-06-26
+AdamBien,airails,java/python-to-java/SKILL.md,jvm-collection,Adam Bien airails Java skill 'python-to-java' — promote-worthy,2026-06-26,2026-06-26
+AdamBien,airails,java/zargs/SKILL.md,jvm-collection,Adam Bien airails Java skill 'zargs' — promote-worthy,2026-06-26,2026-06-26
+AdamBien,airails,java/zb-release-pipeline/SKILL.md,jvm-collection,Adam Bien airails Java skill 'zb-release-pipeline' — promote-worthy,2026-06-26,2026-06-26
+AdamBien,airails,java/zb/SKILL.md,jvm-collection,Adam Bien airails Java skill 'zb' — promote-worthy,2026-06-26,2026-06-26
+AdamBien,airails,java/zcfg/SKILL.md,jvm-collection,Adam Bien airails Java skill 'zcfg' — promote-worthy,2026-06-26,2026-06-26
+AdamBien,airails,java/zcl/SKILL.md,jvm-collection,Adam Bien airails Java skill 'zcl' — promote-worthy,2026-06-26,2026-06-26
+AdamBien,airails,java/zjson/SKILL.md,jvm-collection,Adam Bien airails Java skill 'zjson' — promote-worthy,2026-06-26,2026-06-26
+AdamBien,airails,java/zunit/SKILL.md,jvm-collection,Adam Bien airails Java skill 'zunit' — promote-worthy,2026-06-26,2026-06-26
+ArturSkowronski,ksef-cli,skills/ksef-cli/SKILL.md,off-topic-service,Polish KSeF e-invoice CLI (Python tool),2026-06-26,2026-06-26
+ThomasVitale,agents-skills-oci-artifacts-spec,examples/skills/manage-pull-requests/SKILL.md,off-topic-service,Forgejo pull-request management,2026-06-26,2026-06-26
+gAmUssA,dotfiles,agents/skills/tavily-search/SKILL.md,off-topic-service,Tavily web search,2026-06-26,2026-06-26
+johnsonr,pack-github,skills/github-workflows/SKILL.md,off-topic-service,generic GitHub workflows (Embabel pack),2026-06-26,2026-06-26
+johnsonr,pack-google,skills/google-docs-editor-workflows/SKILL.md,off-topic-service,Google Docs/Drive/Sheets workflows (Embabel pack),2026-06-26,2026-06-26
+johnsonr,pack-google,skills/google-docs-workflows/SKILL.md,off-topic-service,Google Docs/Drive/Sheets workflows (Embabel pack),2026-06-26,2026-06-26
+johnsonr,pack-google,skills/google-drive-workflows/SKILL.md,off-topic-service,Google Docs/Drive/Sheets workflows (Embabel pack),2026-06-26,2026-06-26
+johnsonr,pack-google,skills/google-sheets-workflows/SKILL.md,off-topic-service,Google Docs/Drive/Sheets workflows (Embabel pack),2026-06-26,2026-06-26
+johnsonr,pack-hubspot,skills/hubspot-crm/SKILL.md,off-topic-service,HubSpot CRM (Embabel pack),2026-06-26,2026-06-26
+johnsonr,pack-movie,skills/movie/SKILL.md,off-topic-service,"movie data (Embabel pack, demo)",2026-06-26,2026-06-26
+johnsonr,pack-research,skills/web-search/SKILL.md,off-topic-service,web search (Embabel pack),2026-06-26,2026-06-26
+johnsonr,pack-stripe,skills/stripe/SKILL.md,off-topic-service,Stripe billing workflows (Embabel pack),2026-06-26,2026-06-26
+johnsonr,pack-zoom,skills/zoom-recordings/SKILL.md,off-topic-service,Zoom recordings (Embabel pack),2026-06-26,2026-06-26
+AdamBien,airails,documentation/bce-diagrams/SKILL.md,off-topic-tech,doc tooling (bce-diagrams: mermaid/drawio/readme),2026-06-26,2026-06-26
+AdamBien,airails,documentation/drawio/SKILL.md,off-topic-tech,doc tooling (drawio: mermaid/drawio/readme),2026-06-26,2026-06-26
+AdamBien,airails,documentation/mermaid/SKILL.md,off-topic-tech,doc tooling (mermaid: mermaid/drawio/readme),2026-06-26,2026-06-26
+AdamBien,airails,documentation/readme/SKILL.md,off-topic-tech,doc tooling (readme: mermaid/drawio/readme),2026-06-26,2026-06-26
+AdamBien,airails,web/web-components/SKILL.md,off-topic-tech,web frontend skill (web-components),2026-06-26,2026-06-26
+AdamBien,airails,web/web-static/SKILL.md,off-topic-tech,web frontend skill (web-static),2026-06-26,2026-06-26
+ArturSkowronski,clawd-reachy-mini,action-skill/SKILL.md,off-topic-tech,"Reachy-mini robot action skill (robotics, non-JVM)",2026-06-26,2026-06-26
+asm0dey,calit,.claude/skills/daisyui/SKILL.md,off-topic-tech,daisyUI CSS-framework skills,2026-06-26,2026-06-26
+asm0dey,calit,.claude/skills/daisyui/colors/SKILL.md,off-topic-tech,daisyUI CSS-framework skills,2026-06-26,2026-06-26
+asm0dey,calit,.claude/skills/daisyui/config/SKILL.md,off-topic-tech,daisyUI CSS-framework skills,2026-06-26,2026-06-26
+asm0dey,calit,.claude/skills/daisyui/install/SKILL.md,off-topic-tech,daisyUI CSS-framework skills,2026-06-26,2026-06-26
+asm0dey,calit,.claude/skills/daisyui/usage/SKILL.md,off-topic-tech,daisyUI CSS-framework skills,2026-06-26,2026-06-26
+asm0dey,calit,CLAUDE.md,off-topic-tech,daisyUI CSS-framework skills,2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.claude/skills/ui-ux-pro-max/SKILL.md,off-topic-tech,UI/UX design skill,2026-06-26,2026-06-26
+gAmUssA,ai-assisted-engineering,.windsurf/skills/ui-ux-pro-max/SKILL.md,off-topic-tech,UI/UX design skill,2026-06-26,2026-06-26
+johnsonr,ecstasy-skill,SKILL.md,off-topic-tech,Ecstasy/XTC language assistance (non-JVM language),2026-06-26,2026-06-26
+AdamBien,airails,java/enterprisifier/SKILL.md,off-topic-workflow,overengineering novelty skill (comedic),2026-06-26,2026-06-26
+AdamBien,zsmith,zsmith/src/test/skills/code-reviewer/SKILL.md,off-topic-workflow,generic code review skill (zsmith demo),2026-06-26,2026-06-26
+AdamBien,zsmith,zsmith/src/test/skills/explain/SKILL.md,off-topic-workflow,generic code-explanation skill (zsmith demo),2026-06-26,2026-06-26
+jamesward,skills,skills/zen-of-james/SKILL.md,off-topic-workflow,"personal FP coding philosophy; general, not JVM-specific",2026-06-26,2026-06-26
+raphaeldelio,agent-skills,packet-orchestration/SKILL.md,off-topic-workflow,parallel multi-agent packet orchestration; project-agnostic,2026-06-26,2026-06-26
+raphaeldelio,agent-skills,thread-branching/SKILL.md,off-topic-workflow,handoff-prompt generator for new threads; not JVM,2026-06-26,2026-06-26
+victorrentea,ai-central,skills/caveman/SKILL.md,off-topic-workflow,"ultra-compressed comms mode; token efficiency, not JVM",2026-06-26,2026-06-26
+victorrentea,petclinic,.claude/skills/multi-review/SKILL.md,off-topic-workflow,review orchestration via review-boss agent; language-agnostic,2026-06-26,2026-06-26
+victorrentea,petclinic,.claude/skills/regen-user-manual/SKILL.md,off-topic-workflow,regenerate project user manual; generic workflow,2026-06-26,2026-06-26
+AdamBien,airails,java/zb/AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+AdamBien,confex,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+AdamBien,confex-ai,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+AdamBien,quarkus-microprofile,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+AdamBien,z-java-cli-app,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+AdamBien,zb,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+AdamBien,zsmith,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+ArturSkowronski,jvm-daily,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+ArturSkowronski,nytw-companion,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+ArturSkowronski,nytw-companion,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+ArturSkowronski,stl-gdrive-viewer,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+ArturSkowronski,warpaint-cli,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+asm0dey,conference-notifier-bot,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+asm0dey,conference-notifier-bot,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+asm0dey,java-version-checker,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+asm0dey,java-version-checker,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+danieloh30,high-perf-kube-java,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+danieloh30,high-perf-kube-java,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+danieloh30,resilient-ai-driven-java-quarkus,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+danieloh30,resilient-ai-driven-java-quarkus,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+gAmUssA,cad-3d,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+gAmUssA,codepocalypse-langchain4j-agentic,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+gAmUssA,codepocalypse-langchain4j-agentic,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+gAmUssA,reACT-langchain4j,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+gAmUssA,reACT-langchain4j,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+gAmUssA,robocoders-kagematch-2026,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+gAmUssA,robocoders-kagematch-2026,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+jamesward,acp-web-gateway,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+jamesward,ai4jvm,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+jamesward,ai4jvm,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+jamesward,javadoccentral,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+jamesward,sbt-reload,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+jamesward,zio-bedrock-converse,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+jamesward,zio-http-mcp,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+jamesward,zio-http-mcp,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+kdubois,kubernetes-aiops-agent,agents.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+kdubois,netatmo-java-mcp,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+markpollack,acp-java-tutorial,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+markpollack,agent-client-tutorial,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+markpollack,agent-experiment,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+markpollack,agent-experiment-template,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+markpollack,agent-hooks,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+markpollack,agento-forge,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+markpollack,docs,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+markpollack,experiment-code-coverage-v3,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+markpollack,forge,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+markpollack,loopy,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+markpollack,prplot,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+markpollack,spring-ai-project-mgmt,pr-review/CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+martinfrancois,question-driven-talk-assistant,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+mohamed-taman,Hotel-Booking-AI-Assistant,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+myfear,ejq_substack_articles,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+tzolov,docs,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+victorrentea,agentic-wiki,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+victorrentea,java-memory,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+victorrentea,kafka,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+victorrentea,live-coding,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+victorrentea,microservices,Agents.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+victorrentea,microservices,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+victorrentea,petclinic,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+victorrentea,petclinic,petclinic-ui-test/CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+victorrentea,secure-coding,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+victorrentea,training-assistant,AGENTS.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+victorrentea,training-assistant,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+victorrentea,victor-macos-addons,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+victorrentea,wispr-flow-addons,CLAUDE.md,project-doc,bare project AI-instructions file,2026-06-26,2026-06-26
+AdamBien,zsmith,zsmith/src/test/skills/java-modernizer/SKILL.md,test-fixture,16-line skill under src/test/skills/ — JVM but shallow fixture,2026-06-26,2026-06-26
+markpollack,loopy,src/test/resources/META-INF/skills/test-org/test-repo/classpath-skill/SKILL.md,test-fixture,classpath-skill test fixture,2026-06-26,2026-06-26
+asm0dey,conference-notifier-bot,.tessl/plugins/jbaruch/kotlin-tutor/skills/kotlin-api-review/SKILL.md,vendored,vendored 3rd-party plugin 'jbaruch' — not authored by speaker,2026-06-26,2026-06-26
+asm0dey,conference-notifier-bot,.tessl/plugins/jbaruch/kotlin-tutor/skills/kotlinify-tests/SKILL.md,vendored,vendored 3rd-party plugin 'jbaruch' — not authored by speaker,2026-06-26,2026-06-26
+asm0dey,conference-notifier-bot,.tessl/plugins/jbaruch/kotlin-tutor/skills/nullable-cleanup/SKILL.md,vendored,vendored 3rd-party plugin 'jbaruch' — not authored by speaker,2026-06-26,2026-06-26
+asm0dey,conference-notifier-bot,.tessl/plugins/jbaruch/kotlin-tutor/skills/pojoify-to-dataclass/SKILL.md,vendored,vendored 3rd-party plugin 'jbaruch' — not authored by speaker,2026-06-26,2026-06-26
