@@ -22,12 +22,14 @@ Visit **[jvmskills.com](https://jvmskills.com)** to browse all skills, filter by
 
 | Category | Scope |
 |----------|-------|
+| Framework | Comprehensive framework guides, scaffolding, and framework-level best practices |
+| Language | Java, Kotlin, and JVM language best practices |
 | Database | jOOQ, JPA/Hibernate, PostgreSQL, Flyway, Liquibase |
-| Web | Spring Boot, JTE, Thymeleaf, security |
-| Infrastructure | Docker, CI/CD, deployment, observability |
 | Testing | Testcontainers, integration testing patterns |
-| Architecture | Hexagonal, design patterns, modularity |
+| Fullstack | End-to-end application workflows spanning backend, frontend, and tests |
+| Web | Web UI, frontend, templates, and browser-facing performance |
 | Workflow | Planning, interview, code review, process skills |
+| Tool | Agent-facing tools, automation utilities, and supporting integrations |
 
 ## Contributing
 
@@ -51,12 +53,14 @@ open dist/index.html
 
 ```
 skills/                    # Skill listing YAML files (one per skill)
-  database/                #   jooq.yaml, flyway.yaml, postgresql.yaml
-  web/                     #   spring-core.yaml, jte.yaml
-  infrastructure/          #   docker-spring.yaml
-  testing/                 #   testcontainers.yaml
-  architecture/            #   hexagonal.yaml
-  workflow/                #   grill-me.yaml
+  framework/               #   spring-boot.yaml, scaffolding.yaml
+  language/                #   java-code-quality.yaml, design-patterns.yaml
+  database/                #   jooq.yaml, jpa.yaml, postgresql.yaml
+  testing/                 #   testcontainers.yaml, tdd.yaml
+  fullstack/               #   fullstack fix and end-to-end workflows
+  web/                     #   frontend design and web performance
+  workflow/                #   planning, commit, interview workflows
+  tool/                    #   browser automation and supporting tools
 site/                      # Website build tooling
   template.html            #   HTML template with embedded CSS/JS
   build.main.kts           #   Kotlin build script: reads YAML → outputs dist/index.html

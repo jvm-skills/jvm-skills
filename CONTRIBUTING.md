@@ -13,7 +13,7 @@ The easiest way to contribute is to add a new skill listing.
    ```
    skills/<category>/<name>.yaml
    ```
-   Categories: `database`, `web`, `infrastructure`, `testing`, `architecture`, `workflow`
+   Categories: `framework`, `language`, `database`, `testing`, `fullstack`, `web`, `workflow`, `tool`
 
 3. **Fill in all required fields:**
 
@@ -48,7 +48,7 @@ The easiest way to contribute is to add a new skill listing.
 | `name` | yes | Display name |
 | `description` | yes | One paragraph, shown on the card |
 | `repo` | yes | GitHub `owner/repo` where the skill lives |
-| `category` | yes | One of: database, web, infrastructure, testing, architecture, workflow |
+| `category` | yes | One of: framework, language, database, testing, fullstack, web, workflow, tool |
 | `tools` | yes | AI tools: claude, cursor, copilot, windsurf, aider |
 | `languages` | yes | kotlin, java, or both |
 | `trust` | yes | `community` for PR submissions (`official` and `curated` assigned by maintainers) |

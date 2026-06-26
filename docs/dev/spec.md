@@ -33,22 +33,25 @@ The project follows a **phased approach**:
 ```
 jvm-skills/                          # GitHub repo (github.com/jvm-skills/jvm-skills)
 ├── skills/                          # Skill listing YAML files (one per skill)
+│   ├── framework/
+│   │   └── spring-boot.yaml
+│   ├── language/
+│   │   ├── code-quality-java.yaml
+│   │   └── design-patterns-java.yaml
 │   ├── database/
 │   │   ├── jooq.yaml
 │   │   ├── jpa.yaml
-│   │   └── flyway.yaml
-│   ├── web/
-│   │   ├── spring-core.yaml
-│   │   └── jte.yaml
-│   ├── infrastructure/
-│   │   └── testcontainers.yaml
+│   │   └── postgresql.yaml
 │   ├── testing/
-│   │   └── spring-boot-testing.yaml
-│   ├── architecture/
-│   │   └── hexagonal.yaml
-│   └── workflow/
-│       ├── grill-me.yaml
-│       └── prd-to-plan.yaml
+│   │   └── tdd-task.yaml
+│   ├── fullstack/
+│   │   └── fix-fullstack.yaml
+│   ├── web/
+│   │   └── frontend-design.yaml
+│   ├── workflow/
+│   │   └── commit.yaml
+│   └── tool/
+│       └── agent-browser.yaml
 │
 ├── build-site.sh                    # Shell script: reads YAML → outputs index.html
 ├── template.html                    # HTML template with embedded CSS/JS
@@ -116,7 +119,7 @@ tags:
 | `name`             | yes      | Display name of the skill                                                  |
 | `description`      | yes      | One-paragraph description shown on the card                                |
 | `repo`             | yes      | GitHub `owner/repo` where the skill content lives                          |
-| `category`         | yes      | One of: `database`, `web`, `infrastructure`, `testing`, `architecture`, `workflow` |
+| `category`         | yes      | One of: `framework`, `language`, `database`, `testing`, `fullstack`, `web`, `workflow`, `tool` |
 | `tools`            | yes      | AI tools supported: `claude`, `cursor`, `copilot`, `windsurf`, `aider`     |
 | `languages`        | yes      | Languages supported: `kotlin`, `java`, or both                             |
 | `trust`            | yes      | `official`, `curated`, or `community`                                        |
@@ -135,13 +138,14 @@ Skills are organized by technology layer:
 
 | Category           | Scope                                                                  |
 |--------------------|------------------------------------------------------------------------|
+| `framework`        | Comprehensive framework guides, scaffolding, and framework-level best practices |
+| `language`         | Java, Kotlin, and JVM language best practices                          |
 | `database`         | Data access (jOOQ, JPA/Hibernate), databases (PostgreSQL, MySQL), migrations (Flyway, Liquibase) |
-| `web`              | Web frameworks (Spring Boot, Quarkus), template engines (JTE, Thymeleaf), security |
-| `infrastructure`   | Docker, CI/CD, deployment, observability                               |
 | `testing`          | Testing strategies, Testcontainers, integration testing patterns       |
-| `architecture`     | Design patterns, hexagonal architecture, modularity                    |
+| `fullstack`        | End-to-end application workflows spanning backend, frontend, and tests |
+| `web`              | Web UI, frontend, templates, and browser-facing performance            |
 | `workflow`         | Process and meta skills: planning (prd-to-plan), interview (grill-me), code review, compound engineering. These are language-agnostic but curated for JVM developers. |
-| `framework`         | Comprehensive framework guides covering multiple layers (Spring Boot full-stack, opinionated starter guides, framework-level best practices). These are `scope: comprehensive` skills that reference multiple focused sub-guides. |
+| `tool`             | Agent-facing tools, automation utilities, and supporting integrations  |
 
 ### Trust Model
 
@@ -174,7 +178,7 @@ A shell script (`build-site.sh`) reads all YAML files in `skills/`, then generat
 
 #### Design
 
-- Skills grouped by category (Database, Web, Infrastructure, Testing, Architecture)
+- Skills grouped by category (Framework, Language, Database, Testing, Fullstack, Web, Workflow, Tool)
 - Each skill rendered as a card showing: name, description, author, trust badge, supported tools, languages, tags
 - Client-side JavaScript for filtering by: search text, AI tool, language, trust level
 - Cards link directly to the skill's GitHub repo — no detail pages

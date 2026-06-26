@@ -34,12 +34,14 @@ body:
     attributes:
       label: Category
       options:
+        - framework
+        - language
         - database
-        - web
-        - infrastructure
         - testing
-        - architecture
+        - fullstack
+        - web
         - workflow
+        - tool
     validations:
       required: true
 
