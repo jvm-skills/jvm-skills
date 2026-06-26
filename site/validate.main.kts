@@ -6,7 +6,7 @@ import org.yaml.snakeyaml.Yaml
 import java.io.File
 import kotlin.system.exitProcess
 
-val requiredFields = listOf("name", "description", "repo", "category", "tools", "languages", "trust", "author")
+val requiredFields = listOf("name", "description", "repo", "category", "languages", "trust", "author")
 val validCategories = setOf("database", "web", "infrastructure", "testing", "architecture", "workflow")
 val validTrust = setOf("official", "curated", "community")
 
