@@ -10,7 +10,7 @@ val requiredFields = listOf("name", "description", "repo", "category", "tools", 
 val validCategories = setOf("database", "web", "infrastructure", "testing", "architecture", "workflow")
 val validTrust = setOf("official", "curated", "community")
 
-val rootDir = File(__FILE__).parentFile.parentFile.absoluteFile
+val rootDir = __FILE__.absoluteFile.parentFile.parentFile
 val skillsDir = File(rootDir, "skills")
 val yaml = Yaml()
 val errors = mutableListOf<String>()
