@@ -1,0 +1,24 @@
+name: Java Optional Skill
+description: >-
+  Java Optional best practices for implementation, review, and cleanup.
+  Covers Optional shape selection, isPresent()+get() and orElse(null)
+  antipatterns, lazy fallback with orElseGet(...), primitive Optionals,
+  stream interop, findFirst()/findAny() semantics, and checked-IO boundaries.
+repo: martinfrancois/java-optionals-skill
+skill_path: "skills/java-optionals/SKILL.md"
+category: language
+languages:
+  - java
+trust: community
+author: François Martin
+version: "1.0.0"
+last_updated: "2026-06-24"
+scope: focused
+tech: []
+tags:
+  - optional
+  - null-safety
+  - functional-programming
+  - code-review
+  - refactoring
+  - clean-code

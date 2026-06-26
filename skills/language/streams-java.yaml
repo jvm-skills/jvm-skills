@@ -1,0 +1,26 @@
+name: Java Streams Skill
+description: >-
+  Java Streams, Collectors, and Gatherers best practices for implementation,
+  review, and cleanup. Covers terminal operation choice, ordering and null
+  behavior, collector semantics, primitive streams, duplicate-key and
+  comparator pitfalls, Java-version-specific APIs, and when parallelStream()
+  is actually appropriate.
+repo: martinfrancois/java-streams-skill
+skill_path: "skills/java-streams/SKILL.md"
+category: language
+languages:
+  - java
+trust: community
+author: François Martin
+version: "1.0.0"
+last_updated: "2026-06-26"
+scope: focused
+tech: []
+tags:
+  - streams
+  - collectors
+  - functional-programming
+  - code-review
+  - refactoring
+  - clean-code
+  - parallel-streams
