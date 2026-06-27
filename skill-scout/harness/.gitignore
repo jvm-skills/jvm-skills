@@ -7,5 +7,9 @@
 *_verdicts*.json
 *_ckpt.json
 *_conf.json
+*_overlay.json
+recheck_*.json
 *_aliases_add.csv
+fetch_results.json
+peek_results.txt
 __pycache__/

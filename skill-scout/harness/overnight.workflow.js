@@ -6,7 +6,7 @@ export const meta = {
     { title: 'Harvest', detail: 'WebFetch rosters in parallel; browser fallback serial' },
     { title: 'Scan', detail: 'SERIAL chunked tree-scan (GitHub core mutex)' },
     { title: 'Eval', detail: 'Sonnet score + Opus adversarial recheck' },
-    { title: 'Apply', detail: 'serial CSV upsert + self-validate' },
+    { title: 'Apply', detail: 'serial: build_conf.py (deterministic) + CSV upsert + self-validate' },
   ],
 }
 
@@ -207,12 +207,18 @@ const proms = []
 for (const [slug, vs] of Object.entries(verdictsBySlug)) for (const v of vs) if (v.status === 'found' || v.status === 'needs_review') proms.push({ ...v, slug })
 const bundleProm = Object.values(bundleVerdictsBySlug).reduce((n, m) => n + Object.values(m).filter(v => v.cohesive && (v.status === 'found' || v.status === 'needs_review')).length, 0)
 log(`Judged ${judgedCount} files (+${bundleProm} bundle promotions); ${proms.length} individual promotions; Opus rechecking each.`)
+// stable, short cache key per candidate (djb2 over login|repo|path) — lets a retry skip already-decided
+// rechecks instead of re-hammering Opus (the batch-1 rate-limit storm left ~200 rechecks unresolved).
+const djb2 = t => { let h = 5381; for (let i = 0; i < t.length; i++) h = ((h * 33) ^ t.charCodeAt(i)) >>> 0; return h.toString(36) }
+const rcFile = s => `${H}/recheck_${s.slug}_${djb2(`${s.login}|${s.repo}|${s.path}`)}.json`
 const rechecks = await parallel(proms.map(s => () => agent(
   `Adversarially verify ONE proposed skill-directory candidate. Default to keep=false unless it clearly passes.\n`
+  + `RESILIENCE: if ${rcFile(s)} already exists and is valid JSON {keep,reason}, return its contents verbatim (do NOT re-verify).\n`
   + `Candidate: ${s.login}/${s.repo} :: ${s.path} — proposed status=${s.status}, category=${s.category || '?'}, claim: ${s.reasoning}\n`
   + `Read it: HEAD=400 python3 ${H}/peek.py ${s.login} "${s.repo}|${s.path}"\n`
   + `Keep ONLY a genuine, created, REUSABLE, JVM-specific skill in this person's OWN non-fork repo — not a bare project-doc, not vendored/forked, not boilerplate. `
-  + `NOTE: living in a demo/workshop repo is NOT by itself a reason to drop a genuinely reusable skill. Return {keep:boolean, reason:"<one line>"}.`,
+  + `NOTE: living in a demo/workshop repo is NOT by itself a reason to drop a genuinely reusable skill. `
+  + `WRITE your verdict to ${rcFile(s)} as {keep:boolean, reason:"<one line>"} and return the SAME object.`,
   { label: `recheck:${s.login}/${s.repo}`, phase: 'Eval', schema: RECHECK_SCHEMA, model: 'opus' })
   .then(v => ({ key: `${s.slug}|${s.login}|${s.repo}|${s.path}`, keep: !v || v.keep !== false, reason: v && v.reason }))))
 const dropReason = {}
@@ -233,28 +239,30 @@ await agent(
   + `(missing add-files are skipped). It prints "aliases: +N new (M total)". Return {ok:true, note:"<that line>"}.`,
   { label: 'merge-aliases', phase: 'Eval', schema: STEP_SCHEMA, model: 'sonnet' })
 
-// 4e) assemble per-conf overlays: individual skills + rejected (bundles assembled inside apply.py from bundle_detect+verdicts)
+// 4e) assemble per-conf overlays. The heavy skills[]/rejected[] arrays are reconstructed DETERMINISTICALLY
+// from on-disk <slug>_verdicts_*.json by build_conf.py at apply time — here we only need the counts (for the
+// run-note + final summary) and the SMALL deltas the verdicts can't carry: `drops` (Opus recheck rejections)
+// and bundle verdicts. This keeps the apply agent's payload tiny so large confs can't blow the 32k output cap.
 const overlays = scanned.map(c => {
   const vs = verdictsBySlug[c.slug] || []
-  const skills = [], rejected = []
+  const drops = {} // "login|repo|path" -> opus recheck reason; consumed by build_conf.py
+  let nFound = 0, nNr = 0, nReject = 0
   for (const v of vs) {
     const key = `${c.slug}|${v.login}|${v.repo}|${v.path}`
     const isProm = v.status === 'found' || v.status === 'needs_review'
     if (isProm && !(key in dropReason)) {
-      skills.push({ login: v.login, repo: v.repo, path: v.path, status: v.status, depth: v.depth || 0,
-        jvm_fit: v.jvm_fit || '', category: v.category || '', lines: v.lines || 0, notes: v.notes || '', reasoning: v.reasoning || '' })
+      if (v.status === 'found') nFound++; else nNr++
     } else if (isProm) {
-      rejected.push({ login: v.login, repo: v.repo, path: v.path, reason: 'review',
-        reasoning: `Opus recheck rejected promotion: ${dropReason[key]}. (judge: ${v.reasoning || ''})` })
+      drops[`${v.login}|${v.repo}|${v.path}`] = dropReason[key] || ''; nReject++
     } else {
-      rejected.push({ login: v.login, repo: v.repo, path: v.path, reason: v.reason || 'review', reasoning: v.reasoning || '' })
+      nReject++
     }
   }
   const bv = bundleVerdictsBySlug[c.slug] || {}
   const nb = Object.values(bv).filter(v => v.cohesive && (v.status === 'found' || v.status === 'needs_review')).length
-  const run_notes = `${skills.filter(s => s.status === 'found').length} found, ${skills.filter(s => s.status === 'needs_review').length} needs_review, `
-    + `${nb} bundle(s), ${rejected.length} rejected. LLM-judged every non-bundle hit; bundles evaluated as units.`
-  return { slug: c.slug, skills, rejected, bundleVerdicts: bv, run_notes }
+  const run_notes = `${nFound} found, ${nNr} needs_review, ${nb} bundle(s), ${nReject} rejected. `
+    + `LLM-judged every non-bundle hit; bundles evaluated as units.`
+  return { slug: c.slug, drops, bundleVerdicts: bv, run_notes, nFound, nNr }
 })
 
 // ---------------- Phase 5: apply — SERIAL (shared CSV writes) ----------------
@@ -262,17 +270,22 @@ phase('Apply')
 const applied = []
 for (const o of overlays) {
   const c = bySlug[o.slug]
-  const conf = {
+  // SMALL overlay only — build_conf.py reconstructs the heavy skills[]/rejected[] from on-disk verdicts.
+  // (Previously the agent inline-wrote the full conf.json; for big confs that exceeded the 32k output cap
+  //  and silently dropped them — jax/devoxxfrance/digitalcraftsday, batch 1.)
+  const overlay = {
     conference: c.name, url: c.url, roster_fetched_at: TODAY, today: TODAY,
-    scout: `${H}/${o.slug}_scout.json`, skills: o.skills || [], rejected: o.rejected || [],
-    bundle_detect: `${H}/${o.slug}_bundles.json`, bundle_verdicts: o.bundleVerdicts || {}, run_notes: o.run_notes || '',
+    drops: o.drops || {}, bundle_verdicts: o.bundleVerdicts || {}, run_notes: o.run_notes || '',
   }
   const r = await agent(
-    `Write this JSON to ${H}/${o.slug}_conf.json exactly:\n${JSON.stringify(conf)}\n`
-    + `Then run: python3 ${H}/apply.py ${H}/${o.slug}_conf.json${DRY_APPLY ? ' --dry' : ''}\n`
+    `Apply conference "${c.name}" to the jvm-skills CSVs — three Bash steps, in order:\n`
+    + `1. Write this SMALL JSON to ${H}/${o.slug}_overlay.json exactly:\n${JSON.stringify(overlay)}\n`
+    + `2. python3 ${H}/build_conf.py ${o.slug} ${H}/${o.slug}_overlay.json ${H}/${o.slug}_conf.json\n`
+    + `   (reconstructs the full conf.json from on-disk verdicts; prints a "skills=… rejected=…" summary line)\n`
+    + `3. python3 ${H}/apply.py ${H}/${o.slug}_conf.json${DRY_APPLY ? ' --dry' : ''}\n`
     + (DRY_APPLY
-      ? `(--dry renders the would-be CSVs without writing or self-validating.) Return {ok:true, validation:"DRY", note:"<#skills + #bundles rendered>"}.`
-      : `It must print "VALIDATION PASS". Return {ok:true, validation:"PASS", note:"<found/bundle counts>"} on PASS; `
+      ? `(--dry renders the would-be CSVs without writing or self-validating.) Return {ok:true, validation:"DRY", note:"<the build_conf summary line>"}.`
+      : `apply.py must print "VALIDATION PASS". Return {ok:true, validation:"PASS", note:"<the build_conf summary line>"} on PASS; `
         + `if it prints FAIL, return {ok:false, validation:"FAIL", note:"<the ragged/dup detail>"} and do NOT attempt to fix data.`),
     { label: `apply:${o.slug}`, phase: 'Apply', schema: APPLY_SCHEMA, model: 'sonnet' })
   applied.push({ slug: o.slug, ...(r || { ok: false, validation: '?' }) })
@@ -292,8 +305,8 @@ await agent(
   `Run: python3 ${H}/gen_candidates.py && python3 ${H}/gen_review_html.py — regenerate the human views. Return {ok:true}.`,
   { label: 'regen-views', phase: 'Apply', schema: STEP_SCHEMA, model: 'sonnet' })
 
-const foundTotal = overlays.reduce((n, o) => n + (o.skills || []).filter(s => s.status === 'found').length, 0)
-const nrTotal = overlays.reduce((n, o) => n + (o.skills || []).filter(s => s.status === 'needs_review').length, 0)
+const foundTotal = overlays.reduce((n, o) => n + (o.nFound || 0), 0)
+const nrTotal = overlays.reduce((n, o) => n + (o.nNr || 0), 0)
 const bundleTotal = overlays.reduce((n, o) => n + Object.values(o.bundleVerdicts || {}).filter(v => v.cohesive && (v.status === 'found' || v.status === 'needs_review')).length, 0)
 log(`DONE. Conferences applied: ${applied.filter(a => a.validation === 'PASS').length}/${overlays.length}. `
   + `found=${foundTotal} needs_review=${nrTotal} bundles=${bundleTotal}. Validation issues: ${applied.filter(a => a.validation !== 'PASS').map(a => a.slug).join(', ') || 'none'}.`)
