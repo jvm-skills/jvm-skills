@@ -1,72 +1,147 @@
-# Handoff — Speaker-Scout Loop: trial → execute
+# skill-scout — Handoff (2026-06-27)
 
-**What this is:** a validated loop that finds AI skills *created by conference speakers* (resolve speaker
-→ GitHub via user search → scan repos for skill files → evaluate). Run the **TRIAL** first; only proceed to
-**EXECUTE** if the gates pass.
+Self-contained handoff for the next session. **Assume no prior context.** Covers what batch 1
+produced, what failed, the fixes now in place, and exactly how to continue + retry.
 
-## Files
-| File | Role |
+> Supersedes the original trial→execute handoff (the manual `speaker-scout-loop.md` validation plan);
+> that loop is built and running as the Workflow below. Old version is in git history.
+
+---
+
+## TL;DR
+
+- **Batch 1 done:** 24 of 75 queued JVM conferences scanned → judged → applied. DB now holds
+  **451 skill files, 3 bundles, ~2.8k rejected, 1931 speakers** (24 runs). Committed in
+  `c6b0b00` (fixes) + `0b6058c` (data) on branch `skill-scout-loop`.
+- **Two known gaps from batch 1**, both rate-limit-driven — see [What failed](#what-failed).
+- **Fixes are committed** so a rerun won't repeat them — see [Fixes in place](#fixes-in-place).
+- **Next:** [Continue](#1-continue-batch-2--51-remaining-confs) (51 confs) and optionally
+  [Reevaluate/retry](#2-reevaluate--retry-batch-1-rechecks) the rate-limited rechecks.
+
+---
+
+## How the pipeline works (1-paragraph primer)
+
+`harness/overnight.workflow.js` is a Workflow script. Per conference it: **Harvest** roster
+(WebFetch) → **Scan** GitHub for skill files (serial `scout.py`, throttled — GitHub core API is a
+global mutex) → **Eval** (Haiku judges each file → Opus adversarially rechecks each promotion) →
+**Apply** (serial upsert into `db/*.csv`, self-validating). All heavy intermediates are cached on
+disk in `harness/` (gitignored) and agents self-skip when their cache file exists, so a relaunch
+resumes cheaply. Run it with:
+`Workflow({scriptPath: "<repo>/skill-scout/harness/overnight.workflow.js", args: {limit: 25, today: "<YYYY-MM-DD>"}})`
+
+---
+
+## What failed
+
+1. **3 large confs failed to apply (RECOVERED).** `jax`, `devoxxfrance`, `digitalcraftsday` were
+   fully scanned + judged, but the old Apply step asked the agent to inline-write a huge `conf.json`,
+   which exceeded the 32k agent-output cap → the agent failed → those confs were silently dropped.
+   **Already recovered** this session (re-applied deterministically from on-disk verdicts, all
+   `VALIDATION PASS`) and the root cause is fixed. No action needed unless you re-derive them.
+
+2. **~200 Opus rechecks failed on server-side rate-limiting (NOT recovered).** During the Eval tail
+   the account hit sustained 429/"temporarily limiting requests". Rechecks that exhaust retries
+   return `null`, which **fail-safes to `keep=true`** — so those promotions are in `skill_files.csv`
+   **without** adversarial verification. Nothing was lost, but those rows are less-filtered than
+   intended (some may be false positives Opus would have dropped). This is the main thing to
+   **reevaluate** — see step 2 below. Affected candidates clustered around speakers such as
+   `JohannesRabauer/*`, `jabrena/cursor-rules-*`, `marcoemrich/*`, `Grinseteddy/*`, `dyor/*`,
+   `agoncal/*`, `brunoborges/gh-appmod`, `anishi1222/*`, `sshaaf/*`.
+
+---
+
+## Fixes in place (committed `c6b0b00`)
+
+- **`harness/build_conf.py`** — reconstructs the heavy `skills[]`/`rejected[]` arrays
+  deterministically from on-disk `<slug>_verdicts_*.json`. The Apply agent now writes only a tiny
+  `<slug>_overlay.json` (Opus drops + bundle verdicts + meta) then runs `build_conf.py` + `apply.py`.
+  **Per-conf size can no longer blow the output cap** (failure #1 cannot recur).
+- **Opus recheck is now disk-cached** at `harness/recheck_<slug>_<hash>.json`. A rerun skips
+  already-decided candidates instead of re-hammering Opus — so retrying failure #2 is cheap and
+  won't re-trigger the storm.
+- `.gitignore` updated for the new `*_overlay.json` / `recheck_*.json` / scratch artifacts.
+
+> Note: batch 1 ran on the OLD code, so **no `recheck_*.json` files exist for batch 1 yet** — the
+> first reevaluation pass (step 2) will create them.
+
+---
+
+## What to do next
+
+### 1. Continue: batch 2 — 51 remaining confs
+
+`queue.py` already excludes the 24 done confs; it returns **51 unscanned** (next up: `jalba`,
+`javaone`, `voxxeddayszurich`, `confoo`, `fosdem`, …). Run in batches of ~25 to bound wall-clock and
+rate-limit exposure:
+
+```
+Workflow({scriptPath: "<repo>/skill-scout/harness/overnight.workflow.js",
+          args: {limit: 25, today: "<today>"}})
+```
+
+Run it twice more (limit 25, then the remainder) to clear all 51. The large-conf fix means no conf
+will be dropped at apply time now.
+
+**Monitoring** (learned the hard way): liveness = a running `scout.py` OR advancing
+`harness/*_scout*.json` mtimes OR new `*_ckpt.json` during Scan; during Eval/Apply use the workflow
+agent-transcript mtimes + growing `db/skill_files.csv`. Completion arrives as a task-notification.
+Your monitoring checks run on the **same account** the workflow uses — if rate-limited, **back off to
+~60-min checks** so you don't starve the run of token budget. Serial phases (Scan, Apply) tolerate
+throttling and self-recover via retry; don't relaunch unless the transcript is stale >15-20 min AND
+the runtime process is gone AND it's absent from `/workflows`.
+
+### 2. Reevaluate / retry: batch-1 rechecks
+
+Re-run **eval-only** over the 24 batch-1 confs. This reuses cached scout + judge verdicts (instant),
+re-runs the Opus recheck (now cached as it goes) + apply (now deterministic + idempotent upsert), so
+the ~200 unverified promotions finally get their adversarial pass and any false positives move to
+`rejected.csv`.
+
+```
+# regenerate the evalOnly arg (24 confs) from the on-disk checkpoints:
+python3 - <<'PY'
+import json, glob, os
+arr=[]
+for f in sorted(glob.glob("skill-scout/harness/*_ckpt.json")):
+    slug=os.path.basename(f).replace("_ckpt.json","")
+    d=json.load(open(f)); arr.append({"slug":slug,"name":d.get("conference",slug),"url":d.get("url","")})
+print(json.dumps(arr))
+PY
+# then:
+Workflow({scriptPath: "<repo>/skill-scout/harness/overnight.workflow.js",
+          args: {today: "<today>", evalOnly: <the array above>}})
+```
+
+This is an **Opus-heavy** pass (~451 rechecks). Do it when rate limits are healthy, or scope
+`evalOnly` to the clustered confs above if cost is a concern. Because rechecks now cache, a second
+pass after any further rate-limiting is cheap (only the still-uncached ones rerun).
+
+---
+
+## Deferred optimizations (NOT done — evaluate before batch 2 if desired)
+
+- **Pipeline Scan→Eval→Apply per-conf** instead of three strict phases. Real but bounded win: it only
+  overlaps eval's LLM *thinking* time under scan's rate-limit sleeps. **Caveat:** eval's `peek.py`
+  (`gh api .../contents`) shares the **same GitHub core rate-limit bucket** as `scout.py`, so naive
+  overlap splits the budget and can slow the long-pole scan. Worth doing carefully (keep scan serial
+  via the existing mutex, kick a conf's eval on its checkpoint, keep apply serial), but it's a
+  structural rewrite — don't bundle it with an unattended run.
+- **Batch the Opus recheck** (one agent rechecks N candidates) to cut agent count / rate-limit
+  pressure. Tradeoff: less per-candidate attention. Disk-caching (already added) covers most of the
+  retry pain without this.
+
+---
+
+## Quick reference
+
+| Thing | Where |
 |---|---|
-| `loop-design.md` | Design, Mermaid diagrams, trial results, **v3** decisions, DB + re-fetch |
-| `speaker-scout-loop.md` | **The runnable procedure** (v3). Feed this to the agent |
-| `db/*.csv` + `db/README.md` | System of record (git-tracked CSV; `candidates.md` is generated from it) |
-| `candidates.md` | **Generated** human view (Found / Needs-review / Parked / Rejected) |
-| `candidates.trial.md` | Phase-1 (Spring I/O) trial results |
-| `HANDOFF.md` | This plan |
-
-## Status (validated 2026-06-26)
-- **v3 passes the critical gates on fresh data.** Phase-1 (Spring I/O, 15) failed gates #2/#3 and exposed
-  two bugs (code-search recall; name-only false positives) → fixed in v3 (tree-scan primary + throttle;
-  auto-accept HIGH only). Re-trial on 8 **fresh Devnexus** speakers: **0 false-positive auto-accepts**
-  (a wrong "Phil Webb" was correctly routed to MANUAL, not accepted); throttled tree-scan clean.
-- **Known residual gaps (safely handled):** affiliation false-negatives downgrade correct people to MANUAL;
-  name variants (Kenneth/Ken) → UNRESOLVED; **rosters without affiliations** (Devnexus) need an
-  affiliation-enrichment step before the HIGH gate can fire. None cause bad auto-accepts.
-- **State is git-tracked CSV** (`db/*.csv`); the loop upserts by natural key and supports cheap re-fetch.
-
----
-
-## Phase 1 — TRIAL (do this first)
-
-**Scope:** Spring I/O 2026, **first 15 speakers only** (alphabetical from the roster).
-
-**Steps:** run `speaker-scout-loop.md` stages 1–5 on those 15. Write results to a scratch copy
-(`candidates.trial.md`), **not** the real artifact yet.
-
-**Acceptance gates (ALL must pass):**
-1. **Resolution recall ≥ 70%** — ≥ 11/15 resolved to a handle (rest legitimately UNRESOLVED, not wrong).
-2. **Zero false-positive resolutions** — spot-check 5 resolved handles by hand; none may be the wrong person.
-   *(This is the critical gate — a wrong handle silently poisons the scan.)*
-3. **Scan correctness** — re-run the batched code-search and confirm it agrees with a REST tree-scan on
-   1 resolved handle (no false "0 skills").
-4. **Artifact hygiene** — every speaker lands in exactly one bucket (Found/Needs-review/Parked/Rejected);
-   no dupes vs `skills/**/*.yaml`; run-log row written.
-
-**If a gate fails:** stop, report which gate + sample failures, adjust `speaker-scout-loop.md`, re-trial.
-Do **not** proceed to EXECUTE on a failed trial.
-
----
-
-## Phase 2 — EXECUTE (only after TRIAL passes)
-
-1. Run the loop on **all ~85 Spring I/O 2026 speakers** (batches of ~20 for the scan; checkpoint
-   `candidates.md` between batches; respect rate-limit polling).
-2. Mark Spring I/O `[x]`; write the run-log row.
-3. Pop the **next conference** from the Arm-A queue (Devoxx Belgium, JavaLand, …) and repeat.
-4. Stop when the queue is empty, or on user request.
-
-**Expected yield (set expectations):** based on the trial + earlier scans, *individual speakers rarely
-ship skills* — most will Park. Value = exhaustive, deduped coverage + the occasional high-authority hit.
-If after 2 full conferences the Found count is ~0, surface that and reconsider whether Arm B (topic
-skill-file search) deserves priority over more rosters.
-
-## How to run
-- **Inline (recommended for control):** execute `speaker-scout-loop.md` stage by stage in this session.
-- **Delegated:** spawn one agent per conference with `speaker-scout-loop.md` as the prompt; fan speakers
-  into sub-batches. (Larger fan-outs = a Workflow; opt-in/cost-gated.)
-
-## Guardrails
-- **Never accept an unvalidated top search result** — require name- or affiliation-match (stage 2 gate).
-- **Verify skills by reading** — never list on a search hit alone.
-- **Park, don't guess** — unresolved/pseudonymous/no-skill → watchlist, never a fabricated candidate.
-- **Watch rate limits** — poll `gh api rate_limit` before each code-search batch.
+| Workflow script | `skill-scout/harness/overnight.workflow.js` |
+| Deterministic conf builder | `skill-scout/harness/build_conf.py` |
+| Apply / validation | `skill-scout/harness/apply.py` (`VALIDATION PASS` on success) |
+| Queue of unscanned confs | `python3 skill-scout/harness/queue.py` |
+| Eval rules (self-refining) | `skill-scout/harness/rules/eval.md`, `rules/matching.md` |
+| DB (source of truth) | `skill-scout/db/*.csv` |
+| Human views | `skill-scout/candidates.md`, `skill-scout/review.html` (regen: `gen_candidates.py`, `gen_review_html.py`) |
+| Per-conf caches (gitignored) | `skill-scout/harness/<slug>_{speakers,scout,verdicts,bundles,ckpt,conf,overlay}*.json`, `recheck_*.json` |
