@@ -1,0 +1,27 @@
+name: JSpecify Onboarding
+description: >-
+  Onboards Java and Kotlin projects to JSpecify null-safety annotations.
+  Adds the JSpecify dependency, annotates packages with @NullMarked /
+  @Nullable, migrates from other annotation libraries (JSR-305, JetBrains,
+  Spring, Jakarta, Android, FindBugs, Checker Framework, Eclipse JDT) using
+  OpenRewrite, configures NullAway + Error Prone enforcement, supports
+  incremental adoption with @NullUnmarked, and covers Kotlin interop.
+repo: adityamparikh/jspecify
+skill_path: SKILL.md
+category: tool
+tools:
+  - claude
+languages:
+  - java
+  - kotlin
+trust: community
+author: Aditya Parikh
+tags:
+  - jspecify
+  - null-safety
+  - static-analysis
+  - annotations
+  - nullaway
+  - error-prone
+  - java
+  - kotlin
