@@ -15,6 +15,7 @@ import json, csv, os, sys, datetime, io
 
 DB = "/Users/tschuehly/IdeaProjects/jvm-skills/skill-scout/db"
 DRY = "--dry" in sys.argv
+CHECKPOINT = "--checkpoint" in sys.argv  # write only speakers/speaker_conferences/resolutions for cross-conf dedup; skip stamp/skills/rejected/ledger
 cfg = json.load(open([a for a in sys.argv[1:] if not a.startswith("-")][0]))
 scout = json.load(open(cfg["scout"]))
 TODAY = cfg["today"]
@@ -29,12 +30,13 @@ COLS = {
   "repos.csv": ["login","name","is_fork","stars","pushed_at","head_sha","last_scanned_at"],
   "skill_files.csv": ["login","repo","path","status","depth","jvm_fit","category","lines","notes","reasoning","first_seen","last_seen"],
   "rejected.csv": ["login","repo","path","reason","reasoning","first_seen","last_seen"],
+  "bundles.csv": ["login","repo","root","name","kind","status","depth","members","copies","reasoning","first_seen","last_seen"],
 }
 KEY = {
   "conferences.csv": ("name",), "speakers.csv": ("norm_name",),
   "speaker_conferences.csv": ("norm_name","conference"), "resolutions.csv": ("norm_name",),
   "repos.csv": ("login","name"), "skill_files.csv": ("login","repo","path"),
-  "rejected.csv": ("login","repo","path"),
+  "rejected.csv": ("login","repo","path"), "bundles.csv": ("login","repo","root"),
 }
 
 def load(name):
@@ -56,9 +58,10 @@ def upsert(name, row, preserve_first_seen=False):
     rows.append(row); return "insert"
 
 log = []
-# 1) conference
-log.append(("conferences.csv", upsert("conferences.csv",
-    {"name":CONF,"url":cfg["url"],"roster_fetched_at":cfg["roster_fetched_at"]})))
+# 1) conference (skip under --checkpoint — don't stamp roster_fetched_at until eval + final apply)
+if not CHECKPOINT:
+    log.append(("conferences.csv", upsert("conferences.csv",
+        {"name":CONF,"url":cfg["url"],"roster_fetched_at":cfg["roster_fetched_at"]})))
 
 # 2/3/4) per speaker
 for r in scout["resolutions"]:
@@ -82,7 +85,30 @@ repo_meta = {}  # (login,repo) -> {stars,pushed_at,head_sha}
 for login, s in scout["scans"].items():
     for h in s["hits"]:
         repo_meta[(login, h["repo"])] = {"stars":h["stars"],"pushed_at":h["pushed_at"],"head_sha":h["head_sha"]}
-repos_to_write = {(s["login"], s["repo"]) for s in cfg["skills"]}
+# ---- bundles: assemble from bundle_detect candidates + the LLM bundle verdicts (keyed "repo|root") ----
+# A cohesive bundle becomes ONE canonical row and CLAIMS all its member paths (canonical + copies) so
+# they are never individually listed/rejected. A non-cohesive numbered group is released to rejected.
+bundle_rows, claimed, bundle_rejected = [], set(), []
+if not CHECKPOINT and cfg.get("bundle_detect") and os.path.exists(cfg["bundle_detect"]):
+    verdicts = cfg.get("bundle_verdicts", {})
+    for c in json.load(open(cfg["bundle_detect"])).get("candidates", []):
+        v = verdicts.get(f'{c["repo"]}|{c["root"]}') or {}
+        all_paths = [(c["login"], c["repo"], m["path"]) for m in c["members"]]
+        for cp in c.get("copies", []):
+            all_paths += [(c["login"], cp["repo"], m["path"]) for m in cp["members"]]
+        if v.get("cohesive"):
+            claimed.update(all_paths)
+            bundle_rows.append({"login":c["login"],"repo":c["repo"],"root":c["root"],
+                "name":v.get("name") or "-","kind":v.get("kind",""),"status":v.get("status",""),
+                "depth":str(v.get("depth",0)),"members":";".join(m["skill"] for m in c["members"]),
+                "copies":";".join(sorted({cp["repo"] for cp in c.get("copies",[])})),
+                "reasoning":v.get("reasoning","")})
+        else:  # not a cohesive bundle -> members fall back to individual rejected rows
+            for (lg, rp, pa) in all_paths:
+                bundle_rejected.append({"login":lg,"repo":rp,"path":pa,"reason":v.get("reason","review"),
+                    "reasoning":v.get("reasoning","numbered group judged not a cohesive bundle")})
+
+repos_to_write = {(s["login"], s["repo"]) for s in cfg["skills"]} | {(b["login"], b["repo"]) for b in bundle_rows}
 for (login, repo) in sorted(repos_to_write):
     m = repo_meta.get((login, repo), {"stars":0,"pushed_at":"","head_sha":""})
     log.append(("repos.csv", upsert("repos.csv",
@@ -97,16 +123,28 @@ for s in cfg["skills"]:
          "lines":str(s["lines"]),"notes":s.get("notes",""),"reasoning":s.get("reasoning",""),
          "first_seen":TODAY,"last_seen":TODAY}, preserve_first_seen=True)))
 
-# 6b) rejected.csv — classify every scanned hit NOT promoted (no silent drops)
+# 6a) bundles.csv — cohesive dependent skill-sets, one canonical row each (copies recorded inline).
+for b in bundle_rows:
+    log.append(("bundles.csv", upsert("bundles.csv",
+        {**b, "first_seen":TODAY, "last_seen":TODAY}, preserve_first_seen=True)))
+
+# 6b) rejected.csv — every scanned hit NOT promoted (no silent drops). Prefer the LLM's per-row
+#     verdict (cfg["rejected"] + released non-cohesive bundle members); fall back to classify.py.
+#     Member paths of a COHESIVE bundle are claimed by it and never rejected here.
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from classify import classify
 kept = {(s["login"], s["repo"], s["path"]) for s in cfg["skills"]}
-for login, s in scout.get("scans", {}).items():
+overlay = {(r["login"], r["repo"], r["path"]): (r["reason"], r.get("reasoning", ""))
+           for r in (cfg.get("rejected", []) + bundle_rejected)}
+for login, s in ({} if CHECKPOINT else scout.get("scans", {})).items():  # no rejected rows under --checkpoint
     for h in s.get("hits", []):
         for path in h["paths"]:
-            if (login, h["repo"], path) in kept:
+            if (login, h["repo"], path) in kept or (login, h["repo"], path) in claimed:
                 continue
-            reason, reasoning = classify(login, h["repo"], path)
+            if (login, h["repo"], path) in overlay:
+                reason, reasoning = overlay[(login, h["repo"], path)]
+            else:
+                reason, reasoning = classify(login, h["repo"], path)
             log.append(("rejected.csv", upsert("rejected.csv",
                 {"login":login,"repo":h["repo"],"path":path,"reason":reason,
                  "reasoning":reasoning,"first_seen":TODAY,"last_seen":TODAY}, preserve_first_seen=True)))
@@ -116,10 +154,11 @@ nres = sum(1 for r in scout["resolutions"] if r["confidence"]=="HIGH")
 scanned = sum(s["scanned_repos"] for s in scout["scans"].values())
 found = sum(1 for s in cfg["skills"] if s["status"]=="found")
 parked = sum(1 for r in scout["resolutions"] if r["confidence"] in ("MED","UNRESOLVED"))
-runs = changes.setdefault("runs.csv", load("runs.csv"))
-runs.append({"started_at":TODAY,"conference":CONF,"speakers":str(len(scout["resolutions"])),
-    "resolved":str(nres),"scanned_repos":str(scanned),"skipped_repos":"0",
-    "found":str(found),"parked":str(parked),"notes":cfg.get("run_notes","")})
+if not CHECKPOINT:  # no ledger row for a checkpoint write
+    runs = changes.setdefault("runs.csv", load("runs.csv"))
+    runs.append({"started_at":TODAY,"conference":CONF,"speakers":str(len(scout["resolutions"])),
+        "resolved":str(nres),"scanned_repos":str(scanned),"skipped_repos":"0",
+        "found":str(found),"parked":str(parked),"notes":cfg.get("run_notes","")})
 
 # write
 def render(name, rows):
@@ -134,7 +173,7 @@ from collections import Counter
 for name in COLS:
     c = Counter(act for n, act in log if n == name)
     if c: print(f"  {name:<26} {dict(c)}")
-print(f"  runs.csv                   append 1 row")
+if not CHECKPOINT: print(f"  runs.csv                   append 1 row")
 for name, rows in changes.items():
     if name == "runs.csv":
         cols = ["started_at","conference","speakers","resolved","scanned_repos","skipped_repos","found","parked","notes"]

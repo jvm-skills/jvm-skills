@@ -6,8 +6,18 @@ Reads db/speakers.csv + db/resolutions.csv for dedupe/reuse. Does NOT write the 
 import json, subprocess, re, time, unicodedata, sys, csv, os
 
 DB = "/Users/tschuehly/IdeaProjects/jvm-skills/skill-scout/db"
-SPEAKERS_FILE, OUT = sys.argv[1], sys.argv[2]
-SPEAKERS = json.load(open(SPEAKERS_FILE))
+# Two modes:
+#   scout.py <speakers.json> <out.json>          resolve roster + scan HIGH handles
+#   scout.py --logins a,b,c <out.json>           scan only these logins (investigate-accepted MEDs)
+_ARGS = sys.argv[1:]
+LOGINS_MODE = None
+if _ARGS and _ARGS[0] == "--logins":
+    LOGINS_MODE = [x.strip() for x in _ARGS[1].split(",") if x.strip()]
+    OUT = _ARGS[2]
+    SPEAKERS = []
+else:
+    SPEAKERS_FILE, OUT = _ARGS[0], _ARGS[1]
+    SPEAKERS = json.load(open(SPEAKERS_FILE))
 STOP = {"ag","inc","the","team","group","labs","llc","gmbh","co","corp","ltd","sa","systems","it"}
 SKILL_RE = re.compile(r"(^|/)(SKILL\.md|AGENTS\.md|CLAUDE\.md|\.cursorrules)$", re.I)
 
@@ -38,12 +48,28 @@ def enrich(l):
         d = json.loads(out); return {"login":d[0],"name":d[1],"company":d[2],"bio":d[3],"flw":int(d[4] or 0)}
     except Exception: return None
 
+JVM_LANGS = {"java","kotlin","groovy","scala","clojure"}
+def deep_signals(login):
+    """Extra corroboration for a name-match without affiliation match: orgs + a JVM-repo signal.
+    Gated (called only when needed) to bound core-API cost."""
+    orgs = ghj(["api",f"users/{login}/orgs","--jq","[.[].login]"]) or []
+    langs = ghj(["api",f"users/{login}/repos?sort=pushed&per_page=10&type=owner","--jq","[.[].language]"]) or []
+    jvm_repo = any((l or "").lower() in JVM_LANGS for l in langs)
+    return {"orgs":[o for o in orgs if o], "jvm_repo":jvm_repo}
+
 # ---- load db state for dedupe/reuse ----
 def load_csv(name):
     p = os.path.join(DB, name)
     return list(csv.DictReader(open(p))) if os.path.exists(p) else []
 seen = {r["norm_name"] for r in load_csv("speakers.csv")}
 res_db = {r["norm_name"]: r for r in load_csv("resolutions.csv")}
+# alias ledger (authoritative human/auto overrides). confirm -> force login HIGH; reject -> never pick.
+ALIAS, REJECT = {}, {}
+for a in load_csv("aliases.csv"):
+    nn = norm(a.get("norm_name","")); lg = (a.get("github_login") or "").strip()
+    if not nn or not lg: continue
+    if a.get("decision") == "confirm": ALIAS[nn] = lg
+    elif a.get("decision") == "reject": REJECT.setdefault(nn, set()).add(lg)
 
 # EXCLUDE: repos already listed in skills/**/*.yaml (so the loop never re-promotes them)
 SKILLS_DIR = "/Users/tschuehly/IdeaProjects/jvm-skills/skills"
@@ -55,8 +81,17 @@ for root, _, files in os.walk(SKILLS_DIR):
                 m = re.match(r"\s*repo:\s*['\"]?([^'\"#\s]+)", ln)
                 if m: EXCLUDE.add(m.group(1).strip().lower())
 
+CAND_KEYS = ("login","name","company","bio","flw","nm","am","orgs","jvm_repo")
+def _cand_out(c): return {k: c.get(k) for k in CAND_KEYS if k in c}
+
 def resolve(name, aff):
     nn = norm(name)
+    # 1) alias ledger is authoritative — force the confirmed login (HIGH), one enrich for display fields
+    if nn in ALIAS:
+        c = enrich(ALIAS[nn]) or {}
+        return {"norm_name":nn,"name":name,"aff":aff,"login":ALIAS[nn],"confidence":"HIGH",
+                "gh_name":c.get("name",""),"gh_company":c.get("company",""),
+                "followers":int(c.get("flw") or 0),"method":"alias","reused":False,"cands":[]}
     if nn in seen:  # reuse existing resolution
         r = res_db.get(nn, {})
         return {"norm_name":nn,"name":name,"aff":aff,"login":r.get("github_login",""),
@@ -70,7 +105,8 @@ def resolve(name, aff):
     if not logins:
         wait_search(); d = ghj(["search","users",name,"--json","login","--limit","5"])
         logins = [x["login"] for x in d] if d else []; method = "broad"
-    cands = [c for c in (enrich(l) for l in logins) if c]
+    rej = REJECT.get(nn, set())
+    cands = [c for c in (enrich(l) for l in logins) if c and c["login"] not in rej]
     nt = nn.split(); first, last = (nt[0], nt[-1]) if nt else ("","")
     aff_t = [t for t in norm(aff).split() if t not in STOP and len(t) >= 3]
     for c in cands:
@@ -78,15 +114,20 @@ def resolve(name, aff):
         c["nm"] = (first in gnt and last in gnt)
         c["am"] = any(t in norm(c["company"]+" "+c["bio"]) for t in aff_t) if aff_t else False
     namematch = sorted([c for c in cands if c["nm"]], key=lambda c: -c["flw"])
-    # HIGH: name match AND (aff match OR dominant winner)
     aff_high = [c for c in namematch if c["am"]]
     chosen, conf = None, "UNRESOLVED"
     if aff_high:
         chosen, conf = max(aff_high, key=lambda c: c["flw"]), "HIGH"
     elif namematch:
         top = namematch[0]; runner = namematch[1]["flw"] if len(namematch) > 1 else 0
-        if top["company"] and top["flw"] >= 50 and top["flw"] >= 3*runner:
-            chosen, conf = top, "HIGH"   # dominant winner
+        # permissive + investigative: a name match needs only ONE corroborating signal for HIGH.
+        ds = deep_signals(top["login"])           # gated: only when no aff-match winner exists
+        top["orgs"], top["jvm_repo"] = ds["orgs"], ds["jvm_repo"]
+        org_match = bool(aff_t) and any(t in norm(o) for o in ds["orgs"] for t in aff_t)
+        dominant = bool(top["company"]) and top["flw"] >= 50 and top["flw"] >= 3*runner
+        if top["am"] or org_match or ds["jvm_repo"] or dominant:
+            chosen, conf = top, "HIGH"
+            method += "+" + ("aff" if top["am"] else "org" if org_match else "jvmrepo" if ds["jvm_repo"] else "dominant")
         else:
             chosen, conf = top, "MED"
     return {"norm_name":nn,"name":name,"aff":aff,
@@ -95,7 +136,7 @@ def resolve(name, aff):
             "gh_company":chosen["company"] if chosen else "",
             "followers":chosen["flw"] if chosen else 0,
             "method":method,"reused":False,
-            "cands":[{k:c[k] for k in ("login","name","company","flw","nm","am")} for c in cands]}
+            "cands":[_cand_out(c) for c in cands]}
 
 def scan(login):
     raw = gh(["api",f"users/{login}/repos?per_page=100&sort=pushed&type=owner",
@@ -116,6 +157,16 @@ def scan(login):
     return {"scanned_repos":scanned,"hits":hits}
 
 out = {"resolutions":[], "scans":{}}
+if LOGINS_MODE is not None:  # scan-only mode (investigate-accepted MEDs)
+    print(f"=== SCAN-ONLY {len(LOGINS_MODE)} login(s) ===", flush=True)
+    for login in LOGINS_MODE:
+        s = scan(login); out["scans"][login] = s
+        n = sum(len(h["paths"]) for h in s["hits"])
+        print(f"  {login:<18} {s['scanned_repos']} repos -> {len(s['hits'])} w/ skills, {n} files", flush=True)
+    json.dump(out, open(OUT,"w"), indent=2)
+    print(f"\nwrote {OUT}", flush=True)
+    sys.exit(0)
+
 print(f"=== RESOLVE ({len(SPEAKERS)} speakers) ===", flush=True)
 for name, aff in SPEAKERS:
     r = resolve(name, aff)

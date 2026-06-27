@@ -41,6 +41,22 @@ def base_of(path):
         return parts[-2]
     return parts[-1]
 
+# Cheap name-based JVM signal (no content fetch) — helps a human triage the `review` queue.
+JVM_TOKENS = ("java", "kotlin", "spring", "jpa", "hibernate", "jooq", "quarkus", "micronaut", "ktor",
+              "gradle", "maven", "jvm", "jdk", "jakarta", "testcontainers", "junit", "jbang", "graalvm",
+              "jfr", "reactor", "vertx", "kafka", "mcp")
+OFF_TOKENS = ("react", "vue", "svelte", "angular", "css", "tailwind", "daisyui", "python", "rust",
+              "golang", " go ", "dotnet", "csharp", "php", "node", "npm", "terraform", "astro",
+              "nextjs", "flutter", "swift", "stripe", "hubspot", "zoom", "tekton", "helm", "podman")
+def jvm_hint(*texts):
+    blob = " " + " ".join(t.replace("-", " ").replace("_", " ").replace("/", " ") for t in texts).lower() + " "
+    j = next((t.strip() for t in JVM_TOKENS if t in blob), None)
+    o = next((t.strip() for t in OFF_TOKENS if t in blob), None)
+    if j and not o: return f" [name hints JVM: {j}]"
+    if o and not j: return f" [name hints non-JVM: {o}]"
+    if j and o:     return f" [mixed signal: {j}/{o}]"
+    return ""
+
 # Curated content judgments (path heuristics can't tell JVM-ness of a real skill).
 # key = (login_lower, repo_lower, skill_base_lower) or (login_lower, repo_lower, '*')
 OVERLAY = {

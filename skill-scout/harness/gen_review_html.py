@@ -5,12 +5,13 @@ promote-worthy JVM-collection / vendored leads / manual-confirm / parked / filte
 import csv, os, html, datetime
 DB = "/Users/tschuehly/IdeaProjects/jvm-skills/skill-scout/db"
 OUT = "/Users/tschuehly/IdeaProjects/jvm-skills/skill-scout/review.html"
+TODAY = datetime.date.today().isoformat()
 def load(n):
     p = os.path.join(DB, n)
     return list(csv.DictReader(open(p))) if os.path.exists(p) else []
 conf=load("conferences.csv"); spk=load("speakers.csv"); sc=load("speaker_conferences.csv")
 res=load("resolutions.csv"); repos=load("repos.csv"); sf=load("skill_files.csv")
-rej=load("rejected.csv"); runs=load("runs.csv")
+rej=load("rejected.csv"); runs=load("runs.csv"); bun=load("bundles.csv")
 
 res_by_login={r["github_login"]:r for r in res if r["github_login"]}
 name_by_norm={s["norm_name"]:s["name"] for s in spk}
@@ -25,6 +26,80 @@ def gh(login,repo,path=None):
     return f'<a href="{e(u)}" target="_blank">{e(label)}</a>'
 def stars(login,repo): return stars_by.get((login,repo),"")
 
+CAT_LANG={"language":["java"],"testing":["java","kotlin"],"build":["java"],"data":["java"],"database":["java"]}
+def yaml_snippet(r):
+    login,repo,path=r["login"],r["repo"],r.get("path","")
+    skill=path.split("/")[-2] if "/" in path else path.rsplit(".",1)[0]
+    name=skill.replace("-"," ").replace("_"," ").strip().title() or repo
+    desc=" ".join((r.get("notes") or r.get("reasoning") or "").split())
+    cat=r.get("category") or "tool"
+    langs=CAT_LANG.get(cat,["java","kotlin"])
+    jvm=(r.get("jvm_fit") or "").lower()
+    trust="curated"
+    lg="\n".join(f"  - {l}" for l in langs)
+    return (f"name: {name}\n"
+            f"description: >-\n  {desc}\n"
+            f"repo: {login}/{repo}\n"
+            f'skill_path: "{path}"\n'
+            f"category: {cat}\n"
+            f"languages:\n{lg}\n"
+            f"trust: {trust}\n"
+            f"author: {author(login)}\n"
+            f'version: "1.0.0"\n'
+            f'last_updated: "{TODAY}"\n'
+            f"scope: focused\n"
+            f"tech:\n  - # TODO\n"
+            f"tags:\n  - # TODO")
+def promote_cell(r):
+    return (f'<details class=yd><summary title="copy-paste promotion YAML">📋 yaml</summary>'
+            f'<div class=ybox><button class=cp onclick="cpy(this)">copy</button>'
+            f'<pre class=yaml>{e(yaml_snippet(r))}</pre></div></details>')
+
+def bundle_yaml(b):
+    members=[m for m in (b.get("members") or "").split(";") if m]
+    root=(b.get("root") or "").strip()
+    name=(b.get("name") or "").replace("-"," ").replace("_"," ").strip().title() or b["repo"]
+    desc=" ".join((b.get("reasoning") or "").split())
+    cat="workflow" if b.get("kind")=="workflow" else "framework"
+    langs=["java","kotlin"] if b.get("kind")=="jvm" else ["agnostic"]
+    lg="\n".join(f"  - {l}" for l in langs)
+    sk="\n".join(f'  - "{(root + "/") if root else ""}{m}/SKILL.md"' for m in members) or "  # (members)"
+    return (f"name: {name}\n"
+            f"description: >-\n  {desc}\n"
+            f"repo: {b['login']}/{b['repo']}\n"
+            f'skill_path: "{root}"\n'
+            f"category: {cat}\n"
+            f"languages:\n{lg}\n"
+            f"trust: curated\n"
+            f"author: {author(b['login'])}\n"
+            f'version: "1.0.0"\n'
+            f'last_updated: "{TODAY}"\n'
+            f"scope: bundle\n"
+            f"skills:\n{sk}\n"
+            f"tags:\n  - # TODO")
+def bundle_cell(b):
+    return (f'<details class=yd><summary title="copy-paste bundle promotion YAML">📋 yaml</summary>'
+            f'<div class=ybox><button class=cp onclick="cpy(this)">copy</button>'
+            f'<pre class=yaml>{e(bundle_yaml(b))}</pre></div></details>')
+def bundle_rows(rows):
+    out=[]
+    for b in rows:
+        members=[m for m in (b.get("members") or "").split(";") if m]
+        copies=[c for c in (b.get("copies") or "").split(";") if c]
+        dupes=f'<div class=dupes>also copied in: {e(", ".join(copies))}</div>' if copies else ""
+        steps=f'<div class=dupes>{e(" → ".join(members))}</div>'
+        kind=e(b.get("kind") or "")
+        out.append(f'<tr data-text="{e((b["login"]+" "+b["repo"]+" "+(b.get("name") or "")+" "+(b.get("reasoning") or "")).lower())}">'
+                   f'<td class=sk>{e(b.get("name") or "")}</td>'
+                   f'<td>{gh(b["login"],b["repo"])}{steps}</td>'
+                   f'<td>{e(author(b["login"]))}</td>'
+                   f'<td><span class=badge>{kind}</span></td>'
+                   f'<td>{len(members)}</td>'
+                   f'<td>{e(stars(b["login"],b["repo"]))}</td>'
+                   f'<td>{e(b.get("reasoning") or "")}{dupes}</td>'
+                   f'<td>{bundle_cell(b)}</td></tr>')
+    return "\n".join(out)
+
 def skill_rows(rows, cols_extra):
     out=[]
     for r in rows:
@@ -35,8 +110,15 @@ def skill_rows(rows, cols_extra):
                    f'<td>{e(author(r["login"]))}</td>{cells}</tr>')
     return "\n".join(out)
 
-found=[s for s in sf if s["status"]=="found"]; needs=[s for s in sf if s["status"]=="needs_review"]
+from skilldedup import dedup_found, found_keys, skill_name
+_found_raw=[s for s in sf if s["status"]=="found"]
+found=dedup_found(_found_raw, stars_by)  # one canonical row per (author, skill); copies -> r["_dupes"]
 found.sort(key=lambda s:-int(stars_by.get((s["login"],s["repo"]),0) or 0))
+needs=[s for s in sf if s["status"]=="needs_review"]
+jvm_bundles=[b for b in bun if b.get("status") in ("found","needs_review") and b.get("kind")=="jvm"]
+wf_bundles=[b for b in bun if b.get("status") in ("found","needs_review") and b.get("kind")!="jvm"]
+_promoted=found_keys(_found_raw)  # hide copies of a promoted skill from the reject piles (no found+rejected dup)
+rej=[r for r in rej if (r["login"],skill_name(r["path"])) not in _promoted]
 offtopic=[r for r in rej if r["reason"].startswith("off-topic")]
 jvmcoll=[r for r in rej if r["reason"]=="jvm-collection"]
 vendored=[r for r in rej if r["reason"]=="vendored"]
@@ -78,9 +160,19 @@ details summary{{cursor:pointer;padding:12px 16px;color:var(--mut)}}
 .lead-ok{{color:var(--ok)}} .lead-warn{{color:var(--warn)}}
 .ledger td{{font-size:12px;color:var(--mut)}} .hide{{display:none}}
 .pill{{display:inline-block;background:#222834;border-radius:6px;padding:1px 7px;margin:2px 0;font-size:12px}}
+details.yd summary{{padding:0;color:var(--acc);font-size:12px;list-style:none;white-space:nowrap}}
+details.yd summary::-webkit-details-marker{{display:none}}
+.ybox{{position:relative;margin-top:6px}}
+pre.yaml{{background:#0b0d11;border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:0;
+font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;color:#c9d3e0;white-space:pre;overflow:auto;max-width:520px}}
+.cp{{position:absolute;top:6px;right:6px;background:#222834;color:var(--fg);border:1px solid var(--line);
+border-radius:6px;padding:3px 9px;font-size:11px;cursor:pointer;z-index:1}} .cp:hover{{background:#2a3140}}
+.cp.done{{color:var(--ok);border-color:var(--ok)}}
+.hero{{border-color:var(--ok)}} .hero>h2{{background:#15291b}}
+.dupes{{color:var(--mut);font-size:11px;margin-top:4px;font-style:italic}}
 </style></head><body>
 <header><h1>🔭 Skill-Scout — review</h1>
-<div class=sub>Generated {datetime.date.today().isoformat() if False else "2026-06-26"} from <code>db/*.csv</code>. Every scanned skill carries a decision + reasoning.</div>
+<div class=sub>Generated {TODAY} from <code>db/*.csv</code>. Every scanned skill carries a decision + reasoning. <b style="color:var(--ok)">Review ✅ Found</b> → click <b>📋 yaml</b> → paste into <code>skills/&lt;category&gt;/&lt;slug&gt;.yaml</code>.</div>
 <div class=stats>
 <div class=stat><b class=lead-ok>{len(found)}</b><span>found</span></div>
 <div class=stat><b class=lead-warn>{len(needs)}</b><span>needs review</span></div>
@@ -95,15 +187,28 @@ details summary{{cursor:pointer;padding:12px 16px;color:var(--mut)}}
 <input id=q placeholder="Filter all tables by repo / skill / author / reasoning…" oninput="filt(this.value)">
 """)
 
-W(f"""<section><h2>✅ Found skills <span class=n>· {len(found)}</span></h2>
-<table><thead><tr><th>Skill</th><th>Repo</th><th>Author</th><th>Cat</th><th>Depth</th><th>★</th><th>Why included (reasoning)</th></tr></thead><tbody>
-{skill_rows(found, lambda r:[e(r["category"]), e(r["depth"]), e(stars(r["login"],r["repo"])), e(r.get("reasoning") or r.get("notes"))])}
+W(f"""<section class=hero><h2>✅ Found skills <span class=n>· {len(found)} · ready to promote</span></h2>
+<table><thead><tr><th>Skill</th><th>Repo</th><th>Author</th><th>Cat</th><th>Depth</th><th>★</th><th>Why included (reasoning)</th><th>Promote</th></tr></thead><tbody>
+{skill_rows(found, lambda r:[e(r["category"]), e(r["depth"]), e(stars(r["login"],r["repo"])), e(r.get("reasoning") or r.get("notes"))+(f'<div class=dupes>also copied in: {e(", ".join(r["_dupes"]))}</div>' if r.get("_dupes") else ""), promote_cell(r)])}
 </tbody></table></section>""")
 
+_BUNDLE_HEAD="<table><thead><tr><th>Bundle</th><th>Repo · steps</th><th>Author</th><th>Kind</th><th>#</th><th>★</th><th>Why included (reasoning)</th><th>Promote</th></tr></thead><tbody>"
+if jvm_bundles:
+    W(f"""<section class=hero><h2>📦 JVM skill bundles <span class=n>· {len(jvm_bundles)} · dependent suites, promote as a unit</span></h2>
+    {_BUNDLE_HEAD}
+    {bundle_rows(jvm_bundles)}
+    </tbody></table></section>""")
+if wf_bundles:
+    W(f"""<section><h2>📦 Workflow bundles <span class=n>· {len(wf_bundles)} · general agentic workflows (non-JVM)</span></h2>
+    <div class=blurb>Cohesive, dependent workflow suites (e.g. a spec-driven-dev pipeline). Not JVM, but listable under the <code>workflow</code> category if you want them — evaluated as a whole.</div>
+    {_BUNDLE_HEAD}
+    {bundle_rows(wf_bundles)}
+    </tbody></table></section>""")
+
 if needs:
-    W(f"""<section><h2>🟡 Needs review <span class=n>· {len(needs)}</span></h2>
-    <table><thead><tr><th>Skill</th><th>Repo</th><th>Author</th><th>★</th><th>Why borderline (reasoning)</th></tr></thead><tbody>
-    {skill_rows(needs, lambda r:[e(stars(r["login"],r["repo"])), e(r.get("reasoning") or r.get("notes"))])}
+    W(f"""<section><h2>🟡 Needs review <span class=n>· {len(needs)} · borderline, your call</span></h2>
+    <table><thead><tr><th>Skill</th><th>Repo</th><th>Author</th><th>★</th><th>Why borderline (reasoning)</th><th>Promote</th></tr></thead><tbody>
+    {skill_rows(needs, lambda r:[e(stars(r["login"],r["repo"])), e(r.get("reasoning") or r.get("notes")), promote_cell(r)])}
     </tbody></table></section>""")
 
 if review_q:
@@ -164,6 +269,10 @@ function filt(v){v=v.toLowerCase().trim();
  document.querySelectorAll('tbody tr').forEach(tr=>{
    const t=tr.getAttribute('data-text')||tr.textContent.toLowerCase();
    tr.classList.toggle('hide', v && !t.includes(v));});}
+function cpy(btn){const pre=btn.parentNode.querySelector('pre.yaml');
+ navigator.clipboard.writeText(pre.innerText).then(()=>{const o=btn.textContent;
+   btn.textContent='copied ✓';btn.classList.add('done');
+   setTimeout(()=>{btn.textContent=o;btn.classList.remove('done')},1400);});}
 </script></body></html>""")
 open(OUT,"w").write("\n".join(P))
 print(f"wrote {OUT}")

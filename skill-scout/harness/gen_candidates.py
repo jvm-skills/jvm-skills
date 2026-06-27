@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """Regenerate candidates.md as a human view of db/*.csv (system of record)."""
 import csv, os
+from skilldedup import dedup_found, found_keys, skill_name
 DB = "/Users/tschuehly/IdeaProjects/jvm-skills/skill-scout/db"
 OUT = "/Users/tschuehly/IdeaProjects/jvm-skills/skill-scout/candidates.md"
 def load(n): return list(csv.DictReader(open(os.path.join(DB, n))))
 conf = load("conferences.csv"); spk = load("speakers.csv"); sc = load("speaker_conferences.csv")
 res = load("resolutions.csv"); repos = load("repos.csv"); sf = load("skill_files.csv"); runs = load("runs.csv")
 rej = load("rejected.csv") if os.path.exists(os.path.join(DB, "rejected.csv")) else []
+bun = load("bundles.csv") if os.path.exists(os.path.join(DB, "bundles.csv")) else []
 
 res_by_login = {r["github_login"]: r for r in res if r["github_login"]}
 res_by_norm = {r["norm_name"]: r for r in res}
@@ -27,14 +29,34 @@ W(f"State: {len(conf)} conferences · {len(spk)} speakers · "
   f"{sum(1 for r in res if r['confidence']=='UNRESOLVED')} UNRESOLVED · "
   f"{sum(1 for s in sf if s['status']=='found')} skills found.\n")
 
+found_rows = [s for s in sf if s["status"] == "found"]
+found_canon = dedup_found(found_rows, stars_by)
+promoted_keys = found_keys(found_rows)  # (login, skill) already promoted — hide their copies in reject tables
 W("## ✅ Found skills (created by speakers)\n")
 W("| Skill | Repo | Author | Category | Depth | JVM | ★ | Why included (reasoning) |")
 W("|---|---|---|---|---|---|---|---|")
-for s in sorted([s for s in sf if s["status"] == "found"], key=lambda s: -int(stars_by.get((s["login"], s["repo"]) , 0) or 0)):
+for s in sorted(found_canon, key=lambda s: -int(stars_by.get((s["login"], s["repo"]), 0) or 0)):
     star = stars_by.get((s["login"], s["repo"]), "?")
-    skill = s["path"].split("/")[-2] if "/" in s["path"] else s["path"]
+    skill = skill_name(s["path"])
+    why = s.get("reasoning") or s["notes"]
+    if s.get("_dupes"):
+        why += f" _(also copied in: {', '.join(s['_dupes'])})_"
     W(f"| {skill} | `{s['login']}/{s['repo']}` | {gh_name(s['login'])} | {s['category']} | "
-      f"{s['depth']} | {s['jvm_fit']} | {star} | {s.get('reasoning') or s['notes']} |")
+      f"{s['depth']} | {s['jvm_fit']} | {star} | {why} |")
+
+bundles_promo = [b for b in bun if b.get("status") in ("found", "needs_review")]
+if bundles_promo:
+    W("\n## 📦 Skill bundles (dependent suites — promote as a unit)\n")
+    W("| Bundle | Repo | Author | Kind | Steps | Why included (reasoning) |")
+    W("|---|---|---|---|---|---|")
+    for b in sorted(bundles_promo, key=lambda b: (b.get("kind") != "jvm", b["login"])):
+        members = " → ".join(m for m in (b.get("members") or "").split(";") if m)
+        copies = [c for c in (b.get("copies") or "").split(";") if c]
+        why = b.get("reasoning") or ""
+        if copies:
+            why += f" _(also copied in: {', '.join(copies)})_"
+        W(f"| {b.get('name','')} | `{b['login']}/{b['repo']}` | {gh_name(b['login'])} | {b.get('kind','')} "
+          f"| {members} | {why} |")
 
 needs = [s for s in sf if s["status"] == "needs_review"]
 if needs:
@@ -56,6 +78,9 @@ park = [r for r in res if r["confidence"] == "UNRESOLVED"]
 W(", ".join(f"{name_by_norm.get(r['norm_name'], r['norm_name'])}" for r in park) or "_none_")
 
 if rej:
+    # hide reject rows whose (author, skill) was already promoted from another repo — a skill must not
+    # appear on both the found and rejected side (the Opus demo-repo bias fires inconsistently on copies)
+    rej = [r for r in rej if (r["login"], skill_name(r["path"])) not in promoted_keys]
     def rtab(reasons, title, blurb):
         sel = [r for r in rej if r["reason"] in reasons]
         if not sel: return

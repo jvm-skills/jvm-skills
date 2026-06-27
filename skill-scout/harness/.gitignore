@@ -1,4 +1,11 @@
-# run artifacts written here by the loop
+# run artifacts written here by the loop (per-conference caches)
 *_speakers.json
-*_scout.json
+*_scout*.json
+*_chunk*.json
+*_prefilter.json
+*_bundles.json
+*_verdicts*.json
+*_ckpt.json
 *_conf.json
+*_aliases_add.csv
+__pycache__/
