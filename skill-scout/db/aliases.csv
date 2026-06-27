@@ -1,0 +1,404 @@
+norm_name,github_login,decision,source,note,decided_at
+milen dyankov,azzazzel,confirm,human,confirmed correct person (was parked MED),2026-06-27
+soroosh khodami,cmandesign,confirm,human,confirmed correct person (was parked MED),2026-06-27
+ioannis kolaxis,ikolaxis,confirm,human,confirmed correct person (was parked MED),2026-06-27
+andrew madson,andymadson,reject,auto,no jvm repos no bio fivetran is data-eng not jvm,2026-06-27
+bruno souza,bgsouza,reject,auto,middle initial G differs CoffeeInCO company mismatch,2026-06-27
+dennis schulz,Pluto1010,reject,auto,multiple candidates none show TNG company or jvm repos,2026-06-27
+gytenis mikulenas,gtennis,confirm,auto,rare Lithuanian name Mambu is java banking platform,2026-06-27
+josian chevalier,JosianChevalier,confirm,auto,distinctive name Shodo is known French jvm-tdd company,2026-06-27
+julian burr,julianburr,reject,auto,no jvm repos no bio generic senior developer affiliation,2026-06-27
+luis fraile,lfraile,confirm,auto,msmvps org aligns with Plain Concepts microsoft partner 63 followers,2026-06-27
+olena kutsenko,anelook,confirm,auto,Confluent is kafka jvm ecosystem distinctive name 45 followers,2026-06-27
+sofia lescano carroll,sofia-lescano-carroll,confirm,auto,distinctive triple-compound name single candidate exact match,2026-06-27
+thomas hugle,ThomasHugleTNG,confirm,auto,login contains TNG matching affiliation TNG Technology Consulting,2026-06-27
+gojko adzic,gojko,confirm,auto,exact name 516 flw claudiajs org known author/speaker,2026-06-27
+bartosz cytrowski,cytrowski,confirm,auto,exact name 148 flw Polish dev org Sniadanie-z-Programowaniem,2026-06-27
+pavol dudrik,palibook,reject,auto,0 flw no bio no JVM no corroboration login not obvious,2026-06-27
+mary fesenko,mfesenko,confirm,auto,exact name natural login company changed Chronosphere vs Dropbox,2026-06-27
+jakub gajski,jakubgajski,confirm,auto,exact name natural login j-labs speaker,2026-06-27
+micha gniadek,MichalGniadek,confirm,auto,exact name 25 flw unique Polish name Ten Square Games,2026-06-27
+serges goma,sergesgoma,confirm,auto,exact name unique name natural login,2026-06-27
+dotan horovits,horovits,confirm,auto,exact name 12 flw known observability speaker,2026-06-27
+wei hu,HcwXd,reject,auto,name mismatch Cheng-Wei Hu vs Wei Hu common name no JVM,2026-06-27
+arnaud jean,jean-developer,reject,auto,different person Jean Carlos Arnaud B not Arnaud Jean from AWS,2026-06-27
+agata kabat,agatakabat,confirm,auto,exact name sibling account agatkabat-ibm corroborates IBM aff,2026-06-27
+mateusz kwasniewski,PadreMateo8,reject,auto,0 flw no bio no JVM no company login weakly maps to name,2026-06-27
+emilia lendzion barszcz,sfc-gh-elendzionbarszcz,confirm,auto,sfc prefix=Snowflake org login pattern matches affiliation,2026-06-27
+jacek marmuszewski,jmarmuszewski,confirm,auto,exact name natural login 5 flw unique surname,2026-06-27
+jan mazurek,Maiquey,reject,auto,bio says SFU student Canada not EPAM Systems engineer,2026-06-27
+pawel piwosz,pawelpiwosz,confirm,auto,exact name 76 flw natural login UpCloud speaker,2026-06-27
+micha poczwardowski,dmp0x7c5,confirm,auto,exact name 10 flw unique Polish name initials-based login,2026-06-27
+szymon so tys,szymonHtf,confirm,auto,exact name htf handle consistent across two accounts,2026-06-27
+artur wojnar,arturwojnar,confirm,auto,exact name natural login company field self-named MasterBorn,2026-06-27
+ihor zhuravlov,IhZhur,confirm,auto,initials Ih+Zhur match unique name Sigma Software,2026-06-27
+alexander gunsche,lxg,confirm,auto,company @aws matches Amazon Web Services affiliation,2026-06-27
+alexandra badea,Alexandra-Badea,reject,auto,common name multiple candidates no company or JVM corroboration,2026-06-27
+alexandru gheorghe,AlexanderGheorghe,reject,auto,common name no company or JVM corroboration multiple candidates,2026-06-27
+andreea dragomirescu,AndreeaDrago,reject,auto,company nShift does not match Criteo R&D no JVM repos,2026-06-27
+andreea gulie,cw-AndreeaGulie,confirm,auto,distinctive name cw- prefix suggests company workspace account,2026-06-27
+andrei stanca,ILikeCinnamon,confirm,auto,name match reversed Stanca Andrei bio says Eastern European software engineer,2026-06-27
+bogdan burtea,razvanbrb,reject,auto,candidate primary first name is Razvan not Bogdan different person,2026-06-27
+bogdan cioc,BogdanCioc74,reject,auto,company Politehnica Bucharest is university not SAP no JVM,2026-06-27
+bogdan neacsu,neacsu,reject,auto,no company or JVM corroboration multiple candidates with same name,2026-06-27
+catalin gheorghiu,CatalinGheorghiu,reject,auto,bio says frontend developer no EPAM affiliation no JVM repos,2026-06-27
+chris armstrong,carmstrong,reject,auto,company Chainguard not SmartBear no JVM repos,2026-06-27
+corina patachia,copatachia,confirm,auto,distinctive surname single candidate exact name match,2026-06-27
+cosmin argatu,arcosmin,confirm,auto,distinctive Romanian surname single top candidate by followers,2026-06-27
+cosmin trandafir,Trandafir-Cristian,reject,auto,candidate full name is Trandafir Cristian-Cosmin first name is Cristian,2026-06-27
+cristian cordos,icordos,reject,auto,no Amazon affiliation candidate is Ioan-Cristian Cordos,2026-06-27
+dan mihai dinu,danmdinu,confirm,auto,exact 3-part name match single candidate,2026-06-27
+daniel fifiita,dfifiita,confirm,auto,highly distinctive surname Fifiita single candidate exact match,2026-06-27
+daniela prodan,Danielaa111,reject,auto,company Technical University of Moldova not Microsoft Romania,2026-06-27
+diana rusu,dianne21,reject,auto,common Romanian name five matching candidates no corroboration,2026-06-27
+dmytro tereshchenko,US3RN2ME,confirm,auto,distinctive Ukrainian name top candidate by followers among matches,2026-06-27
+erika dietrick,erdietri,confirm,auto,distinctive name single candidate company mismatch may reflect job change,2026-06-27
+etienne bernard,ebernard,reject,auto,common French name multiple candidates no NuMind corroboration,2026-06-27
+gabriela pepino,gabriela26121006,confirm,auto,distinctive surname Pepino single candidate exact match,2026-06-27
+george barbulescu,GeorgeCosminBarbulescu,reject,auto,bio indicates frontend JS developer company DB not BCR,2026-06-27
+gerard van engelen,GVengelen,confirm,auto,distinctive Dutch name single candidate exact match,2026-06-27
+horia niculescu,Horia-Niculescu,reject,auto,no Google affiliation two candidates with same name no corroboration,2026-06-27
+jeff watkins,jeffwatkins,reject,auto,common name no Business AI Alliance corroboration,2026-06-27
+jonathan filogna,jfilogna,confirm,auto,distinctive surname Filogna single candidate exact match,2026-06-27
+lucian popovici,lucianpopovici,confirm,auto,single candidate exact name match,2026-06-27
+luiza cicone,luiza-cicone,confirm,auto,distinctive surname Cicone single candidate,2026-06-27
+marian andrei,andrei-rizoiu,reject,auto,candidate last name is Rizoiu not Andrei Marian Andrei is first plus last,2026-06-27
+marius costin,CMarius94,reject,auto,company DNNSharp not eMAG no JVM repos,2026-06-27
+mohamed gamal,MoGamal27,reject,auto,common name multiple candidates no Vinted corroboration,2026-06-27
+natalie godec,ngodec,confirm,auto,distinctive surname Godec single candidate,2026-06-27
+nick ciolpan,nickciolpan,confirm,auto,distinctive Romanian name single candidate,2026-06-27
+nicoleta tirdea,nicoletatattirdea,confirm,auto,distinctive surname Tirdea single candidate exact name match,2026-06-27
+paula andrei,Andr3iGM,reject,auto,candidate is Brazilian Andrei Serafim de Paula completely different person,2026-06-27
+peter szanto,peterk55,confirm,auto,distinctive Hungarian name Szanto Peter name tokens match,2026-06-27
+radu stefan,Stefan-Radu,reject,auto,common Romanian name reversed order no Avaelgo corroboration,2026-06-27
+radu vunvulea,vunvulear,confirm,auto,highly distinctive Romanian surname Vunvulea single candidate,2026-06-27
+rail mazgutov,RailMazgutov,confirm,auto,distinctive Tatar name single candidate exact match,2026-06-27
+raluca minea,ralucaminea,confirm,auto,distinctive Romanian name single candidate,2026-06-27
+sorin mihailescu,FarahTrip,confirm,auto,exact name match Traveleon is travel company consistent with Booking Holdings aff,2026-06-27
+stefan mihai,mihaimoga,reject,auto,candidate full name is Stefan-Mihai MOGA last name is MOGA C++ dev not JVM,2026-06-27
+steliana moraru,stelianamoraru,confirm,auto,distinctive Romanian first name Steliana single candidate,2026-06-27
+vlad valentin,vvalentinv,confirm,auto,name tokens Vlad Valentin both present reversed order software bio,2026-06-27
+michael cote,mcote7,reject,auto,company videonet holdings unrelated to cote.io no JVM repos only 12 followers common name,2026-06-27
+stefan angelov,stefan50,reject,auto,"bio: FMI student, networking/games/embedded — no JVM",2026-06-27
+kristiyan stoyanov,KrisKStoyanov,reject,auto,"4 same-name candidates, no JVM repos or bio to distinguish",2026-06-27
+lyubomir bozhinov,lyubomir-bozhinov,reject,auto,"no JVM repos, bio generic tech leader, multiple same-name candidates",2026-06-27
+nayden gochev,gochev,confirm,auto,"bio: Java/Spring, Kotlin, jug.bg co-leader, co-organizer jprime",2026-06-27
+antoine thomas,ttoine,reject,auto,company @Prestashop/PHP ecosystem not Hyland; common name; no JVM repos,2026-06-27
+christopher cacciatore,ChrisCacc,reject,auto,company PNNL (US national lab) vs ITs4U (Luxembourg); no JVM repos,2026-06-27
+dominique nauroy,dnauroy,confirm,auto,distinctive name; sole candidate; Luxembourg Government speaker,2026-06-27
+elise souvannavong,eliseSou,confirm,auto,very distinctive surname; sole exact-name candidate,2026-06-27
+giorgi dalakishvili,Giorgi,reject,auto,Microsoft MVP + dotnet-foundation member; .NET not JVM,2026-06-27
+giovanna monti,GiovannaMonti,confirm,auto,distinctive name; bio explicitly says speaks at conferences,2026-06-27
+jerome wax,xblaster,confirm,auto,distinctive surname; 85 followers; sole candidate; Luxembourg conference,2026-06-27
+laura schlosser,lauraschlosser,confirm,auto,distinctive name; login=fullname; sole candidate,2026-06-27
+long le,longld,reject,auto,very common Vietnamese name; multiple unrelated candidates; no corroboration,2026-06-27
+ukasz nowak,LukaszNowakPL,reject,auto,frontend freelancer bio; no JVM repos; multiple candidates,2026-06-27
+marion chineaud,MarionChineaud,confirm,auto,distinctive name; login=fullname; sole candidate; Takima like other confirmed speakers,2026-06-27
+pierre alaime,pal-odoo,confirm,auto,login contains odoo matching affiliation Odoo LU; sole candidate,2026-06-27
+suzy zimmer,zimmersuzy,confirm,auto,distinctive name; sole candidate; Pictet Technologies Luxembourg,2026-06-27
+victoire de lacharriere,victoireladreit,confirm,auto,distinctive name; sole candidate; Takima like other confirmed speakers,2026-06-27
+zied ben abderrahim,ziedBenAbderrahim,confirm,auto,very distinctive name; login=fullname; sole candidate,2026-06-27
+dov katz,dovkatz,reject,auto,company Oculus VR vs MORGAN STANLEY; no JVM repos; common name,2026-06-27
+anshuman mishra,kanpuriyanawab,reject,auto,bio is Python/ML (TensorFlow/Keras); not JVM; no company match for Uber,2026-06-27
+sean sullivan,seans3,reject,auto,candidate at Google not Grubhub; no JVM repos; common name with many cands,2026-06-27
+devin thomson,devinthomson,reject,auto,company Collaborative Consulting vs TINDER; no JVM repos; 0 followers,2026-06-27
+prince valluri,princevalluri,confirm,auto,distinctive surname Valluri; single dominant candidate; login matches name,2026-06-27
+javiera laso,javieralaso,confirm,auto,distinctive name; login exact match; single candidate,2026-06-27
+guadalupe aliseda canton,guadalupe-alican,confirm,auto,unique full hyphenated name; single candidate; exact name match,2026-06-27
+rui abreu,rumaroab,reject,auto,Data Scientist at Imaginary Cloud not Meta; common Portuguese name; no JVM repos,2026-06-27
+jonathan vogel,vogelbot,reject,auto,company unIQ vs AWS; no JVM repos; common name with multiple weak cands,2026-06-27
+sanjana seetharam,sanjanas,confirm,auto,distinctive surname Seetharam; single candidate; login matches directly,2026-06-27
+patrick vuong,patrickv77,confirm,auto,distinctive Vietnamese surname; 63 followers dominant over 0-follower runner-up; Moderne is JVM shop,2026-06-27
+anthony collins,antorcol,reject,auto,no company/bio/JVM signal linking to Thales UK; profile empty,2026-06-27
+ian callaghan,ianshk,reject,auto,no company/bio/JVM signal linking to Thales UK; 16 flw but empty profile,2026-06-27
+anne currie,aecurrie,confirm,auto,bio 25+ year engineer matches known UK tech speaker; distinctive name,2026-06-27
+mark erikson,markerikson,confirm,auto,5945 followers Redux maintainer at Replay.io; exact employer match,2026-06-27
+kim fletcher,kvandrunen,reject,auto,GH name VanDrunen-Fletcher does not match Fletcher; 0 followers no signals,2026-06-27
+stephen galbraith,nerdgency,reject,auto,empty profile; no company/bio/JVM signal for Capital One speaker,2026-06-27
+mark hazell,mhazell,reject,auto,GH company Cisco does not match Devoxx UK affiliation; 0 followers,2026-06-27
+ryan healey,RAHealey,reject,auto,GH company Tide Talk does not match LMAX Group; no JVM signals,2026-06-27
+rob hopkins,radiorob,reject,auto,OpenBroadcaster/radio background wholly differs from Transition Network,2026-06-27
+fabian klemm,klemmpnx,reject,auto,empty profile; no TNG or JVM signal,2026-06-27
+jonas mayer,jonasmayer,reject,auto,GH company Treasure Data does not match TNG Technology Consulting,2026-06-27
+derek mortimer,pyoio,confirm,auto,London consultant/platform engineer bio matches CECG speaker; distinctive profile,2026-06-27
+anders noras,anoras,confirm,auto,distinctive Norwegian name with diacritic; 35 followers; login derived from name,2026-06-27
+ixchel ruiz,IxchelNR,reject,auto,Nestle company wrong; correct match is ixchelruiz (Karakun AG am=true),2026-06-27
+ixchel ruiz,ixchelruiz,confirm,auto,Karakun AG matches affiliation am=true; bio developer since 2000; 28 followers,2026-06-27
+lennard schiefelbein,lsc0498,reject,auto,empty profile; no TNG or JVM signal; 0 followers,2026-06-27
+melinda seckington,mseckington,confirm,auto,geeksoflondon and hackdaymanifesto orgs match known London tech speaker,2026-06-27
+pooja subramanian,PoojaSubramanian,reject,auto,common name; no Thoughtworks or JVM signal; sparse profile,2026-06-27
+barbara teruggi,barbara-teruggi,confirm,auto,Security Architect bio matches; distinctive name; sole candidate,2026-06-27
+christian woerz,chwoerz,confirm,auto,distinctive German name; 52 followers; Fullstack Developer bio fits independent contractor,2026-06-27
+aviva peisach,avivap,confirm,auto,"very distinctive name, sole matching candidate, speaker is Wix Backend Head",2026-06-27
+josef goldstein,JosefGold,reject,auto,"no JVM repos, empty company/bio, name not distinctive enough without corroboration",2026-06-27
+marcin apaj,mlapaj,reject,auto,"two candidates with same name, neither has iteratec affiliation or JVM repos",2026-06-27
+mateusz nalepa,MateuszGrafik3D,reject,auto,"login suggests 3D/graphics domain not JVM, no JVM repos, 0 followers",2026-06-27
+markus baumann,bionix,reject,auto,"company @akquinet vs MHP, common name, no JVM corroboration",2026-06-27
+moritz besser,besserai,confirm,auto,"unique name, besser.ai company aligns with sustainability-AI affiliation",2026-06-27
+patric betz,pb-attempto,reject,auto,"no bio/company, competing cand PatricBetz has AI-automation bio matching speaker",2026-06-27
+stefan blum,DerBlum,reject,auto,"top cand stblmuc at iteratec, selected DerBlum has no info, no corroboration",2026-06-27
+christian bobach,cbobach,reject,auto,"company @clearhaus vs HUK-Coburg, no JVM corroboration",2026-06-27
+elmar borgmeier,ElmarBorgmeier,confirm,auto,"unique name, bio explicitly states Syngenio AG matching company field",2026-06-27
+ronald brill,BrillBay,confirm,auto,"unusual name, single candidate, web-testing/open-source affiliation aligns",2026-06-27
+daniel buza,BuzikMLG,reject,auto,bio says C++ Dev but speaker is Java developer and tech lead,2026-06-27
+samantha casler,sc-girl-coder,confirm,auto,"rare name, single candidate, backend engineer affiliation plausible",2026-06-27
+daniel chwat gogol,dc-g,confirm,auto,"very unique hyphenated name, single candidate",2026-06-27
+john davies,john-davies,reject,auto,"common name, Java expert needs stronger corroboration, no company/JVM signal",2026-06-27
+sven deichsel,SvenDeichsel,confirm,auto,unique name; companion login SvenDeichselMaterna confirms Materna affiliation,2026-06-27
+zeljko dodlek,Zeljko-07,reject,auto,"company Tessell INC does not match Aiven, no JVM corroboration",2026-06-27
+dan erez,danFromTelAviv,reject,auto,"bio is CV/speech R&D, speaker is Cloud/Serverless Backend — mismatch",2026-06-27
+lukas essig,kokosnuss,confirm,auto,company @Atruvia matches speaker affiliation (Atruvia/IaC),2026-06-27
+claire fautsch,claireNeo,confirm,auto,"rare name, single candidate, Joblift backend context plausible",2026-06-27
+robin ferrari,zecka,confirm,auto,company SQLI Switzerland matches speaker affiliation,2026-06-27
+hergy fongue,rjtch,confirm,auto,"very unusual name, single candidate, Finanz Informatik engineer",2026-06-27
+christina framke,cgebken,confirm,auto,"rare name, single candidate, username likely reflects maiden name change",2026-06-27
+uwe friedrichsen,ufried,confirm,auto,"unique German name, codecentric AG is well-known JVM company",2026-06-27
+kai gellien,gftkign,confirm,auto,GitHub display name explicitly shows 'Kai Gellien @ GFT' matching affiliation,2026-06-27
+robert glaser,youngbrioche,confirm,auto,"company Exxeta matches speaker affiliation, 32 followers",2026-06-27
+michael graf,Michadelic,reject,auto,"common German name, SAP/Sports does not match Kotlin agile-consulting affiliation",2026-06-27
+richard gross,RillyTheKid,reject,auto,"wrong candidate selected; Richargh (Richard Groß, IT Archeologist) is stronger match",2026-06-27
+sascha gro,saschalev,reject,auto,top cand is saschagr; saschalev company The Real Insight does not match Mathema,2026-06-27
+serafima gurevich,s-gurevich,confirm,auto,"rare name, single candidate, Java/Frontend affiliation plausible",2026-06-27
+matthias hagele,anotherMatze,confirm,auto,"unusual name, single candidate, MEONDI GmbH context",2026-06-27
+andreas hartmann,andreas-hartmann,reject,auto,"common German name, multiple candidates, @otto-ec lacks specific corroboration",2026-06-27
+clemens helm,clemenshelm,confirm,auto,"unique name, 73 followers, full-stack craftsman bio, Helmcraft likely own company",2026-06-27
+michael hofmann,kmhofmann,confirm,auto,"101 followers dominant over next (9), Java Enterprise expert affiliation aligns",2026-06-27
+jonas hofmann,dogtype,reject,auto,"bio says PhD student at TU Darmstadt, speaker is professional developer",2026-06-27
+marius hofmeister,MariusHof,confirm,auto,"unusual name, single candidate, Professor Webentwicklung context",2026-06-27
+roland hu,ro14nd-talks,confirm,auto,"login ro14nd-talks clearly belongs to Roland Huß (presentations account), Java/K8s expert",2026-06-27
+michael inden,Michaeli71,confirm,auto,"Michael Inden is known Java book author in Germany, 39 followers, single candidate",2026-06-27
+mirza iqbal,mjmirza,confirm,auto,"rare name, 38 followers dominant, AI workflow focus aligns",2026-06-27
+clemens jutte,jayonthenet,confirm,auto,"rare name, single candidate, Architect/cloud bio fits VMware/Humanitec context",2026-06-27
+martin kalsow,martinkalsow2222,confirm,auto,"unusual name, single candidate, Tech Lead context plausible",2026-06-27
+christoph kappel,unexist,confirm,auto,"51 followers dominant, unique name, single well-followed candidate",2026-06-27
+niklas kappler,niklaskappler,confirm,auto,"login is full name, bio explicitly mentions @Meondi matching MEONDI context",2026-06-27
+christian kehl,CKehl,reject,auto,"common German name, multiple unrelated candidates, no JVM/marketing corroboration",2026-06-27
+christopher keibel,CKeibel,confirm,auto,"rare name, single candidate, AI Engineer bio aligns with tech speaker",2026-06-27
+johannes kellner,johannes-kellner,confirm,auto,"unusual name, single candidate, Atruvia AG context",2026-06-27
+christian kemper,ck3mp3r,reject,auto,"common name, multiple competing candidates including one at @atruvia; no clear winner",2026-06-27
+simon kerler,namelessvoid,confirm,auto,"unusual name, single candidate, software architect/cloud focus aligns",2026-06-27
+patrick kopp,PatersonKopp,confirm,auto,"unusual name, single name-matched candidate with company",2026-06-27
+maria korneeva,mkorneeva1,reject,auto,"better match is korneevamg (alias-matched, frontend/Angular bio, 41 followers)",2026-06-27
+michael kotten,michbeck100,confirm,auto,"unusual name, single candidate, Freelancer Java Enterprise profile aligns",2026-06-27
+thomas kruse,thomaskruse,confirm,auto,"unusual name, single candidate, Java web expert affiliation plausible",2026-06-27
+karsten lentzsch,KLentzsch,confirm,auto,JGoodies is famous Java Swing library — strongly corroborates Java-Design/UX expert,2026-06-27
+malin litwinski,malinshirin,confirm,auto,"rare name, single candidate, Crown Agents Bank fintech context",2026-06-27
+larry maccherone,lmaccherone,confirm,auto,"rare name, 65 followers, single candidate, DevSecOps/Agile expert",2026-06-27
+moritz meid,MoritzMeid,confirm,auto,"Chainguard is container-security company, aligns with DevSecOps/K8s speaker",2026-06-27
+cathrin moller,ProfCathrinMoeller,confirm,auto,"rare name, bio confirms IT consultant 10+ yrs teaching microservices matches TNG context",2026-06-27
+diana montalion,dianamontalion,confirm,auto,"rare name, @MentrixGroup org, 9 followers dominant, systems architecture aligns",2026-06-27
+sven muller,svenmueller,confirm,auto,"company commercetools GmbH matches affiliation, in commercetools org",2026-06-27
+frank muller,suchasurge,confirm,auto,"26 followers, single full-name-matched candidate",2026-06-27
+bjorn muller,muellerbjoern,confirm,auto,"unusual name, single candidate",2026-06-27
+ikenna nwaiwu,ikenna,confirm,auto,unique first name matches own consulting company Ikenna Consulting,2026-06-27
+manuel ottlik,manuelottlik,confirm,auto,"rare name, login is full name, cloud-native developer context",2026-06-27
+sara pellegrini,saratry,confirm,auto,"unusual name, single candidate, 26 followers, distributed-arch affiliation",2026-06-27
+daniel pfeiffer,mediabounds,reject,auto,"common German name, @gowithfloat company has no corroboration for public-sector RE",2026-06-27
+natalie ramp,Schnapumpel13,reject,auto,"bio says Coding Bootcamps Europe, speaker is from jambit GmbH — mismatch",2026-06-27
+sarah rayfuse,Moonunit27,confirm,auto,"rare name, single candidate, Sysco AS company",2026-06-27
+maren reuter,MarenReuter,confirm,auto,"rare name, single candidate, Java-backend coach context",2026-06-27
+thomas riedel,Thomas-Riedel,reject,auto,"bio says mathematics student TU Munich, speaker is at production company Droid Boy",2026-06-27
+dominik rost,domrost,confirm,auto,"unusual name, login is short form, Full Flamingo tech company bio aligns",2026-06-27
+markus schlegel,markschl,confirm,auto,"unusual name, WSL is Swiss research institute fitting formal-methods speaker",2026-06-27
+alexander schluter,alexschlueter,reject,auto,"bio says PhD student mathematics WWU Münster, speaker is at Couchbase — mismatch",2026-06-27
+jan schmidt,thaytan,reject,auto,"very common name, 169 followers but no company or JVM corroboration",2026-06-27
+andy schmidt,bentreflection,reject,auto,"common name, no corroborating info for healthcare-architecture speaker",2026-06-27
+daniel schmitz hubsch,DanielSchH,confirm,auto,"company Materna Information matches speaker affiliation, bio confirms same",2026-06-27
+matthias schneider,dermatthias,reject,auto,"common name, top cand mschneider82 at retarus not HCL, selected dermatthias unconfirmed",2026-06-27
+michael schock,mjschock,reject,auto,"bio says Georgia Tech AI/ML grad student, speaker is German banking software architect",2026-06-27
+alexander schramm,Mindar,reject,auto,"bio says robotics/electronics/embedded, speaker is agile software architect — mismatch",2026-06-27
+rene schroder,derrrey,confirm,auto,"unusual name, single candidate, self-employed agile coach",2026-06-27
+sarah schuh,TraumSchuh,reject,auto,company Traum-Ferienwohnungen.de (vacation rentals) does not match org-consulting speaker,2026-06-27
+katja schulke,katjaschulke,confirm,auto,"rare name, single candidate, data-analysis/AI context",2026-06-27
+sven schuster,svenschuster,reject,auto,"top cand schustersv has no name info, common name, no corroboration",2026-06-27
+shohre shaddelian,shohreh-sh,confirm,auto,"very unusual name, 11 followers, single dominant match",2026-06-27
+aminata sidibe,wuschey,confirm,auto,"rare name, 12 followers, single candidate",2026-06-27
+frank steimle,steimlfk,confirm,auto,"unusual name, single candidate, DDD/agile consulting context",2026-06-27
+david tanzer,dtanzer,confirm,auto,"unusual name, 22 followers, single candidate, freelancer context",2026-06-27
+jan thewes,JWThewes,confirm,auto,"unusual name, single candidate, AWS company, tech speaker context",2026-06-27
+sergej tihonov,Sergej-Tihonov,confirm,auto,"rare name, single candidate, self-employed speaker",2026-06-27
+frank tingle,ftingle,confirm,auto,company Sonatype (JVM/Maven security) strongly corroborates DevSecOps expert,2026-06-27
+catalin tudose,seeq-ops,reject,auto,"selected login seeq-ops appears org/team account, CatalinTudose is better personal login",2026-06-27
+gien verschatse,selketjah,confirm,auto,"rare Belgian name, @eightpointsquared org, 30 followers, DDD/architecture aligns",2026-06-27
+christian voigt,christianvoigt,confirm,auto,"unusual name, 46 followers, single dominant candidate",2026-06-27
+michael voss,Voss-Mike,reject,auto,"Premier Inc is US healthcare company, does not match German IT consultant context",2026-06-27
+sandra warmbrunn,smily75,confirm,auto,"unusual name, bio explicitly says Java Software Developer DevOps Engineer",2026-06-27
+hillel wayne,hwayne,confirm,auto,"well-known tech author, 881 followers, unique name, dominant match",2026-06-27
+christian wenz,wenz,confirm,auto,"unusual spelling (wenz), 37 followers, web-security expert context",2026-06-27
+maximilian worner,maxwoerner,confirm,auto,"unusual name, single candidate, DevOps/infrastructure context",2026-06-27
+johannes wu,hansz84,reject,auto,"top cand is Wüstner not Wu, selected login hansz84 has no name match",2026-06-27
+tim wullner,timwuellner,confirm,auto,"unusual name, single candidate, ML-integration web expert",2026-06-27
+erkan yanar,erkules,confirm,auto,"unusual name, 138 followers, Linux/DevOps expert aligns perfectly",2026-06-27
+aljosa vister,aljosavister,confirm,auto,unique Slovenian name exact match; company differs but plausible job change,2026-06-27
+kristjan cuznar,CuAuPro,confirm,auto,email kristjancuznar0@gmail.com in bio confirms identity,2026-06-27
+jan jez,it2314,reject,auto,two bare candidates with same name; top cand bio=IT student does not match aff IGEA d.o.o.,2026-06-27
+marcin przepiorowski,pioro,confirm,auto,distinctive Polish name; 43 followers; @dbops aligns with database domain like Delphix,2026-06-27
+petro velychko,petrceo,confirm,auto,distinctive Ukrainian name; single candidate; login petrceo suggests exec role,2026-06-27
+neil chandler,neilchandler,confirm,auto,known Oracle DB expert; login=neilchandler; golf-travel second cand is clearly different person,2026-06-27
+lucas hirschegger,lucashir,confirm,auto,distinctive name; single candidate; login lucashir is name abbreviation,2026-06-27
+ariel david jancar,ariel-jancar,confirm,auto,distinctive Slovenian name with diacritic exact match; Celtra is real Slovenian tech company,2026-06-27
+ales cadez,alscdz,confirm,auto,login alscdz is consonant abbreviation of Ales Cadez; distinctive Slovenian name,2026-06-27
+ziga vaupot,zigavaupot,confirm,auto,login=full name concatenated; distinctive Slovenian name; SmartQ is real Slovenian co,2026-06-27
+yvind isene,oisene,confirm,auto,bio=Oracle DBA+Kafka matches conference profile; Twitter=OyvindIsene in bio confirms; login=O+surname,2026-06-27
+monika lewandowska,zabadragon,reject,auto,common Polish name; login zabadragon unrelated to name; bare profile with zero corroboration,2026-06-27
+yishai beeri,yishaibeeri,confirm,auto,login=full name concatenated; distinctive name; CTO at LinearB is real tech company,2026-06-27
+dani schnider,DSchnider,confirm,auto,login=D+Schnider matches initial+surname; Callista is real Swiss IT consulting firm,2026-06-27
+gara,gaawal,reject,auto,"single-word handle; no bio, no JVM repos, no company — zero corroboration",2026-06-27
+junhee lee,junh0328,reject,auto,profile: frontend dev at wrtn tech; speaker is from Casareal (Java training); wrong company and role,2026-06-27
+shun watanabe,shika358,reject,auto,"common JP name; no company (speaker=NRI), no JVM repos; insufficient corroboration",2026-06-27
+stephen chin,steveonjava,confirm,auto,login steveonjava strong JVM signal; orgs: JFXtras/visage-lang/scalafx/NightHacking/RaspberryPiWithJava confirm Java community figure,2026-06-27
+takeshi miyajima,miyazi777,reject,auto,"no company, no bio, no JVM repos; speaker from SunArch not reflected in profile",2026-06-27
+takumi endo,ENDOTAKUMI,reject,auto,"no company, no JVM repos; endo-cariot (company=Cariot Inc.) is a better match for speaker from Cariot",2026-06-27
+toru takahashi,toru-takahashi,reject,auto,"bio: Director Customer Experience at Treasure Data; speaker says Backend Engineer; common JP name, no JVM repos",2026-06-27
+wagyu,mukamikou,reject,auto,bio content is troll-like/concerning; no JVM repos; no corroboration,2026-06-27
+yohei kajiro,y-kajiro,reject,auto,"0 followers, no bio, no company, no JVM repos; cannot confirm",2026-06-27
+yoshihiko minami,nannany,reject,auto,"no company match (STORES not in profile), no JVM repos",2026-06-27
+yuji nakagawa,yuji1919,reject,auto,"0 followers, no bio, no company, no JVM repos; common JP name",2026-06-27
+yusuke saito,ysaito8015,reject,auto,common JP name; WealthNavi not in profile; no JVM repos,2026-06-27
+yuya296,yuya296,confirm,auto,speaker handle yuya296 = GitHub login yuya296 (direct identity); affiliation: Enterprise Java Engineer in Financial Systems,2026-06-27
+dan neciu,Cst2989,reject,auto,company Phallanx≠CareerOS; no JVM repos; bio=ReactJS Barcelona organizer,2026-06-27
+luqman saeed,Luqmansaeed,reject,auto,bio=Just a Web Developer contradicts Payara technical writer; 0 followers; no JVM repos,2026-06-27
+bowen feng,thebowenfeng,reject,auto,student at UMelb no JVM repos no Google connection,2026-06-27
+dan kim,dandelin,reject,auto,common name; research scientist at TwelveLabs no JVM repos,2026-06-27
+ian botsford,ianbotsf,confirm,auto,unique name + AWS company matches Amazon affiliation,2026-06-27
+lena reinhard,lenareinhard,confirm,auto,bio says Speaker; unique name; sole candidate,2026-06-27
+meike felicia hammer,meikefeliciah,confirm,auto,very distinctive full name exact match sole candidate,2026-06-27
+modeste assiongbon,rblmdst,confirm,auto,unique name; bio says Speaker+French content creator,2026-06-27
+pierre andrieux,winderslide008,reject,auto,3 same-name cands; no Capgemini signal; common name,2026-06-27
+lionel armanet,lionelarmanet,confirm,auto,login encodes name; distinctive name; single real cand,2026-06-27
+jerome baton,JeromeBaton,confirm,auto,login encodes name exactly; single candidate,2026-06-27
+frederic bisson,Zigazou,confirm,auto,61 followers; exact name match; single candidate,2026-06-27
+caroline boyer,CarolineBoyer,reject,auto,company @usnistgov contradicts Sopra Steria France,2026-06-27
+geoffrey beausire,geobeau,confirm,auto,login encodes name; Criteo context fits; distinctive name,2026-06-27
+luis blanche,LuisBlanche,reject,auto,cand luisblanche-mirakl encodes Mirakl aff better,2026-06-27
+julien botella,julienbotella,confirm,auto,login encodes name; single candidate,2026-06-27
+philippe bourgau,philou,confirm,auto,118 followers; refactoring coach bio matches speaker,2026-06-27
+fanny bouton,Fanny1000110,confirm,auto,OVHcloud company+bio; consistent with tech speaker,2026-06-27
+audren burlot,AudrenHellowork,confirm,auto,login encodes name+company; distinctive name,2026-06-27
+maxime clement,maxime-clem,reject,auto,5 same-name cands; no Docker signal; common name,2026-06-27
+manuel camargo,SirLouen,reject,auto,WordPress/Vozitel profile; conflicts with Theodo Fintech,2026-06-27
+mathieu cans,cansmathieu,confirm,auto,login encodes name; single candidate,2026-06-27
+jeremy chauvin,jeremychauvin,confirm,auto,login encodes name; single candidate,2026-06-27
+houssem chihoub,hecdbx,reject,auto,login opaque; hchihoub is clearer name encoding,2026-06-27
+luc chmielowski,lucchmielowski,confirm,auto,login encodes name; very distinctive surname,2026-06-27
+nahel chokairi,Anorien63,confirm,auto,distinctive name; suffix 63=Puy-de-Dome fits Michelin HQ,2026-06-27
+benoit colin,Benoit382,reject,auto,3 same-name cands; no Bedrock signal; common name,2026-06-27
+sylvain dedieu,sdedieu,confirm,auto,bio explicitly says Conference speaker; login encodes name,2026-06-27
+rachel dubois,RDUBOIS75,confirm,auto,login encodes R DUBOIS 75 (Paris); Spotify is tech,2026-06-27
+laurent duclay,caa-lduclay,confirm,auto,login prefix caa=Credit Agricole Assurances matches aff exactly,2026-06-27
+pablo farey,Pabloulou,confirm,auto,distinctive name; single candidate,2026-06-27
+sebastien ferrer,sebferrer,confirm,auto,org ovh matches OVHcloud aff; bio says Speaker,2026-06-27
+christophe furmaniak,looztra,confirm,auto,company @dktunited=Decathlon matches aff; strong corroboration,2026-06-27
+jerome gauthier,AngelQC,reject,auto,login opaque; no Sopra Steria signal; common name,2026-06-27
+denis germain,zwindler,confirm,auto,163 followers; DevOps/tech blogger; distinctive handle,2026-06-27
+nicolas giraud,niconoe-,reject,auto,very common name; Aareon vs onepoint; 5 cands no signal,2026-06-27
+yann gloriau,yannGloriau,confirm,auto,login encodes name; single candidate,2026-06-27
+peter goron,pgoron,confirm,auto,login encodes name; Criteo fits; single useful cand,2026-06-27
+maxime gosselin,maximegosselin,reject,auto,Quebec First Nations dev bio; conflicts with Oodrive FR,2026-06-27
+jordane grenat,jgrenat,confirm,auto,login encodes name; distinctive name,2026-06-27
+thomas jouve,Thomasimov,reject,auto,nephrologist at Grenoble Univ Hospital vs Sopra Steria IT,2026-06-27
+dimitrios kafetzis,Dimitrios-Kafetzis,confirm,auto,very distinctive Greek name; login encodes it,2026-06-27
+henry lagarde,tolares,reject,auto,login opaque; @MistralAi vs Datadog aff mismatch,2026-06-27
+yannick lambruschi,ylambruschi,confirm,auto,login encodes name; distinctive surname,2026-06-27
+sebastien lecacheur,slecache,confirm,auto,login encodes name; distinctive surname,2026-06-27
+samuel lefebvre,SamLefebvre,reject,auto,web dev bio (React/VueJS/Unity) conflicts with Shodo Java; common name,2026-06-27
+pablo lopez,PabloLopez23,reject,auto,very common Spanish name; cybersec vs WeScale DevOps,2026-06-27
+mathilde lorrain,malorrain,confirm,auto,login encodes name; single candidate,2026-06-27
+fabien martin,Kwalish,reject,auto,login opaque; Founders Lair vs Everial; common name,2026-06-27
+arnaud mary,ArnaudMary,confirm,auto,login encodes name directly; single candidate,2026-06-27
+antoine mayer,mayerantoine,confirm,auto,login encodes name last-first; single candidate,2026-06-27
+simon mercier,smercier,reject,auto,Mapgears Canada vs Worldline FR; common name; 5 cands,2026-06-27
+anthony maffert,anthony-maffert-wmx,confirm,auto,wmx=Winamax in login matches affiliation exactly,2026-06-27
+barbara martin,Babishula,reject,auto,login opaque; no Michelin signal; common name,2026-06-27
+emeric martineau,emeric-martineau,confirm,auto,login encodes name; distinctive name,2026-06-27
+jerome masson,Sphinxgaia,confirm,auto,Kubernetes/DevOps bio strongly fits WeScale speaker,2026-06-27
+guillaume mathieu,gmathieu,reject,auto,Gusto US vs Wescale FR; common name; 5 cands,2026-06-27
+guillaume mazollier,gmiam,confirm,auto,distinctive surname; single candidate,2026-06-27
+florian meuleman,FlorianMeuleman,confirm,auto,login encodes name; EFREI student profile may be old pre-Takima,2026-06-27
+kim adeline miguel,kimadeline,confirm,auto,very distinctive name; login encodes first names; GitHub employee,2026-06-27
+francois mockers,mockersf,confirm,auto,346 followers; distinctive name; login encodes name,2026-06-27
+jeremy nadal,Jeremynadalmirakl,confirm,auto,login encodes full name; mirakl=likely prev employer,2026-06-27
+bertrand nau,bnau,confirm,auto,login encodes name; single candidate,2026-06-27
+olivier poncet,ponceto,confirm,auto,120 followers; OSS/tech speaker bio; login encodes name,2026-06-27
+johan rouve,ooga,reject,auto,login opaque; TrustCollect vs Comet aff mismatch,2026-06-27
+manuel ryan,ryanthemanuel,reject,auto,GitHub name is Ryan Manuel (reversed); @cypress-io vs Swissquote,2026-06-27
+yann schepens,yannschepens,confirm,auto,login encodes name directly; single candidate,2026-06-27
+sarah tedjani,sarahted,confirm,auto,login encodes name; distinctive name,2026-06-27
+stephane trognon,stephane-trognon,confirm,auto,login encodes name; SRE/DevOps teacher bio fits speaker,2026-06-27
+matthieu vetter,Grudov,reject,auto,login opaque; no WhereWeGo signal,2026-06-27
+nicolas wlodarczyk,nicolaswlo,confirm,auto,login encodes name; very distinctive surname,2026-06-27
+yifang dong,YifangDONG,confirm,auto,login encodes name; distinctive name; Murex is JVM shop,2026-06-27
+jerome leonard,jeromeleonard,reject,auto,StrangeBee vs CGI aff mismatch; login encodes name but co wrong,2026-06-27
+stephane teyssier,yesteph,reject,auto,login opaque; no Wescale signal,2026-06-27
+george argyropoulos,george-argy,reject,auto,two empty candidates same name no corroboration to distinguish,2026-06-27
+evi chatzidaki,chatzidaki,confirm,auto,distinctive Greek name sole candidate exact match,2026-06-27
+ron dagdag,rondagdag,confirm,auto,distinctive name 111 followers tech bio primary account,2026-06-27
+giota eftaxia,ggefta,confirm,auto,distinctive Greek name sole candidate exact match,2026-06-27
+michelle frost,michellevenables1,reject,auto,common English name 4 candidates no corroboration,2026-06-27
+spyros karavanis,spyroskaravanis,confirm,auto,distinctive Greek name username is full name,2026-06-27
+vasileia kourli,vkourli,confirm,auto,distinctive Greek name sole candidate exact match,2026-06-27
+konstantinos koutitsas,FullMetalAlchemistEMP,confirm,auto,distinctive Greek name sole candidate exact match,2026-06-27
+alex konig,axkng,confirm,auto,axkng abbreviates Alex Konig AWS speaker top candidate,2026-06-27
+sotiris lyras,cyberrobots,confirm,auto,distinctive Greek name sole candidate exact match,2026-06-27
+antonis markopoulos,amarkopoulos,confirm,auto,distinctive Greek name sole candidate exact match,2026-06-27
+alyssa nicoll,alyssamichelle,confirm,auto,full name in profile Developer Advocate GDE 258 followers conference speaker,2026-06-27
+tasos nikolaou,tase-nikol,confirm,auto,software engineer bio backend microservices fits conference speaker,2026-06-27
+patroklos papapetrou,ppapapetrou76,confirm,auto,107 followers CodeHubGreece org member distinctive name,2026-06-27
+vadym pinchuk,VadymPinchuk,confirm,auto,Android dev on JVM 94 followers distinctive name,2026-06-27
+will sentance,WillSen,confirm,auto,768 followers bio confirms CEO Codesmith distinctive name,2026-06-27
+kostas stroggylos,modernist,confirm,auto,distinctive Greek name sole candidate 25 followers,2026-06-27
+menelaos zetas,menelaoszetas1990,confirm,auto,distinctive Greek name sole candidate programmer bio,2026-06-27
+turhal temizer,turhaltemizer,confirm,auto,unique Turkish name; sole exact match; low follower count but name specificity sufficient,2026-06-27
+alexis monville,alexismonville,confirm,auto,open-organization org is a Red Hat community project corroborating RedHat affiliation,2026-06-27
+kenan sevindik,harezmi,confirm,auto,login harezmi matches affiliation Harezmi IT Solutions exactly; company shows kenansevindik.com,2026-06-27
+yehonathan sharvit,viebel,confirm,auto,bio explicitly mentions Clojure/ClojureScript (JVM language); 331 followers; distinctive name,2026-06-27
+gregory green,gregreen,reject,auto,astrophysicist at Max Planck Institute not a JVM developer,2026-06-27
+ruben afonso,rubentnf,reject,auto,no JVM repos no AWS affiliation 9 followers no corroborating signal,2026-06-27
+sergei chernov,sacher90,reject,auto,0 followers no bio no company no JVM repos insufficient evidence,2026-06-27
+soham dasgupta,thesobercoder,reject,auto,multiple same-name candidates; no JVM repos; company empty (no Microsoft signal),2026-06-27
+mark dirksma,funkycoding,confirm,auto,distinctive Dutch name; single candidate; Dutch conference speaker,2026-06-27
+eli holderness,eli-holderness,reject,auto,bio says Anvil not The Bennett Institute; no JVM repos; contradicting affiliation,2026-06-27
+remco siemonsma,Remco-testing,confirm,auto,distinctive Dutch name; single candidate; Remcoder likely personal brand vs Qirion day job,2026-06-27
+peter smink,psmink,reject,auto,common Dutch surname; company SolutionWorx vs Team Rockstars IT; 0 followers; no JVM repos,2026-06-27
+victor botan,Taurettt,reject,auto,bio is sustainability/networking; no JVM repos; no AD/01 signal; victor-botan-ad01 may be better,2026-06-27
+andrei mihai,crunck78,reject,auto,last name Neacsu does not match; company is developerakademie not Adobe; no JVM repos,2026-06-27
+alin miu,alin-miu-scoalainformala,reject,auto,empty bio; no JVM repos; no Amazon signal; scoalainformala suffix suggests unrelated coding-bootcamp account,2026-06-27
+malavika balamurali,Mbala658,reject,auto,name-only match; no bio/company/jvm_repo/followers — insufficient corroboration,2026-06-27
+john ceccarelli,johnceccarelli,confirm,auto,company Oracle is JVM-ecosystem company; exact name match; unique enough for Azul speaker,2026-06-27
+medha chakraborty,medha209,confirm,auto,bio explicitly mentions Java; exact name match for BlackRock speaker,2026-06-27
+chris corriere,ecology-chris,confirm,auto,login ecology-chris directly matches speaker affiliation Ecology Computing,2026-06-27
+john coyne,iolla-net,reject,auto,common name; bio is designer/runner with no JVM signal; multiple candidates; no corroboration,2026-06-27
+christopher curtin,ccurtin,reject,auto,no JVM repos; org twowordsdigital does not match ADP; no affiliation corroboration,2026-06-27
+srijani dey,SrijaniTinni,reject,auto,company TCS does not match BlackRock; multiple zero-follower candidates; no JVM signal,2026-06-27
+jonathon graf,JonoGraf,reject,auto,name-only match; no bio/company/jvm_repo/followers,2026-06-27
+emmanuel guzman,eguzmanv,reject,auto,bio is geophysics student — wrong person; likely match is Emmax77 (Java/Oracle ACE/JUG speaker),2026-06-27
+leonid igolnik,ligolnik,reject,auto,name-only match; no bio/company/jvm_repo; two identical-name candidates,2026-06-27
+laurie lay,LaurieLonecrow,reject,auto,no JVM repos; no company listed despite Ippon Technologies affiliation; no corroboration,2026-06-27
+martin rojas,martinrojas,reject,auto,common Spanish name; no bio/company/jvm_repo; four candidates with equal weight,2026-06-27
+zoe steinkamp,zoesteinkamp,reject,auto,no bio/company/jvm_repo; ClickHouse speaker context not JVM-specific,2026-06-27
+phil webb,prwebbuk,reject,auto,company Valorem Reply does not match Broadcom; Spring Boot Phil Webb is philwebb (2305 flw) not prwebbuk,2026-06-27
+daneez zamangil,daneez-evity,reject,auto,name-only match; no bio/company/jvm_repo/followers; Callrail not JVM-specific,2026-06-27
+robert eichenseer,RobertEichenseer,confirm,auto,"unique German name, 62 followers, both candidates Microsoft-affiliated; crafts conference broader than JVM",2026-06-27
+sven eiter,sjeiter,confirm,auto,"sole candidate, adesso SE (Java-heavy shop), name uncommon enough",2026-06-27
+stefan mintert,stefanmintert,confirm,auto,"sole candidate, unique German name, own consulting company; known DE tech community",2026-06-27
+thomas lemberger,lembergerth,confirm,auto,sosy-lab (software research/Java tools); runner-up tlemberger is EMBO biology - wrong field,2026-06-27
+janek fellien,jfellien,confirm,auto,"sole candidate, 46 followers, msmvps org confirms active tech speaker profile",2026-06-27
+johannes dienst,JohannesDienst,confirm,auto,"adesso SE (Java-heavy), Mastodon bio confirms active tech community member; highest followers among three accounts",2026-06-27
+sinan yildirim,sinanyil81,reject,auto,"gh name is Kasim Sinan YILDIRIM (different first name), academic institution, no JVM repos",2026-06-27
+giulia maier,gimaier,confirm,auto,"unique exact name match, uncommon name, plausible login pattern (gi+maier)",2026-06-27
+stefan nachtrab,st3v0rr,confirm,auto,"unique match, Software-Architect bio, @adorsys company, adorsys org",2026-06-27
+clemens hubner,clemens-huebner,confirm,auto,"unique exact name match, uncommon name, single candidate",2026-06-27
+carmen delgado,cldelgadop,confirm,auto,"Eclipse Foundation / @adoptium community manager, JVM-adjacent role",2026-06-27
+rainald menge sonnentag,Kirodar,confirm,auto,"unique name, Senior Editor at ix-magazin/heise covering Java, ix-magazin org",2026-06-27
+bernhard lowenstein,lion78at,confirm,auto,"uncommon name, single exact match candidate",2026-06-27
+ingo eichhorst,ingo-eichhorst,confirm,auto,"unique name, 21 followers, Nowtilus org, dominant match",2026-06-27
+daniel kocot,danielkocot,confirm,auto,"Principal Integration Architect @adorsys, docToolchain org (JVM-adjacent)",2026-06-27
+benjamin wolf,programming-wolf,confirm,auto,"@innoq company + arc42 org, strong German Java community signals",2026-06-27
+frederik wystup,DG1001,confirm,auto,"unique match, uncommon name, single candidate, prefer recall",2026-06-27
+andreas voigt,voigtan,reject,auto,"common German name, 5 candidates, no JVM signal for top candidate",2026-06-27
+sebastian sprenger,sprengr,reject,auto,"EpicGames org suggests game dev not JVM, multiple candidates with similar profiles",2026-06-27
+felix medam,SputnikTea,confirm,auto,"unique match, uncommon name, single candidate, prefer recall",2026-06-27
+christian heilmann,codepo8,confirm,auto,"dominant match 2796 followers, known conference speaker, exact name match",2026-06-27
+benedikt werner,benediktwerner,confirm,auto,"lichess-org (Scala/JVM project), 123 followers, unique name",2026-06-27
+florian sommer,fsteckel,reject,auto,"bio is Aerospace Engineer and Maker, clearly not JVM speaker, multiple ambiguous candidates",2026-06-27
+thomas krieger,tom-krieger,confirm,auto,"THK IT Beratung company matches initials, IT consulting consistent with JVM speaker",2026-06-27
