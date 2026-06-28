@@ -40,7 +40,7 @@ luis fraile,lfraile,MED,Luis Fraile,,63,fullname,2026-06-28,2026-09-26
 mauricio salaboy salatino,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 mauro gioberti,maurogioberti,HIGH,Mauro Gioberti,,10,fullname,2026-06-28,
 mauro morales,mauromorales,HIGH,Mauro Morales,@spectrocloud,123,fullname,2026-06-28,
-olena kutsenko,anelook,MED,Olena Kutsenko,,45,fullname,2026-06-28,2026-09-26
+olena kutsenko,anelook,HIGH,Olena Kutsenko,,45,alias,2026-06-28,
 olivier leplus,tagazok,HIGH,Olivier Leplus,@aws,54,fullname,2026-06-28,
 paolo ricciuti,paoloricciuti,HIGH,Paolo Ricciuti,@mainmatter ,300,fullname,2026-06-28,
 rachid zarouali,xinity,HIGH,Rachid Zarouali,@sevensphereio,113,fullname,2026-06-28,
@@ -3150,3 +3150,16 @@ florian rudisch,frudisch,HIGH,Florian Rudisch,Senacor Technologies AG,11,fullnam
 joerg mueller,JoergM,MED,Joerg Mueller,INNOQ,38,fullname,2026-06-28,2026-09-26
 susanne pfeiffer,,UNRESOLVED,,,,fullname,2026-06-28,2026-09-26
 andrii raikov,raykov,MED,Andrii Raikov,,17,fullname,2026-06-28,2026-09-26
+georg sumailov,Cybersepp,HIGH,Georg Sumailov,CERN,5,fullname-ascii,2026-06-28,
+matheus albuquerque,ythecombinator,HIGH,Matheus Albuquerque,@medallia,493,fullname,2026-06-28,
+cedric champeau,melix,HIGH,Cédric Champeau,Oracle Labs ,639,fullname,2026-06-28,
+joe egan,joeegan,MED,Joe Egan,,24,fullname,2026-06-28,2026-09-26
+kevlin henney,,UNRESOLVED,,,,fullname,2026-06-28,2026-09-26
+romain jourdan,rjourdan,HIGH,Romain Jourdan,@aws,3,fullname,2026-06-28,
+dmitry kekelidze,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+jesse kershaw,jkrshw,HIGH,Jesse Kershaw,CERN,7,fullname,2026-06-28,
+christos kotselidis,kotselidis,HIGH,Christos Kotselidis,The University of Manchester @beehive-lab ,29,fullname,2026-06-28,
+marcos maia,marcosmaia777,MED,Marcos Maia Fidelis ,,27,fullname,2026-06-28,2026-09-26
+jos roseboom,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+karthik sayapparaju,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+mary xekalaki,mairooni,HIGH,Mary Xekalaki,The University of Manchester,10,fullname,2026-06-28,

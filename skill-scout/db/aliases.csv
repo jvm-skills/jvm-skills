@@ -870,3 +870,6 @@ jochen setz,jose1979,reject,auto,empty profile no company bio orgs or JVM repos,
 masha staub,masha-staub,reject,auto,company mismatch Accenture vs Thoughtworks no JVM repos,2026-06-28
 joerg mueller,JoergM,confirm,auto,INNOQ company+org match Principal Consultant title 38 followers JUG orgs,2026-06-28
 andrii raikov,raykov,reject,auto,empty profile no company bio or JVM repos,2026-06-28
+joe egan,joeegan,reject,auto,no bio/company/org/JVM-repo; zero corroboration for UCL/ATLAS,2026-06-28
+joe egan,joes-git,confirm,auto,bio 'High Energy Physics PhD Student | UCL' matches UCL/ATLAS affiliation exactly,2026-06-28
+marcos maia,marcosmaia777,reject,auto,front-end student; no Bitvavo or JVM corroboration; wrong person,2026-06-28
