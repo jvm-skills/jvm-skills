@@ -1,0 +1,4 @@
+interface:
+  display_name: "Draft Article"
+  short_description: "Organize private article drafts with supporting logs."
+  default_prompt: "Create or update a private article draft source folder, then add supporting Codex or ChatGPT logs one by one with readable extracts, notes, and an updated outline."
