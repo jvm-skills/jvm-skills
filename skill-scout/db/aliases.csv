@@ -1012,3 +1012,4 @@ marlene mhangami,marlenemhangami,confirm,auto,"login exactly encodes full name, 
 patryk pietka,circuit-printer,reject,auto,"login circuit-printer does not match name, 0 followers, no corroboration",2026-06-28
 sumit saha,ss-is-master-chief,reject,auto,"common name, 5 candidates, company mismatch Microsoft vs squadrun",2026-06-28
 dominik tomalczyk,13Dominik,confirm,auto,"unique name, single match, AGH UST student consistent with conference speaker",2026-06-28
+ole maiwald,olemaiwald,confirm,auto,exact login match; bio architecting distributed systems; likely changed jobs MHP->BCG,2026-06-28

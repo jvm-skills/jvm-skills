@@ -69,3 +69,4 @@ started_at,conference,speakers,resolved,scanned_repos,skipped_repos,found,parked
 2026-06-28,Øredev 2025,113,47,584,0,0,66,"0 found, 0 needs_review, 0 bundle(s), 111 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
 2026-06-28,Devoxx Belgium 2025,114,99,269,0,3,15,"3 found, 0 needs_review, 0 bundle(s), 78 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
 2026-06-28,Ya!vaConf 2025,163,76,872,0,0,87,"0 found, 0 needs_review, 0 bundle(s), 72 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
+2026-06-28,W-JAX 2025,457,293,615,0,0,164,"0 found, 0 needs_review, 0 bundle(s), 16 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
