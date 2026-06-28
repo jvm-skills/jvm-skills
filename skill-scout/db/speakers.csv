@@ -14,7 +14,7 @@ Arnau Gómez Farell,arnau gomez farell,AI Engineer at Tiptap
 Asier Zapata,asier zapata,"Edpuzzle, Senior Staff Software Engineer"
 Ben Evans,ben evans,"Observability Lead, Red Hat Runtimes"
 Brian Vermeer,brian vermeer,Snyk
-Bruno Souza,bruno souza,helping developers design amazing careers
+Bruno Souza,bruno souza,SouJava
 Carles Nuñez,carles nunez,Product Engineer @ framer.com
 Carmen Laura Delgado Pérez,carmen laura delgado perez,Open Source Community Manager at Eclipse Foundation and Step4ward Founder and Mentor
 Cedric Clyburn,cedric clyburn,Red Hat
@@ -51,7 +51,7 @@ Serge Harb,serge harb,"Software Engineer, Preply"
 Sergi Almar,sergi almar,
 Sofia Lescano Carroll,sofia lescano carroll,Senior Software Engineer - Alan
 Sofia Santos,sofia santos,Mews - Staff Service Designer
-Steve Poole,steve poole,Developer Advocate at HeroDevs
+Steve Poole,steve poole,Independent
 Suzanne Daniels,suzanne daniels,Senior Chief Developer Advisor at Microsoft
 Thomas Hugle,thomas hugle,"TNG Technology Consulting GmbH, Senior Consultant"
 Tiffany Souterre,tiffany souterre,Senior Developer Advocate @AWS
@@ -69,7 +69,7 @@ James Birnie,james birnie,Forrow.uk
 Simon Brown,simon brown,
 Piotr Ceranek,piotr ceranek,Allegro
 Orysia Chuda - Rakowska,orysia chuda rakowska,Skills Boost
-Holly Cummins,holly cummins,IBM
+Holly Cummins,holly cummins,Quarkus
 Bartosz Cytrowski,bartosz cytrowski,Dropbox
 Tomasz Ducin,tomasz ducin,Bottega IT Minds
 Pavol Dudrík,pavol dudrik,GlobalLogic Slovakia
@@ -80,7 +80,7 @@ Artem Fast,artem fast,Revolut
 Mary Fesenko,mary fesenko,Dropbox
 Pasha Finkelshteyn,pasha finkelshteyn,BellSoft
 Michał Furdyna,micha furdyna,Tesco Technology
-Mario Fusco,mario fusco,IBM
+Mario Fusco,mario fusco,Red Hat
 Jakub Gajski,jakub gajski,j-labs
 Willem Jan Glerum,willem jan glerum,
 Michał Gniadek,micha gniadek,Ten Square Games
@@ -347,15 +347,15 @@ Willem Meints,willem meints,Chief AI Architect/Microsoft AI MVP
 Elena van Engelen,elena van engelen,Independent Senior Software Engineer
 Ties van de Ven,ties van de ven,Alliander
 Daniel Garnier-Moiroux,daniel garnier moiroux,Broadcom
-Tom Cools,tom cools,Developer Relations Engineer @ Timefold
-Rustam Mehmandarov,rustam mehmandarov,"Principal Engineer and Cloud Lead, Miles"
+Tom Cools,tom cools,Timefold
+Rustam Mehmandarov,rustam mehmandarov,
 Milen Dyankov,milen dyankov,
 Roberto Cortez,roberto cortez,IBM
 Ioannis Kolaxis,ioannis kolaxis,
-Jonathan Vila López,jonathan vila lopez,
+Jonathan Vila López,jonathan vila lopez,Sonar
 Stefan Angelov,stefan angelov,
 Ivan Yonkov,ivan yonkov,Codexio
-Cay Horstmann,cay horstmann,San José State University
+Cay Horstmann,cay horstmann,
 Johannes Bechberger,johannes bechberger,SAP SE
 Christian Heitzmann,christian heitzmann,SimplexaCode AG
 Marcin Chrost,marcin chrost,
@@ -644,7 +644,7 @@ Zeljko Dodlek,zeljko dodlek,Aiven
 Michael Dowden,michael dowden,"Technology leader, author, and international speaker"
 Martine Dowden,martine dowden,"Web Technologies, Firebase, and Angular GDE Microsoft MVP in Developer Technologies"
 Patrick Drechsler,patrick drechsler,Mathema
-Oliver Drotbohm,oliver drotbohm,Broadcom
+Oliver Drotbohm,oliver drotbohm,Spring
 Paul Dubs,paul dubs,Innovator im grafischen Programmieren für KI mit Xircuits
 Damian Dudziec,damian dudziec,Zeiss Digital Innovation
 Ivan Dugalic,ivan dugalic,AxonIQ
@@ -930,7 +930,7 @@ Marco Sieben,marco sieben,"Agiler Fullstack-Entwickler
 | Optimierung von Softwareentwicklungsprozessen."
 Karsten Silz,karsten silz,Full-Stack-Java-Entwickler
 Michael Simons,michael simons,Neo4j
-Falk Sippach,falk sippach,"Softwarearchitekt, Berater und Trainer von embarc Software Consulting GmbH mit Fokus auf Java und agile Projekte"
+Falk Sippach,falk sippach,embarc
 Karsten Sitterberg,karsten sitterberg,"Freiberuflicher Entwickler, Trainer und Berater für Webtechnologien und Java | Experte für HTTP APIs, TypeScript und Angular"
 Kilian Soerries,kilian soerries,Experte für Midtier- und Container-Technologien & DevOps Engineer
 Ralf Somplatzki,ralf somplatzki,"„Quality is not an act, it is a habit.“"
@@ -1607,7 +1607,7 @@ Marc Philipp,marc philipp,JUnit
 Nupur Agarwal,nupur agarwal,ING
 Markus Kett,markus kett,MicroStream
 Dominika Tasarz,dominika tasarz,Payara
-Mary Grygleski,mary grygleski,
+Mary Grygleski,mary grygleski,AI Collective
 Grace Robinson,grace robinson,IBM
 Frank Delporte,frank delporte,Azul
 Sharat Chander,sharat chander,Oracle
@@ -1799,14 +1799,14 @@ Kevin Strohmeyer,kevin strohmeyer,
 Anders Swanson,anders swanson,Oracle Corp.
 Brandon Tylke,brandon tylke,
 Heather VanCura,heather vancura,Oracle
-Dan Vega,dan vega,Broadcom
+Dan Vega,dan vega,VMware Tanzu
 Phil Webb,phil webb,Broadcom
 Rob Winch,rob winch,Broadcom
 Brad Wood,brad wood,Ortus
 Ted M. Young,ted m young,JitterTed Productions
 Ho Jong Yu,ho jong yu,
 Daneez Zamangil,daneez zamangil,Callrail
-Richard Fichtner,richard fichtner,
+Richard Fichtner,richard fichtner,XDEV Software GmbH
 Robert Eichenseer,robert eichenseer,
 Johannes Rabauer,johannes rabauer,
 Christoph Menzel,christoph menzel,
@@ -1993,7 +1993,7 @@ Gerard Sans,gerard sans,Google Developer Expert; former AWS Amplify team
 Guy Nesher,guy nesher,Redis
 Heath Kesler,heath kesler,OpenTek Solutions
 Henri Helvetica,henri helvetica,
-Henri Tremblay,henri tremblay,TS Imagine
+Henri Tremblay,henri tremblay,TS Imagine Canada
 Jessica Tornare,jessica tornare,
 Joel Tosi,joel tosi,Dojo & Co
 Johan Janssens,johan janssens,Timble
@@ -2006,7 +2006,7 @@ Justine Gehring,justine gehring,Gologic
 Karol Deland,karol deland,Workleap
 Kathryn Grayson Nanz,kathryn grayson nanz,Progress Software
 Kilian Valkhof,kilian valkhof,Polypane
-Kito Mann,kito mann,"Principal Consultant at Virtua, Inc."
+Kito Mann,kito mann,"Virtua, Inc."
 Loïc Tréhin,loic trehin,ESA Series
 Louis Beaudoin-Allaire,louis beaudoin allaire,Workleap
 Maarten Balliauw,maarten balliauw,Duende Software
@@ -3129,3 +3129,11 @@ Vincent Chegwidden,vincent chegwidden,Entelect
 "Professor Isidro, Ph.D.",professor isidro ph d,Federal University of ABC
 Bruno Ferreira de Souza,bruno ferreira de souza,SouJava
 Michael Levin,michael levin,Cambridge Web Design
+María Arias de Reyna Dominguez,maria arias de reyna dominguez,IBM
+Eric Deandrea,eric deandrea,IBM
+Andrew Dinn,andrew dinn,IBM
+Loiane Groner,loiane groner,BNY
+Andrzej Grzesik,andrzej grzesik,
+Elias Nogueira,elias nogueira,
+Bazlur Rahman,bazlur rahman,
+Vladimir Sonkin,vladimir sonkin,Luxoft
