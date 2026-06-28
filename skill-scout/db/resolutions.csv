@@ -675,7 +675,7 @@ hergy fongue,rjtch,MED,Hergy Fongue,,11,fullname,2026-06-28,2026-09-26
 christina framke,cgebken,MED,Christina Framke,,0,fullname,2026-06-28,2026-09-26
 maximilian franzke,mfranzke,HIGH,Maximilian Franzke,@db-ux-design-system @db-ui @deutschebahn @dbsystel,62,fullname,2026-06-28,
 maurice freund,,UNRESOLVED,,,,fullname,2026-06-28,2026-09-26
-uwe friedrichsen,ufried,MED,Uwe Friedrichsen,codecentric AG,19,fullname,2026-06-28,2026-09-26
+uwe friedrichsen,ufried,HIGH,Uwe Friedrichsen,codecentric AG,19,alias,2026-06-28,
 thilo frotscher,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 juan fumero,jjfumero,HIGH,Juan Fumero,@oracle,87,fullname+jvmrepo,2026-06-28,
 kai gellien,gftkign,MED,Kai Gellien @ GFT,,0,fullname,2026-06-28,2026-09-26
@@ -702,7 +702,7 @@ sascha gro,saschalev,MED,Sascha Groß,The Real Insight,1,fullname,2026-06-28,202
 christian grumme,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 steffen grunwald,steffeng,HIGH,Steffen Grunwald,Amazon Web Services EMEA Sàrl,58,fullname+dominant,2026-06-28,
 martin gunther,mintar,HIGH,Martin Günther,@DFKI-NI ,201,fullname+dominant,2026-06-28,
-serafima gurevich,s-gurevich,MED,Serafima Gurevich,,2,fullname,2026-06-28,2026-09-26
+serafima gurevich,s-gurevich,HIGH,Serafima Gurevich,,2,alias,2026-06-28,
 halil cem gursoy,hcguersoy,HIGH,Dr. Halil-Cem Gürsoy,Capgemini,29,fullname-ascii,2026-06-28,
 arno haase,arnohaase,HIGH,Arno Haase,,33,fullname+jvmrepo,2026-06-28,
 matthias hagele,anotherMatze,MED,Matthias Hägele,,5,fullname,2026-06-28,2026-09-26
@@ -757,7 +757,7 @@ christian kehl,CKehl,MED,Christian Kehl,,21,fullname,2026-06-28,2026-09-26
 christopher keibel,CKeibel,MED,Christopher Keibel,,15,fullname,2026-06-28,2026-09-26
 johannes kellner,johannes-kellner,MED,Johannes Kellner,,1,fullname,2026-06-28,2026-09-26
 christian kemper,ck3mp3r,MED,Christian Kemper 🍉,,21,fullname,2026-06-28,2026-09-26
-simon kerler,namelessvoid,MED,Simon Kerler,,20,fullname,2026-06-28,2026-09-26
+simon kerler,namelessvoid,HIGH,Simon Kerler,,20,alias,2026-06-28,
 patrick kiessling,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 thomas kloppe,MimirsSource,HIGH,Thomas Kloppe,,0,fullname+jvmrepo,2026-06-28,
 niko kobler,dasniko,HIGH,Niko Köbler,"Keycloak Expert, Freelancer",710,fullname,2026-06-28,
@@ -821,7 +821,7 @@ andreas monschau,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 diana montalion,dianamontalion,MED,Diana Montalion,@MentrixGroup ,9,fullname,2026-06-28,2026-09-26
 thomas much,thmuch,HIGH,Thomas Much,@DieTechniker,39,fullname,2026-06-28,
 thomas muller,Tom94,HIGH,Thomas Müller,NVIDIA,1292,fullname+dominant,2026-06-28,
-sven muller,svenmueller,MED,Sven Müller,commercetools GmbH,32,fullname,2026-06-28,2026-09-26
+sven muller,svenmueller,HIGH,Sven Müller,commercetools GmbH,32,alias,2026-06-28,
 robin muller,MrRoundRobin,HIGH,Robin Müller,@Microsoft,148,fullname+dominant,2026-06-28,
 ralf d muller,rdmueller,HIGH,Ralf D. Müller,@dbsystel ,199,fullname-ascii+org,2026-06-28,
 frank muller,suchasurge,MED,Frank Müller,,26,fullname,2026-06-28,2026-09-26
@@ -3133,3 +3133,20 @@ andrzej grzesik,,UNRESOLVED,,,,fullname,2026-06-28,2026-09-26
 elias nogueira,eliasnogueira,HIGH,Elias Nogueira,Booking.com,1391,fullname+jvmrepo,2026-06-28,
 bazlur rahman,rokon12,HIGH,A N M Bazlur Rahman ,Hammerspace,650,fullname+jvmrepo,2026-06-28,
 vladimir sonkin,sonkin,HIGH,Vladimir Sonkin,,17,fullname+jvmrepo,2026-06-28,
+jan schmitz hermes,schmitzhermes,HIGH,Jan Schmitz-Hermes,L21s,14,fullname-ascii,2026-06-28,
+tobias larscheid,tobilarscheid,HIGH,Tobias Larscheid,L21s,19,fullname,2026-06-28,
+torben keller,torbenkeller,HIGH,Torben Keller,INNOQ Deutschland GmbH,10,fullname,2026-06-28,
+torsten fink,tnfink,HIGH,Torsten Fink,tech@spree,6,fullname+jvmrepo,2026-06-28,
+jochen setz,jose1979,MED,Jochen Setz,,0,fullname,2026-06-28,2026-09-26
+nicolas byl,nbyl,HIGH,Nicolas Byl,@nexineer,33,fullname,2026-06-28,
+nina nitzsche,ninam2,HIGH,Nina Marie Nitzsche,,0,fullname+jvmrepo,2026-06-28,
+wolfgang strunk,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+tobias deekens,tdeekens,HIGH,Tobias Deekens,commercetools GmbH,141,fullname,2026-06-28,
+olaf herden,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+seun faluyi,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+dehla sokenou,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+masha staub,masha-staub,MED,Masha Staub,@Thoughtworks,0,fullname,2026-06-28,2026-09-26
+florian rudisch,frudisch,HIGH,Florian Rudisch,Senacor Technologies AG,11,fullname,2026-06-28,
+joerg mueller,JoergM,MED,Joerg Mueller,INNOQ,38,fullname,2026-06-28,2026-09-26
+susanne pfeiffer,,UNRESOLVED,,,,fullname,2026-06-28,2026-09-26
+andrii raikov,raykov,MED,Andrii Raikov,,17,fullname,2026-06-28,2026-09-26
