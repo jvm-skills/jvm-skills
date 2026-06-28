@@ -853,3 +853,4 @@ matthias kirschner,kirschner,confirm,auto,aff=FSFE matches company=Free Software
 matija suklje,silverhook,confirm,auto,"corroborated: company=@liferay, orgs=['liferay', 'kiberpipa'",2026-06-28
 nektarios konstantinidis,nekkon,reject,auto,"bio=Lead FE Developer; no JVM repos; 0 followers — FE dev, not JVM speaker",2026-06-28
 stratos kourtzanidis,melkor54248,reject,auto,bio=.NET Developer; company=ThessalonikiNet-MeetUp; orgs=msmvps — .NET stack not JVM,2026-06-28
+sergey polyashov,mincer,reject,auto,sparse profile: no bio no company no JVM repos zero corroboration despite exact name match,2026-06-28

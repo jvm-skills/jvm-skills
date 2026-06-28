@@ -52,3 +52,4 @@ started_at,conference,speakers,resolved,scanned_repos,skipped_repos,found,parked
 2026-06-28,FOSDEM 2026,1034,410,6301,0,1,624,"1 found, 0 needs_review, 0 bundle(s), 647 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
 2026-06-28,ChurConf 2025,8,7,95,0,0,1,"0 found, 0 needs_review, 0 bundle(s), 4 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
 2026-06-28,Voxxed Days Thessaloniki 2025,10,5,88,0,0,5,"0 found, 0 needs_review, 0 bundle(s), 2 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
+2026-06-28,XtremeJ 2025,12,9,64,0,0,3,"0 found, 0 needs_review, 0 bundle(s), 0 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."

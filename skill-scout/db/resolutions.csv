@@ -1920,7 +1920,7 @@ marcus norder tuitje,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 ed burns,edburns,HIGH,Ed Burns,@microsoft ,148,fullname+jvmrepo,2026-06-28,
 oliver manz,olivermanz,HIGH,Oliver Manz,,0,fullname+jvmrepo,2026-06-28,
 julia pedak,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
-thomas krieger,tom-krieger,MED,Thomas Krieger,THK IT Beratung,0,fullname,2026-06-28,2026-09-26
+thomas krieger,tom-krieger,HIGH,Thomas Krieger,THK IT Beratung,0,alias,2026-06-28,
 christoph iserlohn,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 dr stefan schlott,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 prof dr johannes schildgen,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
@@ -3079,3 +3079,7 @@ stratos kourtzanidis,melkor54248,MED,Stratos Kourtzanidis,https://github.com/The
 chrysovalantis koutsoumpos,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 anastasios theodosiou,atheodosiou,HIGH,Anastasios Theodosiou,Arhs Developments Hellas,21,fullname,2026-06-28,
 george tzinos,gtzinos,HIGH,George Tzinos,@InstaShopDevs ,57,fullname,2026-06-28,
+andres sacco,andres-sacco,HIGH,Andres Sacco,,103,fullname+jvmrepo,2026-06-28,
+tanya janca,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+sergey polyashov,mincer,MED,Sergey Polyashov,,5,fullname,2026-06-28,2026-09-26
+li haoyi,lihaoyi,HIGH,Li Haoyi,,5195,fullname+jvmrepo,2026-06-28,
