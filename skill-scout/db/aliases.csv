@@ -861,3 +861,8 @@ diego silva,DiegoMBS,reject,auto,extremely common name; no JVM repos or bio sign
 vicente suc,vicentesuc,confirm,auto,bio explicitly says Java/.Net Core; distinctive name,2026-06-28
 tanja obradovic,TanjaObradovic,confirm,auto,Eclipse Foundation company directly corroborates Jakarta EE Program Manager role,2026-06-28
 shabnam mayel,shabnammayel,confirm,auto,Unique name exact match; sparse profile consistent with marketing (non-developer) role,2026-06-28
+michael johnson,migarjo,reject,auto,common name; no bio/company/JVM repos; no affiliation match for SQLSA,2026-06-28
+gerard de jong,gerarddejong,reject,auto,"no JVM repos, no company, bio gives no affiliation signal for IQBusiness",2026-06-28
+mario junior,Mario-Junior,reject,auto,company Stone Co. != XP Inc.; no JVM repos; common name with multiple candidates,2026-06-28
+veliswa boya,veliswaan,confirm,auto,bio says AWS Community Hero/Certified — directly corroborates AWS affiliation; distinctive name,2026-06-28
+michael levin,MichaelLevin5908,reject,auto,company Drip/YC != Cambridge Web Design; no JVM repos; common name,2026-06-28
