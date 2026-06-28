@@ -851,3 +851,5 @@ renzo davoli,rd235,confirm,auto,"corroborated: orgs=['virtualsquare'], flw=168",
 bradley m kuhn,bkuhn,confirm,auto,"corroborated: company=@conservancy , has_bio, flw=49",2026-06-28
 matthias kirschner,kirschner,confirm,auto,aff=FSFE matches company=Free Software Foundation Europe,2026-06-28
 matija suklje,silverhook,confirm,auto,"corroborated: company=@liferay, orgs=['liferay', 'kiberpipa'",2026-06-28
+nektarios konstantinidis,nekkon,reject,auto,"bio=Lead FE Developer; no JVM repos; 0 followers — FE dev, not JVM speaker",2026-06-28
+stratos kourtzanidis,melkor54248,reject,auto,bio=.NET Developer; company=ThessalonikiNet-MeetUp; orgs=msmvps — .NET stack not JVM,2026-06-28

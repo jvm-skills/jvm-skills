@@ -1560,7 +1560,7 @@ karl henrik nilsson,karl-henrik,HIGH,Karl-Henrik Nilsson,GAC,11,fullname,2026-06
 michalis papadimitriou,mikepapadim,HIGH,Michalis Papadimitriou,Neo4j,57,fullname+jvmrepo,2026-06-28,
 peggy papadopoulou,pegpapas,HIGH,Papadopoulou Peggy,Deloitte,2,fullname,2026-06-28,
 dimitris papageorgiou,dpapageo,HIGH,Dimitris Papageorgiou,AWS,2,fullname+jvmrepo,2026-06-28,
-patroklos papapetrou,ppapapetrou76,MED,Papapetrou Patroklos,,107,fullname,2026-06-28,2026-09-26
+patroklos papapetrou,ppapapetrou76,HIGH,Papapetrou Patroklos,,107,alias,2026-06-28,
 vadym pinchuk,VadymPinchuk,MED,Vadym Pinchuk,,94,fullname,2026-06-28,2026-09-26
 thomas pliakas,pliakas,HIGH,Thomas Pliakas,Roukou,6,fullname+jvmrepo,2026-06-28,
 christos psychogyios,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
@@ -3071,3 +3071,11 @@ phillip kruger,phillip-kruger,HIGH,Phillip Krüger,Red Hat,267,fullname,2026-06-
 tom hombergs,thombergs,HIGH,Tom Hombergs,@atlassian,2603,fullname,2026-06-28,
 paul king,paulk-asert,HIGH,Paul King,,199,fullname+org,2026-06-28,
 michael barker,mikeb01,HIGH,Michael Barker,,460,fullname+jvmrepo,2026-06-28,
+giorgos gaganis,gaganis,HIGH,Giorgos Gaganis,,11,fullname+jvmrepo,2026-06-28,
+argiris georgiadis,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+nektarios konstantinidis,nekkon,MED,Nektarios Konstantinidis,,0,fullname,2026-06-28,2026-09-26
+vissarion kourtesas,Kortex,HIGH,Vissarion Kourtesas,PRODYNA SE,4,fullname,2026-06-28,
+stratos kourtzanidis,melkor54248,MED,Stratos Kourtzanidis,https://github.com/ThessalonikiNet-MeetUp,26,fullname,2026-06-28,2026-09-26
+chrysovalantis koutsoumpos,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+anastasios theodosiou,atheodosiou,HIGH,Anastasios Theodosiou,Arhs Developments Hellas,21,fullname,2026-06-28,
+george tzinos,gtzinos,HIGH,George Tzinos,@InstaShopDevs ,57,fullname,2026-06-28,
