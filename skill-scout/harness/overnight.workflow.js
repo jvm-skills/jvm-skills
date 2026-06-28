@@ -1,11 +1,11 @@
 export const meta = {
   name: 'skill-scout-overnight',
-  description: 'Overnight skill-scout: harvest conference rosters, serial chunked GitHub tree-scan (core-bucket mutex), Sonnet eval + Opus recheck, apply to CSVs with validation.',
+  description: 'Overnight skill-scout: harvest conference rosters, serial chunked GitHub tree-scan (core-bucket mutex), Haiku judge + Sonnet adversarial recheck, apply to CSVs with validation. Mechanical command-runner agents run on Haiku/low-effort.',
   phases: [
     { title: 'Load queue', detail: 'read unscanned confs from conferences.csv' },
     { title: 'Harvest', detail: 'WebFetch rosters in parallel; browser fallback serial' },
     { title: 'Scan', detail: 'SERIAL chunked tree-scan (GitHub core mutex)' },
-    { title: 'Eval', detail: 'Sonnet score + Opus adversarial recheck' },
+    { title: 'Eval', detail: 'Haiku judge + Sonnet adversarial recheck' },
     { title: 'Apply', detail: 'serial: build_conf.py (deterministic) + CSV upsert + self-validate' },
   ],
 }
@@ -17,7 +17,9 @@ const TODAY = A.today || '2026-06-26'
 const LIMIT = A.limit || 999
 const ONLY = Array.isArray(A.slugs) ? new Set(A.slugs) : null // optional explicit slug allowlist
 const CHUNK = 22 // speakers per scout.py call — under the 10-min Bash timeout; bigger = fewer scan agents
-const JUDGE_MODEL = A.judgeModel || 'haiku' // bulk per-file judging — cheap model; Opus rechecks promotions
+const JUDGE_MODEL = A.judgeModel || 'haiku' // bulk per-file judging — cheap model
+const RECHECK_MODEL = A.recheckModel || 'sonnet' // adversarial recheck — Sonnet by default; pass recheckModel:'opus' for the hardest runs
+const MECH = { model: 'haiku', effort: 'low' } // pure command-runner agents (run a python script, report ok) — no reasoning, no quality tradeoff
 const EVAL_ONLY = Array.isArray(A.evalOnly) && A.evalOnly.length ? A.evalOnly : null // [{slug,name,url}] reuse existing *_scout.json
 const DRY_APPLY = !!A.dryApply // apply.py --dry (render, don't mutate the CSVs) — for fast tests
 const MAX_SPEAKERS = A.maxSpeakers || 0 // optional per-conference speaker cap (small trials); 0 = full roster
@@ -67,7 +69,7 @@ phase('Load queue')
 const q = await agent(
   `Run: python3 ${H}/queue.py — it prints JSON {confs:[{name,url,slug}]} of every unscanned conference with `
   + `DETERMINISTIC slugs. Return that JSON object verbatim (do not modify the slugs).`,
-  { label: 'load-queue', phase: 'Load queue', schema: QUEUE_SCHEMA, model: 'sonnet' })
+  { label: 'load-queue', phase: 'Load queue', schema: QUEUE_SCHEMA, ...MECH })
 const allConfs = (q && q.confs || [])
 const confs = (ONLY ? allConfs.filter(c => ONLY.has(c.slug)) : allConfs).slice(0, LIMIT)
 Object.assign(bySlug, Object.fromEntries(confs.map(c => [c.slug, c])))
@@ -120,7 +122,7 @@ for (const c of toScan) {
   const sp = await agent(
     `Run: python3 ${H}/split_speakers.py ${H}/${c.slug}_speakers.json ${H}/${c.slug}_chunk ${CHUNK} ${MAX_SPEAKERS}\n`
     + `It prints the number of chunk files written. Return {chunks:<that integer>}.`,
-    { label: `split:${c.slug}`, phase: 'Scan', schema: SPLIT_SCHEMA, model: 'sonnet' })
+    { label: `split:${c.slug}`, phase: 'Scan', schema: SPLIT_SCHEMA, ...MECH })
   const n = (sp && sp.chunks) || 0
   if (!n) { log(`  ${c.slug}: split produced 0 chunks, skipping`); continue }
   let allOk = true
@@ -131,7 +133,7 @@ for (const c of toScan) {
       + `Otherwise run exactly: python3 ${H}/scout.py ${H}/${c.slug}_chunk_${k}.json ${H}/${c.slug}_scout_${k}.json\n`
       + `This is rate-limit-throttled and may take several minutes; do not interrupt it. Return {ok:true} if it wrote the `
       + `output file (the last line is "wrote ..."), else {ok:false,note:"<tail of error>"}.`,
-      { label: `scout:${c.slug}#${k}`, phase: 'Scan', schema: STEP_SCHEMA, model: 'sonnet' })
+      { label: `scout:${c.slug}#${k}`, phase: 'Scan', schema: STEP_SCHEMA, ...MECH })
     if (!r || !r.ok) { allOk = false; log(`  ${c.slug} chunk ${k}: scout failed (${r && r.note})`) }
   }
   const parts = Array.from({ length: n }, (_, k) => `${H}/${c.slug}_scout_${k}.json`).join(' ')
@@ -144,7 +146,7 @@ for (const c of toScan) {
     + `2. Checkpoint speakers+resolutions to the DB (for cross-conference dedup). Write this JSON to ${H}/${c.slug}_ckpt.json exactly:\n${ckpt}\n`
     + `   then run: python3 ${H}/apply.py ${H}/${c.slug}_ckpt.json --checkpoint  — it writes only speakers/resolutions and must print "VALIDATION PASS".\n`
     + `Return {ok:true,note:"<merge summary + checkpoint speaker/resolution counts>"} if BOTH succeed, else {ok:false,note:"<error>"}.`,
-    { label: `merge+ckpt:${c.slug}`, phase: 'Scan', schema: STEP_SCHEMA, model: 'sonnet' })
+    { label: `merge+ckpt:${c.slug}`, phase: 'Scan', schema: STEP_SCHEMA, ...MECH })
   if (mg && mg.ok) { scanned.push(c); log(`  scanned+checkpointed ${c.slug} (${n} chunks)${allOk ? '' : ' [partial]'}: ${mg.note || ''}`) }
 }
 log(`Scan complete: ${scanned.length} conferences scanned.`)
@@ -167,7 +169,7 @@ const prep = (await parallel(scanned.map(c => () => agent(
   + `1. python3 ${H}/bundle_detect.py ${H}/${c.slug}_scout.json ${H}/${c.slug}_bundles.json   (prints "bundles: N candidate(s) ...")\n`
   + `2. python3 ${H}/prefilter.py ${H}/${c.slug}_scout.json ${H}/${c.slug}_bundles.json        (prints "judge=N skip=M ...")\n`
   + `Return {judge:N, skip:M, bundles:N} from those two outputs.`,
-  { label: `prep:${c.slug}`, phase: 'Eval', schema: PREP_SCHEMA, model: 'sonnet' })
+  { label: `prep:${c.slug}`, phase: 'Eval', schema: PREP_SCHEMA, ...MECH })
   .then(r => ({ slug: c.slug, judge: (r && r.judge) || 0, skip: (r && r.skip) || 0, bundles: (r && r.bundles) || 0 }))))).filter(Boolean)
 const prepBySlug = Object.fromEntries(prep.map(p => [p.slug, p]))
 log(`Prep: ${prep.reduce((n, p) => n + p.judge, 0)} files to judge, ${prep.reduce((n, p) => n + p.skip, 0)} cheap-skipped, ${prep.reduce((n, p) => n + p.bundles, 0)} bundle candidates.`)
@@ -202,13 +204,13 @@ await parallel(scanned.filter(c => (prepBySlug[c.slug] || {}).bundles).map(c => 
   { label: `bundle-eval:${c.slug}`, phase: 'Eval', schema: BUNDLE_EVAL_SCHEMA, model: 'sonnet' })
   .then(r => { const m = {}; for (const v of (r && r.verdicts) || []) m[`${v.repo}|${v.root}`] = v; bundleVerdictsBySlug[c.slug] = m })))
 
-// 4c) Opus adversarial recheck — individual promotions only
+// 4c) adversarial recheck (RECHECK_MODEL, default Sonnet) — individual promotions only
 const proms = []
 for (const [slug, vs] of Object.entries(verdictsBySlug)) for (const v of vs) if (v.status === 'found' || v.status === 'needs_review') proms.push({ ...v, slug })
 const bundleProm = Object.values(bundleVerdictsBySlug).reduce((n, m) => n + Object.values(m).filter(v => v.cohesive && (v.status === 'found' || v.status === 'needs_review')).length, 0)
-log(`Judged ${judgedCount} files (+${bundleProm} bundle promotions); ${proms.length} individual promotions; Opus rechecking each.`)
+log(`Judged ${judgedCount} files (+${bundleProm} bundle promotions); ${proms.length} individual promotions; ${RECHECK_MODEL} rechecking each.`)
 // stable, short cache key per candidate (djb2 over login|repo|path) — lets a retry skip already-decided
-// rechecks instead of re-hammering Opus (the batch-1 rate-limit storm left ~200 rechecks unresolved).
+// rechecks instead of re-hammering the recheck model (the batch-1 rate-limit storm left ~200 rechecks unresolved).
 const djb2 = t => { let h = 5381; for (let i = 0; i < t.length; i++) h = ((h * 33) ^ t.charCodeAt(i)) >>> 0; return h.toString(36) }
 const rcFile = s => `${H}/recheck_${s.slug}_${djb2(`${s.login}|${s.repo}|${s.path}`)}.json`
 const rechecks = await parallel(proms.map(s => () => agent(
@@ -219,10 +221,10 @@ const rechecks = await parallel(proms.map(s => () => agent(
   + `Keep ONLY a genuine, created, REUSABLE, JVM-specific skill in this person's OWN non-fork repo — not a bare project-doc, not vendored/forked, not boilerplate. `
   + `NOTE: living in a demo/workshop repo is NOT by itself a reason to drop a genuinely reusable skill. `
   + `WRITE your verdict to ${rcFile(s)} as {keep:boolean, reason:"<one line>"} and return the SAME object.`,
-  { label: `recheck:${s.login}/${s.repo}`, phase: 'Eval', schema: RECHECK_SCHEMA, model: 'opus' })
+  { label: `recheck:${s.login}/${s.repo}`, phase: 'Eval', schema: RECHECK_SCHEMA, model: RECHECK_MODEL, effort: 'high' })
   .then(v => ({ key: `${s.slug}|${s.login}|${s.repo}|${s.path}`, keep: !v || v.keep !== false, reason: v && v.reason }))))
 const dropReason = {}
-for (const v of rechecks.filter(x => !x.keep)) { dropReason[v.key] = v.reason || ''; log(`  Opus dropped ${v.key.split('|').slice(1).join('/')}: ${v.reason || ''}`) }
+for (const v of rechecks.filter(x => !x.keep)) { dropReason[v.key] = v.reason || ''; log(`  recheck dropped ${v.key.split('|').slice(1).join('/')}: ${v.reason || ''}`) }
 
 // 4d) investigate — MED matches: deeper profile look vs the talk topic; record accept/reject for future runs.
 await parallel(scanned.map(c => () => agent(
@@ -237,11 +239,11 @@ await parallel(scanned.map(c => () => agent(
 await agent(
   `Run: python3 ${H}/merge_aliases.py ${DBDIR}/aliases.csv ${scanned.map(c => `${H}/${c.slug}_aliases_add.csv`).join(' ')}\n`
   + `(missing add-files are skipped). It prints "aliases: +N new (M total)". Return {ok:true, note:"<that line>"}.`,
-  { label: 'merge-aliases', phase: 'Eval', schema: STEP_SCHEMA, model: 'sonnet' })
+  { label: 'merge-aliases', phase: 'Eval', schema: STEP_SCHEMA, ...MECH })
 
 // 4e) assemble per-conf overlays. The heavy skills[]/rejected[] arrays are reconstructed DETERMINISTICALLY
 // from on-disk <slug>_verdicts_*.json by build_conf.py at apply time — here we only need the counts (for the
-// run-note + final summary) and the SMALL deltas the verdicts can't carry: `drops` (Opus recheck rejections)
+// run-note + final summary) and the SMALL deltas the verdicts can't carry: `drops` (adversarial recheck rejections)
 // and bundle verdicts. This keeps the apply agent's payload tiny so large confs can't blow the 32k output cap.
 const overlays = scanned.map(c => {
   const vs = verdictsBySlug[c.slug] || []
@@ -287,7 +289,7 @@ for (const o of overlays) {
       ? `(--dry renders the would-be CSVs without writing or self-validating.) Return {ok:true, validation:"DRY", note:"<the build_conf summary line>"}.`
       : `apply.py must print "VALIDATION PASS". Return {ok:true, validation:"PASS", note:"<the build_conf summary line>"} on PASS; `
         + `if it prints FAIL, return {ok:false, validation:"FAIL", note:"<the ragged/dup detail>"} and do NOT attempt to fix data.`),
-    { label: `apply:${o.slug}`, phase: 'Apply', schema: APPLY_SCHEMA, model: 'sonnet' })
+    { label: `apply:${o.slug}`, phase: 'Apply', schema: APPLY_SCHEMA, ...MECH })
   applied.push({ slug: o.slug, ...(r || { ok: false, validation: '?' }) })
   if (!r || r.validation !== 'PASS') log(`  APPLY ISSUE ${o.slug}: ${r && r.validation} ${r && r.note}`)
 }
@@ -295,7 +297,7 @@ for (const o of overlays) {
 // 5b) rule-refinement — let the eval LEARN: append general lessons to the rules files (git-tracked, auditable).
 if (!DRY_APPLY) await parallel(overlays.map(o => () => agent(
   `Refine the skill-scout rule files from conference "${bySlug[o.slug].name}" results.\n`
-  + `Read ${EVAL_RULES}. Inspect this run's outcomes in ${DBDIR}/skill_files.csv, ${DBDIR}/rejected.csv, ${DBDIR}/bundles.csv and note any judge↔Opus disagreements or surprising calls.\n`
+  + `Read ${EVAL_RULES}. Inspect this run's outcomes in ${DBDIR}/skill_files.csv, ${DBDIR}/rejected.csv, ${DBDIR}/bundles.csv and note any judge↔recheck disagreements or surprising calls.\n`
   + `ONLY if you find a GENERAL, reusable lesson not already captured, prepend one or two concise dated bullets to the "Learnings changelog" of ${EVAL_RULES} (and/or ${MATCH_RULES} for matching lessons). Do NOT bulk-rewrite or delete existing rules; keep additions minimal and general.\n`
   + `Return {ok:true, added:<#bullets added>, note:"<what you added, or 'nothing new'>"}.`,
   { label: `refine:${o.slug}`, phase: 'Apply', schema: REFINE_SCHEMA, model: 'sonnet' })
@@ -303,7 +305,7 @@ if (!DRY_APPLY) await parallel(overlays.map(o => () => agent(
 
 await agent(
   `Run: python3 ${H}/gen_candidates.py && python3 ${H}/gen_review_html.py — regenerate the human views. Return {ok:true}.`,
-  { label: 'regen-views', phase: 'Apply', schema: STEP_SCHEMA, model: 'sonnet' })
+  { label: 'regen-views', phase: 'Apply', schema: STEP_SCHEMA, ...MECH })
 
 const foundTotal = overlays.reduce((n, o) => n + (o.nFound || 0), 0)
 const nrTotal = overlays.reduce((n, o) => n + (o.nNr || 0), 0)
