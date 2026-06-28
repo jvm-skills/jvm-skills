@@ -904,3 +904,10 @@ toshiki nishioka,tnishiok,reject,auto,no JVM signal; no company; ambiguous vs tn
 yuichiro hayashi,onihei,reject,auto,bio is iOS music app; no JVM; no company match,2026-06-28
 neel bhatt,Neel1302,reject,auto,ML/CV postdoc at UT Austin; no JVM repos; no connection to RTL or Java,2026-06-28
 peter schuler,peter-m-schuler,reject,auto,company it-objects GmbH mismatches Rabobank; no JVM repos; multiple Peter Schulers without corroboration,2026-06-28
+kevin azijn,kazijn,confirm,auto,distinctive Belgian/Dutch name; sole candidate; exact name match; AWS speaker at JVM conference,2026-06-28
+andrea berglund,andberg,confirm,auto,moderately distinctive name; sole gender-matching candidate; runner-up is Andreas not Andrea; Swedish context consistent with Arbetsförmedlingen,2026-06-28
+stefan bohringer,sboehringer,reject,auto,moderately common German name; zero corroboration (no company/bio/orgs/jvm_repo); Educational Data Science affiliation not clearly JVM,2026-06-28
+martin gunnarsson,Blazter99,reject,auto,bio says currently learning programming contradicts professional conference speaker; no Parkster affiliation; common Swedish name,2026-06-28
+gang luo,crysislinux,reject,auto,bio says JavaScript Developer contradicts JVM conference speaker; no Electrolux affiliation; no JVM repos,2026-06-28
+georges saab,georgessb,confirm,auto,Georges Saab is well-known Oracle Java VP; login georgessb abbreviates Georges Saab; reversed name format Saab Georges consistent with Eastern name order,2026-06-28
+andreas wanqvist,mobilemancer,reject,auto,Aurelia JavaScript framework core team member; Microsoft MVP; no JVM repos; profile stack is JS/frontend not JVM,2026-06-28

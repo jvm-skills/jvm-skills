@@ -1094,7 +1094,7 @@ saoko uranaka,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 shigeki shoji,takesection,HIGH,Shigeki Shoji,,29,fullname+jvmrepo,2026-06-28,
 shimashima35,,UNRESOLVED,,,,fullname,2026-06-28,2026-09-26
 shun watanabe,shika358,MED,Shun Watanabe,,12,fullname,2026-06-28,2026-09-26
-stephen chin,steveonjava,MED,Stephen Chin,,214,fullname,2026-06-28,2026-09-26
+stephen chin,steveonjava,HIGH,Stephen Chin,,214,alias,2026-06-28,
 takahiro nagao,tnagao7,HIGH,Takahiro Nagao,Fujitsu Limited,3,fullname,2026-06-28,
 takeshi miyajima,miyazi777,MED,takeshi miyajima,,6,fullname,2026-06-28,2026-09-26
 takumi endo,ENDOTAKUMI,MED,ENDO Takumi,,27,fullname,2026-06-28,2026-09-26
@@ -3285,3 +3285,32 @@ reinier zwitserloot,rzwitserloot,HIGH,Reinier Zwitserloot,Zorg op Orde BV,423,fu
 roel spilker,rspilker,HIGH,Roel Spilker,TOPdesk,84,fullname+jvmrepo,2026-06-28,
 julian exenberger,jexenberger,HIGH,Julian Exenberger,Cap Gemini,13,fullname+jvmrepo,2026-06-28,
 robert schrijvers,robertxocs,HIGH,Robert Schrijvers,,1,fullname+jvmrepo,2026-06-28,
+kevin azijn,kazijn,MED,Kevin Azijn,,3,fullname,2026-06-28,2026-09-26
+anna chiara bellini,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+andrea berglund,andberg,MED,Andrea Berglund,,7,fullname,2026-06-28,2026-09-26
+jonas boner,jboner,HIGH,Jonas Bonér,Akka,1854,fullname,2026-06-28,
+stefan bohringer,sboehringer,MED,Stefan Böhringer,,15,fullname,2026-06-28,2026-09-26
+renato guerra cavalcanti,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+magnus eklund,bmeklund,HIGH,Magnus Eklund,Red Hat,2,fullname,2026-06-28,
+yagmur eren,nelanbu,HIGH,Yagmur Eren,@oracle,7,fullname,2026-06-28,
+joakim eriksson,joakimeriksson,HIGH,Joakim Eriksson,RISE Research Institutes of Sweden,87,fullname,2026-06-28,
+martin gunnarsson,Blazter99,MED,Martin Gunnarsson,,9,fullname,2026-06-28,2026-09-26
+arun gupta,arun-gupta,HIGH,Arun Gupta,NVIDIA,3831,fullname+jvmrepo,2026-06-28,
+marcus hellberg,marcushellberg,HIGH,Marcus Hellberg,Vaadin,604,fullname,2026-06-28,
+helena hjerten,javaHelena,HIGH,Helena Hjertén,Crisp,33,fullname+jvmrepo,2026-06-28,
+adriaan de jonge,adriaandejonge,HIGH,Adriaan de Jonge,,0,fullname,2026-06-28,
+oleksandr kachur,olka,HIGH,Oleksandr Kachur ,,12,fullname+jvmrepo,2026-06-28,
+holden karau,holdenk,HIGH,Holden Karau,Open Source Big Data Dev,2536,fullname+jvmrepo,2026-06-28,
+mattias karlsson,devlead,HIGH,Mattias Karlsson,@WCOMAB,198,fullname+dominant,2026-06-28,
+gang luo,crysislinux,MED,Luo Gang,,29,fullname,2026-06-28,2026-09-26
+per minborg,minborg,HIGH,Per-Ake Minborg,"Oracle, Inc",109,fullname,2026-06-28,
+fabio niephaus,fniephaus,HIGH,Fabio Niephaus,@oracle,353,fullname,2026-06-28,
+joakim nordstrom,jaokim,HIGH,Joakim Nordström,,12,fullname+org,2026-06-28,
+claes redestad,cl4es,HIGH,Claes Redestad,,100,fullname+org,2026-06-28,
+georges saab,georgessb,MED,Saab Georges,,1,fullname,2026-06-28,2026-09-26
+vladimir shcherbinin,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+mattias soderberg,MattiasSoderberg,HIGH,Mattias Söderberg,,11,fullname+jvmrepo,2026-06-28,
+par turborn,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+ilkka turunen,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+jennifer wadin,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+andreas wanqvist,mobilemancer,MED,Andreas Wänqvist,Axonis,38,fullname,2026-06-28,2026-09-26
