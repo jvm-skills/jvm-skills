@@ -402,3 +402,4 @@ christian heilmann,codepo8,confirm,auto,"dominant match 2796 followers, known co
 benedikt werner,benediktwerner,confirm,auto,"lichess-org (Scala/JVM project), 123 followers, unique name",2026-06-27
 florian sommer,fsteckel,reject,auto,"bio is Aerospace Engineer and Maker, clearly not JVM speaker, multiple ambiguous candidates",2026-06-27
 thomas krieger,tom-krieger,confirm,auto,"THK IT Beratung company matches initials, IT consulting consistent with JVM speaker",2026-06-27
+luis blanche,luisblanche-mirakl,confirm,auto,login encodes name+Mirakl aff; better match than LuisBlanche,2026-06-28
