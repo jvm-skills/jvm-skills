@@ -130,13 +130,19 @@ for (const c of toScan) {
   if (!n) { log(`  ${c.slug}: split produced 0 chunks, skipping`); continue }
   let allOk = true
   for (let k = 0; k < n; k++) { // SERIAL across chunks AND across confs — one tree-scan at a time
-    const r = await agent(
-      `Run the GitHub tree-scan for one roster chunk. Use the Bash tool with timeout: 600000 (10 min).\n`
-      + `If ${H}/${c.slug}_scout_${k}.json already exists and is valid JSON, SKIP and return {ok:true,note:"cached"}.\n`
-      + `Otherwise run exactly: python3 ${H}/scout.py ${H}/${c.slug}_chunk_${k}.json ${H}/${c.slug}_scout_${k}.json\n`
-      + `This is rate-limit-throttled and may take several minutes; do not interrupt it. Return {ok:true} if it wrote the `
-      + `output file (the last line is "wrote ..."), else {ok:false,note:"<tail of error>"}.`,
-      { label: `scout:${c.slug}#${k}`, phase: 'Scan', schema: STEP_SCHEMA, ...MECH })
+    // A very slow chunk (huge roster, e.g. FOSDEM) can make the scout agent end WITHOUT emitting its
+    // structured result, which makes agent() THROW. Catch it so one bad chunk degrades to a [partial]
+    // conf instead of killing the whole batch — the merge below still uses whatever chunks did land.
+    let r = null
+    try {
+      r = await agent(
+        `Run the GitHub tree-scan for one roster chunk. Use the Bash tool with timeout: 600000 (10 min).\n`
+        + `If ${H}/${c.slug}_scout_${k}.json already exists and is valid JSON, SKIP and return {ok:true,note:"cached"}.\n`
+        + `Otherwise run exactly: python3 ${H}/scout.py ${H}/${c.slug}_chunk_${k}.json ${H}/${c.slug}_scout_${k}.json\n`
+        + `This is rate-limit-throttled and may take several minutes; do not interrupt it. Return {ok:true} if it wrote the `
+        + `output file (the last line is "wrote ..."), else {ok:false,note:"<tail of error>"}.`,
+        { label: `scout:${c.slug}#${k}`, phase: 'Scan', schema: STEP_SCHEMA, ...MECH })
+    } catch (e) { log(`  ${c.slug} chunk ${k}: scout threw (${(e && e.message || String(e)).slice(0, 120)})`) }
     if (!r || !r.ok) { allOk = false; log(`  ${c.slug} chunk ${k}: scout failed (${r && r.note})`) }
   }
   const parts = Array.from({ length: n }, (_, k) => `${H}/${c.slug}_scout_${k}.json`).join(' ')
