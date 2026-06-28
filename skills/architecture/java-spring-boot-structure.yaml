@@ -1,0 +1,31 @@
+name: java-spring-boot-structure
+description: >-
+  A comprehensive project structure skill for Java Spring Boot microservices.
+  Covers package organization for layered architecture including controller,
+  service (abstraction/concrete/strategy), dao, mapper, model, client, queue,
+  scheduler, aspect, and util layers. Also includes Spring AI integration
+  packages (advisor, client, prompt, tool) and Claude Code AI file conventions
+  (CLAUDE.md, .claude/agents/, skills/). Enforces MapStruct for mapping,
+  strict DTO/entity separation, and strategy pattern conventions.
+repo: israf1l/java-spring-boot-structure
+category: architecture
+tools:
+  - claude
+  - cursor
+  - copilot
+  - windsurf
+  - aider
+languages:
+  - java
+  - kotlin
+trust: community
+author: Israfil Iskandarov
+tags:
+  - java
+  - spring-boot
+  - microservices
+  - project-structure
+  - spring-ai
+  - mapstruct
+  - kafka
+  - architecture
