@@ -3,7 +3,7 @@
 **Do not edit by hand** — regenerate with `gen_candidates.py` after each scout run. The CSVs in
 `db/` are the system of record; this is a read-only view. Loop: `speaker-scout-loop.md`.
 
-State: 75 conferences · 3067 speakers · 1492 HIGH / 842 MED / 733 UNRESOLVED · 319 skills found.
+State: 75 conferences · 3072 speakers · 1497 HIGH / 842 MED / 733 UNRESOLVED · 319 skills found.
 
 ## ✅ Found skills (created by speakers)
 
@@ -3424,7 +3424,7 @@ Real SKILL.md files the auto-classifier could not judge JVM-vs-offtopic — read
 
 ## 🗑️ Filtered noise (counts only — see `db/rejected.csv`)
 
-**project-doc** 947 · **test-fixture** 369 · **boilerplate** 226 · **demo** 97 · **already-listed** 6
+**project-doc** 951 · **test-fixture** 369 · **boilerplate** 226 · **demo** 97 · **already-listed** 6
 
 
 ## 🏃 Run ledger
@@ -3482,8 +3482,9 @@ Real SKILL.md files the auto-classifier could not judge JVM-vs-offtopic — read
 | 2026-06-28 | ConFoo 2026 | 108 | 66 | 921 | 0 | 42 | 0 found, 0 needs_review, 0 bundle(s), 125 rejected. LLM-judged every non-bundle hit; bundles evaluated as units. |
 | 2026-06-28 | Voxxed Days Zurich 2026 | 52 | 41 | 271 | 0 | 11 | 0 found, 0 needs_review, 0 bundle(s), 41 rejected. LLM-judged every non-bundle hit; bundles evaluated as units. |
 | 2026-06-28 | FOSDEM 2026 | 1034 | 410 | 6301 | 1 | 624 | 1 found, 0 needs_review, 0 bundle(s), 647 rejected. LLM-judged every non-bundle hit; bundles evaluated as units. |
+| 2026-06-28 | ChurConf 2025 | 8 | 7 | 95 | 0 | 1 | 0 found, 0 needs_review, 0 bundle(s), 4 rejected. LLM-judged every non-bundle hit; bundles evaluated as units. |
 
-## 📅 Conferences (27 scanned / 48 queued)
+## 📅 Conferences (28 scanned / 47 queued)
 
 - ✅ **DevBcn 2026** — https://www.devbcn.com (scanned 2026-06-28)
 - ✅ **Devoxx Poland 2026** — https://devoxx.pl/ (scanned 2026-06-28)
@@ -3520,7 +3521,7 @@ Real SKILL.md files the auto-classifier could not judge JVM-vs-offtopic — read
 - ⏳ **jChampions 2026** — https://jchampionsconf.com/index.html (queued)
 - ⏳ **JakartaOne Livestream 2025** — https://jakartaone.org/2025/ (queued)
 - ⏳ **Ya!vaConf 2025** — https://yavaconf.com/en/ (queued)
-- ⏳ **ChurConf 2025** — https://churconf.com (queued)
+- ✅ **ChurConf 2025** — https://churconf.com (scanned 2026-06-28)
 - ⏳ **Devoxx Morocco 2025** — https://devoxx.ma (queued)
 - ⏳ **J-Fall 2025** — https://jfall.nl (queued)
 - ⏳ **JJUG CCC 2025 Fall** — https://ccc2025fall.java-users.jp/ (queued)
