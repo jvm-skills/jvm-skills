@@ -873,3 +873,6 @@ andrii raikov,raykov,reject,auto,empty profile no company bio or JVM repos,2026-
 joe egan,joeegan,reject,auto,no bio/company/org/JVM-repo; zero corroboration for UCL/ATLAS,2026-06-28
 joe egan,joes-git,confirm,auto,bio 'High Energy Physics PhD Student | UCL' matches UCL/ATLAS affiliation exactly,2026-06-28
 marcos maia,marcosmaia777,reject,auto,front-end student; no Bitvavo or JVM corroboration; wrong person,2026-06-28
+tobias kluge,tobiaskluge,reject,auto,3 candidates share exact name; top cand has no JVM repos or bio to distinguish,2026-06-28
+oguz ceylan,oguzc,reject,auto,2 candidates share exact name; Microsoft company not JVM-specific; no repos or bio,2026-06-28
+arthur neudeck,ArthurNeudeck,confirm,auto,uncommon name; single exact match on GitHub; likely the BaselOne speaker,2026-06-28

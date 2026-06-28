@@ -59,3 +59,4 @@ started_at,conference,speakers,resolved,scanned_repos,skipped_repos,found,parked
 2026-06-28,jChampions 2026,31,24,161,0,9,7,"9 found, 0 needs_review, 0 bundle(s), 88 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
 2026-06-28,BED-Con 2025,32,21,154,0,0,11,"0 found, 0 needs_review, 0 bundle(s), 12 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
 2026-06-28,Voxxed Days CERN 2026,36,23,117,0,0,13,"0 found, 0 needs_review, 0 bundle(s), 1 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
+2026-06-28,BaselOne 2025,45,20,29,0,0,25,"0 found, 0 needs_review, 0 bundle(s), 3 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."

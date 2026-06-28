@@ -21,9 +21,9 @@ Cedric Clyburn,cedric clyburn,Red Hat
 Dani Coll,dani coll,Senior Developer Advocate at Dynatrace
 David Pilato,david pilato,Elastic
 David vonThenen,david vonthenen,NetApp
-Dennis Schulz,dennis schulz,"TNG Technology Consulting GmbH, Senior Consultant"
+Dennis Schulz,dennis schulz,
 Diego Rodríguez Varela,diego rodriguez varela,Software Development Engineer
-François Martin,francois martin,Karakun AG
+François Martin,francois martin,
 Gerard París,gerard paris,Back-end Engineer at Preply
 Gytenis Mikulėnas,gytenis mikulenas,"Mambu, Sr. Engineering Manager"
 Hugh Evans,hugh evans,Senior Developer Advocate @ Aiven and Community Organiser
@@ -35,7 +35,7 @@ Julian Burr,julian burr,Senior Developer
 Julien Topcu,julien topcu,Shodo
 Kai Nitsch,kai nitsch,Senior Developer at GK Software
 Kellyn Gorman,kellyn gorman,Advocate and Engineer
-Kevin Dubois,kevin dubois,IBM
+Kevin Dubois,kevin dubois,
 Luis Fraile,luis fraile,DevOps Consultant at Plain Concepts + CTO B!Play
 "Mauricio ""Salaboy"" Salatino",mauricio salaboy salatino,OSS Software and Ecosystem Engineer @Diagrid / Java Champion / Cloud Native Ambassador
 Mauro Gioberti,mauro gioberti,.NET Software Engineer | Devs Mentor
@@ -53,7 +53,7 @@ Sofia Lescano Carroll,sofia lescano carroll,Senior Software Engineer - Alan
 Sofia Santos,sofia santos,Mews - Staff Service Designer
 Steve Poole,steve poole,Independent
 Suzanne Daniels,suzanne daniels,Senior Chief Developer Advisor at Microsoft
-Thomas Hugle,thomas hugle,"TNG Technology Consulting GmbH, Senior Consultant"
+Thomas Hugle,thomas hugle,
 Tiffany Souterre,tiffany souterre,Senior Developer Advocate @AWS
 Toni Noguera,toni noguera,"Mambu, Sr. Software Engineer"
 Victor Rentea,victor rentea,Victor Rentea Consulting
@@ -84,7 +84,7 @@ Mario Fusco,mario fusco,Red Hat
 Jakub Gajski,jakub gajski,j-labs
 Willem Jan Glerum,willem jan glerum,
 Michał Gniadek,micha gniadek,Ten Square Games
-Sergès Goma,serges goma,Eveasoft
+Sergès Goma,serges goma,
 Gerrit Grunwald,gerrit grunwald,
 Misko Hevery,misko hevery,Roblox
 Sander Hoogendoorn,sander hoogendoorn,ibood.com
@@ -329,11 +329,11 @@ Maik Kingma,maik kingma,Principal Consultant @ the/experts.
 Venkateshwaran Kumarasamy,venkateshwaran kumarasamy,"ABNAMRO, System Architect, IT Java Dev Engineer"
 Piet van Dongen,piet van dongen,Software Architect & Software Engineering Consultant at OpenValue
 Ario Afrashteh,ario afrashteh,Lead Engineer focusing on AI & Data
-Viktor Gamov,viktor gamov,"Principal Developer Advocate, Confluent"
+Viktor Gamov,viktor gamov,
 Alejandro Serrano Mena,alejandro serrano mena,JetBrains
 Jago de Vreede,jago de vreede,Developer at TenneT
 James Ward,james ward,AWS
-Baruch Sadogursky,baruch sadogursky,TuxCare
+Baruch Sadogursky,baruch sadogursky,
 Susanne Pieterse,susanne pieterse,Open.nl Software Group
 Lucía Conde-Moreno,lucia conde moreno,Head of AI Research & Software Engineer at Info Support B.V.
 Michael Coté,michael cote,cote.io
@@ -355,7 +355,7 @@ Ioannis Kolaxis,ioannis kolaxis,
 Jonathan Vila López,jonathan vila lopez,Sonar
 Stefan Angelov,stefan angelov,
 Ivan Yonkov,ivan yonkov,Codexio
-Cay Horstmann,cay horstmann,San José State University
+Cay Horstmann,cay horstmann,
 Johannes Bechberger,johannes bechberger,SAP SE
 Christian Heitzmann,christian heitzmann,SimplexaCode AG
 Marcin Chrost,marcin chrost,
@@ -550,7 +550,7 @@ Eoin Woods,eoin woods,Artechra
 Thomas Wuerthinger,thomas wuerthinger,Oracle
 Ananya Kittane Yogananda,ananya kittane yogananda,
 Jonathan du Mesnil de Rochemont,jonathan du mesnil de rochemont,TNG Technology Consulting
-Tim te Beek,tim te beek,Moderne
+Tim te Beek,tim te beek,
 Adam Dudczak,adam dudczak,Computational systems and people engineering practitioner
 Ahmed Hassanien,ahmed hassanien,"Engineering Manager with experience in software architecture, leadership, and AI/ML"
 Arjen Poutsma,arjen poutsma,Software engineer who spent nearly 20 years shaping the Spring Framework and now advises Embabel
@@ -592,7 +592,7 @@ Petr Aubrecht,petr aubrecht,Payara Services
 Christian Bachler,christian bachler,Spezialist für moderne & plattformübergreifende Frontend-Architektur
 Patrik Baumann,patrik baumann,Software & Support Media GmbH
 Markus Baumann,markus baumann,MHP Management- und IT-Beratung GmbH
-Patrick Baumgartner,patrick baumgartner,42talents
+Patrick Baumgartner,patrick baumgartner,
 Thomas Bayer,thomas bayer,"API Consultant with 20+ Years of Experience, Managing Director at predic8, and Developer of Membrane API Gateway."
 Viktor Bekaj,viktor bekaj,Experte für SRE und DevOps-Transformationen
 Candide Bekono,candide bekono,"Agile Transformation Experte, der echte Mitarbeiterbedürfnisse in den Mittelpunkt stellt."
@@ -802,7 +802,7 @@ Frank Lyaruu,frank lyaruu,Quin
 Larry Maccherone,larry maccherone,Expert in DevSecOps and Agile transformations
 Sahak Maloyan,sahak maloyan,Experte für Cloud-Technologien & zukunftsorientierte Softwarearchitektur
 Artur Margonari,artur margonari,Agile Coach & Trainer with 10+ Years of Experience
-Simon Martinelli,simon martinelli,Martinelli LLC
+Simon Martinelli,simon martinelli,
 Thomas Mauch,thomas mauch,magicwerk
 Manuel Mauky,manuel mauky,Saxonia Systems AG
 Yara Mayer,yara mayer,Geschäftswissen trifft Softwarearchitektur – für flexible und resiliente Systeme.
@@ -826,7 +826,7 @@ Thomas Much,thomas much,Technical Agile Coach
 Thomas Müller,thomas muller,
 Sven Müller,sven muller,Software Architect at synyx
 Robin Müller,robin muller,
-Ralf D. Müller,ralf d muller,"Ralf D. Müller, ein renommierter Softwarearchitekt und anerkannter Experte im Bereich GenAI und arc42"
+Ralf D. Müller,ralf d muller,
 Frank Müller,frank muller,
 Björn Müller,bjorn muller,Gründer & Experte für Oberflächentechnologien und -architekturen
 Bernd Müller,bernd muller,"Java-Champion, Informatikprofessor & Softwareentwicklungsexperte"
@@ -930,7 +930,7 @@ Marco Sieben,marco sieben,"Agiler Fullstack-Entwickler
 | Optimierung von Softwareentwicklungsprozessen."
 Karsten Silz,karsten silz,Full-Stack-Java-Entwickler
 Michael Simons,michael simons,Neo4j
-Falk Sippach,falk sippach,embarc
+Falk Sippach,falk sippach,
 Karsten Sitterberg,karsten sitterberg,"Freiberuflicher Entwickler, Trainer und Berater für Webtechnologien und Java | Experte für HTTP APIs, TypeScript und Angular"
 Kilian Soerries,kilian soerries,Experte für Midtier- und Container-Technologien & DevOps Engineer
 Ralf Somplatzki,ralf somplatzki,"„Quality is not an act, it is a habit.“"
@@ -1455,7 +1455,7 @@ Steve RIGANO,steve rigano,Crédit Agricole Technologies & Services
 David ROBIN,david robin,JFrog
 Johan ROUVE,johan rouve,Comet
 Romain ROZEWICZ,romain rozewicz,ARGIOS
-Lize Raes,lize raes,Oracle
+Lize Raes,lize raes,
 Johann Rakotoharisoa,johann rakotoharisoa,Comet
 Alain Regnier,alain regnier,Kubo Labs
 René Ribaud,rene ribaud,Red Hat
@@ -1694,7 +1694,7 @@ Jens Kat,jens kat,ING
 Mario Klaver,mario klaver,Port of Rotterdam
 Michael Koers,michael koers,Info Support
 Sophie Küster,sophie kuster,cronn GmbH
-Aicha Laafia,aicha laafia,Havana Group
+Aicha Laafia,aicha laafia,
 Julien Lengrand-Lambert,julien lengrand lambert,
 Adam Michalik,adam michalik,Rabobank
 Jacopo Nardiello,jacopo nardiello,ING
@@ -1860,11 +1860,11 @@ Ole Koring,ole koring,
 Joern Karthaus,joern karthaus,
 Markus Zimmermann,markus zimmermann,
 Ingo Eichhorst,ingo eichhorst,
-Michael Vitz,michael vitz,INNOQ
+Michael Vitz,michael vitz,
 Dr. Jens Bendisposto,dr jens bendisposto,
 Gregor Trefs,gregor trefs,
 Sebastian Rose,sebastian rose,
-Ferdinand Ade,ferdinand ade,
+Ferdinand Ade,ferdinand ade,Exact coding
 Jochen Mader,jochen mader,
 Michaela Schrötel,michaela schrotel,
 Christoph Gerlach,christoph gerlach,
@@ -1875,7 +1875,7 @@ Lisa Rosenberg,lisa rosenberg,
 Leonóra Dér,leonora der,
 Sina Orth,sina orth,
 Marc Hoffmann,marc hoffmann,
-Andres Almiray,andres almiray,Oracle
+Andres Almiray,andres almiray,
 Andrej Lustin,andrej lustin,
 Nikolas Hermann,nikolas hermann,
 Wolfgang Schell,wolfgang schell,
@@ -1932,7 +1932,7 @@ Jan Jürjens,jan jurjens,
 Dr. Annegret Junker,dr annegret junker,
 Jonas Bandi,jonas bandi,IvoryCode GmbH
 Fabrizio Beretta Piccoli,fabrizio beretta piccoli,Swiss Post
-Nadine Broghammer,nadine broghammer,Swiss Post
+Nadine Broghammer,nadine broghammer,
 Céline Camacho,celine camacho,Swiss Post
 Giovanni Degiorgi,giovanni degiorgi,Swiss Post
 Jasmin Fluri,jasmin fluri,Schaltstelle
@@ -1945,7 +1945,7 @@ Francesco Nigro,francesco nigro,IBM
 Warren Parad,warren parad,Authress
 Alessandra Pasini,alessandra pasini,Amazon Web Services (AWS)
 Emanuel Peter,emanuel peter,Oracle
-Marc Sallin,marc sallin,Swiss Post
+Marc Sallin,marc sallin,
 Makan Sepehrifar,makan sepehrifar,Code Nomads
 Alessio Soldano,alessio soldano,IBM
 César Soto Valero,cesar soto valero,SEB Group
@@ -3167,3 +3167,26 @@ Marcos Maia,marcos maia,Bitvavo B.V
 Jos Roseboom,jos roseboom,EasingYou
 Karthik Sayapparaju,karthik sayapparaju,CERN
 Mary Xekalaki,mary xekalaki,University of Manchester
+Kristian Bergmann,kristian bergmann,Exact coding
+Neha Lagoo Ratnakar,neha lagoo ratnakar,
+Bogdan Doroslovac,bogdan doroslovac,
+Loana Franzese,loana franzese,
+Pascal Tomasivic,pascal tomasivic,
+David Beisert,david beisert,
+Prof. Dr. Alena Buyx,prof dr alena buyx,
+Christian Schuszter,christian schuszter,CERN
+Philipp Klett,philipp klett,Kanton Basel-Stadt
+Tobias Kluge,tobias kluge,
+Manuela Raidl,manuela raidl,
+Ralph Hees,ralph hees,
+Oğuz Ceylan,oguz ceylan,
+David Uebelacker,david uebelacker,
+Cosima Laube,cosima laube,
+Ursula Deriu,ursula deriu,
+Karsten Thoms,karsten thoms,
+Jürg Käsermann,jurg kasermann,
+Pawel Sucholbiak,pawel sucholbiak,
+Danielle Kaufmann,danielle kaufmann,Kanton Basel-Stadt
+Dr. med. Monika Spahl,dr med monika spahl,
+Dr. Jan-Arne Gewert,dr jan arne gewert,FHNW
+Arthur Neudeck,arthur neudeck,

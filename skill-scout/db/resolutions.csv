@@ -53,7 +53,7 @@ sofia lescano carroll,sofia-lescano-carroll,MED,Sofia Lescano Carroll,,0,fullnam
 sofia santos,RisingFisan,HIGH,Sofia Santos,Universidade do Minho,286,fullname+dominant,2026-06-28,
 steve poole,spoole167,HIGH,Steve Poole,,12,fullname+jvmrepo,2026-06-28,
 suzanne daniels,suuus,HIGH,Suzanne Daniels,@microsoft,40,fullname,2026-06-28,
-thomas hugle,ThomasHugleTNG,MED,Thomas Hugle,,2,fullname,2026-06-28,2026-09-26
+thomas hugle,ThomasHugleTNG,HIGH,Thomas Hugle,,2,alias,2026-06-28,
 tiffany souterre,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 toni noguera,janoguera,HIGH,Toni Noguera,,0,fullname+jvmrepo,2026-06-28,
 victor rentea,victorrentea,HIGH,Victor Rentea,Independent,1464,fullname,2026-06-28,
@@ -84,7 +84,7 @@ mario fusco,mariofusco,HIGH,Mario Fusco,IBM,1228,fullname,2026-06-28,
 jakub gajski,jakubgajski,MED,Jakub Gajski,,0,fullname,2026-06-28,2026-09-26
 willem jan glerum,wjglerum,HIGH,Willem Jan Glerum,@lunatech-labs ,31,fullname,2026-06-28,
 micha gniadek,MichalGniadek,MED,Michał Gniadek,,25,fullname,2026-06-28,2026-09-26
-serges goma,sergesgoma,MED,Sergès Goma,,2,fullname,2026-06-28,2026-09-26
+serges goma,sergesgoma,HIGH,Sergès Goma,,2,alias,2026-06-28,
 gerrit grunwald,HanSolo,HIGH,Gerrit Grunwald,Azul Systems,1023,fullname,2026-06-28,
 misko hevery,mhevery,HIGH,Miško Hevery,Builder.io,6259,fullname+dominant,2026-06-28,
 sander hoogendoorn,aahoogendoorn,HIGH,Sander Hoogendoorn,www.sanderhoogendoorn.com,53,fullname,2026-06-28,
@@ -530,7 +530,7 @@ pratik patel,pratik227,HIGH,Pratik Patel,,227,fullname+jvmrepo,2026-06-28,
 jose paumard,JosePaumard,HIGH,José Paumard,Oracle,1465,fullname,2026-06-28,
 stephane philippart,philippart-s,HIGH,Stéphane Philippart,OVHcloud,66,fullname,2026-06-28,
 carly richmond,carlyrichmond,HIGH,Carly Richmond,@elastic,54,fullname,2026-06-28,
-ixchel ruiz,IxchelNR,MED,Ixchel Navarrete Ruiz,Nestlé,1,fullname,2026-06-28,2026-09-26
+ixchel ruiz,ixchelruiz,HIGH,Ix-chel Ruiz,Karakun AG,28,alias,2026-06-28,
 lennard schiefelbein,lsc0498,MED,Lennard Schiefelbein,,0,fullname,2026-06-28,2026-09-26
 simon schrottner,aepfli,HIGH,Simon Schrottner,,37,fullname+jvmrepo,2026-06-28,
 marc schuh,MarcSchuhTNG,HIGH,Marc Schuh,TNG Technology Consulting GmbH,2,fullname,2026-06-28,
@@ -3163,3 +3163,26 @@ marcos maia,marcosmaia777,MED,Marcos Maia Fidelis ,,27,fullname,2026-06-28,2026-
 jos roseboom,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 karthik sayapparaju,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 mary xekalaki,mairooni,HIGH,Mary Xekalaki,The University of Manchester,10,fullname,2026-06-28,
+kristian bergmann,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+neha lagoo ratnakar,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+bogdan doroslovac,baghatur,HIGH,Bogdan Doroslovac,,4,fullname+jvmrepo,2026-06-28,
+loana franzese,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+pascal tomasivic,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+david beisert,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+prof dr alena buyx,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+christian schuszter,,UNRESOLVED,,,,fullname,2026-06-28,2026-09-26
+philipp klett,,UNRESOLVED,,,,fullname,2026-06-28,2026-09-26
+tobias kluge,tobiaskluge,MED,Tobias Kluge,incratec,8,fullname,2026-06-28,2026-09-26
+manuela raidl,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+ralph hees,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+oguz ceylan,oguzc,MED,Oğuz Ceylan,@Microsoft,3,fullname,2026-06-28,2026-09-26
+david uebelacker,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+cosima laube,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+ursula deriu,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+karsten thoms,kthoms,HIGH,Karsten Thoms,itemis AG,48,fullname+jvmrepo,2026-06-28,
+jurg kasermann,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+pawel sucholbiak,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+danielle kaufmann,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+dr med monika spahl,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+dr jan arne gewert,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+arthur neudeck,ArthurNeudeck,MED,Arthur Neudeck,,3,fullname,2026-06-28,2026-09-26
