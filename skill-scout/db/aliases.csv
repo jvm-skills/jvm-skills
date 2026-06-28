@@ -1036,3 +1036,7 @@ marek obaza,nc-mlo,confirm,auto,login nc-mlo encodes Netcompany + Marek Lobaza i
 micha marcinczuk,mczuk,confirm,auto,very rare Polish surname Marcinczuk; company Samurai Labs/CodeNLP is real; name uniqueness sufficient,2026-06-28
 iwona christop,iwona-christop,reject,auto,"no JVM repos, empty company/bio, only 3 followers — zero corroboration",2026-06-28
 marcin wierzbinski,marcin119a,reject,auto,company @letscodekids (kids coding edu) does not corroborate JVM speaker; no JVM repos,2026-06-28
+martina staffa,MartinaLinn,reject,auto,"web developer / c't webdev speaker, no JVM repos, no shopware AG match",2026-06-28
+kai schmidt,kaikalii,reject,auto,"Rust developer / uiua-lang creator, no JVM; common name with multiple candidates",2026-06-28
+sebastian meyer,bastimeyer,reject,auto,"Streamlink/Python developer, no JVM repos, no Dirk Rossmann GmbH link; common name",2026-06-28
+gabriel winkler,misternono,reject,auto,"GitHub name is Noah-Gabriel Winkler not Gabriel Winkler, no company/JVM/OPEN KNOWLEDGE match",2026-06-28

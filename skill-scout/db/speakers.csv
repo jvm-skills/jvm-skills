@@ -1,5 +1,5 @@
 name,norm_name,affiliation
-Alex Soto,alex soto,IBM
+Alex Soto,alex soto,Director of Developer Experience at Red Hat
 Abdel Sghiouar,abdel sghiouar,Google Cloud
 Adrián Pastén,adrian pasten,Senior Software Engineer
 Alexander Chatzizacharias,alexander chatzizacharias,JDriven
@@ -355,7 +355,7 @@ Ioannis Kolaxis,ioannis kolaxis,
 Jonathan Vila López,jonathan vila lopez,Sonar
 Stefan Angelov,stefan angelov,
 Ivan Yonkov,ivan yonkov,Codexio
-Cay Horstmann,cay horstmann,
+Cay Horstmann,cay horstmann,"Author of Core Java, Scala for the Impatient, and many other books."
 Johannes Bechberger,johannes bechberger,
 Christian Heitzmann,christian heitzmann,"Zertifizierter Softwareentwickler, Dokumentationsberater und Trainer"
 Marcin Chrost,marcin chrost,Bottega IT Minds / chrost.eu
@@ -420,7 +420,7 @@ Pierre Alaime,pierre alaime,Odoo LU
 Pierre Charrasse,pierre charrasse,Pictet Technologies
 Pierre Henriquet,pierre henriquet,
 Pietro Mele,pietro mele,Adelean
-Roland Weisleder,roland weisleder,Java-Experte für Legacy-Systeme und Testautomatisierung
+Roland Weisleder,roland weisleder,Freiberufler
 Sébastien Heilig,sebastien heilig,HITS
 Stéphane Robert,stephane robert,3DS Outscale
 Suzy Zimmer,suzy zimmer,Pictet Technologies
@@ -644,7 +644,7 @@ Zeljko Dodlek,zeljko dodlek,Aiven
 Michael Dowden,michael dowden,"Technology leader, author, and international speaker"
 Martine Dowden,martine dowden,"Web Technologies, Firebase, and Angular GDE Microsoft MVP in Developer Technologies"
 Patrick Drechsler,patrick drechsler,Mathema
-Oliver Drotbohm,oliver drotbohm,VMware
+Oliver Drotbohm,oliver drotbohm,Member of the Spring open source engineering team
 Paul Dubs,paul dubs,Innovator im grafischen Programmieren für KI mit Xircuits
 Damian Dudziec,damian dudziec,Zeiss Digital Innovation
 Ivan Dugalic,ivan dugalic,AxonIQ
@@ -740,13 +740,13 @@ Lars Hupel,lars hupel,innoQ Deutschland GmbH
 Roland Huß,roland hu,"Experte für Java, Kubernetes & Open-Source-Entwicklung"
 Michael Inden,michael inden,Professor of Web Development and Blogger on Innovative Web Technologies.
 Mirza Iqbal,mirza iqbal,Expert in AI Workflow Automation & Enterprise n8n Architecture
-Thorben Janssen,thorben janssen,"Experte für Spring Data JPA, Hibernate and Spring AI"
+Thorben Janssen,thorben janssen,Java persistence specialist
 Michael Jerger,michael jerger,Maintainer von Open-Source-DevOps-Systemen
 Emily Jiang,emily jiang,"MicroProfile & Jakarta EE Expert, Java Champion, Author"
 Michael Johann,michael johann,Principial Platform Engineer für die Magenta Developer eXperience
 Alexander John-Anacker,alexander john anacker,sidion GmbH
 Rod Johnson,rod johnson,Creator of the Spring Framework & Expert in Software Innovation
-Andreas Jürgensen,andreas jurgensen,"Technical Coach - Coding, Testing & Architektur"
+Andreas Jürgensen,andreas jurgensen,Technical Coach - FOURTEEN IT
 Clemens Jütte,clemens jutte,VMware
 Christian Kaiser,christian kaiser,"Experte & Coach für Refactoring, Legacy Code & Softwaretests"
 Martin Kalsow,martin kalsow,Tech Lead & Softwarearchitekt mit starkem Fokus auf People Leadership
@@ -762,7 +762,7 @@ Christian Kemper,christian kemper,Experte für nachhaltige Softwarearchitektur |
 Simon Kerler,simon kerler,Experte für Softwarearchitektur und Cloud-Performance.
 Patrick Kiessling,patrick kiessling,Sonatype
 Thomas Kloppe,thomas kloppe,sidion GmbH
-Niko Köbler,niko kobler,"Mr. Keycloak - Experte für Keycloak, Identity Management und Single-Sign-On"
+Niko Köbler,niko kobler,Keycloak-Expert
 Matthias Koch,matthias koch,"Experte für Java, Clean Code & funktionale Programmierung"
 Christian Kolbe,christian kolbe,Comsysto Reply
 Marius Köllner,marius kollner,Atruvia AG
@@ -899,7 +899,7 @@ Thomas Schilling,thomas schilling,Architektur und UX vereint mit Spring & HTMX
 Thomas Schissler,thomas schissler,"Gründer von agileMax, Experte für Agilität und DevOps"
 Markus Schlegel,markus schlegel,Experte für funktionale Architektur & formale Methoden
 Thorsten Schleinzer,thorsten schleinzer,nn
-Jan-Christoph Schlieker,jan christoph schlieker,Experte für Softwarearchitekturen und Automatisierung in der Finanz Informatik
+Jan-Christoph Schlieker,jan christoph schlieker,"Bereichsleiter Anwendungsentwicklung, Finanz Informatik"
 Alexander Schlüter,alexander schluter,Couchbase
 Robert Schmelzer,robert schmelzer,Experte für Softwarearchitektur und agile Entwicklung in Enterprise-Systemen
 Silke Schmid,silke schmid,"Expertin für Microservices, Automatisierung & CI/CD"
@@ -961,7 +961,7 @@ Sebastian Tiemann,sebastian tiemann,Apache Contributor & Java Community Engineer
 Sergej Tihonov,sergej tihonov,self employed
 Frank Tingle,frank tingle,DevSecOps Architecture Expert
 Kai Tödter,kai todter,Experte für Java- und Webtechnologien und Open-Source-Committer
-Joshua Töpfer,joshua topfer,Experte für Ensemble Programming und verteilte Systeme
+Joshua Töpfer,joshua topfer,"INNOQ, Senior Consultant"
 Stefan Toth,stefan toth,Berater für moderne Softwarearchitektur
 Mario Trzensky,mario trzensky,Frontend-Entwickler bei Cologne Intelligence
 Catalin Tudose,catalin tudose,Luxoft Romania
@@ -1002,7 +1002,7 @@ Stefan Wilk,stefan wilk,Shaping the cloud foundations for the next generation of
 Kevin Wittek,kevin wittek,
 Marcus Wojtusik,marcus wojtusik,AUDI AG
 Stefan Wolf,stefan wolf,Gradle
-Eberhard Wolff,eberhard wolff,Software Architecture. Technology. Learning every day.
+Eberhard Wolff,eberhard wolff,Head of Architecture @ SWAGLab
 Janek Wonner,janek wonner,Conrad Electronics
 Tobias Wörenkämper,tobias worenkamper,REWE digtal GmbH
 Maximilian Wörner,maximilian worner,Infrastructure- & Plattformstratege | DevOps & Automatisierung
@@ -1681,7 +1681,7 @@ Jettro Coenradie,jettro coenradie,Fellow at Luminis working as Search and Data e
 Soham Dasgupta,soham dasgupta,Microsoft
 Delicia De Jong,delicia de jong,Chainguard
 Mark Dirksma,mark dirksma,Energie Data Services Nederland
-Ramona Domen,ramona domen,Team Rockstars IT
+Ramona Domen,ramona domen,Software Engineer at Team Rockstars IT
 Jeroen Egelmeers,jeroen egelmeers,Sogeti Netherlands
 Hanno Embregts,hanno embregts,Info Support
 Iulia Feroli,iulia feroli,Back To Engineering / YouTube
@@ -1806,7 +1806,7 @@ Brad Wood,brad wood,Ortus Solutions
 Ted M. Young,ted m young,JitterTed Productions
 Ho Jong Yu,ho jong yu,
 Daneez Zamangil,daneez zamangil,Callrail
-Richard Fichtner,richard fichtner,XDEV Software GmbH
+Richard Fichtner,richard fichtner,Principal Software Architect / CEO at XDEV Software GmbH
 Robert Eichenseer,robert eichenseer,
 Johannes Rabauer,johannes rabauer,
 Christoph Menzel,christoph menzel,
@@ -1844,8 +1844,8 @@ Arno Scholz,arno scholz,
 Fedor Zholud,fedor zholud,
 Sven Woltmann,sven woltmann,Happy Coders
 Clemens Hübner,clemens hubner,
-Fin Labusch,fin labusch,
-Thomas Ruhroth,thomas ruhroth,
+Fin Labusch,fin labusch,"Freiberuflicher Software-Entwickler, Vater"
+Thomas Ruhroth,thomas ruhroth,"Principal IT Consultant, msg systems ag"
 Holger Jansen,holger jansen,
 Carmen Delgado,carmen delgado,
 Dennis Schladebeck,dennis schladebeck,
@@ -1853,14 +1853,14 @@ Alexander Eimer,alexander eimer,
 Dan Denich,dan denich,
 Edward-Jacob Fakhouri,edward jacob fakhouri,
 Rainald Menge-Sonnentag,rainald menge sonnentag,
-Daniel Vergien,daniel vergien,
+Daniel Vergien,daniel vergien,Bundesdruckerei
 Bernhard Löwenstein,bernhard lowenstein,
 Ionida Löwenstein,ionida lowenstein,
 Ole Koring,ole koring,
 Joern Karthaus,joern karthaus,
 Markus Zimmermann,markus zimmermann,
 Ingo Eichhorst,ingo eichhorst,
-Michael Vitz,michael vitz,innoQ Deutschland GmbH
+Michael Vitz,michael vitz,Java Champion & Senior Consultant bei INNOQ
 Dr. Jens Bendisposto,dr jens bendisposto,
 Gregor Trefs,gregor trefs,
 Sebastian Rose,sebastian rose,
@@ -3727,3 +3727,17 @@ Sebastian Kozak,sebastian kozak,
 Szymon Hulewicz,szymon hulewicz,
 Patrycja Budner,patrycja budner,
 Dawid Detko,dawid detko,
+Tom Osenberg,tom osenberg,"Abteilungsleiter in der Anwendungsentwicklung, Finanz Informatik"
+Kathrin Wegner,kathrin wegner,eck*cellent IT - Projektmanagement Technik
+Arne Limburg,arne limburg,OPEN KNOWLEDGE GmbH
+Magdalena Zenglein-Markert,magdalena zenglein markert,eck*cellent IT - Projektmanagement Technik
+Jendrik Johannes,jendrik johannes,Trainer und Consultant für Build-Automatisierung
+Liam Bergh,liam bergh,Technischer Dokumentator
+Lisa Maria Schäfer,lisa maria schafer,Produkt- und Marketingmanagerin bei socreatory
+Frederik Hahne,frederik hahne,"Software Architect, Senior Software Engineer"
+Martina Staffa,martina staffa,Software Engineer @ shopware AG
+Felix Rieß,felix rie,Software Architect @ BettercallPaul
+Kai Schmidt,kai schmidt,Software-engineer and -architect
+Richard Groß,richard gro,Head of Software Archaeology
+Sebastian Meyer,sebastian meyer,Dirk Rossmann GmbH
+Gabriel Winkler,gabriel winkler,Enterprise Architect - OPEN KNOWLEDGE GmbH
