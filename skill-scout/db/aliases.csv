@@ -859,3 +859,5 @@ betzabe salas,betzabe-salas-vergara,confirm,auto,rare first name; login encodes 
 christian gomez,cvcg11,reject,auto,very common name; no bio/company/JVM repos — no corroboration,2026-06-28
 diego silva,DiegoMBS,reject,auto,extremely common name; no JVM repos or bio signal for top candidate,2026-06-28
 vicente suc,vicentesuc,confirm,auto,bio explicitly says Java/.Net Core; distinctive name,2026-06-28
+tanja obradovic,TanjaObradovic,confirm,auto,Eclipse Foundation company directly corroborates Jakarta EE Program Manager role,2026-06-28
+shabnam mayel,shabnammayel,confirm,auto,Unique name exact match; sparse profile consistent with marketing (non-developer) role,2026-06-28
