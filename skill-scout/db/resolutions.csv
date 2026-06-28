@@ -1561,7 +1561,7 @@ michalis papadimitriou,mikepapadim,HIGH,Michalis Papadimitriou,Neo4j,57,fullname
 peggy papadopoulou,pegpapas,HIGH,Papadopoulou Peggy,Deloitte,2,fullname,2026-06-28,
 dimitris papageorgiou,dpapageo,HIGH,Dimitris Papageorgiou,AWS,2,fullname+jvmrepo,2026-06-28,
 patroklos papapetrou,ppapapetrou76,HIGH,Papapetrou Patroklos,,107,alias,2026-06-28,
-vadym pinchuk,VadymPinchuk,MED,Vadym Pinchuk,,94,fullname,2026-06-28,2026-09-26
+vadym pinchuk,VadymPinchuk,HIGH,Vadym Pinchuk,,94,alias,2026-06-28,
 thomas pliakas,pliakas,HIGH,Thomas Pliakas,Roukou,6,fullname+jvmrepo,2026-06-28,
 christos psychogyios,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 j b rainsberger,jbrains,HIGH,J. B. Rainsberger,"Diaspar Software Services, Inc.",494,fullname-ascii,2026-06-28,
@@ -3314,3 +3314,63 @@ par turborn,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 ilkka turunen,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 jennifer wadin,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 andreas wanqvist,mobilemancer,MED,Andreas Wänqvist,Axonis,38,fullname,2026-06-28,2026-09-26
+zakaria slimane,slzakaria,MED,Zakaria Slimane.,,13,fullname,2026-06-28,2026-09-26
+ivan pesenti,ossan-dev,HIGH,Ivan Pesenti,CrowdStrike,166,fullname,2026-06-28,
+badr el houari,eBadr,HIGH,Badr El Houari,xHub,77,fullname,2026-06-28,
+pavlos tzianos,ptzianos,MED,Pavlos Tzianos,Smithy Security,17,fullname,2026-06-28,2026-09-26
+chaimaa britel,britel-chaimaa20,HIGH,Britel Chaimaa,,7,fullname+jvmrepo,2026-06-28,
+anshika koul,AnshikaKoul,MED,anshika koul,,2,fullname,2026-06-28,2026-09-26
+abdelhadi gannoune,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+amine chouki,amineck,MED,Amine Chouki,,38,fullname,2026-06-28,2026-09-26
+badr molato,badrmolato1,MED,Badr Molato,Molato Digital,0,fullname,2026-06-28,2026-09-26
+yassin eljakani,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+ivan miklec,ivanmiklec,HIGH,Ivan Miklec,Infinum,4,fullname,2026-06-28,
+saloua chaaibi,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+mehdi boumhicha,elmehdibm,MED,El Mehdi Boumhicha,,42,fullname,2026-06-28,2026-09-26
+estelle landry,estellelandry,MED,Estelle Landry,Pix,2,fullname,2026-06-28,2026-09-26
+lotfi saci,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+laurent grangeau,laurentgrangeau,HIGH,Laurent Grangeau,@Google,85,fullname+dominant,2026-06-28,
+er raghi karima,KarimaErraghi,MED,Er-raghi Karima,,0,fullname-ascii,2026-06-28,2026-09-26
+nizar benalla,nizarbenalla,HIGH,Nizar Benalla,Oracle,7,fullname,2026-06-28,
+hafsa el idrissi,slippyishappy,HIGH,Hafsa El Idrissi,,2,fullname+jvmrepo,2026-06-28,
+bruno baptista,brunobat,HIGH,Bruno Baptista,IBM,80,fullname,2026-06-28,
+danya tazi mokha,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+zineb ammar,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+soukaina guassmi,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+fahd mekouar,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+el bachir outidrarine,StoicBug,MED,El Bachir Outidrarine,,65,fullname,2026-06-28,2026-09-26
+anass drissi,Anass-Dr,MED,Anass Drissi,,74,fullname,2026-06-28,2026-09-26
+oualid maazouzi,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+kamesh sampath,kameshsampath,HIGH,Kamesh Sampath,@snowflakedb,329,fullname,2026-06-28,
+youssef mouhim,YoussefMouhim,MED,Youssef Mouhim,,3,fullname,2026-06-28,2026-09-26
+mazlum tosun,tosun-si,HIGH,Mazlum Tosun,@GroupBees,116,fullname,2026-06-28,
+omar zeroual,Omar29-long,MED,Omar Zeroual,,1,fullname,2026-06-28,2026-09-26
+youness rekass,yrekass,HIGH,Youness REKASS,Onepoint,2,fullname,2026-06-28,
+oussama anou,Usmaexe,HIGH,Anou Oussama,inpt,21,fullname+jvmrepo,2026-06-28,
+stefano marzo,StefanoMarzo,HIGH,Stefano Marzo,CERN,3,fullname,2026-06-28,
+soumaya erradi,soumayaerradi,HIGH,Soumaya Erradi,,101,fullname+org,2026-06-28,
+oussama ennafii,ethiy,MED,Oussama ENNAFII,Upciti,42,fullname,2026-06-28,2026-09-26
+houssam tajjiou,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+aicha zeroual,AichaZEROUAL,HIGH,Aicha ZEROUAL,,17,fullname+jvmrepo,2026-06-28,
+shafik quoraishee,squoraishee,HIGH,Shafik Quoraishee,,10,fullname+jvmrepo,2026-06-28,
+timon borter,bbortt,HIGH,Timon Borter,@postfinance,37,fullname,2026-06-28,
+annie talvasto,AnnieTalvasto,MED,Annie Talvasto,Upbound,34,fullname,2026-06-28,2026-09-26
+jamila mehmandarova,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+faycal noushi,N-faycal,MED,Fayçal NOUSHI,https://www.zen-networks.ma,19,fullname,2026-06-28,2026-09-26
+abai oussama,oabai,MED,oussama abai,Digicactus,1,fullname,2026-06-28,2026-09-26
+adnane miliari,miliariadnane,HIGH,MILIARI Adnane,@TransPerfect,89,fullname,2026-06-28,
+andrea iacono,andreaiacono,MED,Andrea Iacono,,79,fullname,2026-06-28,2026-09-26
+joel seguillon,jseguillon,MED,Joel Seguillon,@AriadNext,31,fullname-ascii,2026-06-28,2026-09-26
+kenza barnier,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+otavio rodolfo piske,orpiske,HIGH,Otavio Rodolfo Piske,IBM,99,fullname,2026-06-28,
+alex magalhaes,MagalhaesExe,MED,Alex Magalhães,,9,fullname,2026-06-28,2026-09-26
+ismail drissi,ismaildrs,HIGH,Ismail Drissi,,53,fullname+jvmrepo,2026-06-28,
+colonel said dahmani,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+naima ajebli,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+marouane gazanayi,mgazanayi,HIGH,Marouane Gazanayi,,48,fullname+jvmrepo,2026-06-28,
+amine benettaj,aminebenettaj,MED,Amine BENETTAJ,,0,fullname,2026-06-28,2026-09-26
+mohammed daoudi,Iduoad,MED,Mohammed Daoudi,,209,fullname,2026-06-28,2026-09-26
+youssef ameachaq,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+oumayma essarhi,ouma09,MED,Oumayma Essarhi,,4,fullname,2026-06-28,2026-09-26
+nejmeddine ben ouarred,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+mahmoud fettal,MahmoudFettal,HIGH,Mahmoud Fettal,,97,fullname,2026-06-28,

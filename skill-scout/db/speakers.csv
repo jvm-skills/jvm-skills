@@ -1,9 +1,9 @@
 name,norm_name,affiliation
 Alex Soto,alex soto,IBM
-Abdel Sghiouar,abdel sghiouar,Google Cloud
+Abdel Sghiouar,abdel sghiouar,
 Adrián Pastén,adrian pasten,Senior Software Engineer
 Alexander Chatzizacharias,alexander chatzizacharias,JDriven
-Ana Maria Mihalceanu,ana maria mihalceanu,Oracle
+Ana-Maria Mihalceanu,ana maria mihalceanu,Oracle
 Andrei Tazetdinov,andrei tazetdinov,Senior Software Engineer & Tech Evangelist
 Andrew Madson,andrew madson,"Head of Developer Relations at Fivetran | Author of ""Apache Polaris - The Definitive Guide"". Authoring ""AI-Ready Data"" for Wiley and ""Data Transformation"" for O'Reilly"
 Andy Igdal,andy igdal,"PhD Student, Energy Policy, UT Austin"
@@ -82,12 +82,12 @@ Pasha Finkelshteyn,pasha finkelshteyn,BellSoft
 Michał Furdyna,micha furdyna,Tesco Technology
 Mario Fusco,mario fusco,IBM
 Jakub Gajski,jakub gajski,j-labs
-Willem Jan Glerum,willem jan glerum,Principal Software Engineer @ Lunatech
+Willem Jan Glerum,willem jan glerum,Lunatech
 Michał Gniadek,micha gniadek,Ten Square Games
 Sergès Goma,serges goma,
 Gerrit Grunwald,gerrit grunwald,
 Misko Hevery,misko hevery,Roblox
-Sander Hoogendoorn,sander hoogendoorn,ibood.com
+Sander Hoogendoorn,sander hoogendoorn,iBOOD.com
 Dotan Horovits,dotan horovits,AWS
 Wei Hu,wei hu,Oracle USA
 Johan Hutting,johan hutting,Developer advocate at ING
@@ -154,7 +154,7 @@ Alexandre Touret,alexandre touret,Magellan
 Adam Warski,adam warski,Sharing elegant solutions to everyday problems | Functional programmer | Blogger | OSS developer
 Artur Wojnar,artur wojnar,MasterBorn
 Mike Wojtyna,mike wojtyna,wojtyna.pl
-Alina Yurenko,alina yurenko,Oracle
+Alina Yurenko,alina yurenko,
 Sylwia Zabielska,sylwia zabielska,sylwiazabielska.pl
 Paweł Żemła,pawe zem a,SAP
 Ihor Zhuravlov,ihor zhuravlov,Sigma Software
@@ -163,7 +163,7 @@ Simone de Gijt,simone de gijt,OpenValue
 Guus de Wit,guus de wit,Software developer at adesso Netherlands
 Hinse ter Schuur,hinse ter schuur,SDB Java
 Paco van Beckhoven,paco van beckhoven,Hexagon
-Marit van Dijk,marit van dijk,Software Developer | Java Champion | Developer Advocate at JetBrains
+Marit van Dijk,marit van dijk,JetBrains
 Adam Urban,adam urban,Camunda
 Adina Panduru,adina panduru,Tchibo
 Adina Rusu,adina rusu,Allianz Technology Romania
@@ -348,7 +348,7 @@ Elena van Engelen,elena van engelen,Independent Senior Software Engineer
 Ties van de Ven,ties van de ven,Alliander
 Daniel Garnier-Moiroux,daniel garnier moiroux,Broadcom
 Tom Cools,tom cools,Developer Relations Engineer @ Timefold
-Rustam Mehmandarov,rustam mehmandarov,Miles
+Rustam Mehmandarov,rustam mehmandarov,SpareBank1 Utvikling
 Milen Dyankov,milen dyankov,
 Roberto Cortez,roberto cortez,IBM
 Ioannis Kolaxis,ioannis kolaxis,
@@ -532,7 +532,7 @@ Stéphane Philippart,stephane philippart,OVHcloud
 Carly Richmond,carly richmond,Elastic
 Ixchel Ruiz,ixchel ruiz,Karakun AG
 Lennard Schiefelbein,lennard schiefelbein,TNG Technology Consulting
-Simon Schrottner,simon schrottner,CNCF Ambassador | Senior Software Engineer & Team Captain @Dynatrace
+Simon Schrottner,simon schrottner,Dynatrace
 Marc Schuh,marc schuh,TNG Technology Consulting
 Nate Schutta,nate schutta,Thoughtworks
 Melinda Seckington,melinda seckington,Learn Build Share
@@ -541,7 +541,7 @@ Gantigmaa Selenge,gantigmaa selenge,IBM
 Filip Srnec,filip srnec,Infobip
 Kate Stanley,kate stanley,IBM
 Pooja Subramanian,pooja subramanian,Thoughtworks
-Bárbara Teruggi,barbara teruggi,Security Architect
+Barbara Teruggi,barbara teruggi,
 Heather Thacker,heather thacker,Gatling
 Simon Vergauwen,simon vergauwen,JetBrains
 Nitsan Wakart,nitsan wakart,Apple
@@ -596,7 +596,7 @@ Patrick Baumgartner,patrick baumgartner,
 Thomas Bayer,thomas bayer,"API Consultant with 20+ Years of Experience, Managing Director at predic8, and Developer of Membrane API Gateway."
 Viktor Bekaj,viktor bekaj,Experte für SRE und DevOps-Transformationen
 Candide Bekono,candide bekono,"Agile Transformation Experte, der echte Mitarbeiterbedürfnisse in den Mittelpunkt stellt."
-Konstantin Belinski,konstantin belinski,Experte für verteilte Systeme & JVM-Architekturen
+Konstantin Belinski,konstantin belinski,OpenValue
 Christian Berg,christian berg,SCHUFA Holding AG
 Dennis Berger,dennis berger,Software-Architekt
 Georg Berky,georg berky,Selbstständig
@@ -622,7 +622,7 @@ Samantha Casler,samantha casler,Software Engineer specializing in backend soluti
 Daniel Chwat-Gogol,daniel chwat gogol,Experte für KI-Transformation & AI Engineering
 Katie Clark,katie clark,"Software Entwicklerin und Scrum
 Trainerin"
-Jamie Coleman,jamie coleman,"Knowledge in Microservices, cloud architecture, containers, devsecops, java app servers and JVMs"
+Jamie Coleman,jamie coleman,Loqate
 Adrian Colyer,adrian colyer,Accel
 Hubert Corr,hubert corr,Softwarearchitekt | Risikomodelle & Low-Code-Plattformen
 Marcus Crestani,marcus crestani,Softwarearchitekt mit Fokus auf Eventsysteme & Lehre
@@ -1045,7 +1045,7 @@ dr. Mark Little,dr mark little,"Vice President, Middleware Engineering @IBM"
 Neil Chandler,neil chandler,Oracle Database Expert
 Mike Durran,mike durran,Oracle Analytics Product Manager
 Lucas Hirschegger,lucas hirschegger,Senior Oracle APEX Consultant | Oracle ACE Associate
-Matej Nedić,matej nedic,Infinum
+Matej Nedic,matej nedic,Infinum
 Jan Martiska,jan martiska,Quarkus engineer
 Rok Garbas,rok garbas,"Flox, Software Engineer"
 Ariel David Jančar,ariel david jancar,Senior Software Engineer @ Celtra
@@ -1329,7 +1329,7 @@ Thomas Froment,thomas froment,Eclipse Foundation
 Alexandre Fruchaud,alexandre fruchaud,Noscendi
 Christophe Furmaniak,christophe furmaniak,Decathlon
 Erwan GEREEC,erwan gereec,Doctolib
-Hajar GHARBI,hajar gharbi,RS2i
+Hajar Gharbi,hajar gharbi,RS2i
 Océane GILLARD,oceane gillard,Zenika
 Vincent Galloy,vincent galloy,QuickSign
 Jean-François Garreau,jean francois garreau,SFEIR
@@ -1358,7 +1358,7 @@ Antoine Irisson,antoine irisson,D-EDGE
 Virginie JUGIE,virginie jugie,Pigment
 Pauline Jamin,pauline jamin,Agicap
 Stephan Janssen,stephan janssen,Devoxx
-Tony Jarriault,tony jarriault,Sogeti
+Tony Jarriault,tony jarriault,Capgemini
 Paul Jeannot,paul jeannot,Sêmeia
 Christophe Jollivet,christophe jollivet,Apside
 Thomas Jouve,thomas jouve,Sopra Steria
@@ -1605,7 +1605,7 @@ Yehonathan Sharvit,yehonathan sharvit,CyCognito
 Mads Opheim,mads opheim,Computas AS
 Marc Philipp,marc philipp,JUnit
 Nupur Agarwal,nupur agarwal,ING
-Markus Kett,markus kett,MicroStream
+Markus Kett,markus kett,
 Dominika Tasarz,dominika tasarz,Payara
 Mary Grygleski,mary grygleski,AI Collective
 Grace Robinson,grace robinson,IBM
@@ -1938,7 +1938,7 @@ Giovanni Degiorgi,giovanni degiorgi,Swiss Post
 Jasmin Fluri,jasmin fluri,Schaltstelle
 Younes Jaaidi,younes jaaidi,Marmicode
 Vojtech Mašek,vojtech masek,FlowUp
-Stefano Maestri,stefano maestri,IBM
+Stefano Maestri,stefano maestri,RedHat
 Connor McDonald,connor mcdonald,Oracle Corporation
 Maurice Naftalin,maurice naftalin,Morningside Light Ltd
 Francesco Nigro,francesco nigro,IBM
@@ -3318,3 +3318,63 @@ Pär Turborn,par turborn,Irori AB
 Ilkka Turunen,ilkka turunen,Sonatype
 Jennifer Wadin,jennifer wadin,Pensionsmyndigheten
 Andreas Wänqvist,andreas wanqvist,Voyado
+Zakaria Slimane,zakaria slimane,WIRKY
+Ivan Pesenti,ivan pesenti,CrowdStrike
+Badr El Houari,badr el houari,xHub
+Pavlos Tzianos,pavlos tzianos,
+Chaimaa BRITEL,chaimaa britel,Deloitte
+Anshika Koul,anshika koul,Posten Norge
+Abdelhadi GANNOUNE,abdelhadi gannoune,Societe Generale Africa Technologies & Services
+Amine Chouki,amine chouki,Journify
+Badr Molato,badr molato,Capgemini
+YASSIN ELJAKANI,yassin eljakani,Ibn Zohr University
+Ivan Miklec,ivan miklec,Infinum
+Saloua Chaaibi,saloua chaaibi,
+Mehdi Boumhicha,mehdi boumhicha,MaVoie
+Estelle Landry,estelle landry,
+Lotfi Saci,lotfi saci,CloudBees
+Laurent Grangeau,laurent grangeau,
+Er-raghi Karima,er raghi karima,Sophatel
+Nizar Benalla,nizar benalla,Oracle
+Hafsa El Idrissi,hafsa el idrissi,NOVATARD | Hack Club Casablanca
+Bruno Baptista,bruno baptista,IBM
+Danya Tazi Mokha,danya tazi mokha,CIH Bank
+Zineb Ammar,zineb ammar,Deloitte Extended Services
+Soukaina Guassmi,soukaina guassmi,
+Fahd MEKOUAR,fahd mekouar,AfriTechia
+El Bachir Outidrarine,el bachir outidrarine,Alts Morocco
+Anass Drissi,anass drissi,Gear9
+Oualid Maazouzi,oualid maazouzi,
+Kamesh Sampath,kamesh sampath,Snowflake
+Youssef Mouhim,youssef mouhim,CIH Bank
+Mazlum Tosun,mazlum tosun,GroupBees
+OMAR ZEROUAL,omar zeroual,Societe Generale Africa Technologies And Services
+Youness REKASS,youness rekass,Onepoint
+Oussama ANOU,oussama anou,
+Stefano Marzo,stefano marzo,CERN
+Soumaya Erradi,soumaya erradi,Atlantis
+Oussama Ennafii,oussama ennafii,CIH Bank
+Houssam Tajjiou,houssam tajjiou,Sophatel
+Aicha ZEROUAL,aicha zeroual,
+Shafik Quoraishee,shafik quoraishee,The New York Times
+Timon Borter,timon borter,PostFinance AG
+Annie Talvasto,annie talvasto,waovo
+Jamila Mehmandarova,jamila mehmandarova,Computas
+Faycal Noushi,faycal noushi,
+ABAI Oussama,abai oussama,Les filles et les garçons de la tech
+Adnane Miliari,adnane miliari,Transperfect
+Andrea Iacono,andrea iacono,
+Joël Seguillon,joel seguillon,Freelance
+Kenza Barnier,kenza barnier,Les filles et les garçons de la tech
+Otavio Rodolfo Piske,otavio rodolfo piske,Red Hat/IBM
+Alex Magalhaes,alex magalhaes,A.I.deology
+Ismail Drissi,ismail drissi,
+Colonel Said Dahmani,colonel said dahmani,
+Naima AJEBLI,naima ajebli,Deloitte
+Marouane Gazanayi,marouane gazanayi,Neo4j
+Amine BENETTAJ,amine benettaj,OMNISHORE
+Mohammed Daoudi,mohammed daoudi,Oracle
+Youssef Ameachaq,youssef ameachaq,Oracle
+Oumayma essarhi,oumayma essarhi,
+Nejmeddine Ben Ouarred,nejmeddine ben ouarred,
+Mahmoud Fettal,mahmoud fettal,Nucleon security

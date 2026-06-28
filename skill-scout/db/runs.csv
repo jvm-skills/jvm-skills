@@ -65,3 +65,4 @@ started_at,conference,speakers,resolved,scanned_repos,skipped_repos,found,parked
 2026-06-28,JJUG CCC 2025 Fall,62,18,184,0,0,44,"0 found, 0 needs_review, 0 bundle(s), 23 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
 2026-06-28,J-Fall 2025,72,58,344,0,0,14,"0 found, 0 needs_review, 0 bundle(s), 2 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
 2026-06-28,Jfokus 2026,93,71,315,0,14,22,"14 found, 0 needs_review, 0 bundle(s), 34 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
+2026-06-28,Devoxx Morocco 2025,97,55,394,0,0,42,"0 found, 0 needs_review, 0 bundle(s), 33 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
