@@ -7,6 +7,7 @@ export const meta = {
     { title: 'Scan', detail: 'SERIAL chunked tree-scan (GitHub core mutex)' },
     { title: 'Eval', detail: 'Haiku judge + Sonnet adversarial recheck' },
     { title: 'Apply', detail: 'serial: build_conf.py (deterministic) + CSV upsert + self-validate' },
+    { title: 'Commit', detail: 'opt-in (autoCommit): git commit ONLY skill-scout outputs' },
   ],
 }
 
@@ -22,6 +23,8 @@ const RECHECK_MODEL = A.recheckModel || 'sonnet' // adversarial recheck — Sonn
 const MECH = { model: 'haiku', effort: 'low' } // pure command-runner agents (run a python script, report ok) — no reasoning, no quality tradeoff
 const EVAL_ONLY = Array.isArray(A.evalOnly) && A.evalOnly.length ? A.evalOnly : null // [{slug,name,url}] reuse existing *_scout.json
 const DRY_APPLY = !!A.dryApply // apply.py --dry (render, don't mutate the CSVs) — for fast tests
+const AUTO_COMMIT = !!A.autoCommit // opt-in: final step commits ONLY skill-scout outputs (db/, candidates.md, review.html, rules/*.md)
+const REPO = '/Users/tschuehly/IdeaProjects/jvm-skills'
 const MAX_SPEAKERS = A.maxSpeakers || 0 // optional per-conference speaker cap (small trials); 0 = full roster
 
 const QUEUE_SCHEMA = { type: 'object', required: ['confs'], properties: { confs: { type: 'array', items: {
@@ -312,6 +315,32 @@ const nrTotal = overlays.reduce((n, o) => n + (o.nNr || 0), 0)
 const bundleTotal = overlays.reduce((n, o) => n + Object.values(o.bundleVerdicts || {}).filter(v => v.cohesive && (v.status === 'found' || v.status === 'needs_review')).length, 0)
 log(`DONE. Conferences applied: ${applied.filter(a => a.validation === 'PASS').length}/${overlays.length}. `
   + `found=${foundTotal} needs_review=${nrTotal} bundles=${bundleTotal}. Validation issues: ${applied.filter(a => a.validation !== 'PASS').map(a => a.slug).join(', ') || 'none'}.`)
+
+// ---------------- Phase 6: commit — opt-in, SCOPED to skill-scout outputs only ----------------
+// Stages ONLY the files this workflow writes, aborts if anything else is staged (never sweeps up
+// unrelated working-tree changes), and no-ops cleanly when there is nothing to commit.
+const okSlugs = applied.filter(a => a.validation === 'PASS').map(a => a.slug)
+if (AUTO_COMMIT && !DRY_APPLY && okSlugs.length) {
+  phase('Commit')
+  const msg = `skill-scout: batch — ${okSlugs.length} confs applied (found=${foundTotal} needs_review=${nrTotal} bundles=${bundleTotal})\n\n`
+    + `Confs: ${okSlugs.join(', ')}.\n\n`
+    + `Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>\n`
+    + `Claude-Session: https://claude.ai/code/session_01GCHca34hTGdUPtERGTuq6Z`
+  const commitCmd =
+    `git -C ${REPO} add skill-scout/db skill-scout/candidates.md skill-scout/review.html ${EVAL_RULES} ${MATCH_RULES} && `
+    + `EXTRA=$(git -C ${REPO} diff --cached --name-only | grep -v '^skill-scout/' || true); `
+    + `if [ -n "$EXTRA" ]; then git -C ${REPO} reset -q; echo "ABORT unexpected staged: $EXTRA"; exit 0; fi; `
+    + `if git -C ${REPO} diff --cached --quiet; then echo "NOTHING_TO_COMMIT"; else `
+    + `git -C ${REPO} commit -q -F - <<'MSGEOF'\n${msg}\nMSGEOF\n`
+    + `echo "COMMITTED $(git -C ${REPO} rev-parse --short HEAD)"; fi`
+  const r = await agent(
+    `Run EXACTLY this one Bash command verbatim (it is a single command with a heredoc — run it as-is, do not modify, do not split):\n\n${commitCmd}\n\n`
+    + `Then report what it printed. Return {ok:true, note:"<the COMMITTED.../NOTHING_TO_COMMIT line>"} on success, `
+    + `or {ok:false, note:"<the ABORT... line>"} if it printed an ABORT line.`,
+    { label: 'commit', phase: 'Commit', schema: STEP_SCHEMA, ...MECH })
+  log(`  auto-commit: ${r ? r.note || (r.ok ? 'done' : 'failed') : 'no result'}`)
+}
+
 return {
   queued, harvested: harvestedCount, scanned: scanned.length,
   found: foundTotal, needs_review: nrTotal, bundles: bundleTotal,
