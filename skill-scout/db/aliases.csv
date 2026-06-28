@@ -1013,3 +1013,12 @@ patryk pietka,circuit-printer,reject,auto,"login circuit-printer does not match 
 sumit saha,ss-is-master-chief,reject,auto,"common name, 5 candidates, company mismatch Microsoft vs squadrun",2026-06-28
 dominik tomalczyk,13Dominik,confirm,auto,"unique name, single match, AGH UST student consistent with conference speaker",2026-06-28
 ole maiwald,olemaiwald,confirm,auto,exact login match; bio architecting distributed systems; likely changed jobs MHP->BCG,2026-06-28
+jerry van angeren,angerenj,reject,auto,empty profile; no company/bio/JVM repos; ING affiliation unconfirmed,2026-06-28
+miroslav grgic,MiroslavGrgic-DB,reject,auto,(DB) suffix in name conflicts with OG Consultancy affiliation; no corroboration,2026-06-28
+stjepan matijasevic,smatijasevicHappening,confirm,auto,login encodes affiliation org 'Happening'; corroborates HUJAK/Happening,2026-06-28
+marek kratky,Marekatrix,reject,auto,2 candidates; neither has JVM repos or bio; no corroboration,2026-06-28
+ivo majic,IvoMajic,reject,auto,single candidate; no company/bio/JVM repos; no corroboration,2026-06-28
+martin zagar,mxzcad,reject,auto,cryptic login unrelated to name; empty profile; empty affiliation to cross-check,2026-06-28
+filip milkovic,Filip7,reject,auto,4 ambiguous candidates; top cand has ghostty-org but no JVM repos; no corroboration,2026-06-28
+martin grmek,martingrmek-asseco,confirm,auto,GitHub company @asseco-see and login encodes company name; sufficient corroboration,2026-06-28
+jacek psiuk,jacek-psiuk,reject,auto,empty profile; Commerce Media Tech affiliation unconfirmed; no corroboration,2026-06-28

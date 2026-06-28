@@ -3110,7 +3110,7 @@ richard garel jones,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 hantsy bai,hantsy,HIGH,Hantsy Bai,,1407,fullname+jvmrepo,2026-06-28,
 edwin derks,ederks85,HIGH,Edwin Derks,,22,fullname+jvmrepo,2026-06-28,
 mala gupta,malagupta,HIGH,Mala Gupta,,48,fullname,2026-06-28,
-tanja obradovic,TanjaObradovic,MED,Tanja Obradovic,Eclipse Foundation,7,fullname,2026-06-28,2026-09-26
+tanja obradovic,TanjaObradovic,HIGH,Tanja Obradovic,Eclipse Foundation,7,alias,2026-06-28,
 shabnam mayel,shabnammayel,MED,Shabnam Mayel,,3,fullname,2026-06-28,2026-09-26
 michael johnson,migarjo,MED,Michael Johnson,,37,fullname,2026-06-28,2026-09-26
 gerard de jong,gerarddejong,MED,Gerard de Jong,,166,fullname,2026-06-28,2026-09-26
@@ -3634,3 +3634,43 @@ andreas maier,andb0t,HIGH,Andreas Maier,,34,fullname+jvmrepo,2026-06-28,
 nicolai mainiero,nicolaimainiero,HIGH,Nicolai Mainiero,,6,fullname+jvmrepo,2026-06-28,
 ole maiwald,olemaiwald,MED,Ole Maiwald,BCG Platinion,12,fullname,2026-06-28,2026-09-26
 maik wietheger,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+jerry van angeren,angerenj,MED,Jerry van Angeren,,0,fullname,2026-06-28,2026-09-26
+sakib hadziavdic,sake92,HIGH,Sakib Hadžiavdić,@sacode387 ,117,fullname,2026-06-28,
+branko mihaljevic,bramih,HIGH,Branko Mihaljević,RIT Croatia (Rochester Institute of Technology Croatia),0,fullname,2026-06-28,
+marin kalapac,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+helvira goma,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+igor beslic,igorbeslic,HIGH,Igor Bešlić,Bitna prednost d.o.o.,14,fullname,2026-06-28,
+jochem bout,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+miroslav grgic,MiroslavGrgic-DB,MED,Miroslav Grgić (DB),,0,fullname,2026-06-28,2026-09-26
+matija rabuzin,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+stjepan matijasevic,smatijasevicHappening,MED,Stjepan Matijasevic,,0,fullname-ascii,2026-06-28,2026-09-26
+helena mikulic,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+jorge d ortiz fuentes,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+giorgi tsiklauri,giorgitsiklauri,HIGH,Giorgi Tsiklauri,,0,fullname,2026-06-28,
+marek kratky,Marekatrix,MED,Marek Krátky,,1,fullname,2026-06-28,2026-09-26
+bobur umurzokov,Boburmirzo,HIGH,Bobur Umurzokov,Microsoft,172,fullname,2026-06-28,
+ivo majic,IvoMajic,MED,Ivo Majic,,3,fullname-ascii,2026-06-28,2026-09-26
+boni garcia,bonigarcia,HIGH,Boni García,UC3M,2040,fullname,2026-06-28,
+maciej walkowiak,maciejwalkowiak,HIGH,Maciej Walkowiak,,1452,fullname+jvmrepo,2026-06-28,
+aleksander radovan,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+martin zagar,mxzcad,MED,Martin Žagar,,0,fullname,2026-06-28,2026-09-26
+corrado de bari,corradodebari,HIGH,Corrado De Bari,Oracle,12,fullname,2026-06-28,
+zoran cavuzic,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+nacho cougil,icougil,HIGH,Nacho Cougil,@Dynatrace,79,fullname,2026-06-28,
+stanis aw tokarski,stanislaw-tokarski,HIGH,Stanisław Tokarski,@codewise-oss ,3,fullname+jvmrepo,2026-06-28,
+andrija plavsa,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+stijepo vrdoljak,svrdoljak,HIGH,Stijepo Vrdoljak,,8,fullname+jvmrepo,2026-06-28,
+juarez junior,josejuarezjunior,HIGH,Jose Juarez Souza Junior,@ziliatech,34,fullname,2026-06-28,
+elisabeth panholzer,epanholz,HIGH,Elisabeth Panholzer,@leaningtech,25,fullname+jvmrepo,2026-06-28,
+filip bebek,,UNRESOLVED,,,,fullname,2026-06-28,2026-09-26
+zita brigljevic,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+ivan delic,ivandelic,HIGH,Ivan Delic,Oracle,8,fullname,2026-06-28,
+alvaro sanchez mariscal,alvarosanchez,HIGH,Álvaro Sánchez-Mariscal,@Oracle,190,fullname-ascii,2026-06-28,
+dubravko bogovic,AvronNet,HIGH,Dubravko Bogović,,1,fullname+jvmrepo,2026-06-28,
+lorenzo de marchis,ldemarchis,HIGH,Lorenzo De Marchis,Oracle,0,fullname,2026-06-28,
+lovre marketin,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+filip milkovic,Filip7,MED,Filip Milković,,13,fullname,2026-06-28,2026-09-26
+martin grmek,martingrmek-asseco,MED,Martin Grmek,@asseco-see,0,fullname,2026-06-28,2026-09-26
+daniel kec,danielkec,HIGH,Daniel Kec,@Oracle,71,fullname,2026-06-28,
+stevan milovanovic,stevan-milovanovic,HIGH,Stevan Milovanovic,,6,fullname,2026-06-28,
+jacek psiuk,jacek-psiuk,MED,Jacek Psiuk,,0,fullname,2026-06-28,2026-09-26
