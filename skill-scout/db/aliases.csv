@@ -889,3 +889,16 @@ alessandro giagnorio,Devy99,confirm,auto,unique name single candidate PhD inform
 domagoj maric,doma150,confirm,auto,unique Croatian name single candidate IoT software dev consistent with JVM conf speaker,2026-06-28
 matteo orlandi,doranakan,reject,auto,bio explicitly shows React Native/Expo JS dev not JVM company mismatch Sygnum vs Welld,2026-06-28
 lorenzo verardo,lorenzoverardo,confirm,auto,rare Italian surname single candidate software engineer company may reflect job change,2026-06-28
+atsushi ikeda,Ai0202,reject,auto,no JVM signal; common name; multiple empty candidates,2026-06-28
+ayaka suzuki,suzukiayaka1211,reject,auto,no JVM signal; common name; no company match (Nomura NRI),2026-06-28
+daiki sakuma,daiki-skm,reject,auto,no JVM signal; no company match vs Recruit,2026-06-28
+gaku amano,gakuamano13,reject,auto,bio explicitly PHP/Laravel; not JVM,2026-06-28
+kohei sasaki,sasaki-kouhei,reject,auto,company excite.co.jp vs RedFrasco; wrong person,2026-06-28
+kohei sasaki,kohei-sasaki-rf,confirm,auto,login -rf and company Red Frasco match aff RedFrasco,2026-06-28
+masataka fujiwara,wn-masatakafujiwara,confirm,auto,login prefix wn- and org wealthnavi match aff WealthNavi,2026-06-28
+naoki takahashi,NaokiTakahashi12,reject,auto,very common name; 5 similar candidates; no JVM signal,2026-06-28
+t a c,TzuChieh,reject,auto,game engine dev EpicGames; no JVM; T.C. != T.A.C.,2026-06-28
+making,waffle-iron,reject,auto,company Rally Software vs VMware; wrong person,2026-06-28
+making,making,confirm,auto,speaker handle=making; VMware aff match; 901 followers,2026-06-28
+toshiki nishioka,tnishiok,reject,auto,no JVM signal; no company; ambiguous vs tnishiox,2026-06-28
+yuichiro hayashi,onihei,reject,auto,bio is iOS music app; no JVM; no company match,2026-06-28
