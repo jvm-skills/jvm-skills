@@ -2,8 +2,8 @@ name,norm_name,affiliation
 Alex Soto,alex soto,IBM
 Abdel Sghiouar,abdel sghiouar,Google Cloud
 Adrián Pastén,adrian pasten,Senior Software Engineer
-Alexander Chatzizacharias,alexander chatzizacharias,JDriven
-Ana-Maria Mihălceanu,ana maria mihalceanu,Oracle
+Alexander Chatzizacharias,alexander chatzizacharias,"Software Engineer, jDriven"
+Ana Maria Mihalceanu,ana maria mihalceanu,"Java Champion Alumni, Certified Architect"
 Andrei Tazetdinov,andrei tazetdinov,Senior Software Engineer & Tech Evangelist
 Andrew Madson,andrew madson,"Head of Developer Relations at Fivetran | Author of ""Apache Polaris - The Definitive Guide"". Authoring ""AI-Ready Data"" for Wiley and ""Data Transformation"" for O'Reilly"
 Andy Igdal,andy igdal,"PhD Student, Energy Policy, UT Austin"
@@ -13,8 +13,8 @@ Archie Sharma,archie sharma,COO at Zencoder
 Arnau Gómez Farell,arnau gomez farell,AI Engineer at Tiptap
 Asier Zapata,asier zapata,"Edpuzzle, Senior Staff Software Engineer"
 Ben Evans,ben evans,"Observability Lead, Red Hat Runtimes"
-Brian Vermeer,brian vermeer,Snyk
-Bruno Souza,bruno souza,SouJava
+Brian Vermeer,brian vermeer,Java Champion | Staff Developer Advocate @ Snyk
+Bruno Souza,bruno souza,helping developers design amazing careers
 Carles Nuñez,carles nunez,Product Engineer @ framer.com
 Carmen Laura Delgado Pérez,carmen laura delgado perez,Open Source Community Manager at Eclipse Foundation and Step4ward Founder and Mentor
 Cedric Clyburn,cedric clyburn,Red Hat
@@ -23,7 +23,7 @@ David Pilato,david pilato,Elastic
 David vonThenen,david vonthenen,NetApp
 Dennis Schulz,dennis schulz,
 Diego Rodríguez Varela,diego rodriguez varela,Software Development Engineer
-François Martin,francois martin,
+François Martin,francois martin,Senior Full Stack Software Engineer at Karakun AG
 Gerard París,gerard paris,Back-end Engineer at Preply
 Gytenis Mikulėnas,gytenis mikulenas,"Mambu, Sr. Engineering Manager"
 Hugh Evans,hugh evans,Senior Developer Advocate @ Aiven and Community Organiser
@@ -51,7 +51,7 @@ Serge Harb,serge harb,"Software Engineer, Preply"
 Sergi Almar,sergi almar,
 Sofia Lescano Carroll,sofia lescano carroll,Senior Software Engineer - Alan
 Sofia Santos,sofia santos,Mews - Staff Service Designer
-Steve Poole,steve poole,HeroDevs
+Steve Poole,steve poole,Independent
 Suzanne Daniels,suzanne daniels,Senior Chief Developer Advisor at Microsoft
 Thomas Hugle,thomas hugle,
 Tiffany Souterre,tiffany souterre,Senior Developer Advocate @AWS
@@ -66,7 +66,7 @@ Mete Atamel,mete atamel,Software Engineer and Developer Advocate at Google
 Paul Bakker,paul bakker,Netflix
 Tim Berglund,tim berglund,Confluent
 James Birnie,james birnie,Forrow.uk
-Simon Brown,simon brown,Architectis Limited
+Simon Brown,simon brown,Independent Consultant
 Piotr Ceranek,piotr ceranek,Allegro
 Orysia Chuda - Rakowska,orysia chuda rakowska,Skills Boost
 Holly Cummins,holly cummins,Quarkus
@@ -82,7 +82,7 @@ Pasha Finkelshteyn,pasha finkelshteyn,BellSoft
 Michał Furdyna,micha furdyna,Tesco Technology
 Mario Fusco,mario fusco,IBM
 Jakub Gajski,jakub gajski,j-labs
-Willem Jan Glerum,willem jan glerum,
+Willem Jan Glerum,willem jan glerum,Principal Software Engineer @ Lunatech
 Michał Gniadek,micha gniadek,Ten Square Games
 Sergès Goma,serges goma,
 Gerrit Grunwald,gerrit grunwald,
@@ -90,7 +90,7 @@ Misko Hevery,misko hevery,Roblox
 Sander Hoogendoorn,sander hoogendoorn,ibood.com
 Dotan Horovits,dotan horovits,AWS
 Wei Hu,wei hu,Oracle USA
-Johan Hutting,johan hutting,ING
+Johan Hutting,johan hutting,Developer advocate at ING
 Mackenzie Jackson,mackenzie jackson,Aikido Security
 Szymon Janikowski,szymon janikowski,Noesis Vision / Bottega IT Minds
 Arnaud Jean,arnaud jean,AWS
@@ -130,7 +130,7 @@ Michał Poczwardowski,micha poczwardowski,Perspectiveship
 Krzysiek Przekwas,krzysiek przekwas,Iver AB
 Piotr Przybył,piotr przyby,Elastic
 Daniel Raniz Raneland,daniel raniz raneland,factor10
-Balkrishna Rawool,balkrishna rawool,ING Bank
+Balkrishna Rawool,balkrishna rawool,IT Chapter Lead at ING Bank NV
 Simon Ritter,simon ritter,Azul Systems
 Abdellfetah SGHIOUAR,abdellfetah sghiouar,Google Cloud
 GRZEGORZ SZTANDERA,grzegorz sztandera,Commerzbank
@@ -163,7 +163,7 @@ Simone de Gijt,simone de gijt,OpenValue
 Guus de Wit,guus de wit,Software developer at adesso Netherlands
 Hinse ter Schuur,hinse ter schuur,Senior Software Engineer at SDB Java
 Paco van Beckhoven,paco van beckhoven,Hexagon
-Marit van Dijk,marit van dijk,JetBrains
+Marit van Dijk,marit van dijk,Software Developer | Java Champion | Developer Advocate at JetBrains
 Adam Urban,adam urban,Camunda
 Adina Panduru,adina panduru,Tchibo
 Adina Rusu,adina rusu,Allianz Technology Romania
@@ -256,7 +256,7 @@ Iustin Dinca,iustin dinca,VOIS
 Jeff Watkins,jeff watkins,"AI Consultant, expert in AI Security and humanising LLMs"
 Jonathan Filogna,jonathan filogna,WA.Technology
 Krisztián Papp,krisztian papp,Consultant @ Letscode Solutions
-Laura Trotta,laura trotta,Elastic
+Laura Trotta,laura trotta,Senior Software Engineer - Elastic
 Laurentiu Spilca,laurentiu spilca,Endava
 Leena Liukkonen,leena liukkonen,Embassy of Finland Bucharest
 Leonard Alexandru,leonard alexandru,Deloitte
@@ -325,7 +325,7 @@ Vlad Laslau,vlad laslau,Keysight Technologies
 Vlad Puescu,vlad puescu,eMAG
 Vlad Valentin,vlad valentin,Quality Engineering & Automation Stage
 Winston Liu,winston liu,Keysight Technologies
-Maik Kingma,maik kingma,Principal Consultant @ the/experts.
+Maik Kingma,maik kingma,Senior Software Craftsman @ the/experts.
 Venkateshwaran Kumarasamy,venkateshwaran kumarasamy,"ABNAMRO, System Architect, IT Java Dev Engineer"
 Piet van Dongen,piet van dongen,Software Architect & Software Engineering Consultant at OpenValue
 Ario Afrashteh,ario afrashteh,Lead Engineer focusing on AI & Data
@@ -333,21 +333,21 @@ Viktor Gamov,viktor gamov,
 Alejandro Serrano Mena,alejandro serrano mena,JetBrains
 Jago de Vreede,jago de vreede,Developer at TenneT
 James Ward,james ward,AWS
-Baruch Sadogursky,baruch sadogursky,Tessl
+Baruch Sadogursky,baruch sadogursky,"Head of DevRel, TuxCare"
 Susanne Pieterse,susanne pieterse,Open.nl Software Group
 Lucía Conde-Moreno,lucia conde moreno,Head of AI Research & Software Engineer at Info Support B.V.
 Michael Coté,michael cote,cote.io
 Catherine Edelveis,catherine edelveis,BellSoft
 Michaël Hompus,michael hompus,Architect @ Info Support | Microsoft MVP
 Josh Long,josh long,Broadcom
-Bouke Nijhuis,bouke nijhuis,CINQ ICT
+Bouke Nijhuis,bouke nijhuis,CTO @ CINQ ICT
 Andrei Shakirin,andrei shakirin,Amazon Web Services
 Marc Buma,marc buma,Owner - Bumos
 Willem Meints,willem meints,Chief AI Architect/Microsoft AI MVP
 Elena van Engelen,elena van engelen,Independent Senior Software Engineer
 Ties van de Ven,ties van de ven,Alliander
 Daniel Garnier-Moiroux,daniel garnier moiroux,Broadcom
-Tom Cools,tom cools,Timefold
+Tom Cools,tom cools,Developer Relations Engineer @ Timefold
 Rustam Mehmandarov,rustam mehmandarov,Miles
 Milen Dyankov,milen dyankov,
 Roberto Cortez,roberto cortez,IBM
@@ -355,7 +355,7 @@ Ioannis Kolaxis,ioannis kolaxis,
 Jonathan Vila López,jonathan vila lopez,Sonar
 Stefan Angelov,stefan angelov,
 Ivan Yonkov,ivan yonkov,Codexio
-Cay Horstmann,cay horstmann,
+Cay Horstmann,cay horstmann,"Author of Core Java, Scala for the Impatient, and many other books."
 Johannes Bechberger,johannes bechberger,SAP SE
 Christian Heitzmann,christian heitzmann,SimplexaCode AG
 Marcin Chrost,marcin chrost,
@@ -392,7 +392,7 @@ Giovanna Monti,giovanna monti,Adelean
 Guillaume Lours,guillaume lours,Docker
 Helder Araujo Carneiro,helder araujo carneiro,ARHS Group Part of Accenture
 Hussein Loubani,hussein loubani,CIAD
-Ines Panker,ines panker,
+Ines Panker,ines panker,Software engineer by trade and an explorer at heart
 Ivan Ponomarev,ivan ponomarev,Synthesized.io
 Jens Knipper,jens knipper,OpenValue
 Jérôme Wax,jerome wax,InTech
@@ -487,7 +487,7 @@ Madhura Chaganty,madhura chaganty,Elliptic
 Anne Currie,anne currie,Strategically Green
 Benjamin Dauvissat,benjamin dauvissat,Adelean
 Rahul De,rahul de,Citibank
-Raphael De Lio,raphael de lio,Redis
+Raphael De Lio,raphael de lio,Developer Advocate @ Redis
 David Denton,david denton,
 Iryna Dohndorf,iryna dohndorf,Karakun Group
 Thomas Endres,thomas endres,TNG Technology Consulting GmbH
@@ -499,7 +499,7 @@ Trisha Gee,trisha gee,Java Champion
 Horacio Gonzalez,horacio gonzalez,Clever Cloud
 Matthias Haeussler,matthias haeussler,CGI
 Mark Hazell,mark hazell,Devoxx UK
-Ryan Healey,ryan healey,LMAX Group
+Ryan Healey,ryan healey,Senior Software Developer @ LMAX Group
 Cheuk Ting Ho,cheuk ting ho,JetBrains
 Marianne Hoornenborg,marianne hoornenborg,NLJUG and KVK (Dutch Chamber of Commerce)
 Rob Hopkins,rob hopkins,Transition Network
@@ -517,7 +517,7 @@ Jules May,jules may,22 Consulting Ltd
 Jonas Mayer,jonas mayer,TNG Technology Consulting
 Paulo Menon,paulo menon,Red Hat
 Derek Mortimer,derek mortimer,CECG
-Maarten Mulders,maarten mulders,
+Maarten Mulders,maarten mulders,Consultant ~ Trainer ~ Speaker ~ Java Champion ~ Oracle ACE Pro
 Frank Munz,frank munz,Databricks
 Alexey Naiden,alexey naiden,Cloud Linux
 Diana Nanuti,diana nanuti,Chainalysis
@@ -541,7 +541,7 @@ Gantigmaa Selenge,gantigmaa selenge,IBM
 Filip Srnec,filip srnec,Infobip
 Kate Stanley,kate stanley,IBM
 Pooja Subramanian,pooja subramanian,Thoughtworks
-Bárbara Teruggi,barbara teruggi,
+Bárbara Teruggi,barbara teruggi,Security Architect
 Heather Thacker,heather thacker,Gatling
 Simon Vergauwen,simon vergauwen,JetBrains
 Nitsan Wakart,nitsan wakart,Apple
@@ -550,7 +550,7 @@ Eoin Woods,eoin woods,Artechra
 Thomas Wuerthinger,thomas wuerthinger,Oracle
 Ananya Kittane Yogananda,ananya kittane yogananda,
 Jonathan du Mesnil de Rochemont,jonathan du mesnil de rochemont,TNG Technology Consulting
-Tim te Beek,tim te beek,
+Tim te Beek,tim te beek,Staff software engineer at Moderne
 Adam Dudczak,adam dudczak,Computational systems and people engineering practitioner
 Ahmed Hassanien,ahmed hassanien,"Engineering Manager with experience in software architecture, leadership, and AI/ML"
 Arjen Poutsma,arjen poutsma,Software engineer who spent nearly 20 years shaping the Spring Framework and now advises Embabel
@@ -745,7 +745,7 @@ Michael Jerger,michael jerger,Maintainer von Open-Source-DevOps-Systemen
 Emily Jiang,emily jiang,Java Champion
 Michael Johann,michael johann,Principial Platform Engineer für die Magenta Developer eXperience
 Alexander John-Anacker,alexander john anacker,sidion GmbH
-Rod Johnson,rod johnson,Embabel
+Rod Johnson,rod johnson,"Spring, Embabel"
 Andreas Jürgensen,andreas jurgensen,"Technical Coach - Coding, Testing & Architektur"
 Clemens Jütte,clemens jutte,VMware
 Christian Kaiser,christian kaiser,"Experte & Coach für Refactoring, Legacy Code & Softwaretests"
@@ -973,7 +973,7 @@ Thomas Velden,thomas velden,SCHUFA Holding AG
 Gien Verschatse,gien verschatse,Consultant & Software Engineer specialized  in Domain Driven Design & Software Architecture
 Natale Vinto,natale vinto,"Developer Experience, Evangelism Director @ Red Hat | AI Specialist"
 Almudena Vivanco González,almudena vivanco gonzalez,"Performance Engineering Expert, DevOps Advocate & STEM Ambassador"
-David vlijmincx,david vlijmincx,
+David Vlijmincx,david vlijmincx,Developer @ JPoint
 Daniel Voelsen,daniel voelsen,Stiftung Wissenschaft und Politik
 Markus Voelter,markus voelter,Freiberuflich
 Lars Vogel,lars vogel,Experte für Eclipse-Entwicklung und Android-Schulungen.
@@ -1195,7 +1195,7 @@ Márton Braun,marton braun,JetBrains
 Matt Dyor,matt dyor,
 Meike Felicia Hammer,meike felicia hammer,
 Merlin Pahic,merlin pahic,EIDU
-Michail Zarečenskij,michail zarecenskij,
+Michail Zarečenskij,michail zarecenskij,Lead Language Designer @ Kotlin
 Michal Harakal,michal harakal,Deutsche Telekom AG
 Mohamed Ben Rejeb,mohamed ben rejeb,
 Nat Pryce,nat pryce,
@@ -1455,7 +1455,7 @@ Steve RIGANO,steve rigano,Crédit Agricole Technologies & Services
 David ROBIN,david robin,JFrog
 Johan ROUVE,johan rouve,Comet
 Romain ROZEWICZ,romain rozewicz,ARGIOS
-Lize Raes,lize raes,
+Lize Raes,lize raes,Software Engineer at LangChain4j
 Johann Rakotoharisoa,johann rakotoharisoa,Comet
 Alain Regnier,alain regnier,Kubo Labs
 René Ribaud,rene ribaud,Red Hat
@@ -1609,7 +1609,7 @@ Markus Kett,markus kett,MicroStream
 Dominika Tasarz,dominika tasarz,Payara
 Mary Grygleski,mary grygleski,AI Collective
 Grace Robinson,grace robinson,IBM
-Frank Delporte,frank delporte,Azul
+Frank Delporte,frank delporte,Java Champion - Author of 'Getting started with Java on the Raspberry Pi' - Senior Technical Writer at Azul
 Sharat Chander,sharat chander,Oracle
 Markus Eisele,markus eisele,IBM Research
 Bruno Borges,bruno borges,Principal PM Manager at Microsoft
@@ -1656,7 +1656,7 @@ Philip Riecks,philip riecks,PragmaTech
 Ram Mohan Rao Chukka,ram mohan rao chukka,JFrog
 Raquel Pau,raquel pau,Broadcom
 Ricardo Ferreira,ricardo ferreira,Redis
-Ronald Dehuysser,ronald dehuysser,JobRunr
+Ronald Dehuysser,ronald dehuysser,Opensource software developer
 Rossen Stoyanchev,rossen stoyanchev,Broadcom
 Ruben Afonso,ruben afonso,AWS
 Sergei Chernov,sergei chernov,Miro
@@ -1666,7 +1666,7 @@ Thomas Vitale,thomas vitale,Systematic
 Tiffany Jernigan,tiffany jernigan,Grafana Labs
 Tim van Baarsen,tim van baarsen,ING
 Tommy Ludwig,tommy ludwig,Broadcom
-Urs Peter,urs peter,Xebia
+Urs Peter,urs peter,Urs Peter Senior Software Engineer and JetBrains certified Kotlin Trainer
 Vadim Briliantov,vadim briliantov,JetBrains
 Vadzim Prudnikau,vadzim prudnikau,Apotek 1
 Yuriy Bezsonov,yuriy bezsonov,AWS
@@ -1677,13 +1677,13 @@ Marthijs Berfelo,marthijs berfelo,EDSN
 Jan Boonen,jan boonen,the/experts.
 Jeroen Borgers,jeroen borgers,jPinpoint B.V.
 Wilco Burggraaf,wilco burggraaf,HighTech Innovators
-Jettro Coenradie,jettro coenradie,Yuma
+Jettro Coenradie,jettro coenradie,Fellow at Luminis working as Search and Data expert
 Soham Dasgupta,soham dasgupta,Microsoft
 Delicia De Jong,delicia de jong,Chainguard
 Mark Dirksma,mark dirksma,Energie Data Services Nederland
-Ramona Domen,ramona domen,Team Rockstars IT
+Ramona Domen,ramona domen,Software Engineer and Impact Leader at Team Rockstars IT
 Jeroen Egelmeers,jeroen egelmeers,Sogeti Netherlands
-Hanno Embregts,hanno embregts,Info Support
+Hanno Embregts,hanno embregts,"Java Developer by day, musician by night. A bit of both at conferences."
 Iulia Feroli,iulia feroli,Back To Engineering / YouTube
 Daniël Floor,daniel floor,Info Support
 Annie Freeman,annie freeman,Coralogix
@@ -1696,18 +1696,18 @@ Michael Koers,michael koers,Info Support
 Sophie Küster,sophie kuster,cronn GmbH
 Aicha Laafia,aicha laafia,
 Julien Lengrand-Lambert,julien lengrand lambert,
-Adam Michalik,adam michalik,Rabobank
+Adam Michalik,adam michalik,DevOps Engineer at Rabobank
 Jacopo Nardiello,jacopo nardiello,ING
 Saman Nourkhalaj,saman nourkhalaj,Elastic
 Janne Ploeger,janne ploeger,Picnic Technologies
 Sri Rang,sri rang,
 Gunter Rotsaert,gunter rotsaert,ICT TriOpSys
 Jos Rutten,jos rutten,Trailblazers
-Bert Jan Schrijver,bert jan schrijver,OpenValue
-Michel Schudel,michel schudel,Craftsmen
+Bert Jan Schrijver,bert jan schrijver,CTO at OpenValue
+Michel Schudel,michel schudel,Full-stack software engineer at Craftsmen
 Remco Siemonsma,remco siemonsma,Remcoder
 Peter Smink,peter smink,Team Rockstars IT/ASML
-Daniël Spee,daniel spee,Yuma
+Daniël Spee,daniel spee,Search Engineer at Luminis
 Max Sumrall,max sumrall,Picnic Technologies
 Daniele Tonella,daniele tonella,ING
 Ko Turk,ko turk,Codelab
@@ -1715,7 +1715,7 @@ Victor Uria Valle,victor uria valle,CERN
 Lutske de Leeuw,lutske de leeuw,Craftsmen
 Edo van Draanen,edo van draanen,Energie Data Services Nederland
 Boyen van Gorp,boyen van gorp,Alliander
-Martijn van Iersel,martijn van iersel,TOPdesk
+Martijn van Iersel,martijn van iersel,gamifying software education
 Marco van Veldhuizen,marco van veldhuizen,Chainguard
 Linda van der Pal,linda van der pal,Trailblazers
 Magda Miu,magda miu,Adobe
@@ -1893,7 +1893,7 @@ Matthias Bünger,matthias bunger,
 Daniel Rosowski,daniel rosowski,
 Dr. Jendrik Johannes,dr jendrik johannes,
 Dr. Mihaela Gheorghe-Roman,dr mihaela gheorghe roman,
-Martijn Dashorst,martijn dashorst,Topicus.nl
+Martijn Dashorst,martijn dashorst,Mijn Java ervaring mag eindelijk een biertje drinken en autolessen nemen (niet noodzakelijkerwijs tegelijkertijd)
 Frederik Wystup,frederik wystup,
 Andreas Voigt,andreas voigt,
 Lukas Pradel,lukas pradel,
@@ -3164,7 +3164,7 @@ Dmitry Kekelidze,dmitry kekelidze,CERN
 Jesse Kershaw,jesse kershaw,CERN
 Christos Kotselidis,christos kotselidis,The University of Manchester/Nimble Innovation
 Marcos Maia,marcos maia,Bitvavo B.V
-Jos Roseboom,jos roseboom,EasingYou
+Jos Roseboom,jos roseboom,Freelance software developer
 Karthik Sayapparaju,karthik sayapparaju,CERN
 Mary Xekalaki,mary xekalaki,University of Manchester
 Kristian Bergmann,kristian bergmann,Exact coding
@@ -3260,3 +3260,32 @@ roronya,roronya,Recruit Co. ltd
 kis,kis,LY Corporation
 soudai,soudai,Have Fun Tech / Linkage
 Ao Miyazawa,ao miyazawa,株式会社ZOZO
+Neel Bhatt,neel bhatt,Chapter Lead & Solutions Architect at RTL
+Rick Ossendrijver,rick ossendrijver,Software Engineer in Picnic's Java Platform team
+Pim Tegelaar,pim tegelaar,Tech Trainer @ Picnic Technologies
+Pieter van der Meer,pieter van der meer,Engineer @ Dataworkz
+Ruben Scheedler,ruben scheedler,Software Engineer @ Sopra Steria
+Ragna Gerretsen,ragna gerretsen,"Tech Lead, Community Lead @ Rabobank"
+Vincent van der Zijden,vincent van der zijden,Java Engineer @ FreshMinds
+Peter Hilton,peter hilton,"Product manager, writer, speaker, trainer, and musician"
+Yorgos Saslis,yorgos saslis,Building a better home for Open Source: Radicle.xyz
+Arjan Tijms,arjan tijms,Director OmniFish
+Rijo Sam,rijo sam,"Java Chapter Lead, Senior Java Developer"
+Roald Nefs,roald nefs,Chief Technology Officer at Warpnet
+Tonny Garić,tonny garic,Java DevOps Engineer @ Flink Software
+Rafael Winterhalter,rafael winterhalter,software consultant at Scienta in Oslo
+Jan Ouwens,jan ouwens,Java juggler at Yoink
+Ted Vinke,ted vinke,Senior Software Engineer at First8 Conclusion
+Peter Schuler,peter schuler,Senior Java Developer @ Rabobank
+Abraham Van der Vyver,abraham van der vyver,"Rabobank, Devops Engineer, Community Lead"
+Patrick Beks,patrick beks,Product Owner @ KB/National Library The Netherlands
+Louëlla Creemers,louella creemers,Microsoft MVP | .NET Developer | Content Creator
+Arjen Wiersma,arjen wiersma,Cybersecurity Consultant at Scyon and Writer at Offensive AI
+Stéphane Nicoll,stephane nicoll,Software Engineer
+Auke Haanstra,auke haanstra,Consultant Expert level at Pancompany
+Roy van Rijn,roy van rijn,OpenValue
+Berwout de Vries Robles,berwout de vries robles,Java Developer at Alliander
+Reinier Zwitserloot,reinier zwitserloot,"Co-Founder and lead developer, Zorg op Orde"
+Roel Spilker,roel spilker,Project Lombok maintainer
+Julian Exenberger,julian exenberger,Consultant - CapGemini
+Robert Schrijvers,robert schrijvers,Dutch Tax administration (Belastingdienst)

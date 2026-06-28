@@ -541,7 +541,7 @@ gantigmaa selenge,tinaselenge,HIGH,Gantigmaa Selenge,Red Hat,12,fullname+jvmrepo
 filip srnec,ib-fsrnec,HIGH,Filip Srnec,@infobip ,1,fullname,2026-06-28,
 kate stanley,katheris,HIGH,Kate Stanley,,114,fullname+org,2026-06-28,
 pooja subramanian,PoojaSubramanian,MED,Pooja Subramanian,,3,fullname,2026-06-28,2026-09-26
-barbara teruggi,barbara-teruggi,MED,Barbara Teruggi,,1,fullname-ascii,2026-06-28,2026-09-26
+barbara teruggi,barbara-teruggi,HIGH,Barbara Teruggi,,1,alias,2026-06-28,
 heather thacker,hhthacker,HIGH,Heather Thacker,,75,fullname+jvmrepo,2026-06-28,
 simon vergauwen,nomisRev,HIGH,Simon Vergauwen,JetBrains,462,fullname,2026-06-28,
 nitsan wakart,nitsanw,HIGH,Nitsan Wakart,,477,fullname+jvmrepo,2026-06-28,
@@ -3256,3 +3256,32 @@ roronya,roronya,HIGH,roronya,,15,fullname+jvmrepo,2026-06-28,
 kis,koreainvestment,HIGH,KIS Developers,Korea investment & Securities,324,fullname+dominant,2026-06-28,
 soudai,soudai,HIGH,soudai sone,日本PostgreSQLユーザ会,78,fullname+jvmrepo,2026-06-28,
 ao miyazawa,miyar2306,HIGH,Ao Miyazawa,ZOZO,3,fullname,2026-06-28,
+neel bhatt,Neel1302,MED,Neel Bhatt,The University of Texas at Austin,8,fullname,2026-06-28,2026-09-26
+rick ossendrijver,rickie,HIGH,Rick Ossendrijver,@ExpressMe @PicnicSupermarket,50,fullname,2026-06-28,
+pim tegelaar,pimtegelaar,HIGH,Pim Tegelaar,Picnic,4,fullname,2026-06-28,
+pieter van der meer,elucidator,HIGH,Pieter van der Meer,Dataworkz,3,fullname,2026-06-28,
+ruben scheedler,RubenScheedler,HIGH,Ruben Scheedler,,2,fullname+jvmrepo,2026-06-28,
+ragna gerretsen,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+vincent van der zijden,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+peter hilton,hilton,HIGH,Peter Hilton,,93,fullname,2026-06-28,
+yorgos saslis,gsaslis,HIGH,Yorgos Saslis,radicle.dev,79,fullname,2026-06-28,
+arjan tijms,arjantijms,HIGH,Arjan Tijms,,239,fullname+jvmrepo,2026-06-28,
+rijo sam,Rijosam,HIGH,Rijo Sam,,6,fullname+jvmrepo,2026-06-28,
+roald nefs,roaldnefs,HIGH,Roald Nefs,@warpnet,197,fullname,2026-06-28,
+tonny garic,TonnyGaric,HIGH,Tonny Garić,Flink Software,10,fullname,2026-06-28,
+rafael winterhalter,raphw,HIGH,Rafael Winterhalter,Scienta,1565,fullname,2026-06-28,
+jan ouwens,jqno,HIGH,Jan Ouwens,,75,fullname+jvmrepo,2026-06-28,
+ted vinke,tedmijnsofie,HIGH,Ted Vinke,First8,0,fullname,2026-06-28,
+peter schuler,peter-m-schuler,MED,Peter M. Schuler,it-objects GmbH,4,fullname,2026-06-28,2026-09-26
+abraham van der vyver,avdvyver,HIGH,Abraham van der Vyver,Trifork,5,fullname+jvmrepo,2026-06-28,
+patrick beks,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+louella creemers,LouellaCreemers,HIGH,Louella Creemers,Louella Devekopment,40,fullname-ascii,2026-06-28,
+arjen wiersma,credmp,HIGH,Arjen Wiersma,,70,fullname+jvmrepo,2026-06-28,
+stephane nicoll,snicoll,HIGH,Stéphane Nicoll,Broadcom,2486,fullname,2026-06-28,
+auke haanstra,AukeHaanstra,HIGH,Auke Haanstra,Pancompany,4,fullname,2026-06-28,
+roy van rijn,royvanrijn,HIGH,Roy van Rijn,OpenValue Rotterdam,211,fullname,2026-06-28,
+berwout de vries robles,nrg500,HIGH,Berwout de Vries Robles,,3,fullname+jvmrepo,2026-06-28,
+reinier zwitserloot,rzwitserloot,HIGH,Reinier Zwitserloot,Zorg op Orde BV,423,fullname,2026-06-28,
+roel spilker,rspilker,HIGH,Roel Spilker,TOPdesk,84,fullname+jvmrepo,2026-06-28,
+julian exenberger,jexenberger,HIGH,Julian Exenberger,Cap Gemini,13,fullname+jvmrepo,2026-06-28,
+robert schrijvers,robertxocs,HIGH,Robert Schrijvers,,1,fullname+jvmrepo,2026-06-28,

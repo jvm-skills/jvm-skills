@@ -63,3 +63,4 @@ started_at,conference,speakers,resolved,scanned_repos,skipped_repos,found,parked
 2026-06-28,dev2next 2025,49,35,222,0,0,14,"0 found, 0 needs_review, 0 bundle(s), 15 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
 2026-06-28,Voxxed Days Ticino 2026,50,35,140,0,0,15,"0 found, 0 needs_review, 0 bundle(s), 2 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
 2026-06-28,JJUG CCC 2025 Fall,62,18,184,0,0,44,"0 found, 0 needs_review, 0 bundle(s), 23 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
+2026-06-28,J-Fall 2025,72,58,344,0,0,14,"0 found, 0 needs_review, 0 bundle(s), 2 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
