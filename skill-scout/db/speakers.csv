@@ -40,7 +40,7 @@ Luis Fraile,luis fraile,DevOps Consultant at Plain Concepts + CTO B!Play
 "Mauricio ""Salaboy"" Salatino",mauricio salaboy salatino,OSS Software and Ecosystem Engineer @Diagrid / Java Champion / Cloud Native Ambassador
 Mauro Gioberti,mauro gioberti,.NET Software Engineer | Devs Mentor
 Mauro Morales,mauro morales,Spectro Cloud
-Olena Kutsenko,olena kutsenko,Confluent
+Olena Kutsenko,olena kutsenko,
 Olivier Leplus,olivier leplus,Developer Advocate at AWS & Google Developer Expert on Web Technologies
 Paolo Ricciuti,paolo ricciuti,Svelte Maintainer & Senior Software Engineer at Mainmatter
 Rachid Zarouali,rachid zarouali,sevensphere
@@ -78,7 +78,7 @@ Zahra Fakoor Harehdasht,zahra fakoor harehdasht,EPLAN
 Allison Farris,allison farris,Stripe
 Artem Fast,artem fast,Revolut
 Mary Fesenko,mary fesenko,Dropbox
-Pasha Finkelshteyn,pasha finkelshteyn,BellSoft
+Pasha Finkelshteyn,pasha finkelshteyn,
 Michał Furdyna,micha furdyna,Tesco Technology
 Mario Fusco,mario fusco,IBM
 Jakub Gajski,jakub gajski,j-labs
@@ -92,7 +92,7 @@ Dotan Horovits,dotan horovits,AWS
 Wei Hu,wei hu,Oracle USA
 Johan Hutting,johan hutting,Developer advocate at ING
 Mackenzie Jackson,mackenzie jackson,Aikido Security
-Szymon Janikowski,szymon janikowski,Noesis Vision / Bottega IT Minds
+Szymon Janikowski,szymon janikowski,Noesis.vision
 Arnaud Jean,arnaud jean,Developer Advocate
 Katarzyna Jurczak,katarzyna jurczak,
 Agata Kabat,agata kabat,Building teams that everyone wants to work with
@@ -112,7 +112,7 @@ James Lewis,james lewis,Thoughtworks
 Oleg Lobanov,oleg lobanov,Bitvavo
 Andrzej Ludwikowski,andrzej ludwikowski,Akka
 Grzegorz Łyczba,grzegorz yczba,Dropbox
-Sohan Maheshwar,sohan maheshwar,AuthZed
+Sohan Maheshwar,sohan maheshwar,
 Artem Makarov,artem makarov,Code Nomads
 Sebastian Malaca,sebastian malaca,UBS
 Tomasz Manugiewicz,tomasz manugiewicz,Grand Parade
@@ -120,7 +120,7 @@ Simon Maple,simon maple,Tessl
 Jacek Marmuszewski,jacek marmuszewski,Let's Go DevOps
 Jan Mazurek,jan mazurek,EPAM Systems
 Natalia Mikołajek,natalia miko ajek,Jadźka Rysuje
-Jacek Milewski,jacek milewski,Circle K | Bottega IT Minds
+Jacek Milewski,jacek milewski,
 Gunnar Morling,gunnar morling,Confluent
 Nicolai Parlog,nicolai parlog,Oracle
 Dawid Perdek,dawid perdek,Altium
@@ -128,12 +128,12 @@ Sven Peters,sven peters,AI Evangelist at Atlassian
 Pawel Piwosz,pawel piwosz,UpCloud
 Michał Poczwardowski,micha poczwardowski,Perspectiveship
 Krzysiek Przekwas,krzysiek przekwas,Iver AB
-Piotr Przybył,piotr przyby,Elastic
+Piotr Przybył,piotr przyby,
 Daniel Raniz Raneland,daniel raniz raneland,factor10
 Balkrishna Rawool,balkrishna rawool,ING Bank
 Simon Ritter,simon ritter,Azul
 Abdellfetah SGHIOUAR,abdellfetah sghiouar,Google Cloud
-GRZEGORZ SZTANDERA,grzegorz sztandera,Commerzbank
+Grzegorz Sztandera,grzegorz sztandera,
 Muhammed Salih Güler,muhammed salih guler,AWS
 Marcin Samsonowski,marcin samsonowski,Deloitte
 Christian Schabetsberger,christian schabetsberger,Finxit IT Solutions
@@ -153,7 +153,7 @@ Diana Todea,diana todea,VictoriaMetrics
 Alexandre Touret,alexandre touret,Magellan
 Adam Warski,adam warski,SoftwareMill
 Artur Wojnar,artur wojnar,MasterBorn
-Mike Wojtyna,mike wojtyna,wojtyna.pl
+Mike Wojtyna,mike wojtyna,
 Alina Yurenko,alina yurenko,Oracle
 Sylwia Zabielska,sylwia zabielska,sylwiazabielska.pl
 Paweł Żemła,pawe zem a,SAP
@@ -555,17 +555,17 @@ Adam Dudczak,adam dudczak,Computational systems and people engineering practitio
 Ahmed Hassanien,ahmed hassanien,"Engineering Manager with experience in software architecture, leadership, and AI/ML"
 Arjen Poutsma,arjen poutsma,Software engineer who spent nearly 20 years shaping the Spring Framework and now advises Embabel
 Artur Kęska,artur keska,Java dev on daily basis
-Artur Skowroński,artur skowronski,
+Artur Skowronski,artur skowronski,
 Aviva Peisach,aviva peisach,Head of Wix Backend & Wix-Identity
 Christian Tzolov,christian tzolov,Broadcom
 Dariusz Jędrzejczyk,dariusz jedrzejczyk,Broadcom
 Dominik Cebula,dominik cebula,"Cloud Software Principal Engineer at HSBC, Udemy instructor, book author"
 Dylan Beattie,dylan beattie,
 Ivar Grimstad,ivar grimstad,Jakarta EE Developer Advocate
-Jakub Nabrdalik,jakub nabrdalik,"Software, Platform and Solution architect with 23 years of commercial exp"
+Jakub Nabrdalik,jakub nabrdalik,
 Josef Goldstein,josef goldstein,The Data & Culture Guy
 Konrad Szałkowski,konrad sza kowski,Java enthusiast
-Krzysztof Dębski,krzysztof debski,Zen.com
+Krzysztof Debski,krzysztof debski,
 Marcin Grzejszczak,marcin grzejszczak,HeroDevs
 Marcin Kliks,marcin kliks,"Principal Software Engineer, Manager & Biotech Software Founder"
 Marcin Łapaj,marcin apaj,architect at iteratec
@@ -1045,7 +1045,7 @@ dr. Mark Little,dr mark little,"Vice President, Middleware Engineering @IBM"
 Neil Chandler,neil chandler,Oracle Database Expert
 Mike Durran,mike durran,Oracle Analytics Product Manager
 Lucas Hirschegger,lucas hirschegger,Senior Oracle APEX Consultant | Oracle ACE Associate
-Matej Nedić,matej nedic,Infinum - Lead Java Engineer
+Matej Nedic,matej nedic,
 Jan Martiska,jan martiska,Quarkus engineer
 Rok Garbas,rok garbas,"Flox, Software Engineer"
 Ariel David Jančar,ariel david jancar,Senior Software Engineer @ Celtra
@@ -3497,16 +3497,16 @@ Ivan Schwarz,ivan schwarz,DoubleVerify
 Rafik FERROUKH,rafik ferroukh,Harvest Groupe
 Michał Ambruszkiewicz,micha ambruszkiewicz,Lingaro
 Aayush Anand,aayush anand,CBRE
-Kamil Banach,kamil banach,banach.net.pl
+Kamil Banach,kamil banach,
 Indira Bandari,indira bandari,Inde Technology
 Piotr Baryczkowski,piotr baryczkowski,Poznań University of Technology
 Shivam Basia,shivam basia,Intel Corporation
 Konstantin Berezin,konstantin berezin,Rapyd
 Konstantine Beridze,konstantine beridze,
 Jaga Biernacka-Urban,jaga biernacka urban,cooperation.art
-Sebastian Buczyński,sebastian buczynski,Sauce Labs
+Sebastian Buczyński,sebastian buczynski,
 Magdalena Cebula,magdalena cebula,Redge Technologies sp. z o.o.
-Mateusz Chrzonstowski,mateusz chrzonstowski,Paramount
+Mateusz Chrzonstowski,mateusz chrzonstowski,
 Jakub Ciepły,jakub ciep y,Displate
 Lukasz Czekaj,lukasz czekaj,Sii
 Szymon Drejewicz,szymon drejewicz,ASEE Group
@@ -3525,13 +3525,13 @@ Marcin Gąstół,marcin gasto,Microsoft MVP
 Jacek Golebiowski,jacek golebiowski,distil labs
 Tomasz Guściora,tomasz gusciora,DemystifAI
 Michał Ilski,micha ilski,Tooploox
-Tomasz Janczewski,tomasz janczewski,Akademia Marynarki Wojennej w Gdyni
+Tomasz Janczewski,tomasz janczewski,
 Michał Jaworski,micha jaworski,Microsoft
 Mariusz Jażdżyk,mariusz jazdzyk,firstscore.io
 Bethany Jepchumba,bethany jepchumba,Microsoft
 Sławomir Jeżewski,s awomir jezewski,RSB
 Aleksander Kaim,aleksander kaim,Answear
-Mateusz Kamiński,mateusz kaminski,Sages
+Mateusz Kamiński,mateusz kaminski,
 Krzysztof Kąkol,krzysztof kakol,Xebia
 Taras Kloba,taras kloba,Microsoft
 Grzegorz Kocjan,grzegorz kocjan,BeLazy.Dev/IndieBI
@@ -3544,7 +3544,7 @@ Michał Kowol,micha kowol,Codeloop.eu
 Dominik Kozaczko,dominik kozaczko,Gromobrody
 Marcin Kraszewski,marcin kraszewski,Qrpto.com
 Konrad Krawczyk,konrad krawczyk,WEBSENSA
-Bartek Kuczynski,bartek kuczynski,The Codest
+Bartek Kuczyński,bartek kuczynski,
 Artur Laskowski,artur laskowski,javasenior.pl
 Madise Lebogang,madise lebogang,Microsoft
 Yevgeniya Li,yevgeniya li,Netflix
@@ -3608,7 +3608,7 @@ Damian Wysocki,damian wysocki,Mirumee
 Vijay Yadav,vijay yadav,Brooklyn Health
 Michał Zaborowski,micha zaborowski,piano.io
 Wojciech Zając,wojciech zajac,Freelancer
-Marcin Zajączkowski,marcin zajaczkowski,InPost & Bottega
+Marcin Zajączkowski,marcin zajaczkowski,
 Paweł Zwarycz,pawe zwarycz,Independent Speaker
 Krystian Zybała,krystian zyba a,Webosystem
 Michał Zyga,micha zyga,SoftwareMill
@@ -3625,7 +3625,7 @@ Mateusz Kaczorek,mateusz kaczorek,Softserve
 Michał Łopuszyński,micha opuszynski,TCL Research Europe
 Marlene Mhangami,marlene mhangami,
 Ilia Nagovitsyn,ilia nagovitsyn,Private U.S. hedge fund
-Michał Niczyporuk,micha niczyporuk,DataLinks
+Michał Niczyporuk,micha niczyporuk,
 Patryk Piętka,patryk pietka,
 Toni Rodriguez-Magierowsk,toni rodriguez magierowsk,Gis-support
 Sumit Saha,sumit saha,Microsoft
@@ -3682,3 +3682,48 @@ Edward Burns,edward burns,Principal Architect for Java on Azure
 Brian Demers,brian demers,Java Champion & Gradle Developer Advocate
 Mark Stoodley,mark stoodley,Chief Architect for IBM Java
 Mark Heckler,mark heckler,"Java Champion, Senior Director of Field Engineering at Moderne"
+Grzegorz Piwowarek,grzegorz piwowarek,
+Leszek Leszczyński,leszek leszczynski,
+Ariel Drozd,ariel drozd,
+Juliusz Marciniak,juliusz marciniak,
+Sławomir Sobótka,s awomir sobotka,
+Agnieszka Karlińska,agnieszka karlinska,HIVE AI
+Piotr Pęzik,piotr pezik,
+Natalia Burak,natalia burak,
+Rafał Wojdan,rafa wojdan,
+Przemysław Chmielecki,przemys aw chmielecki,
+Jan Dobrowolski,jan dobrowolski,
+Sławek Piotrowski,s awek piotrowski,
+Emilia Pióro,emilia pioro,
+Ros Apostol,ros apostol,
+Naveen Mareddy,naveen mareddy,Netflix
+Sebastian Łaskawiec,sebastian askawiec,
+Mateusz Łyczek,mateusz yczek,
+Maciej Łukasik,maciej ukasik,RTB House
+Witold Sieński,witold sienski,
+Alina Wróblewska,alina wroblewska,
+Kamil Kiszko Zgierski,kamil kiszko zgierski,
+ags,ags,
+Kacper Staniszewski,kacper staniszewski,
+Piotr Ćwikliński,piotr cwiklinski,Sii
+Krzysztof Czartoryski,krzysztof czartoryski,
+Michał Mazur,micha mazur,
+Łukasz Kobyliński,ukasz kobylinski,
+Tomasz Fijałkowski,tomasz fija kowski,
+Francisco Ferreira,francisco ferreira,
+Krzysztof Ślusarski,krzysztof slusarski,
+Maciej Czajka,maciej czajka,
+Jakub Kubryński,jakub kubrynski,
+Marek Łobaza,marek obaza,
+Bartosz Rogowicz,bartosz rogowicz,Kahoot
+Marek Kozłowski,marek koz owski,HIVE AI
+Iwona Christop,iwona christop,
+Marcin Wierzbiński,marcin wierzbinski,
+Kamil Szymański,kamil szymanski,
+Kacper Koza,kacper koza,Allegro
+Michał Marcińczuk,micha marcinczuk,
+Marcin Kruglik,marcin kruglik,
+Sebastian Kozak,sebastian kozak,
+Szymon Hulewicz,szymon hulewicz,
+Patrycja Budner,patrycja budner,
+Dawid Detko,dawid detko,

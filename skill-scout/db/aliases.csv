@@ -1023,3 +1023,16 @@ filip milkovic,Filip7,reject,auto,4 ambiguous candidates; top cand has ghostty-o
 martin grmek,martingrmek-asseco,confirm,auto,GitHub company @asseco-see and login encodes company name; sufficient corroboration,2026-06-28
 jacek psiuk,jacek-psiuk,reject,auto,empty profile; Commerce Media Tech affiliation unconfirmed; no corroboration,2026-06-28
 edward burns,EdwardBurns,reject,auto,two name-matching accounts (EdwardBurns/edward-burns); neither has company/bio/orgs/jvm_repo to corroborate Principal Architect for Java on Azure,2026-06-28
+agnieszka karlinska,akarlinska,reject,auto,"no JVM repos, empty company (aff HIVE AI not in profile), no bio, 6 followers — zero corroboration",2026-06-28
+s awek piotrowski,sentinelt,confirm,auto,org atteo is Atteo Java library project — JVM corroboration; 29 followers; exact name match,2026-06-28
+alina wroblewska,alina-wroblewska,reject,auto,"empty profile: 0 followers, no bio, no company, no JVM repos — zero corroboration",2026-06-28
+ags,lakpahana,reject,auto,speaker name is just initials; AGS Lakpahana (Univ. Ruhuna) does not match Polish JVM conference context,2026-06-28
+piotr cwiklinski,piotrcwiklinski,confirm,auto,distinctive Polish name exact match; aff Sii is major Polish IT firm; sufficient at Polish JVM conference,2026-06-28
+krzysztof czartoryski,k1-euvic,confirm,auto,login k1-euvic encodes Euvic company; company field=Euvic (Polish IT firm); very rare historical surname,2026-06-28
+micha mazur,ultron682,reject,auto,"very common Polish name with multiple candidates; best candidate is IT student, no JVM repos",2026-06-28
+francisco ferreira,OXINARF,reject,auto,"very common Portuguese name; candidate has ArduPilot/robotics org, no JVM repos, multiple equally-named candidates",2026-06-28
+maciej czajka,MaciejCzajka,reject,auto,"completely empty profile: 0 followers, no bio, no company, no JVM repos",2026-06-28
+marek obaza,nc-mlo,confirm,auto,login nc-mlo encodes Netcompany + Marek Lobaza initials; company=Netcompany (IT firm); distinctive name,2026-06-28
+micha marcinczuk,mczuk,confirm,auto,very rare Polish surname Marcinczuk; company Samurai Labs/CodeNLP is real; name uniqueness sufficient,2026-06-28
+iwona christop,iwona-christop,reject,auto,"no JVM repos, empty company/bio, only 3 followers — zero corroboration",2026-06-28
+marcin wierzbinski,marcin119a,reject,auto,company @letscodekids (kids coding edu) does not corroborate JVM speaker; no JVM repos,2026-06-28

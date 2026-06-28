@@ -3500,7 +3500,7 @@ shivam basia,SHIVAMBASIA,HIGH,SHIVAM BASIA,Intel Corporation,3,fullname,2026-06-
 konstantin berezin,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 konstantine beridze,Ber13I,MED,Konstantine Beridze,,1,fullname,2026-06-28,2026-09-26
 jaga biernacka urban,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
-sebastian buczynski,Enforcer,MED,Sebastian Buczyński,,203,fullname,2026-06-28,2026-09-26
+sebastian buczynski,Enforcer,HIGH,Sebastian Buczyński,,203,alias,2026-06-28,
 magdalena cebula,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 mateusz chrzonstowski,mat3e,HIGH,Mateusz Chrzonstowski,Paramount,161,fullname,2026-06-28,
 jakub ciep y,KubaC701,HIGH,Jakub Ciepły,,6,fullname+jvmrepo,2026-06-28,
@@ -3678,3 +3678,48 @@ edward burns,EdwardBurns,MED,Edward Burns,,13,fullname,2026-06-28,2026-09-26
 brian demers,bdemers,HIGH,Brian Demers,@Gradle ,196,fullname,2026-06-28,
 mark stoodley,mstoodle,HIGH,Mark Stoodley,IBM,45,fullname,2026-06-28,
 mark heckler,mkheck,HIGH,Mark Heckler,@spring-projects,1014,fullname,2026-06-28,
+grzegorz piwowarek,pivovarit,HIGH,Grzegorz Piwowarek,@vavr-io,673,fullname+jvmrepo,2026-06-28,
+leszek leszczynski,LeszekLeszczynski,HIGH,Leszek Leszczyński,,2,fullname+jvmrepo,2026-06-28,
+ariel drozd,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+juliusz marciniak,rechandler12,HIGH,Juliusz Marciniak,Decerto,3,fullname+jvmrepo,2026-06-28,
+s awomir sobotka,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+agnieszka karlinska,akarlinska,MED,Agnieszka Karlińska,,6,fullname,2026-06-28,2026-09-26
+piotr pezik,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+natalia burak,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+rafa wojdan,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+przemys aw chmielecki,pchmielecki87,HIGH,Dr Przemysław Chmielecki,@TechBrain,1,fullname+jvmrepo,2026-06-28,
+jan dobrowolski,JanKodowanie,HIGH,Jan Dobrowolski,Warsaw University of Technology,4,fullname+jvmrepo,2026-06-28,
+s awek piotrowski,sentinelt,MED,Sławek Piotrowski,,29,fullname,2026-06-28,2026-09-26
+emilia pioro,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+ros apostol,,UNRESOLVED,,,,fullname,2026-06-28,2026-09-26
+naveen mareddy,mareddynaveen,HIGH,Naveen Mareddy,Netflix,0,fullname,2026-06-28,
+sebastian askawiec,slaskawi,HIGH,Sebastian Łaskawiec,Defense Unicorns,61,fullname+jvmrepo,2026-06-28,
+mateusz yczek,mlyczek,HIGH,Mateusz Łyczek,,1,fullname+jvmrepo,2026-06-28,
+maciej ukasik,maciejBart99,HIGH,Maciej Łukasik,,4,fullname+jvmrepo,2026-06-28,
+witold sienski,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+alina wroblewska,alina-wroblewska,MED,Alina Wróblewska,,0,fullname,2026-06-28,2026-09-26
+kamil kiszko zgierski,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+ags,lakpahana,MED,AGS Lakpahana,University of Ruhuna,91,fullname,2026-06-28,2026-09-26
+kacper staniszewski,w0rt4,HIGH,Kacper Staniszewski,,3,fullname+jvmrepo,2026-06-28,
+piotr cwiklinski,piotrcwiklinski,MED,Piotr Ćwikliński,,1,fullname,2026-06-28,2026-09-26
+krzysztof czartoryski,k1-euvic,MED,Krzysztof Czartoryski,Euvic,0,fullname,2026-06-28,2026-09-26
+micha mazur,ultron682,MED,Michał Mazur,,5,fullname,2026-06-28,2026-09-26
+ukasz kobylinski,lukkob,HIGH,Łukasz Kobyliński,@10clouds ,5,fullname+jvmrepo,2026-06-28,
+tomasz fija kowski,tomaszFijalkowski,HIGH,Tomasz Fijałkowski,,9,fullname+jvmrepo,2026-06-28,
+francisco ferreira,OXINARF,MED,Francisco Ferreira,Critical Techworks,86,fullname,2026-06-28,2026-09-26
+krzysztof slusarski,krzysztofslusarski,HIGH,Krzysztof Ślusarski,,84,fullname+jvmrepo,2026-06-28,
+maciej czajka,MaciejCzajka,MED,Maciej Czajka,,0,fullname,2026-06-28,2026-09-26
+jakub kubrynski,jkubrynski,HIGH,Jakub Kubryński,@Devskiller  ,201,fullname+jvmrepo,2026-06-28,
+marek obaza,nc-mlo,MED,Marek Łobaza,Netcompany,1,fullname,2026-06-28,2026-09-26
+bartosz rogowicz,bartoszrogowicz,HIGH,Bartosz Rogowicz,,0,fullname+jvmrepo,2026-06-28,
+marek koz owski,dev-wannabe,HIGH,Marek Kozłowski,,2,fullname+jvmrepo,2026-06-28,
+iwona christop,iwona-christop,MED,Iwona Christop,,3,fullname,2026-06-28,2026-09-26
+marcin wierzbinski,marcin119a,MED,Marcin Wierzbiński,@letscodekids ,30,fullname,2026-06-28,2026-09-26
+kamil szymanski,kamilszymanski,HIGH,Kamil Szymański,,55,fullname+jvmrepo,2026-06-28,
+kacper koza,,UNRESOLVED,,,,fullname,2026-06-28,2026-09-26
+micha marcinczuk,mczuk,MED,Michał Marcińczuk,"Samurai Labs, CodeNLP",5,fullname,2026-06-28,2026-09-26
+marcin kruglik,blekione,HIGH,Marcin Kruglik,@pushtechnology ,2,fullname+jvmrepo,2026-06-28,
+sebastian kozak,sekozak,HIGH,Sebastian Kozak,,7,fullname+jvmrepo,2026-06-28,
+szymon hulewicz,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+patrycja budner,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+dawid detko,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
