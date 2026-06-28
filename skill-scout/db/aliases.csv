@@ -969,3 +969,46 @@ tina woods,FanodaBoq37,reject,auto,suspicious random-looking username; 0 followe
 vernon richards,vernontab,reject,auto,0 followers; no bio/company/JVM repos,2026-06-28
 markus westergren,markusumecon,confirm,auto,username encodes name+company (markus+umecon); strong affiliation signal,2026-06-28
 ivan schwarz,ivanschwarz,confirm,auto,Zentrick acquired by DoubleVerify 2017; stale profile likely same person,2026-06-28
+aayush anand,Aayush-0910,reject,auto,"common name with 5 candidates, top cand has extra middle name Sinha + no JVM repos, frontend dev at wrong company",2026-06-28
+indira bandari,indupriya9,confirm,auto,"unique name, single exact match, no contradicting signals",2026-06-28
+piotr baryczkowski,Piotr45,confirm,auto,"unique Polish name, single exact match; Intel vs university affiliation plausible dual role",2026-06-28
+konstantine beridze,Ber13I,confirm,auto,"rare Georgian name, single exact match",2026-06-28
+sebastian buczynski,Enforcer,confirm,auto,"unique Polish name, dominant match 203 vs 1 follower",2026-06-28
+pawe fu awka,Pawel605,confirm,auto,"unique Polish name (Pawe Fuawka), single exact match",2026-06-28
+jakub gardo,jgardo-ds,confirm,auto,"login jgardo-ds aligns with affiliation domain jgardo.dev, single match",2026-06-28
+konrad gawda,kgawda,confirm,auto,"login kgawda matches K. Gawda initials, single exact match",2026-06-28
+tomasz janczewski,tomaszjanczewski-deltologic,reject,auto,"login suffix -deltologic contradicts Naval Academy aff; 3 candidates, none match",2026-06-28
+aleksander kaim,olekjs,confirm,auto,"olek is standard nickname for Aleksander, single match, bio=Software Engineer",2026-06-28
+grzegorz kocjan,gkocjan,confirm,auto,"login gkocjan matches initials, single exact match",2026-06-28
+micha kodura,MichaelWarrior,confirm,auto,"unique Polish name, single exact match",2026-06-28
+tomasz kopacz,tkopacz,confirm,auto,"login tkopacz matches T. Kopacz, dominant 27 vs 0 followers",2026-06-28
+ruslan korniichuk,korniichuk,confirm,auto,"unique Ukrainian name, single dominant match, data architect bio",2026-06-28
+konrad krawczyk,krawc,reject,auto,"common Polish surname, 5 candidates, no affiliation corroboration for WEBSENSA",2026-06-28
+madise lebogang,Fruitymo,confirm,auto,"unique African name, reversed as Lebogang MM Madise in GitHub, dominant 54 vs 0 followers",2026-06-28
+igor minar,IgorMinar,confirm,auto,"unique name, 3341 followers dominant, well-known developer at Cloudflare matching aff",2026-06-28
+selim nowicki,selimnowicki-dh,confirm,auto,"rare name, login explicitly encodes full name, single match",2026-06-28
+piotr pawlik,piotrpawlik,reject,auto,company mismatch Microsoft vs Apollo; bio=Senior Frontend Engineer unlikely at JVM conf; 5 candidates,2026-06-28
+maria piterberg,mariapiterberg,confirm,auto,"unique name, login exactly matches, single match, bio=Senior Software Engineer consistent",2026-06-28
+mateusz piwek,tools200ms,reject,auto,"login tools200ms does not match name, no affiliation or JVM corroboration",2026-06-28
+pranav prabhakar,pranav-prabhakar-dev,confirm,auto,"login explicitly encodes full name with -dev suffix, clearest match among 3 candidates",2026-06-28
+alejandro quesada,alejandrocq,reject,auto,cand has middle name Castilla and works at GEOTAB not Netflix; multiple candidates,2026-06-28
+jakub skrzynski,jskrzynski-wr,confirm,auto,"unique Polish name, login encodes surname, single exact match",2026-06-28
+gianmario spacagna,joaomario-brainly,confirm,auto,"unique Italian name, login contains mario+brainly matching former employer, single match",2026-06-28
+adrian sroka,suvroc,reject,auto,login suvroc does not match name; better cand adrian-sroka-relativity matches affiliation,2026-06-28
+piotr stapp,ptrstpp950,confirm,auto,"unique name, 51 followers dominant, orgs include dotnetomaniak = Polish .NET community",2026-06-28
+przemys aw starosta,pstarko,confirm,auto,"unique Polish name, login pstarko matches P. Starosta, single match",2026-06-28
+tomasz stelmach,stelekpl,reject,auto,"3 candidates all with 0 followers, no affiliation corroboration for Quality Island",2026-06-28
+maciej strzelecki,mstrzele,confirm,auto,"login mstrzele matches M. Strzelecki, dominant 37 vs 0 followers",2026-06-28
+daniel taube,danielGFN,reject,auto,"login danielGFN does not match name, 0 followers, no corroboration",2026-06-28
+sebastian witowski,switowski,confirm,auto,"login switowski = s+witowski, 220 followers dominant, org inveniosoftware = tech community",2026-06-28
+damian wysocki,d-wysocki,confirm,auto,"login d-wysocki matches D. Wysocki, dominant 14 vs 6 followers",2026-06-28
+wojciech zajac,WojtekReu,confirm,auto,"Wojtek = standard nickname for Wojciech, dominant 7 vs 0 followers, org WarLUG=tech community",2026-06-28
+marcin dubel,mdubel,confirm,auto,"login mdubel matches M. Dubel, unique name, single match",2026-06-28
+benjamin dubreu,bdubreu-adeo,confirm,auto,"login bdubreu-adeo encodes name+former employer Adeo, unique name",2026-06-28
+grigorij dudnik,Grigorij-Dudnik,confirm,auto,"login exactly encodes full name, unique name, single match",2026-06-28
+mateusz kaczorek,matkacz,confirm,auto,"login matkacz = mat(eusz)+kacz(orek), unique name, single match",2026-06-28
+micha opuszynski,MichalLopuszynski,confirm,auto,"login exactly encodes full name, unique Polish name, single match",2026-06-28
+marlene mhangami,marlenemhangami,confirm,auto,"login exactly encodes full name, unique name, bio=passionate about coding and communities",2026-06-28
+patryk pietka,circuit-printer,reject,auto,"login circuit-printer does not match name, 0 followers, no corroboration",2026-06-28
+sumit saha,ss-is-master-chief,reject,auto,"common name, 5 candidates, company mismatch Microsoft vs squadrun",2026-06-28
+dominik tomalczyk,13Dominik,confirm,auto,"unique name, single match, AGH UST student consistent with conference speaker",2026-06-28
