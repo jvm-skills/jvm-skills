@@ -933,3 +933,37 @@ oussama ennafii,ethiy,reject,auto,"company Upciti not CIH Bank, empty bio, no JV
 oumayma essarhi,ouma09,reject,auto,"no corroborating signals, empty bio/company, no JVM repos",2026-06-28
 amine benettaj,aminebenettaj,reject,auto,"0 followers, empty bio/company, no JVM signals",2026-06-28
 mohammed daoudi,Iduoad,reject,auto,"common Moroccan name, multiple cands, bio non-technical, no Oracle/JVM connection",2026-06-28
+amijai saragovi,amijais,reject,auto,protein designer at UW — not a JVM/tech conference speaker,2026-06-28
+anjuli jhakry,Anjuli-l,confirm,auto,very unique name; sole exact-match candidate,2026-06-28
+anton gunnarsson,anton-g,confirm,auto,top candidate; Mpya Digital is Swedish IT consultancy; 29 followers,2026-06-28
+birol yildiz,BirolYildiz,confirm,auto,founder of @iLert (org match); company matches; developer bio,2026-06-28
+charles humble,CHHUM,confirm,auto,bio says former CTO/architect matches known tech speaker Charles Humble,2026-06-28
+christian horsdal,horsdal,confirm,auto,150 followers; NancyFx and DCI orgs; known .NET author/speaker,2026-06-28
+darren richardson,AntonioUniverse,reject,auto,suspicious username; no bio/company/JVM repos; 6 followers,2026-06-28
+darya petrashka,dashapetr,confirm,auto,Data Scientist/AWS Community Builder bio; 48 followers; unique name,2026-06-28
+david mellum,edmellum,reject,auto,GH name is David Ed Mellum (not exact); 0 followers; no corroboration,2026-06-28
+elizabeth zagroba,ezagroba,confirm,auto,unique name; sole candidate; 14 followers,2026-06-28
+emma armstrong,emmaac,reject,auto,GH name is Emma Armstrong Carter; NSF postdoc at UC Berkeley; not JVM speaker,2026-06-28
+erwin staal,staal-it,confirm,auto,@XpiritBV + @Staal-it companies; Azure Architect; 31 followers,2026-06-28
+gert jan van halem,gjvanhalem,confirm,auto,unique Dutch name; sole candidate,2026-06-28
+goran vuksic,gvuksic,reject,auto,5 competing candidates with same name; no corroboration for top pick,2026-06-28
+hugo hjerten,hugohjerten,confirm,auto,unique Swedish name; sole candidate; 5 followers,2026-06-28
+jitesh gosai,jitgo,confirm,auto,distinctive name; sole candidate,2026-06-28
+joshua kerievsky,JoshuaKerievsky,confirm,auto,Industrial Logic Inc. exact company; speakerconf org; well-known agile practitioner,2026-06-28
+justyna zander,justynazander,confirm,auto,unique name; sole candidate; 18 followers,2026-06-28
+kenneth edwall,kenneth-edwall,confirm,auto,fairly unique Swedish name; sole candidate,2026-06-28
+lianne potter,liannepotter,confirm,auto,@nhsuk company; fairly unique name; sole candidate,2026-06-28
+line hviid,linehviid,confirm,auto,unique Danish name; sole candidate,2026-06-28
+linus martensson,linusmartensson,confirm,auto,unique Swedish name; sole candidate; 7 followers,2026-06-28
+martin nilsson,ibbles,reject,auto,very common Swedish name; 5 competing candidates; no corroboration,2026-06-28
+matyas manninger,manmat,confirm,auto,unique Hungarian name; sole candidate,2026-06-28
+max arshinov,max-arshinov,confirm,auto,81 followers; dominant single match,2026-06-28
+mike burrows,m3bm3b,reject,auto,4 competing candidates with same name; no corroboration for top pick,2026-06-28
+patrick berry,pberry,reject,auto,bio says Principal Product Owner at Ferguson (retail); not JVM speaker profile,2026-06-28
+saurabh shrivastava,saurabhshri,confirm,auto,101 followers; cmusphinx+CCExtractor orgs; dominant match,2026-06-28
+stacy cashmore,StacyCash,confirm,auto,Swetugg org (Swedish tech conf); 51 followers; strong corroboration,2026-06-28
+staffan palopaa,staffanpalopaa,confirm,auto,very unique Finnish-Swedish name; sole candidate,2026-06-28
+taswar bhatti,taswar,confirm,auto,Microsoft company; unique name; 24 followers,2026-06-28
+tim damen,timdamen,confirm,auto,focusring.io company; Nuxt ecosystem team; 49 followers,2026-06-28
+tina woods,FanodaBoq37,reject,auto,suspicious random-looking username; 0 followers; no bio,2026-06-28
+vernon richards,vernontab,reject,auto,0 followers; no bio/company/JVM repos,2026-06-28
