@@ -3216,7 +3216,7 @@ luca caputo,lucapu88,HIGH,Luca Caputo,,10,fullname+jvmrepo,2026-06-28,
 marco d ambros,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 lorenzo ferri,LorenzoFerri,MED,Lorenzo Ferri,,8,fullname,2026-06-28,2026-09-26
 jesper findahl,jeppe-style,HIGH,Jesper Findahl,,1,fullname+jvmrepo,2026-06-28,
-alex gavrilescu,MrLesk,MED,Alex Gavrilescu,,149,fullname,2026-06-28,2026-09-26
+alex gavrilescu,MrLesk,HIGH,Alex Gavrilescu,,149,alias,2026-06-28,
 alessandro giagnorio,Devy99,MED,Alessandro Giagnorio,,26,fullname,2026-06-28,2026-09-26
 alessandro giusti,alessandro-giusti,HIGH,Alessandro Giusti,Dalle Molle Institute for Artificial Intelligence (IDSIA),78,fullname,2026-06-28,
 konstantinos kitsios,kitsiosk,HIGH,Kitsios Konstantinos,,12,fullname,2026-06-28,
@@ -3307,7 +3307,7 @@ per minborg,minborg,HIGH,Per-Ake Minborg,"Oracle, Inc",109,fullname,2026-06-28,
 fabio niephaus,fniephaus,HIGH,Fabio Niephaus,@oracle,353,fullname,2026-06-28,
 joakim nordstrom,jaokim,HIGH,Joakim Nordström,,12,fullname+org,2026-06-28,
 claes redestad,cl4es,HIGH,Claes Redestad,,100,fullname+org,2026-06-28,
-georges saab,georgessb,MED,Saab Georges,,1,fullname,2026-06-28,2026-09-26
+georges saab,georgessb,HIGH,Saab Georges,,1,alias,2026-06-28,
 vladimir shcherbinin,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 mattias soderberg,MattiasSoderberg,HIGH,Mattias Söderberg,,11,fullname+jvmrepo,2026-06-28,
 par turborn,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
@@ -3464,3 +3464,30 @@ tore nestenius,tndata,HIGH,Tore Nestenius,Tore Nestenius Datakonsult AB,65,fulln
 trung vo,trungvose,HIGH,Trung Vo,@kaligo,1638,fullname+dominant,2026-06-28,
 vagif abilov,object,HIGH,Vagif Abilov,Norwegian Broadcasting Corporation (NRK),184,fullname+dominant,2026-06-28,
 vernon richards,vernontab,MED,Vernon Richards,,0,fullname,2026-06-28,2026-09-26
+stephen colebourne,jodastephen,HIGH,Stephen Colebourne,,769,fullname+jvmrepo,2026-06-28,
+robin custers,rcusters,HIGH,Robin Custers,,2,fullname+jvmrepo,2026-06-28,
+paul sandoz,PaulSandoz,HIGH,Paul Sandoz,,94,fullname+org,2026-06-28,
+brian clozel,bclozel,HIGH,Brian Clozel,Spring team,1686,fullname,2026-06-28,
+stuart marks,stuart-marks,HIGH,Stuart Marks,@oracle,182,fullname,2026-06-28,
+manuel bernhardt,manuelbernhardt,HIGH,Manuel Bernhardt,manuel.bernhardt.io,167,fullname,2026-06-28,
+robin marx,rmarx,HIGH,Robin Marx,Akamai Technologies,193,fullname,2026-06-28,
+blagoj jovanov,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+markus westergren,markusumecon,MED,Markus Westergren,,0,fullname,2026-06-28,2026-09-26
+elma westergren,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+marco behler,marcobehler,HIGH,Marco Behler,Marco Behler GmbH,447,fullname+jvmrepo,2026-06-28,
+viktor klang,viktorklang-ora,HIGH,Viktor Klang,Oracle,29,fullname,2026-06-28,
+angelos bimpoudis,,UNRESOLVED,,,,fullname,2026-06-28,2026-09-26
+chris simon,chrissimon-au,HIGH,Chris Simon,Chris Simon - Technology Advisory & Coaching,125,fullname,2026-06-28,
+cees bos,cbos,HIGH,Cees Bos,@openvalue-eu,29,fullname,2026-06-28,
+stefan johansson,kstefanj,HIGH,Stefan Johansson,Oracle,73,fullname,2026-06-28,
+sebastien blanc,SBlanc13,HIGH,Sébastien BLANC,Eoxy E-Sport,5,fullname,2026-06-28,
+matteo di pirro,mdipirro,HIGH,Matteo Di Pirro,,21,fullname+jvmrepo,2026-06-28,
+matthew meckes,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+patrick debois,jedi4ever,HIGH,Patrick Debois,Jedi BV,640,fullname+dominant,2026-06-28,
+guillaume smet,gsmet,HIGH,Guillaume Smet,IBM,385,fullname,2026-06-28,
+barry van someren,bvansomeren,HIGH,Barry van Someren,CoffeeSprout ICT Services,22,fullname,2026-06-28,
+shivasheesh tripathi,,UNRESOLVED,,,,fullname,2026-06-28,2026-09-26
+iliass ziani,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+robert pabst,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
+ivan schwarz,ivanschwarz,MED,Ivan Schwarz,Zentrick (@zentrick),6,fullname,2026-06-28,2026-09-26
+rafik ferroukh,rafgitdz,HIGH,Rafik Ferroukh,,1,fullname+jvmrepo,2026-06-28,

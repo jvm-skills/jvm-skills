@@ -67,3 +67,4 @@ started_at,conference,speakers,resolved,scanned_repos,skipped_repos,found,parked
 2026-06-28,Jfokus 2026,93,71,315,0,14,22,"14 found, 0 needs_review, 0 bundle(s), 34 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
 2026-06-28,Devoxx Morocco 2025,97,55,394,0,0,42,"0 found, 0 needs_review, 0 bundle(s), 33 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
 2026-06-28,Øredev 2025,113,47,584,0,0,66,"0 found, 0 needs_review, 0 bundle(s), 111 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
+2026-06-28,Devoxx Belgium 2025,114,99,269,0,3,15,"3 found, 0 needs_review, 0 bundle(s), 78 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
