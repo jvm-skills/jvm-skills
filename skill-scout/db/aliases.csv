@@ -1022,3 +1022,4 @@ martin zagar,mxzcad,reject,auto,cryptic login unrelated to name; empty profile; 
 filip milkovic,Filip7,reject,auto,4 ambiguous candidates; top cand has ghostty-org but no JVM repos; no corroboration,2026-06-28
 martin grmek,martingrmek-asseco,confirm,auto,GitHub company @asseco-see and login encodes company name; sufficient corroboration,2026-06-28
 jacek psiuk,jacek-psiuk,reject,auto,empty profile; Commerce Media Tech affiliation unconfirmed; no corroboration,2026-06-28
+edward burns,EdwardBurns,reject,auto,two name-matching accounts (EdwardBurns/edward-burns); neither has company/bio/orgs/jvm_repo to corroborate Principal Architect for Java on Azure,2026-06-28
