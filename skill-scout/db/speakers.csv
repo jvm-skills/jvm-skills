@@ -39,7 +39,7 @@ Kevin Dubois,kevin dubois,IBM
 Luis Fraile,luis fraile,DevOps Consultant at Plain Concepts + CTO B!Play
 "Mauricio ""Salaboy"" Salatino",mauricio salaboy salatino,OSS Software and Ecosystem Engineer @Diagrid / Java Champion / Cloud Native Ambassador
 Mauro Gioberti,mauro gioberti,.NET Software Engineer | Devs Mentor
-Mauro Morales,mauro morales,Staff Engineer at Spectro Cloud
+Mauro Morales,mauro morales,Spectro Cloud
 Olena Kutsenko,olena kutsenko,
 Olivier Leplus,olivier leplus,Developer Advocate at AWS & Google Developer Expert on Web Technologies
 Paolo Ricciuti,paolo ricciuti,Svelte Maintainer & Senior Software Engineer at Mainmatter
@@ -88,7 +88,7 @@ Sergès Goma,serges goma,Eveasoft
 Gerrit Grunwald,gerrit grunwald,
 Misko Hevery,misko hevery,Roblox
 Sander Hoogendoorn,sander hoogendoorn,ibood.com
-Dotan Horovits,dotan horovits,OpenSearch Ambassador
+Dotan Horovits,dotan horovits,AWS
 Wei Hu,wei hu,Oracle USA
 Johan Hutting,johan hutting,ING
 Mackenzie Jackson,mackenzie jackson,Aikido Security
@@ -149,7 +149,7 @@ Venkat Subramaniam,venkat subramaniam,
 Paweł Szlendak Szlendi,pawe szlendak szlendi,Partyzanci Lubelszczyzny
 Ryszard Szwajlik,ryszard szwajlik,j-labs
 Sho Tanaka,sho tanaka,Snowflake
-Diana Todea,diana todea,Developer Experience Engineer
+Diana Todea,diana todea,VictoriaMetrics
 Alexandre Touret,alexandre touret,Magellan
 Adam Warski,adam warski,Sharing elegant solutions to everyday problems | Functional programmer | Blogger | OSS developer
 Artur Wojnar,artur wojnar,MasterBorn
@@ -393,7 +393,7 @@ Guillaume Lours,guillaume lours,Docker
 Helder Araujo Carneiro,helder araujo carneiro,ARHS Group Part of Accenture
 Hussein Loubani,hussein loubani,CIAD
 Ines Panker,ines panker,
-Ivan Ponomarev,ivan ponomarev,Synthesized
+Ivan Ponomarev,ivan ponomarev,Synthesized.io
 Jens Knipper,jens knipper,OpenValue
 Jérôme Wax,jerome wax,InTech
 Ji Darwish,ji darwish,Lunatech
@@ -825,7 +825,7 @@ Diana Montalion,diana montalion,"Author & Systems Architecture, Thinking and Des
 Thomas Much,thomas much,Technical Agile Coach
 Thomas Müller,thomas muller,
 Sven Müller,sven muller,Sofware Architekt | DDD-Enthusiast
-Robin Müller,robin muller,Aclue GmbH
+Robin Müller,robin muller,
 Ralf D. Müller,ralf d muller,"Ralf D. Müller, ein renommierter Softwarearchitekt und anerkannter Experte im Bereich GenAI und arc42"
 Frank Müller,frank muller,
 Björn Müller,bjorn muller,Gründer & Experte für Oberflächentechnologien und -architekturen
@@ -1112,7 +1112,7 @@ YujiSoftware,yujisoftware,YujiSoftware
 Yusuke Saito,yusuke saito,WealthNavi Inc. Software Engineer
 yuya296,yuya296,Enterprise Java Engineer in Financial Systems
 Yuya Miyamoto,yuya miyamoto,Backend Engineer
-荻原 利雄,,株式会社 豆蔵 執行役員 主幹ソフトウェアエンジニア
+胡玮文,,
 Anton Arhipov,anton arhipov,JetBrains
 Atila Fassina,atila fassina,Databricks and SolidJS
 Erik Rasmussen,erik rasmussen,American TypeScript Slinger living in Spain 🇪🇸
@@ -1553,7 +1553,7 @@ Konstantina Mavrodimitraki,konstantina mavrodimitraki,Amazon Web Services
 Zisis Michalaris,zisis michalaris,Cosmote Telekom
 Jo Minney,jo minney,House Labs
 Tobias Modig,tobias modig,Citerus
-effie mouzeli,effie mouzeli,Wikimedia Foundation
+effie mouzeli,effie mouzeli,
 Ioannis Nanas,ioannis nanas,Yodeck
 Penelope Nastou,penelope nastou,Epignosis
 Elias Niaos,elias niaos,Prodyna
@@ -1633,7 +1633,7 @@ Dan Dobrin,dan dobrin,Google
 Dave Syer,dave syer,Broadcom
 David Caron,david caron,Broadcom
 Dmitry Chuyko,dmitry chuyko,BellSoft
-Fabrizio Lazzaretti,fabrizio lazzaretti,Wavestone
+Fabrizio Lazzaretti,fabrizio lazzaretti,
 Gregory Green,gregory green,Broadcom
 Ivan Šarić,ivan saric,Revolut
 Jonatan Ivanov,jonatan ivanov,Broadcom
@@ -2011,7 +2011,7 @@ Loïc Tréhin,loic trehin,ESA Series
 Louis Beaudoin-Allaire,louis beaudoin allaire,Workleap
 Maarten Balliauw,maarten balliauw,Duende Software
 Marc-Antoine Aubé,marc antoine aube,Poka
-Marcus Bointon,marcus bointon,Devalps
+Marcus Bointon,marcus bointon,
 Marian Marinov,marian marinov,Web Hosting Canada
 Mario Bittencourt,mario bittencourt,SAP
 Martin Legris,martin legris,Obvious Leap
@@ -2048,3 +2048,1025 @@ Thijs Feryn,thijs feryn,Varnish Software
 Vagmi Mudumbai,vagmi mudumbai,Urai AI Corp.
 Wesley Cabus,wesley cabus,Duende Software
 Xavier Bouclet,xavier bouclet,La fabrique Digit’Owl
+Johan Van de Wauw,johan van de wauw,
+FOSDEM Staff,fosdem staff,
+"Richard ""RichiH"" Hartmann",richard richih hartmann,Grafana Labs
+Luca Boccassi,luca boccassi,Microsoft
+Kristof Beyls,kristof beyls,
+Jan Fajerski,jan fajerski,
+Kathy Giori,kathy giori,MicroBlocks
+Stephane Graber,stephane graber,
+Jose E. Marchesi,jose e marchesi,
+Karen Sandler,karen sandler,
+Alexander Bokovoy,alexander bokovoy,
+Iker Pedrosa,iker pedrosa,Red Hat
+Gábor Szárnyas,gabor szarnyas,DuckDB Labs
+Maartje Eyskens,maartje eyskens,
+Max Mehl,max mehl,Deutsche Bahn
+Björn Töpel,bjorn topel,
+Lorenzo Miniero,lorenzo miniero,
+Cornelius Schumacher,cornelius schumacher,
+TELLIER Benoit,tellier benoit,
+Konstantina Papadea,konstantina papadea,
+Alexios Zavras (zvr),alexios zavras zvr,
+Damian Poddebniak,damian poddebniak,
+Mechiel Lukkien,mechiel lukkien,
+Davide Bettio,davide bettio,
+Jo Van Bulck,jo van bulck,
+Benjamin Cabé,benjamin cabe,
+Eriol fox,eriol fox,
+Michał Żygowski,micha zygowski,
+Justin Wheeler,justin wheeler,
+Shaun McCance,shaun mccance,
+Kenneth Hoste,kenneth hoste,
+Sebastian Eggermont,sebastian eggermont,
+Evangelos Ribeiro Tzaras,evangelos ribeiro tzaras,
+Marcus Müller,marcus muller,
+Laura Czajkowski,laura czajkowski,
+Martin Decky,martin decky,Charles University
+Simon Phipps,simon phipps,
+Piotr Król,piotr krol,
+Hugo Herter,hugo herter,
+Jaron Viëtor,jaron vietor,
+William Jones,william jones,
+Yvan Sraka,yvan sraka,
+Chris Simmonds,chris simmonds,
+Simon Clavier,simon clavier,
+Emily Omier,emily omier,
+Travis Ralston,travis ralston,Matrix
+Neal H. Walfield,neal h walfield,
+Nicole Pappler,nicole pappler,AlektoMetis
+Philipp Ahmann,philipp ahmann,
+Uwe Kleine-König,uwe kleine konig,Baylibre and maintainer
+Tobias Bernard,tobias bernard,
+Ahmad Fatoum,ahmad fatoum,
+Jimmy Angelakos,jimmy angelakos,
+José D. Gómez R.,jose d gomez r,
+Adam Litke,adam litke,
+Matthew Hodgson,matthew hodgson,Element
+1peter10,1peter10,
+FelixS,felixs,
+Mike Gifford,mike gifford,
+Lucas Lasota,lucas lasota,
+Charalampos Mainas,charalampos mainas,
+Niko Bonnieure,niko bonnieure,
+Æva Black,va black,
+Arnout Engelen,arnout engelen,
+Ignat Korchagin,ignat korchagin,Cloudflare
+Thomas Steenbergen,thomas steenbergen,EPAM and HERE
+Michael Meeks,michael meeks,
+dr Karol Suprynowicz,dr karol suprynowicz,
+Anastassios Nanos,anastassios nanos,
+Pierre-Étienne Meunier,pierre etienne meunier,
+Marek Vasut,marek vasut,
+Christian Brauner,christian brauner,
+Benjamin Henrion,benjamin henrion,
+Pablo Ruiz-Múzquiz,pablo ruiz muzquiz,
+Jean Baptiste Kempf,jean baptiste kempf,
+Vladislav Belov,vladislav belov,
+Romain Beauxis,romain beauxis,
+Maxime Peim,maxime peim,
+Wieland Lindenthal,wieland lindenthal,
+Pierre Slamich,pierre slamich,
+HP van Braam,hp van braam,
+Paul Meyer,paul meyer,Edgeless Systems
+Ryan Walker,ryan walker,
+Virgile Deville,virgile deville,Sciences Po Paris
+Jean-Luc Dorel,jean luc dorel,
+Ronny Lam,ronny lam,
+Amandine Le Pape,amandine le pape,
+Dimitris Karakasilis,dimitris karakasilis,
+Ronna Steinberg,ronna steinberg,
+Bryan Honof,bryan honof,
+Vlad-Stefan Harbuz,vlad stefan harbuz,
+Andreas K. Hüttel,andreas k huttel,
+Carol Chen,carol chen,Jolla and Nokia previously
+Edward Betts,edward betts,
+Stefan Kalkowski,stefan kalkowski,
+Andriy Utkin,andriy utkin,
+Simon Josefsson,simon josefsson,
+Susan Remmert,susan remmert,
+Max Inden,max inden,
+Matthias Crauwels,matthias crauwels,PlanetScale
+Arnaud Taffanel,arnaud taffanel,Bitcraze
+Lluis Esquerda,lluis esquerda,
+Evan Prodromou,evan prodromou,
+Radostin Stoyanov,radostin stoyanov,Oxford
+Jordan Maris,jordan maris,
+Lea Beiermann,lea beiermann,
+Andrej Rode,andrej rode,
+Mauro Gaspari,mauro gaspari,Canonical who frequently runs around coordinating
+Roman Shaposhnik,roman shaposhnik,Ainekko
+Tanya Dadasheva,tanya dadasheva,Almaz Capital
+Nicholas Gates,nicholas gates,
+Sebastian Raible,sebastian raible,
+Tessel Renzenbrink (NLnet),tessel renzenbrink nlnet,
+Alya Abbott,alya abbott,Zulip
+Tasos Stampelos,tasos stampelos,
+Lucas Kanashiro,lucas kanashiro,
+iTitou,ititou,
+Maria Majadas,maria majadas,
+Thierry de Pauw,thierry de pauw,
+Julian Stirling,julian stirling,
+Felix Gündling,felix gundling,
+Viktória Spišaková,viktoria spisakova,Masaryk University and final year PhD
+Joe Knapper,joe knapper,
+Dylan Reimerink,dylan reimerink,Isovalent
+Sebastian Kawelke,sebastian kawelke,
+Giacomo,giacomo,
+Sebastian Hagens,sebastian hagens,
+Ruben Nijveld,ruben nijveld,
+Alexander Zaitsev,alexander zaitsev,
+Roman Zhukov,roman zhukov,Red Hat
+Nikolaj Potashnikov,nikolaj potashnikov,
+Yogesh Deshpande,yogesh deshpande,
+Ruoqing He,ruoqing he,
+Richard Fontana,richard fontana,
+Ali Polatel,ali polatel,
+James Smith,james smith,
+Mia Bajić,mia bajic,
+Sammy Gwilym,sammy gwilym,
+Emile 'iMil' Heitor,emile imil heitor,
+Yuning Liang,yuning liang,
+Leah Rowe,leah rowe,
+Tilo Mathes,tilo mathes,ResearchSpace
+Mahendra Paipuri,mahendra paipuri,CNRS
+Thomas Petazzoni,thomas petazzoni,
+Stéphane,stephane,
+Nadia Santalla (she/her),nadia santalla she her,
+Eduard Drusa,eduard drusa,
+Terence Eden,terence eden,
+Preston Doster -- @esk@hachyderm.io,preston doster esk hachyderm io,
+A. Salt,a salt,
+Deborah Udoh,deborah udoh,OLS
+Felix Freitag,felix freitag,
+Bill Mulligan,bill mulligan,
+Mateusz Charytoniuk,mateusz charytoniuk,Intentee
+Margaret Low,margaret low,
+Babar Khan,babar khan,
+Mauro De Gennaro,mauro de gennaro,
+Rohit Nayak,rohit nayak,
+Ilya Zverev,ilya zverev,
+Xavier Delaruelle,xavier delaruelle,CEA
+Philippe Normand,philippe normand,
+Oliver Smith,oliver smith,
+Evan Rusackas,evan rusackas,
+Francesco Pham,francesco pham,
+Daniel Izquierdo,daniel izquierdo,CHAOSS community
+Sunny Bains,sunny bains,CTI Pty
+Daniël van Eeden,daniel van eeden,
+Munawar Hafiz,munawar hafiz,
+YASH PANCHAL,yash panchal,Percona
+Felix Moessbauer,felix moessbauer,
+Matthew Topol,matthew topol,
+Niels G. W. Serup,niels g w serup,
+Gianluca Varisco,gianluca varisco,
+David Allen,david allen,Grafana
+Tushar Sharma,tushar sharma,Dalhousie University
+Amy Marrich,amy marrich,
+Kuniyasu Suzaki,kuniyasu suzaki,
+blinry,blinry,
+Andreas Tille,andreas tille,
+Alexander Krizhanovsky,alexander krizhanovsky,
+Shlomi Noach,shlomi noach,PlanetScale
+Alexis Lothoré,alexis lothore,Bootlin
+Ariel Kaiser,ariel kaiser,
+Kirk Smith,kirk smith,
+Roland Meertens,roland meertens,
+Viktor Malik,viktor malik,Red Hat
+Axel STEFANINI,axel stefanini,RedHat
+Pratichhya Sharma,pratichhya sharma,
+Martin Teichmann,martin teichmann,
+Luca Di Maio,luca di maio,Chainguard
+Patricio WHITTINGSLOW,patricio whittingslow,
+Edward Ly,edward ly,Nextcloud as part of a team
+Thomas Perale,thomas perale,Mind
+Stefano Garzarella,stefano garzarella,Red Hat
+Martin Chang,martin chang,
+Donia Chaiehloudj,donia chaiehloudj,Isovalent
+Xuan-Son Nguyen,xuan son nguyen,
+Westphal Mathieu,westphal mathieu,
+Miguel Xochicale,miguel xochicale,University College London
+Pranam Lashkari,pranam lashkari,
+Vissarion Fisikopoulos,vissarion fisikopoulos,GeomScale
+Eloi Charpentier,eloi charpentier,
+Tobias Diekershoff,tobias diekershoff,
+Pierre Pronchery,pierre pronchery,
+Danny Colin,danny colin,
+Valere Fedronic,valere fedronic,
+Julien Enoch,julien enoch,ZettaScale
+Vitor Oliveira,vitor oliveira,Oracle
+Johan Linåker,johan linaker,
+Michael Winser,michael winser,
+Raphaël Gomès,raphael gomes,
+Pierre-Yves David,pierre yves david,
+caroline sinders,caroline sinders,
+PIERRE KANCIR,pierre kancir,
+Gianluca Guida,gianluca guida,AI Nekko
+Marc Prud'hommeaux,marc prud hommeaux,
+Andrew Nesbitt,andrew nesbitt,
+Daniel Mellado,daniel mellado,Red Hat
+Mikel Olasagasti,mikel olasagasti,
+Tim Panton,tim panton,
+Alexis Jacomy,alexis jacomy,OuestWare
+Lorena Goldoni,lorena goldoni,
+Josep,josep,
+Eric Leblond,eric leblond,Open Network Security Foundation
+Kevin Lumbard,kevin lumbard,Creighton University
+Andreea Daniela Andrisan,andreea daniela andrisan,
+Antony Chazapis,antony chazapis,
+Zughy,zughy,
+Raphael Odini,raphael odini,
+Jeremy Rand,jeremy rand,Namecoin
+Abigail Cabunoc Mayes,abigail cabunoc mayes,GitHub
+Denver Gingerich,denver gingerich,
+Olle E. Johansson,olle e johansson,
+Simon Tournier,simon tournier,
+Pablo del Arco,pablo del arco,
+Jordi Guijarro,jordi guijarro,OpenNebula Systems
+Josh Lee,josh lee,
+Daniel D. Beck,daniel d beck,
+Albert Astals Cid,albert astals cid,
+Joek van Montfort,joek van montfort,
+Julie Rymer,julie rymer,
+Paul,paul,
+Precious Onyewuchi,precious onyewuchi,
+Mickaël Salaün,mickael salaun,
+Floris Bruynooghe,floris bruynooghe,
+Andy Wingo,andy wingo,Igalia
+Marcel Ziswiler,marcel ziswiler,Codethink
+Dave Hughes,dave hughes,
+Lukas Stockner,lukas stockner,
+Cynthia Lo,cynthia lo,
+Felix Reda,felix reda,GitHub
+Sylvestre Ledru,sylvestre ledru,
+Cassie Jiun seo,cassie jiun seo,Cambridge University
+Jose Luis Rivero,jose luis rivero,
+Michael Opdenacker,michael opdenacker,
+Daniel S. Katz,daniel s katz,
+Matthias Pfefferle,matthias pfefferle,
+Alex Pyrgiotis,alex pyrgiotis,
+Pranshu Khanna,pranshu khanna,
+Stefan Lengfeld,stefan lengfeld,
+Piotr P. Karwasz,piotr p karwasz,
+Johannes Müller,johannes muller,Manas.Tech
+Kate Stewart,kate stewart,
+Thomas Schwinge,thomas schwinge,
+Wayne Stambaugh,wayne stambaugh,
+Sebastian Schubert,sebastian schubert,
+Julien Malka,julien malka,
+Hans-Jörg Happel,hans jorg happel,
+Bernat Romagosa,bernat romagosa,SAP
+Steven Goodwin,steven goodwin,
+Tom Marble,tom marble,
+Boris DOLLEY,boris dolley,
+Remy Bertot,remy bertot,
+Peter Smith,peter smith,
+Jesús Espino,jesus espino,Ona
+Marius Brehler,marius brehler,
+Loic HAMELIN,loic hamelin,
+Jos van den Oever,jos van den oever,NLnet
+Ivan Baravy,ivan baravy,
+Bogomil Shopov - Бого,bogomil shopov,
+Ludovic Dubost,ludovic dubost,
+Neil Armstrong,neil armstrong,Linaro in September
+Miguel Duarte,miguel duarte,Red Hat
+Arne Baeyens,arne baeyens,KU Leuven
+Daniel Temkin,daniel temkin,
+Ramon Roche,ramon roche,ROSCon
+Romain Hunault,romain hunault,Murena
+Alexander Smolianitski,alexander smolianitski,
+Alexey Milovidov,alexey milovidov,
+Samuel Thibault,samuel thibault,
+Bruce Gain,bruce gain,
+Kurt Garloff,kurt garloff,SUSE
+Michiel Leenaars,michiel leenaars,NLnet foundation
+Fabio Valentini,fabio valentini,
+Venkata Ravichandra Mynidi,venkata ravichandra mynidi,
+Antonio Jimenez,antonio jimenez,Cisco ThousandEyes
+Floor Drees,floor drees,
+David Brazdil,david brazdil,
+Emma Irwin,emma irwin,Microsoft
+Alexey Dubovskoy,alexey dubovskoy,
+Günther Deschner,gunther deschner,
+Victor Le Pochat,victor le pochat,DG Connect in the European Commission
+Jonah Brüchert,jonah bruchert,
+Alexandra,alexandra,
+Yousef El-Dardiry,yousef el dardiry,
+Dennis Snell,dennis snell,
+Carl-Daniel Hailfinger,carl daniel hailfinger,
+Filipe Jones Mourao,filipe jones mourao,DG Connect
+Daniel Fernandez Pinto,daniel fernandez pinto,
+Michael Schuster,michael schuster,
+Ruben Ortlam,ruben ortlam,
+Raine Mäkeläinen,raine makelainen,
+Gabriele Columbro,gabriele columbro,
+Sofía Aritz,sofia aritz,
+Nikolay Kuznetsov,nikolay kuznetsov,Zalando Finland
+Dennis Kobert,dennis kobert,
+Aysha,aysha,
+Thomas,thomas,
+Angel Angelov,angel angelov,
+Anja Wyrobek,anja wyrobek,
+Carl George,carl george,Red Hat
+Chris Hennes,chris hennes,
+Haris,haris,IONOS
+Motiejus Jakštys,motiejus jakstys,Chronosphere
+Guillaume Monnet,guillaume monnet,
+Clémence,clemence,
+Marga Manterola,marga manterola,Igalia
+Daniel Morin,daniel morin,Collabora
+Alexandre Daubois,alexandre daubois,Les-Tilleuls
+Jos van Schouten,jos van schouten,
+Marco Bernasocchi,marco bernasocchi,
+Frédéric Nass,frederic nass,CLYSO
+Victor Lyuboslavsky,victor lyuboslavsky,AMD
+Satoyuki Tsukano,satoyuki tsukano,
+Patrick Fitzgerald,patrick fitzgerald,
+Erin Kalousková,erin kalouskova,
+Alessandro Pilotti,alessandro pilotti,Birkbeck/UCL
+Marcin Antas,marcin antas,Weaviate
+Roberto Esposito,roberto esposito,Weaviate
+Philippe Ombredanne,philippe ombredanne,
+Fedor Smirnov,fedor smirnov,
+Gosia Zagajewska,gosia zagajewska,Intentee
+Alfonso Hernandez,alfonso hernandez,
+Revan,revan,
+Paul Floyd,paul floyd,Siemens EDA
+Daniel Almeida,daniel almeida,
+Martin Schwaighofer,martin schwaighofer,
+Kristof Van Tomme,kristof van tomme,
+Katharine Jarmul,katharine jarmul,
+Quintessence Anx,quintessence anx,
+Philip Balister,philip balister,
+Moon Davé,moon dave,
+Joost De Cock,joost de cock,
+Stefan Sperling,stefan sperling,
+Omar Polo,omar polo,
+Jon Ericson,jon ericson,
+Marco (aka glowingkitty),marco aka glowingkitty,
+Björn Staschen,bjorn staschen,
+Glen De Cauwsemaecker,glen de cauwsemaecker,
+Patrick Steinhardt,patrick steinhardt,GitLab
+Frank Elsinga,frank elsinga,
+SlimeVR,slimevr,
+Richard Lin,richard lin,Academia Sinica
+Murtaza,murtaza,Amazon on AOSP-fork viz
+Runxi Yu,runxi yu,
+Florian Hackel,florian hackel,
+Özcan Oğuz,ozcan oguz,
+Davide Gomba,davide gomba,
+Bart Louwers,bart louwers,
+Annika Niemann,annika niemann,JUN Legal GmbH
+Alexander Garnett,alexander garnett,Bluesky
+Eri Pazos,eri pazos,
+Christopher Brewster,christopher brewster,TNO
+Andreas Itzchak Rehberg,andreas itzchak rehberg,
+Mayuresh Bagayatkar,mayuresh bagayatkar,
+Pascal Scherbaum,pascal scherbaum,
+Pragyansh Chaturvedi,pragyansh chaturvedi,Canonical
+Maho Pacheco,maho pacheco,SOMOS.tech
+Vanya Sergeev,vanya sergeev,
+Mathieu Othacehe,mathieu othacehe,
+Sriram Ramkrishna,sriram ramkrishna,
+Sylvain Zimmer,sylvain zimmer,
+Dominique Quatravaux,dominique quatravaux,
+Andreas Hernandez Denyer,andreas hernandez denyer,
+Tom Wieczorek,tom wieczorek,Mirantis
+Nicolas Vannieuwkerke,nicolas vannieuwkerke,
+Ricardo Delfin,ricardo delfin,Bloomberg
+Sam James,sam james,
+Tobias Knerr,tobias knerr,
+morgan,morgan,
+Alex Hoyau,alex hoyau,
+Hajime Tazaki,hajime tazaki,
+Justin Mclean,justin mclean,Datastrato
+Giacomo Tenaglia,giacomo tenaglia,CERN IT department
+Kaspar Schleiser,kaspar schleiser,Inria and Freie Universit
+Redouane kachach Elhichou,redouane kachach elhichou,IBM
+Niklas Korz,niklas korz,
+sdomi,sdomi,
+famfo,famfo,
+Shane Kerr (he/him),shane kerr he him,
+Alexander Sosna,alexander sosna,
+F-Droid Team Members,f droid team members,
+Erich Birngruber,erich birngruber,
+Neha Ojha,neha ojha,IBM
+Fatih Degirmenci,fatih degirmenci,SUSE
+Benoit Aveline,benoit aveline,
+devgianlu,devgianlu,
+Ole Mathias Heggem,ole mathias heggem,
+Jacob Coffee,jacob coffee,
+Arnaud Adant,arnaud adant,Jump Trading
+Samvedna Jha,samvedna jha,
+Richard Leitner,richard leitner,
+David Bernard,david bernard,
+Gersona,gersona,
+Tiago Carreira,tiago carreira,
+Fabien Corona,fabien corona,
+Madalin Neag,madalin neag,
+Adolfo García Veytia,adolfo garcia veytia,
+Jade Abraham,jade abraham,Hewlett Packard Enterprise
+Koen Zandberg,koen zandberg,
+Michaël Marcozzi,michael marcozzi,CEA
+Dimitri Kokkonis,dimitri kokkonis,
+Stefano Zacchiroli,stefano zacchiroli,
+Freya Gustavsson,freya gustavsson,Red Hat
+Guillaume BINET,guillaume binet,
+Bob Van Hove,bob van hove,
+Brendan Le Foll,brendan le foll,
+Taym Haddadi,taym haddadi,
+Helena Vela Beltran,helena vela beltran,
+Sylvia van Os,sylvia van os,
+Cassidy James Blaede,cassidy james blaede,
+morgan (tor),morgan tor,
+"Michael ""Mouse"" Parker",michael mouse parker,
+Caitlin,caitlin,DataKind
+Maurice Hendriks,maurice hendriks,
+Maximilian Pohl,maximilian pohl,
+Anoop C S,anoop c s,
+Debojeet Das,debojeet das,IIT Bombay
+Fabian Palmer,fabian palmer,
+Fabian Thomas,fabian thomas,CISPA
+Apelete Seketeli,apelete seketeli,Intel
+Andres Betts,andres betts,
+Adam Pioterek,adam pioterek,
+Maximilian Parzen,maximilian parzen,
+Gertjan Franken,gertjan franken,KU Leuven
+Aleix Pol,aleix pol,
+Ramon (Ray) Santamaria,ramon ray santamaria,
+Klemen,klemen,
+Robin Candau,robin candau,
+Isaac Freund,isaac freund,
+Ivan Mincik,ivan mincik,
+Øjvind Fritjof Arnfred,jvind fritjof arnfred,
+Polarian,polarian,
+Igor Golikov,igor golikov,
+Sal Kimmich,sal kimmich,Sonatype
+Deleted User,deleted user,
+Emma Delescolle,emma delescolle,
+yingqi.ge,yingqi ge,
+Dhairya Parmar,dhairya parmar,Red Hat
+Ruben Pieters,ruben pieters,Null Signal Games
+Júlia,julia,
+Alan Griffiths,alan griffiths,
+Holger Dyroff,holger dyroff,B1 systems
+Ed Chalstrey,ed chalstrey,Alan Turing Institute
+Rumen Mitov,rumen mitov,
+Shane Slattery,shane slattery,
+Kiril Videlov,kiril videlov,
+Pietra Ferreira,pietra ferreira,
+Andreas Dzialocha,andreas dzialocha,
+Szilárd Hajba,szilard hajba,
+Affe Null,affe null,
+Felix,felix,
+Raphaël de Courville,raphael de courville,
+Petya Kangalova,petya kangalova,
+Robin Berjon,robin berjon,New York Times
+Ruben Hias,ruben hias,
+Zach Steindler,zach steindler,GitHub on securing software development
+Michiel De Backker,michiel de backker,
+Ghasan Mohammad (hozan23),ghasan mohammad hozan23,
+Jose Espinosa-Carrasco,jose espinosa carrasco,
+Nick Perez,nick perez,
+Arya,arya,
+lina.py,lina py,
+Kelly Roegies,kelly roegies,
+Rafael Epplée,rafael epplee,
+Valentyn Yukhymenko,valentyn yukhymenko,Bloomberg
+Giuditta Parolini,giuditta parolini,
+László Kupcsik,laszlo kupcsik,
+Amir Montazery,amir montazery,
+Michael Nazzareno Trimarchi,michael nazzareno trimarchi,SSSA Pisa
+Pierre Beyssac,pierre beyssac,
+Jovan Gerodetti,jovan gerodetti,
+Anton Borisov,anton borisov,
+Patrick Masson,patrick masson,Apereo Foundation as Executive Director
+Niko Sirmpilatze,niko sirmpilatze,
+Nicoleta Lazar,nicoleta lazar,Fresha
+Abraxas3d,abraxas3d,
+Thomas Telkamp,thomas telkamp,
+Rutvik Kshirsagar,rutvik kshirsagar,
+Claire Giordano,claire giordano,Microsoft
+Alok Mishra,alok mishra,
+Vojtěch Káně,vojtech kane,
+Marc-André Lemburg,marc andre lemburg,
+mmu_man,mmu man,
+Brian Duggan,brian duggan,
+Peter Cawley,peter cawley,
+Markus Feilner,markus feilner,SuSE
+Thierry Berger,thierry berger,
+Daniele Scasciafratte,daniele scasciafratte,
+Ilaria Battiston,ilaria battiston,
+Jelle van der Waa,jelle van der waa,
+Udo Steinberg,udo steinberg,
+David Llewellyn-Jones,david llewellyn jones,Jolla
+Bonnie Mehring,bonnie mehring,
+Ray Paik,ray paik,Cube Dev
+Federico Paolinelli,federico paolinelli,
+Marc Poulhiès,marc poulhies,
+Andrew Tropin,andrew tropin,
+Christophe Ponsard,christophe ponsard,
+"Roman ""Hedin"" Storozhenko",roman hedin storozhenko,Intel
+Daniel Estévez,daniel estevez,
+Benjamin Bellamy,benjamin bellamy,
+Adrian Reber,adrian reber,
+Pauline Maas,pauline maas,Royal Visio
+Maks Graczyk,maks graczyk,CERN
+Terts Diepraam,terts diepraam,NLnet Labs
+Bartosz Sypytkowski,bartosz sypytkowski,
+Gaétan Darquié,gaetan darquie,
+alexgood,alexgood,
+Maciek Konstantynowicz,maciek konstantynowicz,Cisco
+Tobias Burnus,tobias burnus,
+Kevin Biju,kevin biju,ClickHouse
+Ben Busby,ben busby,
+Prithvi Raj,prithvi raj,Harness
+Aleksa Sarai,aleksa sarai,Amutable
+Paula Grzegorzewska,paula grzegorzewska,
+Antoine Van Malleghem,antoine van malleghem,
+Josephine Pfeiffer,josephine pfeiffer,Red Hat
+Hannes Mühleisen,hannes muhleisen,Radboud University Nijmegen
+Nicolas Rodriguez,nicolas rodriguez,
+lumi,lumi,
+Pablo Marcos,pablo marcos,ClickHouse
+Damien Ciabrini,damien ciabrini,Red Hat
+Elisabeth Wenger-Stickel,elisabeth wenger stickel,
+benedict,benedict,
+Nicolas Frattaroli,nicolas frattaroli,Collabora
+Guillaume Tucker,guillaume tucker,
+Thomas Farstrike,thomas farstrike,
+Suzanne Wood,suzanne wood,Wikimedia Deutschland - Meta wiki user page
+Andrea Monterubbiano,andrea monterubbiano,
+Olga Kalinina,olga kalinina,
+Brooklyn Zelenka,brooklyn zelenka,Ink & Switch
+Sergio Pastor Pérez,sergio pastor perez,
+Vladimiro Paschali,vladimiro paschali,
+Beniamino Pozzan,beniamino pozzan,Archangel Autonomy
+Jonas Devlieghere,jonas devlieghere,Apple
+"Loïc Tosser ""wowi42""",loic tosser wowi42,
+Alex Markuze,alex markuze,IBM
+Matthew White,matthew white,
+Elio Qoshi,elio qoshi,
+Alex Andreba,alex andreba,
+Anja Xhakani,anja xhakani,
+Femke Weijsenfeld,femke weijsenfeld,
+Manuel Raynaud,manuel raynaud,
+F5OEO,f5oeo,
+Rao Lakkakula,rao lakkakula,
+lola odelola,lola odelola,
+Wasim Moosa,wasim moosa,Open Cities Lab
+Stephan Meijer,stephan meijer,Logius
+Thor,thor,Polar Signals
+Al Amjad Isstaif,al amjad isstaif,
+Florian Forestier,florian forestier,Zenika
+Shereen Bellamy,shereen bellamy,Cisco
+Lukasz Towarek,lukasz towarek,Intel
+S1m,s1m,
+Pascal Bleser,pascal bleser,OpenCloud
+Amin Rouan Serik,amin rouan serik,
+Alex Snaps,alex snaps,Red Hat
+Jakov Petrina Trnski,jakov petrina trnski,
+Timothée Jaussoin,timothee jaussoin,
+Simon Repp,simon repp,
+Benjamin Robin,benjamin robin,Bootlin
+TheComputerGuy,thecomputerguy,
+Shreyas Mahangade,shreyas mahangade,Red Hat Support as SME
+Manuel Rego,manuel rego,
+Asep Bagja Priandana,asep bagja priandana,
+Mykyta Kemarskyi,mykyta kemarskyi,
+Tristan Gingold,tristan gingold,
+Niklas Merz,niklas merz,
+Till Wegmüller,till wegmuller,
+Gerlind Deschner,gerlind deschner,
+Fabian Fulga,fabian fulga,
+Joel Winarske,joel winarske,
+Jamie Kerber,jamie kerber,
+Crozet Sébastien,crozet sebastien,
+Felix Wiegand,felix wiegand,
+Antonio Torres,antonio torres,Red Hat
+Beniamino Galvani,beniamino galvani,
+Miranda Heath,miranda heath,
+Lucie Anglade,lucie anglade,
+Bobby Nölte,bobby nolte,
+Amanda Victoria Wagner,amanda victoria wagner,Grafana Labs
+Steve Springett,steve springett,
+Linus Hagemann,linus hagemann,
+ori,ori,
+Stijn van Houwelingen,stijn van houwelingen,ElaadNL
+Martin Messer,martin messer,
+Béatrice Mazoyer,beatrice mazoyer,
+Ibuki Omatsu,ibuki omatsu,
+Yifei Sun,yifei sun,
+Joan Torres Lopez,joan torres lopez,
+Emiel Brok,emiel brok,SUSE
+Ian Preston,ian preston,
+Ben Pate,ben pate,
+Kieran Bingham,kieran bingham,
+Ian Romanick,ian romanick,
+François Lacombe,francois lacombe,
+Jacopo Mondi,jacopo mondi,Ideas On Board
+Jörg Rödel,jorg rodel,SUSE
+David Coles,david coles,
+Viktor Petersson,viktor petersson,
+Soulaine Theocharides,soulaine theocharides,Naturalis Biodiversity Center in Leiden
+Daniel Schultz,daniel schultz,
+many,many,Meilisearch
+Connor Aird,connor aird,
+Kristoffer Dalby,kristoffer dalby,Tailscale
+Afonso Oliveira,afonso oliveira,
+Aswath Srinivasan,aswath srinivasan,
+Stefan Gränitz,stefan granitz,
+Bryn Pickering,bryn pickering,ETH Z
+Christophe Simon,christophe simon,Botronics as the first non-founder
+Tommy Reilly,tommy reilly,
+Mayel de Borniol,mayel de borniol,
+ivan minutillo,ivan minutillo,
+Mosè Giordano,mose giordano,UCL
+Jules Merckx,jules merckx,Ghent University
+Shaygan Hooshyari,shaygan hooshyari,
+Ullrich Hafner,ullrich hafner,Munich University of Applied Sciences
+Alfie Fresta,alfie fresta,
+Ben Dicken,ben dicken,PlanetScale
+Jonas,jonas,
+Michael Riesch,michael riesch,Collabora
+Sunil Mayya,sunil mayya,
+maddog,maddog,
+Martin Sirringhaus,martin sirringhaus,
+Thomas Breuer,thomas breuer,
+Stefano Pentassuglia,stefano pentassuglia,
+José Manuel Domínguez,jose manuel dominguez,Galaxy Europe
+Carlos Delgado,carlos delgado,
+Clemens Lang,clemens lang,Red Hat
+Imke de Man,imke de man,
+Georg Kunz,georg kunz,Ericsson
+Ramon Gordillo,ramon gordillo,
+Kiko Fernandez-Reyes,kiko fernandez reyes,Klarna
+Danfeng Zhang,danfeng zhang,
+Erik Mravec,erik mravec,Red Hat
+Mikael Ronström,mikael ronstrom,Hopsworks to create RonDB
+Pierre Ozoux Krebber,pierre ozoux krebber,
+Jennifer Tridgell,jennifer tridgell,
+Usama Saqib,usama saqib,
+Gabriel Ku Wei Bin,gabriel ku wei bin,
+Kévin L'hôpital,kevin l hopital,
+Laurin Weger,laurin weger,
+Gábor Boskovits,gabor boskovits,
+Hubert Chathi,hubert chathi,Element
+Jonas 'Sortie' Termansen,jonas sortie termansen,
+Frederic Plourde,frederic plourde,Collabora
+Adam Harvey,adam harvey,New Relic
+Alfonso De Gregorio,alfonso de gregorio,
+Hong Minhee,hong minhee,
+Akihiro Suda,akihiro suda,NTT
+Andris Reinman,andris reinman,
+Jonas Lindström,jonas lindstrom,
+Benoît Ganne,benoit ganne,
+Ümit Seren,umit seren,
+Aliaksandr Valialkin,aliaksandr valialkin,
+Leon Schwarzäugl,leon schwarzaugl,
+Bart Pleiter,bart pleiter,Alliander
+Ondřej Budai,ondrej budai,Red Hat from Czechia
+Marco Möller,marco moller,
+Sven Krause,sven krause,
+valentin,valentin,
+Denis Lebold,denis lebold,
+Sebastian Wittlich,sebastian wittlich,
+Ulrika Vincent,ulrika vincent,
+Matt Graham,matt graham,
+Amy O'Donnell,amy o donnell,
+Baris Aktemur,baris aktemur,Intel
+Theodore Tucker,theodore tucker,
+Alex Feyerke,alex feyerke,
+Guillaume Ayoub,guillaume ayoub,
+Ellen Wittingen,ellen wittingen,
+Michael Stahl,michael stahl,Collabora Productivity Germany GmbH
+Julius Tens,julius tens,
+Gnuxie,gnuxie,
+Mikael Kullberg,mikael kullberg,
+pierromond,pierromond,
+Xavier Lambein,xavier lambein,
+Davide Faconti,davide faconti,
+Mario Sanchez-Prada,mario sanchez prada,Igalia
+Henrik Ingo,henrik ingo,
+Jérôme Sautret,jerome sautret,
+Gwenaël GUILLAUME,gwenael guillaume,
+Archita Gorle,archita gorle,Canonical
+Ben Chisholm,ben chisholm,
+Ev Cheng,ev cheng,Apple
+Hannah Kim,hannah kim,
+Sam Khouri,sam khouri,
+Moritz Thüning,moritz thuning,
+Enzo Ghisoni,enzo ghisoni,
+Benjamin Andre,benjamin andre,
+Adam Ivora,adam ivora,
+Michael Poehnl,michael poehnl,Apex.AI
+Cristian Le,cristian le,
+Kashyap Chamarthy,kashyap chamarthy,
+Francesco Napoleoni,francesco napoleoni,
+Federico Bassini,federico bassini,
+Evan Wilde,evan wilde,
+Michael Chiu,michael chiu,
+Date (Yu-Chiang) Huang,date yu chiang huang,
+Alejandro Lopez,alejandro lopez,
+Eldar Kurtić,eldar kurtic,
+Boris Martin,boris martin,
+Sotirios Panagiotou,sotirios panagiotou,
+Linus Basig,linus basig,CARU
+Robert Riemann,robert riemann,
+Payton Yau,payton yau,
+Julien Balian,julien balian,
+Jonas Künstler,jonas kunstler,
+Till Prochaska,till prochaska,
+Dimas Ciputra,dimas ciputra,
+Dylan Ayrey,dylan ayrey,
+Andreas Bertsatos,andreas bertsatos,
+Giulio B,giulio b,
+Tony Wasserka,tony wasserka,
+Malte Schrader,malte schrader,
+Georg C.F. Greve,georg c f greve,
+Sandra Barthel,sandra barthel,
+Rosalind Liu,rosalind liu,
+Evan Patton,evan patton,
+Jens Mönig,jens monig,SAP
+Ildiko Vancsa,ildiko vancsa,
+Vadim Troshchinskiy Shmelev,vadim troshchinskiy shmelev,
+James Bottomley,james bottomley,AT&T Bell labs to work
+Anthony Harrison,anthony harrison,
+Vladislav Shpilevoy,vladislav shpilevoy,Virtual Minds
+Tom De Moor,tom de moor,
+Daniel Stenberg,daniel stenberg,
+Drew DeVault,drew devault,
+Franck Pachot,franck pachot,
+Thijs Schreijer,thijs schreijer,Vcareconnect
+Brede Dammen,brede dammen,
+Pierre Kil,pierre kil,
+Diomidis Spinellis,diomidis spinellis,
+Manuel Leduc,manuel leduc,
+Lennart Poettering,lennart poettering,
+Syed Usman Ahmad,syed usman ahmad,Grafana Labs from Nuremberg
+Luiz Villa,luiz villa,
+Daniela Petruzalek,daniela petruzalek,
+Akashdeep Dhar,akashdeep dhar,
+Emanuele Giuseppe Esposito,emanuele giuseppe esposito,
+Augusto de Oliveira,augusto de oliveira,
+David Baker,david baker,Element
+Ferdinand Schlatt,ferdinand schlatt,Seltz
+Antonio Mallia,antonio mallia,
+Stéphane Caron,stephane caron,
+Sam Pfeiffer,sam pfeiffer,Humanoid
+Dmitry Levin,dmitry levin,
+Abderrahim Kitouni,abderrahim kitouni,Codethink
+samuel desseaux,samuel desseaux,OSMC
+André Rebentisch,andre rebentisch,
+Prasun Anand,prasun anand,
+Fabio Giovanazzi,fabio giovanazzi,
+Anutosh Bhat,anutosh bhat,
+Fra - OpenForFuture,fra openforfuture,
+Aurélien Luciani,aurelien luciani,
+Ben Cerveny,ben cerveny,Samsung
+Ruth Suehle,ruth suehle,GeekMom.com
+Ilya Boyandin,ilya boyandin,Foursquare
+Jonas Jakštys,jonas jakstys,
+Desaintjan Arthur,desaintjan arthur,
+Tobias Kremer,tobias kremer,
+Marek Pikuła,marek piku a,
+Thibault Payet,thibault payet,
+Lukas Trippe,lukas trippe,
+Himadri CHHAYA-SHAILESH,himadri chhaya shailesh,Grenoble INP
+Lars,lars,OpenText
+Filippo Della Bianca,filippo della bianca,
+Pavel Machek,pavel machek,
+Neil Brown,neil brown,
+Rasmus Frey,rasmus frey,
+Esteve Fernández,esteve fernandez,
+Guillaume Claret,guillaume claret,
+Sergey,sergey,
+Célia Piquet,celia piquet,
+Otto Richter,otto richter,
+Martin Storsjö,martin storsjo,
+Marius Kleidl,marius kleidl,
+Stef Dillo,stef dillo,Circuit Launch
+Ruud van Asseldonk,ruud van asseldonk,
+FelixCLC,felixclc,
+Greg Wallace,greg wallace,NetActuate
+José Castillo Lema,jose castillo lema,
+Neil Johnson,neil johnson,Element
+DanJ,danj,
+Hyacinthe Cartiaux,hyacinthe cartiaux,
+Danilo Spinella,danilo spinella,
+Ryan Gibb,ryan gibb,
+Karen Bennet,karen bennet,IBM and Yahoo
+Jan Černý,jan cerny,Charles University
+Harald Fischer,harald fischer,
+David Koňařík,david konarik,MFF CUNI in Prague
+Maximilien Richer,maximilien richer,
+Jarek Potiuk,jarek potiuk,
+Wookey,wookey,
+Ariadne Conill,ariadne conill,Edera
+Naoyuki Masumoto,naoyuki masumoto,University of Osaka
+Thomas Munro,thomas munro,
+Varun R Mallya,varun r mallya,
+Julian Schauder,julian schauder,
+Paul Sonnentag,paul sonnentag,
+Tommaso Bernabo',tommaso bernabo,
+Aditya Singh,aditya singh,
+Aurore Roma,aurore roma,
+Marcel Kolaja,marcel kolaja,Access Now
+Martin Jediný,martin jediny,Red Hat
+Ella Jakubowska,ella jakubowska,
+Georgi Kodinov,georgi kodinov,
+Tobias Augspurger,tobias augspurger,Open Energy Transition
+Cairo Caplan,cairo caplan,
+Alexander Chalikiopoulos,alexander chalikiopoulos,
+Colin Evrard,colin evrard,Leuven with Mind OSS
+Denise R. S. Almeida,denise r s almeida,Element
+Patrick Brosset,patrick brosset,Mozilla
+Karel Kočí,karel koci,CTU Prague
+Daniele Mingolla,daniele mingolla,
+Michal Rostecki,michal rostecki,
+Antoine Oustry,antoine oustry,
+Raul Sevilla,raul sevilla,
+Pepijn Lemmens,pepijn lemmens,PublicSpaces
+Jos,jos,
+Claire Pershan,claire pershan,
+Christian Simon,christian simon,
+Björn Ruytenberg,bjorn ruytenberg,VUSec
+Philip Homburg,philip homburg,
+Andrin Bertschi,andrin bertschi,ETH Zurich
+Charley Mann,charley mann,
+Emma Ghariani,emma ghariani,
+Guillermo Sanchez,guillermo sanchez,DuckDB Labs to work in Product
+Glenn Eriksson,glenn eriksson,
+Sina Karvandi,sina karvandi,
+Rosanna Sibora,rosanna sibora,OpenProject
+Andreas Cuny,andreas cuny,
+Anthony Welte,anthony welte,
+Christoph Haag,christoph haag,Collabora
+Brennan Vincent,brennan vincent,Polar Signals
+Frederic Noppe,frederic noppe,
+Michael Müller,michael muller,Osnabr
+Benoit Descotes-Genon,benoit descotes genon,
+Santiago Peñate-Vera,santiago penate vera,
+Hannah Aubry,hannah aubry,
+Tonis Tiigi,tonis tiigi,
+Arian van Putten,arian van putten,
+Timothée Gosselin,timothee gosselin,
+Paul Fuxjäger,paul fuxjager,
+gotha,gotha,
+Pelin Smines,pelin smines,
+Ondřej Míchal,ondrej michal,
+Albert Krewinkel,albert krewinkel,
+Harmen Stoppels,harmen stoppels,
+Jeremy Jongepier,jeremy jongepier,SURF
+Amelia Crate,amelia crate,Chainguard
+peg,peg,
+Lukas Gerlach,lukas gerlach,IEEE S&P
+Eve Redero,eve redero,
+Django Doucet,django doucet,
+Prankur Gupta,prankur gupta,
+Benjamin W. Broersma,benjamin w broersma,
+Petr Penzin,petr penzin,
+Angus Hollands,angus hollands,Princeton University
+David Petera,david petera,CZ.NIC
+Florin Hasler,florin hasler,Bern University of Applied Sciences
+Matthew Suozzo,matthew suozzo,
+Eric Curtin,eric curtin,
+Eli Mallon,eli mallon,
+Kosuke Miyaji,kosuke miyaji,
+Francisco Martín Rico,francisco martin rico,
+Francisco Miguel Moreno,francisco miguel moreno,Universidad Rey Juan Carlos
+Abel Samot,abel samot,
+Thomas van Dijk,thomas van dijk,TNO
+Alex Wenger,alex wenger,
+Phillip Tennen,phillip tennen,Apple
+Torsten Grote,torsten grote,CalyxOS an Android based operating system
+Bastian Ehrenholz,bastian ehrenholz,
+Egor Dmitriev,egor dmitriev,Alliander
+Paula von der Heide,paula von der heide,
+David Abdurachmanov,david abdurachmanov,
+Shannon Wray,shannon wray,
+Dorin Geman,dorin geman,
+Tim-Philipp Müller,tim philipp muller,
+Artem Dyomin,artem dyomin,
+Pep Pla,pep pla,
+Charly Batista,charly batista,EDB I am passionate about technology
+Jenia Peimer,jenia peimer,Red Hat in the OpenShift Virtualization
+Nils Petter Skålerud,nils petter skalerud,
+Florian Duros,florian duros,Element
+Alfonso Sandoval Rosas,alfonso sandoval rosas,
+Ian Forrester,ian forrester,BBC RD
+Matt Yonkovit ( The Yonk ),matt yonkovit the yonk,Percona
+Gina Plat,gina plat,
+Greg Potter,greg potter,
+Mario Vitale,mario vitale,CERN
+Henrik Brändle,henrik brandle,
+Sam Jewell,sam jewell,
+Mike McQuaid,mike mcquaid,
+Bartosz Golaszewski,bartosz golaszewski,
+Federico Lucifredi,federico lucifredi,Canonical
+Vsevolod Stakhov,vsevolod stakhov,
+Jean-Michel Friedt,jean michel friedt,
+Nicolas Höning,nicolas honing,LF Energy meetings & events
+Hayleigh Thompson,hayleigh thompson,
+Alexander Schwartz,alexander schwartz,IBM
+Tsvetan Usunov,tsvetan usunov,
+Nico Rikken,nico rikken,
+Phil Estes,phil estes,
+Ricardo Signes,ricardo signes,Fastmail
+Nick Kossifidis,nick kossifidis,
+Achim Friedland,achim friedland,
+Benjamin Alan Jamie,benjamin alan jamie,
+Skyler Grey,skyler grey,Collabora
+Thierry Carrez,thierry carrez,
+Eyal Ron (Neiman),eyal ron neiman,
+Daan De Meyer,daan de meyer,
+Luca Weiss,luca weiss,
+Jeffrey Rongen,jeffrey rongen,
+Masashi Yoshimura,masashi yoshimura,NTT
+Anirban (Ani) Sinha,anirban ani sinha,Red Hat in the virtualization engineering
+Ron Evans,ron evans,
+Mohammed Zubair Ahmed,mohammed zubair ahmed,Mattermost
+Tomáš Hrčka,tomas hrcka,
+Cian Butler,cian butler,
+Jonathan Dowland,jonathan dowland,IBM
+Christine Lemmer-Webber,christine lemmer webber,
+Jessica Tallon,jessica tallon,
+Michal Pleban,michal pleban,
+Brendan Abolivier,brendan abolivier,Mozilla
+James Lowden,james lowden,
+Daniel Gultsch,daniel gultsch,
+Salve J. Nilsen,salve j nilsen,
+Vitaly Kuznetsov,vitaly kuznetsov,Red Hat Virtualization Engineering team
+Lancelot SIX,lancelot six,
+Marton Bognar,marton bognar,
+Ludovic Courtès,ludovic courtes,Inria
+Muhammad Usama Sardar,muhammad usama sardar,TU Dresden
+Rémi Denis-Courmont,remi denis courmont,
+Thomas Woerner,thomas woerner,
+Carla Martínez Poveda,carla martinez poveda,
+Philipp K. Krause,philipp k krause,
+Carlos Sanchez,carlos sanchez,Adobe Experience Manager
+David Thompson,david thompson,Spritely
+Hugo Cornelis,hugo cornelis,
+Arnt Gulbrandsen,arnt gulbrandsen,
+Mohammad-Reza Nabipoor,mohammad reza nabipoor,
+Venky Shankar,venky shankar,IBM
+Kemal Akkoyun,kemal akkoyun,Datadog APM
+Peter Keller,peter keller,
+Fernando Fernandez Mancera,fernando fernandez mancera,
+Jan-Patrick Lehr,jan patrick lehr,AMD
+Andrew Williams,andrew williams,
+Pierrick Philippe,pierrick philippe,
+Marta Rybczynska,marta rybczynska,
+Magnus Kulke,magnus kulke,
+Carsten Rosenberg,carsten rosenberg,
+Erwann Roussy,erwann roussy,
+Manu Zurmuehl,manu zurmuehl,
+Julia Lawall,julia lawall,
+Jeremy Bennett,jeremy bennett,
+Rémi Duraffort,remi duraffort,Linaro
+holger krekel,holger krekel,
+Deb Bryant,deb bryant,
+Mattias Jonsson,mattias jonsson,PingCAP
+Lukas,lukas,
+Georg Link,georg link,Bitergia
+Iolanda Pensa,iolanda pensa,
+Alfonso Carrillo Aspiazu,alfonso carrillo aspiazu,OpenNebula Systems
+Shirley Bailes,shirley bailes,
+Walt Miner,walt miner,
+František Lachman,frantisek lachman,Red Hat
+Tobie Langel,tobie langel,
+Thorsten Behrens,thorsten behrens,Sun Microsystems
+Dan Čermák,dan cermak,SUSE
+José María Casanova Crespo,jose maria casanova crespo,Igalia
+Juan A. Suarez,juan a suarez,
+Alexander Sander,alexander sander,
+Oren Klopfer,oren klopfer,
+Timo Kandra,timo kandra,Element
+Bryan O'Donoghue,bryan o donoghue,
+missytake,missytake,
+Petr Menšík,petr mensik,
+Dmitriy Kostiuk,dmitriy kostiuk,
+Jim Madge,jim madge,Alan Turing Institute
+Thibault Raffaillac,thibault raffaillac,
+dcz,dcz,
+Holger Levsen,holger levsen,
+Vittorio Bertola,vittorio bertola,Open-Xchange
+Hans de Goede,hans de goede,Qualcomm
+Ben Bucksch,ben bucksch,
+Alexander Soto,alexander soto,
+Urban Bruhin,urban bruhin,
+Johannes Schlatow,johannes schlatow,TU Braunschweig
+Yorik van Havre,yorik van havre,
+Graziano Casto,graziano casto,
+Aleksandr Mikhalitsyn,aleksandr mikhalitsyn,
+Maximilian Huber,maximilian huber,
+Renzo Davoli,renzo davoli,
+Bradley M. Kühn,bradley m kuhn,
+Matthias Kirschner,matthias kirschner,FSFE
+Jehan Monnier,jehan monnier,
+Imma Valls,imma valls,Grafana Labs
+Rémi (minijackson),remi minijackson,
+Jos Poortvliet,jos poortvliet,Nextcloud
+Matija Šuklje,matija suklje,

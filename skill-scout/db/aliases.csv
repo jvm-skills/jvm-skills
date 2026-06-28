@@ -403,3 +403,451 @@ benedikt werner,benediktwerner,confirm,auto,"lichess-org (Scala/JVM project), 12
 florian sommer,fsteckel,reject,auto,"bio is Aerospace Engineer and Maker, clearly not JVM speaker, multiple ambiguous candidates",2026-06-27
 thomas krieger,tom-krieger,confirm,auto,"THK IT Beratung company matches initials, IT consulting consistent with JVM speaker",2026-06-27
 luis blanche,luisblanche-mirakl,confirm,auto,login encodes name+Mirakl aff; better match than LuisBlanche,2026-06-28
+andres pineda,ajpinedam,reject,auto,"common name, blank company, no JVM repos, multiple candidates",2026-06-28
+arvin singla,arvinsingla,reject,auto,"JavaScript-focused bio, no JVM repos, no affiliation",2026-06-28
+ben dechrai,bendechrai,confirm,auto,"distinctive name, 99 followers, phpaustralia org signals tech conference speaker",2026-06-28
+benoit des ligneris,bligneri,reject,auto,"company Fractional CPO/CTO mismatches ESA, only 3 followers",2026-06-28
+cedric l homme,rangzen,reject,auto,"company blank, no match to Osedea, no JVM repos",2026-06-28
+chad green,chadutah,reject,auto,"very common name, 3 followers, no corroboration",2026-06-28
+daniel mikusa,dmikusa,confirm,auto,"distinctive name, 135 followers, cloudfoundry-samples org, dominant candidate",2026-06-28
+daniel scherzer,danielscherzer,confirm,auto,"distinctive name, dominant at 34 followers vs 19/2, rwu.de = academic",2026-06-28
+derick rethans,derickr,confirm,auto,"1823 followers, Xdebug creator, php org member, single unique candidate",2026-06-28
+erik beaulieu,ebeaulieu-mirego,reject,auto,"company Mirego doesn't match Openmind Technologies, 0 followers",2026-06-28
+etienne vezina,mrevezina,reject,auto,"bio says Heavy Industrial Mechanical Engineer, 0 followers",2026-06-28
+frank boucher,fboucher,confirm,auto,"343 followers dominant, fboucheros alt account bio confirms fboucher is real",2026-06-28
+heath kesler,heathkes,reject,auto,"0 followers, empty bio, no corroboration",2026-06-28
+jonathan marcil,jmarcil,confirm,auto,"distinctive name, @OWASP company, 37 followers, JM International initials match",2026-06-28
+jordan kasper,jakerella,confirm,auto,"dominant at 175 followers, tech community orgs (virtphp, dcjs)",2026-06-28
+julian egelstaff,jegelstaff,confirm,auto,"very distinctive rare name, single candidate, 15 followers",2026-06-28
+justine gehring,justine-gehring,reject,auto,"0 followers, empty bio, no corroboration",2026-06-28
+karol deland,karoldeland,reject,auto,"1 follower, empty bio, company blank vs Workleap",2026-06-28
+kathryn grayson nanz,kathryngraysonnanz,confirm,auto,"very distinctive full name exact match, 47 followers, dominant candidate",2026-06-28
+louis beaudoin allaire,lballaire,confirm,auto,"ShareGate in profile = Workleap rebranded, name exact match",2026-06-28
+marian marinov,hackman,confirm,auto,"368 followers, OpenFest org, distinctive name, dominant",2026-06-28
+mathieu fillion,MatFillion,reject,auto,"company @nventive mismatches Wepoint, only 7 followers",2026-06-28
+mathieu santostefano,welcoMattic,confirm,auto,"SensioLabs = Symfony company, bio says Symfony Core Team, symfony org",2026-06-28
+mohamed wali,Wali-Mohamed,reject,auto,"name order reversed (Wali Mohamed vs Mohamed Wali), 13 followers, no AWS match",2026-06-28
+ralf westphal,ralfw,confirm,auto,"distinctive German name, 86 followers, dominant candidate",2026-06-28
+raphael rougeron,goldoraf,confirm,auto,"distinctive name, 36 followers, single candidate",2026-06-28
+rob richardson,robrich,confirm,auto,"login robrich matches affiliation domain robrich.org, 489 followers",2026-06-28
+rowdy rabouw,rowdyrabouw,confirm,auto,"distinctive name, 41 followers, GDE bio signals conference speaker",2026-06-28
+semira allen,semiraallen21,reject,auto,"0 followers, empty bio, no corroboration",2026-06-28
+shao hang he,devnetf,reject,auto,"6 followers, blank company, no match to DevFortress",2026-06-28
+tamires marcal,tamiresco,reject,auto,"company USP (Sao Paulo) mismatches McGill, extra middle name in profile",2026-06-28
+thibault friedrich,friedrith,confirm,auto,"distinctive name, 47 followers, single candidate, UX engineer fits speaker",2026-06-28
+jonas bandi,jbandi,confirm,auto,"exact distinctive name, single candidate, 55 followers, Swiss conference",2026-06-28
+joel verezhak,verejoel,confirm,auto,"rare distinctive surname, bio mentions Observability aligns with Grafana Labs",2026-06-28
+johan van de wauw,johanvdw,confirm,auto,"single cand + signals: orgs=['OSGeo', 'geopython'], flw=40",2026-06-28
+kristof beyls,kbeyls,confirm,auto,"single cand + signals: orgs=['llsoftsec'], flw=31",2026-06-28
+jan fajerski,jan--f,confirm,auto,"corroborated: company=Red Hat, flw=33",2026-06-28
+jose e marchesi,jemarch,confirm,auto,"single cand, unique name, score=1",2026-06-28
+karen sandler,karensandler,confirm,auto,single cand + signals: company=Software Freedom Conservancy,2026-06-28
+bjorn topel,bjoto,confirm,auto,"corroborated: has_bio, flw=54",2026-06-28
+konstantina papadea,couci,confirm,auto,single cand + signals: flw=86,2026-06-28
+damian poddebniak,duesee,confirm,auto,"corroborated: has_bio, orgs=['FHMS-ITS', 'modern-email'], fl",2026-06-28
+mechiel lukkien,mjl-,confirm,auto,"corroborated: has_bio, flw=273",2026-06-28
+benjamin cabe,kartben,confirm,auto,"corroborated: orgs=['zephyrproject-rtos'], flw=460",2026-06-28
+shaun mccance,shaunix,confirm,auto,single cand + signals: company=Red Hat,2026-06-28
+marcus muller,marcusmueller,confirm,auto,"corroborated: orgs=['kit-cel', 'gnuradio'], flw=179",2026-06-28
+laura czajkowski,lauraczajkowski,confirm,auto,"corroborated: company=Percona, has_bio",2026-06-28
+martin decky,martin-decky,confirm,auto,"corroborated: company=@HelenOS @kernkonzept , has_bio, orgs=",2026-06-28
+simon phipps,webmink,confirm,auto,"corroborated: company=Meshed Insights Ltd, has_bio, orgs=['O",2026-06-28
+jaron vietor,Thulinma,confirm,auto,"corroborated: company=DDVTech / Livepeer, has_bio, orgs=['Bu",2026-06-28
+william jones,cr1901,confirm,auto,corroborated: flw=118,2026-06-28
+yvan sraka,yvan-sraka,confirm,auto,corroborated: flw=219,2026-06-28
+neal h walfield,nwalfield,confirm,auto,"single effective cand, unique name, bio=Sequoia-PGP",2026-06-28
+nicole pappler,nicpappler,confirm,auto,"single cand + signals: has_bio, orgs=['OpenChain-Project']",2026-06-28
+philipp ahmann,pahmann,confirm,auto,"corroborated: company=Robert Bosch GmbH, orgs=['eclipse-scor",2026-06-28
+tobias bernard,bertob,confirm,auto,"corroborated: has_bio, orgs=['gnome-design-team', 'opensourc",2026-06-28
+ahmad fatoum,a3f,confirm,auto,"corroborated: orgs=['barebox', 'pengutronix'], flw=155",2026-06-28
+jimmy angelakos,vyruss,confirm,auto,"corroborated: company=@pgEdge, has_bio, flw=44",2026-06-28
+jose d gomez r,josegomezr,confirm,auto,"corroborated: company=@SUSE , has_bio, flw=48",2026-06-28
+adam litke,aglitke,confirm,auto,"corroborated: company=Red Hat, orgs=['kimchi-project', 'kube",2026-06-28
+charalampos mainas,cmainas,confirm,auto,"single cand, unique name, score=1",2026-06-28
+ignat korchagin,ignatk,confirm,auto,single cand + signals: flw=74,2026-06-28
+christian brauner,brauner,confirm,auto,"corroborated: has_bio, orgs=['openSUSE', 'systemd'], flw=437",2026-06-28
+vladislav belov,vladislavbelov,confirm,auto,"top cand dominates by flw, bio=Senior Graphics Engineer, org",2026-06-28
+romain beauxis,toots,confirm,auto,"corroborated: orgs=['savonet', 'webcast'], flw=214",2026-06-28
+maxime peim,maxime-peim,confirm,auto,"company=Cisco, unique name, top of 2 cands",2026-06-28
+wieland lindenthal,wielinde,confirm,auto,"corroborated: company=OpenProject GmbH, has_bio, orgs=['opf'",2026-06-28
+paul meyer,katexochen,confirm,auto,"corroborated: company=@amutable-systems, has_bio, orgs=['Nix",2026-06-28
+ryan walker,rytwalker,confirm,auto,"corroborated: company=RVshare, has_bio, orgs=['bountiful-dev",2026-06-28
+ronna steinberg,ronna-s,confirm,auto,"corroborated: orgs=['wwgberlin'], flw=115",2026-06-28
+andreas k huttel,akhuettel,confirm,auto,"single cand + signals: orgs=['gentoo', 'gentoo-perl'], flw=4",2026-06-28
+edward betts,EdwardBetts,confirm,auto,"corroborated: has_bio, flw=408",2026-06-28
+stefan kalkowski,skalk,confirm,auto,"corroborated: company=@genodelabs , orgs=['genodelabs'], flw",2026-06-28
+andriy utkin,andrey-utkin,confirm,auto,"single cand, unique name, score=1",2026-06-28
+susan remmert,SusanRemm,confirm,auto,"single cand, unique name, score=0",2026-06-28
+radostin stoyanov,rst0git,confirm,auto,"corroborated: orgs=['NetFPGA', 'p4lang'], flw=142",2026-06-28
+lea beiermann,lbeiermann,confirm,auto,"single cand, unique name, score=0",2026-06-28
+andrej rode,noc0lour,confirm,auto,"corroborated: has_bio, orgs=['gnuradio', 'asta-kit'], flw=62",2026-06-28
+mauro gaspari,ilvipero,confirm,auto,"single cand, unique name, score=0",2026-06-28
+alya abbott,alya,confirm,auto,corroborated: flw=170,2026-06-28
+lucas kanashiro,lucaskanashiro,confirm,auto,"corroborated: company=@canonical , has_bio, orgs=['kuniri-xp",2026-06-28
+ititou,ITITOU,reject,auto,"single-name speaker, ambiguous (3 cands)",2026-06-28
+thierry de pauw,tdpauw,confirm,auto,"corroborated: company=ThinkingLabs, has_bio",2026-06-28
+julian stirling,julianstirling,confirm,auto,"corroborated: company=Humanitarian Technology Trust, has_bio",2026-06-28
+sebastian kawelke,seb-kw,confirm,auto,"corroborated: company=L3montree, orgs=['l3montree-dev']",2026-06-28
+giacomo,giacomo,reject,auto,"single-name speaker, ambiguous (5 cands)",2026-06-28
+nikolaj potashnikov,fiddlededee-fiddle,confirm,auto,"single cand, unique name, score=0",2026-06-28
+yogesh deshpande,yogeshbdeshpande,confirm,auto,"corroborated: company=ARM, has_bio",2026-06-28
+ali polatel,alip,confirm,auto,"corroborated: has_bio, flw=61",2026-06-28
+james smith,loopj,confirm,auto,corroborated: flw=3691,2026-06-28
+mia bajic,clytaemnestra,confirm,auto,"corroborated: orgs=['pyvec'], flw=70",2026-06-28
+tilo mathes,tilorspace,confirm,auto,"corroborated: company=Research Space, has_bio",2026-06-28
+terence eden,edent,confirm,auto,"corroborated: has_bio, orgs=['w3c', 'government'], flw=999",2026-06-28
+babar khan,BabarZKhan,reject,auto,"common name, 5 cands, no clear winner",2026-06-28
+mauro de gennaro,MauroDeGennaro,confirm,auto,"unique name, top of 2 identical cands",2026-06-28
+rohit nayak,rohit-nayak-ps,confirm,auto,"corroborated: company=PlanetScale, has_bio, orgs=['vitessio'",2026-06-28
+oliver smith,ollieparanoid,confirm,auto,"corroborated: has_bio, flw=70",2026-06-28
+francesco pham,frankplus,confirm,auto,"corroborated: company=@Huawei, has_bio, flw=39",2026-06-28
+sunny bains,sunbains,confirm,auto,"unique name, top cand exact match",2026-06-28
+yash panchal,panchal-yash,reject,auto,name mismatch: speaker 'YASH PANCHAL' vs cand 'Yash',2026-06-28
+niels g w serup,nqpz,confirm,auto,"corroborated: has_bio, orgs=['HIPERFIT', 'DIKU-EDU'], flw=67",2026-06-28
+gianluca varisco,gvarisco,confirm,auto,corroborated: flw=224,2026-06-28
+amy marrich,spotz,confirm,auto,"name matches Amy Marrich (spotz), top of 2",2026-06-28
+kuniyasu suzaki,kunisuzaki,confirm,auto,single cand + signals: company=IISEC: Institute of Informati,2026-06-28
+andreas tille,tillea,confirm,auto,"unique name, top of 2, established Debian contributor",2026-06-28
+ariel kaiser,KaiserDragun,reject,auto,name mismatch: speaker 'Ariel Kaiser' vs cand 'Ariel Montoya,2026-06-28
+kirk smith,SmithKirk,reject,auto,"common name, 5 cands, no corroboration",2026-06-28
+roland meertens,rmeertens,confirm,auto,"top cand 93 flw, clearly dominant among 3 cands",2026-06-28
+martin teichmann,tecki,confirm,auto,"single cand, unique name, score=1",2026-06-28
+patricio whittingslow,biohazduck,confirm,auto,"corroborated: company=Stämm Vegh S.A., has_bio",2026-06-28
+eloi charpentier,eckter,confirm,auto,"single cand, unique name, score=0",2026-06-28
+tobias diekershoff,tobiasd,confirm,auto,"single cand, unique name, score=1",2026-06-28
+danny colin,dannycolin,confirm,auto,"corroborated: has_bio, orgs=['thunderbird'], flw=75",2026-06-28
+valere fedronic,BillCarsonFr,confirm,auto,"corroborated: has_bio, orgs=['matrix-org', 'element-hq'], fl",2026-06-28
+johan linaker,johanlinaker,confirm,auto,"corroborated: company=@lunduniversity, has_bio",2026-06-28
+michael winser,michaelwinser,confirm,auto,"single cand, unique name, score=0",2026-06-28
+raphael gomes,Alphare,confirm,auto,"corroborated: company=Octobus, has_bio",2026-06-28
+pierre kancir,khancyr,confirm,auto,"corroborated: has_bio, flw=128",2026-06-28
+gianluca guida,glguida,confirm,auto,"corroborated: orgs=['libcpu', 'aifoundry-org'], flw=76",2026-06-28
+mikel olasagasti,mikelolasagasti,confirm,auto,"unique Basque name, top of 2, 45 flw",2026-06-28
+lorena goldoni,Lorygold,confirm,auto,"corroborated: company=Würth IT Italy, has_bio, flw=29",2026-06-28
+antony chazapis,chazapis,confirm,auto,"corroborated: company=FORTH-ICS, orgs=['CARV-ICS-FORTH'], fl",2026-06-28
+raphael odini,raphodn,confirm,auto,"corroborated: company=@betagouv @openfoodfacts, orgs=['openf",2026-06-28
+denver gingerich,ossguy,confirm,auto,"single cand, unique name, score=1",2026-06-28
+pablo del arco,pablodelarco,confirm,auto,"corroborated: company=OpenNebula, has_bio",2026-06-28
+josh lee,jleedev,confirm,auto,"corroborated: has_bio, orgs=['alltheplaces', 'osm-americana'",2026-06-28
+daniel d beck,ddbeck,confirm,auto,"corroborated: has_bio, orgs=['writethedocs'], flw=230",2026-06-28
+albert astals cid,albert-astals-cid-kdab,confirm,auto,single cand + signals: company=@KDAB,2026-06-28
+julie rymer,Chadys,confirm,auto,"corroborated: company=@BIRU-Scop , orgs=['Axelrod-Python', '",2026-06-28
+precious onyewuchi,Preshh0,confirm,auto,"single cand + signals: has_bio, flw=37",2026-06-28
+marcel ziswiler,ziswiler,confirm,auto,"corroborated: company=@toradex, has_bio",2026-06-28
+dave hughes,davehughes,reject,auto,name mismatch: speaker 'Dave Hughes' vs cand 'David Hughes',2026-06-28
+lukas stockner,lukasstockner,confirm,auto,"corroborated: company=@steliaio, orgs=['steliaio'], flw=35",2026-06-28
+cynthia lo,cynthialo,reject,auto,"common name, 5 cands, low followers, no signals",2026-06-28
+cassie jiun seo,jiunseo,confirm,auto,"single cand, login=jiunseo contains jiun+seo, aff=Cambridge",2026-06-28
+alex pyrgiotis,apyrgio,confirm,auto,"single cand, unique name, score=1",2026-06-28
+kate stewart,kestewart,confirm,auto,"top of 3, orgs=zephyrproject-rtos, 44 flw",2026-06-28
+wayne stambaugh,stambaughw,confirm,auto,"single cand, unique name, score=1",2026-06-28
+tom marble,tmarble-kr,confirm,auto,"corroborated: company=Cprime, has_bio",2026-06-28
+peter smith,peterbsmyth,confirm,auto,"corroborated: has_bio, flw=56",2026-06-28
+marius brehler,marbre,confirm,auto,"corroborated: company=AMD, orgs=['llvm', 'ROCm'], flw=39",2026-06-28
+ivan baravy,dunkaist,confirm,auto,"unique name, top of 2, orgs=KolibriOS",2026-06-28
+bogomil shopov,bogomil,confirm,auto,"very unique name, top of 2, 38 flw, bio present",2026-06-28
+ludovic dubost,ldubost,confirm,auto,"corroborated: company=XWiki SAS, orgs=['xwiki', 'xwiki-contr",2026-06-28
+arne baeyens,abaeyens,confirm,auto,"unique name, top of 2, aff=KU Leuven matches",2026-06-28
+samuel thibault,sthibaul,confirm,auto,"corroborated: orgs=['book-readers'], flw=66",2026-06-28
+kurt garloff,garloff,confirm,auto,"corroborated: company=SCS, has_bio, orgs=['SovereignCloudSta",2026-06-28
+fabio valentini,decathorpe,confirm,auto,"corroborated: has_bio, orgs=['mitmproxy', 'ironthree'], flw=",2026-06-28
+emma irwin,emmairwin,reject,auto,name mismatch: speaker 'Emma Irwin' vs cand 'Emma',2026-06-28
+gunther deschner,gd,confirm,auto,"corroborated: company=Samba Team, flw=28",2026-06-28
+victor le pochat,VictorLeP,confirm,auto,"corroborated: has_bio, orgs=['DistriNet', 'stellarvector'], ",2026-06-28
+alexandra,alexandra,reject,auto,"single-name speaker, ambiguous (5 cands)",2026-06-28
+carl daniel hailfinger,hailfinger,confirm,auto,"single cand, unique name, score=0",2026-06-28
+michael schuster,schustmi,reject,auto,"common name, 5 cands, ambiguous",2026-06-28
+ruben ortlam,0cc4m,confirm,auto,single cand + signals: flw=77,2026-06-28
+raine makelainen,rainemak,confirm,auto,"corroborated: company=Jolla, orgs=['sailfishos'], flw=31",2026-06-28
+sofia aritz,sofiaritz,confirm,auto,"single cand, unique name, score=1",2026-06-28
+nikolay kuznetsov,knah,confirm,auto,"corroborated: company=@JetBrains , flw=122",2026-06-28
+dennis kobert,TrueDoctor,confirm,auto,"corroborated: has_bio, orgs=['squirrel-labs', 'GraphiteEdito",2026-06-28
+aysha,aysha,reject,auto,"single-name speaker, ambiguous (5 cands)",2026-06-28
+thomas,thomas,reject,auto,"single-name speaker, ambiguous (5 cands)",2026-06-28
+angel angelov,angelov,confirm,auto,"corroborated: company=@SliceLife, flw=50",2026-06-28
+carl george,carlwgeorge,confirm,auto,"corroborated: has_bio, orgs=['CentOS', 'TXLF'], flw=142",2026-06-28
+haris,Haris,reject,auto,"single-name speaker, ambiguous (5 cands)",2026-06-28
+motiejus jakstys,motiejus,confirm,auto,"corroborated: has_bio, orgs=['lmio', '11sync'], flw=114",2026-06-28
+jos van schouten,josvanschouten,confirm,auto,"single cand, unique name, score=0",2026-06-28
+satoyuki tsukano,snuffkin,confirm,auto,"corroborated: company=The University of Osaka, QIQB, has_bio",2026-06-28
+roberto esposito,robbespo00,confirm,auto,"corroborated: company=@oracle, has_bio, flw=44",2026-06-28
+fedor smirnov,FedorSmirnov89,confirm,auto,"corroborated: company=Peeriot, has_bio, orgs=['ApolloCEC', '",2026-06-28
+alfonso hernandez,alfonsohdez08,reject,auto,"common name, 5 cands, no corroboration",2026-06-28
+revan,revan,reject,auto,"single-name speaker, ambiguous (5 cands)",2026-06-28
+daniel almeida,daniellealmeidagms,confirm,auto,"corroborated: company=SENAC Goiás, has_bio, flw=84",2026-06-28
+martin schwaighofer,mschwaig,confirm,auto,"corroborated: has_bio, orgs=['NixOS', 'mobilesec'], flw=67",2026-06-28
+moon dave,Seunghyum,reject,auto,"name order ambiguity, Korean vs French speaker mismatch",2026-06-28
+stefan sperling,stspdotname,confirm,auto,"top of 2, bio=@openbsd @apache, 47 flw",2026-06-28
+omar polo,omar-polo,confirm,auto,"corroborated: orgs=['telescope-browser', 'jocker-org'], flw=",2026-06-28
+jon ericson,jericson,confirm,auto,"corroborated: company=OpenSSL Foundation, has_bio, orgs=['op",2026-06-28
+richard lin,ducky64,confirm,auto,"corroborated: has_bio, orgs=['ucb-bar', 'CalSol'], flw=85",2026-06-28
+murtaza,murtaza,reject,auto,"single-name speaker, ambiguous (5 cands)",2026-06-28
+bart louwers,louwers,confirm,auto,"corroborated: has_bio, orgs=['maplibre'], flw=118",2026-06-28
+vanya sergeev,vsergeev,confirm,auto,corroborated: flw=388,2026-06-28
+sriram ramkrishna,sramkrishna,confirm,auto,"corroborated: company=reach out - I'm available!, has_bio, f",2026-06-28
+dominique quatravaux,domq,confirm,auto,"corroborated: company=@epfl-si , has_bio, orgs=['epfl-si'], ",2026-06-28
+andreas hernandez denyer,AndreasHD11,confirm,auto,"corroborated: company=@open-energy-transition, has_bio, orgs",2026-06-28
+morgan,morgan,reject,auto,"single-name speaker, ambiguous (5 cands)",2026-06-28
+hajime tazaki,thehajime,confirm,auto,"corroborated: orgs=['lkl', 'nsnam'], flw=156",2026-06-28
+kaspar schleiser,kaspar030,confirm,auto,"corroborated: orgs=['ariel-os'], flw=60",2026-06-28
+famfo,famfo,reject,auto,"single-word handle, 0 followers, no corroboration",2026-06-28
+benoit aveline,BenoitAveline,confirm,auto,"unique name, top of 2 with data",2026-06-28
+gersona,gersona,reject,auto,"single-name speaker, ambiguous (5 cands)",2026-06-28
+tiago carreira,tcarreira,confirm,auto,"corroborated: has_bio, flw=55",2026-06-28
+madalin neag,madalinnneag,confirm,auto,"corroborated: company=The Linux Foundation, has_bio",2026-06-28
+jade abraham,jabraham17,confirm,auto,"corroborated: has_bio, orgs=['chapel-lang', 'llvm'], flw=25",2026-06-28
+koen zandberg,bergzand,confirm,auto,"corroborated: orgs=['Scintilla', 'RIOT-OS'], flw=71",2026-06-28
+dimitri kokkonis,kokkonisd,confirm,auto,"corroborated: has_bio, flw=97",2026-06-28
+brendan le foll,arfoll,confirm,auto,"corroborated: has_bio, flw=121",2026-06-28
+taym haddadi,Taym95,confirm,auto,"corroborated: orgs=['servo'], flw=132",2026-06-28
+helena vela beltran,hvelab,confirm,auto,"single cand, unique name, score=1",2026-06-28
+caitlin,caitlin,reject,auto,"single-name speaker, ambiguous (5 cands)",2026-06-28
+maurice hendriks,MauriceHendriks,confirm,auto,"corroborated: company=Ministery of Health, Welfare a, has_bi",2026-06-28
+maximilian pohl,pohlm01,confirm,auto,"corroborated: has_bio, orgs=['OpenLEADR', 'pendulum-project'",2026-06-28
+anoop c s,anoopcs9,confirm,auto,"corroborated: company=@IBM , has_bio, orgs=['IBM']",2026-06-28
+fabian palmer,F-Palmer,confirm,auto,"corroborated: company=@SAP, orgs=['SAP']",2026-06-28
+apelete seketeli,apelete,confirm,auto,"very unique name, top of 2, aff=Intel",2026-06-28
+andres betts,anditosan,confirm,auto,"single cand + signals: orgs=['openSUSE'], flw=33",2026-06-28
+isaac freund,ifreund,confirm,auto,"corroborated: has_bio, orgs=['FreeBSDFoundation', 'ziglang']",2026-06-28
+ivan mincik,imincik,confirm,auto,"corroborated: orgs=['gista', 'GRASS-GIS'], flw=61",2026-06-28
+jvind fritjof arnfred,Lindisfritjof,confirm,auto,"single cand, unique name, score=0",2026-06-28
+sal kimmich,Salkimmich,confirm,auto,"single cand, unique name, score=1",2026-06-28
+deleted user,ghost,reject,auto,GitHub ghost/deleted account,2026-06-28
+alan griffiths,AlanGriffiths,confirm,auto,"corroborated: orgs=['unity8-team', 'MirServer'], flw=58",2026-06-28
+rumen mitov,rumenmitov,confirm,auto,"corroborated: company=Constructor Tech, has_bio",2026-06-28
+shane slattery,Slattz,confirm,auto,single cand + signals: flw=78,2026-06-28
+pietra ferreira,Pietra0123,confirm,auto,"unique name, dominant top cand 19 flw",2026-06-28
+szilard hajba,szilu,confirm,auto,"corroborated: company=Symbion Products Ltd., has_bio, orgs=[",2026-06-28
+felix,felix,reject,auto,"single-name speaker, ambiguous (5 cands)",2026-06-28
+petya kangalova,petya-kangalova,reject,auto,name mismatch: speaker 'Petya Kangalova' vs cand 'Petya ',2026-06-28
+robin berjon,darobin,confirm,auto,"corroborated: has_bio, orgs=['w3c', 'coremob'], flw=341",2026-06-28
+rafael epplee,raffomania,confirm,auto,"corroborated: has_bio, orgs=['lovetoys', 'hyper-oktagon'], f",2026-06-28
+giuditta parolini,GParolini,confirm,auto,"very unique Italian name, top of 2",2026-06-28
+laszlo kupcsik,lkupcsik-liz,confirm,auto,single cand + signals: company=@lizard-bio ,2026-06-28
+pierre beyssac,pbeyssac,confirm,auto,"single cand + signals: has_bio, flw=35",2026-06-28
+nicoleta lazar,nicolazar,confirm,auto,"unique name, top of 2, aff=Fresha",2026-06-28
+thomas telkamp,tftelkamp,confirm,auto,single cand + signals: flw=87,2026-06-28
+rutvik kshirsagar,rutvik23,confirm,auto,"corroborated: company=Red Hat, has_bio",2026-06-28
+alok mishra,IndAlok,confirm,auto,"corroborated: has_bio, flw=65",2026-06-28
+vojtech kane,vojta001,confirm,auto,"unique Czech name, top of 2, 16 flw",2026-06-28
+brian duggan,bduggan,confirm,auto,"top of 3, orgs=Raku, 46 flw, dominant",2026-06-28
+peter cawley,corsix,confirm,auto,"corroborated: orgs=['CorsixTH'], flw=329",2026-06-28
+markus feilner,mfeilner,confirm,auto,single cand + signals: company=Feilner IT,2026-06-28
+thierry berger,ThierryBerger,confirm,auto,"corroborated: has_bio, orgs=['bevyengine', 'rustracer'], flw",2026-06-28
+ilaria battiston,ila,confirm,auto,"corroborated: has_bio, orgs=['unixMiB', 'PGPerfFarm'], flw=2",2026-06-28
+udo steinberg,udosteinberg,confirm,auto,single cand + signals: flw=56,2026-06-28
+ray paik,rpaik,confirm,auto,"corroborated: company=@pingcap, orgs=['pingcap', 'chaoss']",2026-06-28
+andrew tropin,abcdw,confirm,auto,"corroborated: has_bio, orgs=['rednotes'], flw=268",2026-06-28
+daniel estevez,daniestevez,confirm,auto,"corroborated: orgs=['gnuradio', 'conda-forge'], flw=547",2026-06-28
+benjamin bellamy,benjaminbellamy,confirm,auto,"corroborated: company=@LINAGORA · @Ad-Aures, has_bio, orgs=[",2026-06-28
+adrian reber,adrianreber,confirm,auto,"corroborated: orgs=['open-mpi', 'fedora-infra'], flw=147",2026-06-28
+pauline maas,microbit101,confirm,auto,"corroborated: company=Microbit101, has_bio",2026-06-28
+bartosz sypytkowski,Horusiath,confirm,auto,"corroborated: has_bio, flw=468",2026-06-28
+maciek konstantynowicz,mkonstan-spec,confirm,auto,"single cand, unique name, score=0",2026-06-28
+tobias burnus,tob2,confirm,auto,"corroborated: company=BayLibre, has_bio, orgs=['OpenACC', 'B",2026-06-28
+ben busby,benbusby,confirm,auto,"corroborated: company=@bstaero, orgs=['bstaero', 'earthbound",2026-06-28
+antoine van malleghem,avanmalleghem,confirm,auto,"corroborated: company=Botronics, has_bio, flw=20",2026-06-28
+lumi,luminati-io,reject,auto,"single-name speaker, ambiguous (5 cands)",2026-06-28
+benedict,Benedict,reject,auto,"single-name speaker, ambiguous (5 cands)",2026-06-28
+guillaume tucker,gctucker,confirm,auto,"unique name, top of 3, dominant by flw=17",2026-06-28
+thomas farstrike,ThomasFarstrike,confirm,auto,"single cand + signals: has_bio, flw=49",2026-06-28
+andrea monterubbiano,cpt-harlock,confirm,auto,"single cand, unique name, score=0",2026-06-28
+olga kalinina,okalinina,reject,auto,"common Russian name, 5 cands, no distinguishing signals",2026-06-28
+alex andreba,Aandreba,confirm,auto,"single cand, unique name, score=0",2026-06-28
+anja xhakani,axhakani,confirm,auto,"corroborated: company=@uracreative , has_bio, orgs=['uradotd",2026-06-28
+f5oeo,F5OEO,confirm,auto,"radio callsign handle, 481 flw, exact match",2026-06-28
+rao lakkakula,raolakk,confirm,auto,"very unique name, top of 2",2026-06-28
+wasim moosa,wcmoosa,confirm,auto,"unique name, top of 2, aff=Open Cities Lab",2026-06-28
+lukasz towarek,ltowarek,confirm,auto,"single cand, unique name, score=0",2026-06-28
+timothee jaussoin,edhelas,confirm,auto,"corroborated: has_bio, orgs=['movim'], flw=119",2026-06-28
+simon repp,simonrepp,confirm,auto,"corroborated: has_bio, orgs=['apertus-open-source-cinema', '",2026-06-28
+shreyas mahangade,shreyas3011,confirm,auto,"unique name, top of 2, aff=Red Hat",2026-06-28
+mykyta kemarskyi,m-kemarskyi,confirm,auto,"single cand + signals: orgs=['telerobots'], flw=20",2026-06-28
+tristan gingold,tgingold-cern,confirm,auto,single cand + signals: company=CERN,2026-06-28
+gerlind deschner,0gd,confirm,auto,"single cand, unique name, score=0",2026-06-28
+fabian fulga,fabi200123,confirm,auto,single cand + signals: company=Cloudbase Solutions,2026-06-28
+jamie kerber,kerberjg,confirm,auto,"corroborated: has_bio, flw=89",2026-06-28
+felix wiegand,KoffeinFlummi,confirm,auto,"corroborated: orgs=['acemod', 'BWMod'], flw=116",2026-06-28
+beniamino galvani,bengal,confirm,auto,"single cand, unique name, score=1",2026-06-28
+linus hagemann,linusha,confirm,auto,"single cand, unique name, score=1",2026-06-28
+ori,ori,reject,auto,"single-name speaker, ambiguous (5 cands)",2026-06-28
+martin messer,messemar,confirm,auto,single cand + signals: company=Cyberus Technology GmbH,2026-06-28
+beatrice mazoyer,bmaz,confirm,auto,"single cand, unique name, score=1",2026-06-28
+yifei sun,NorthSecond,reject,auto,name mismatch: speaker 'Yifei Sun' vs cand 'Yifei Yang',2026-06-28
+joan torres lopez,joantolo,confirm,auto,"corroborated: company=Red Hat, has_bio",2026-06-28
+ben pate,benpate,confirm,auto,"top of 3, 89 flw, clearly dominant",2026-06-28
+ian romanick,ianromanick,confirm,auto,"single cand, unique name, score=0",2026-06-28
+jorg rodel,joergroedel,confirm,auto,"corroborated: company=AMD, orgs=['coconut-svsm'], flw=45",2026-06-28
+david coles,dcoles,confirm,auto,"corroborated: company=Sony Interactive Entertainment, flw=43",2026-06-28
+connor aird,connoraird,confirm,auto,"corroborated: company=@UCL-ARC, has_bio",2026-06-28
+afonso oliveira,AFOliveira,confirm,auto,"corroborated: company=AiNekko, has_bio, orgs=['riscv', 'nekk",2026-06-28
+stefan granitz,weliveindetail,confirm,auto,"corroborated: has_bio, orgs=['criticalmaps', 'llvm'], flw=11",2026-06-28
+christophe simon,christophertesar,reject,auto,name mismatch: speaker 'Christophe Simon' vs cand 'Chris Tes,2026-06-28
+tommy reilly,gnurizen,reject,auto,"common name, 5 cands, no signals",2026-06-28
+shaygan hooshyari,Glyphack,confirm,auto,"corroborated: has_bio, orgs=['howtographql'], flw=375",2026-06-28
+jonas,jonas,reject,auto,"single-name speaker, ambiguous (5 cands)",2026-06-28
+sunil mayya,MayyaSunil,confirm,auto,single cand + signals: company=Mozilla Corporation,2026-06-28
+maddog,maddog,reject,auto,"single-name speaker, ambiguous (5 cands)",2026-06-28
+thomas breuer,ThomasBreuer,reject,auto,"common name, 5 cands, no clear winner",2026-06-28
+stefano pentassuglia,st3penta,confirm,auto,"corroborated: company=Red Hat, has_bio, orgs=['enterprise-co",2026-06-28
+jose manuel dominguez,manueldmgz,confirm,auto,"full name very specific, aff=Galaxy Europe, top of 5",2026-06-28
+imke de man,ImkedeMan,confirm,auto,"single cand, unique name, score=0",2026-06-28
+danfeng zhang,craft-zhang,reject,auto,"common Chinese name, 5 cands, no corroboration",2026-06-28
+usama saqib,usamasaqib,reject,auto,"common name, 5 cands, low followers",2026-06-28
+kevin l hopital,kevlhop,confirm,auto,single cand + signals: company=savoir-faire linux,2026-06-28
+alfonso de gregorio,secYOUre,confirm,auto,"corroborated: company=secYOUre, flw=24",2026-06-28
+jonas lindstrom,sfe-jonie,reject,auto,"common Scandinavian name, 5 cands, 4 flw",2026-06-28
+benoit ganne,bganne,confirm,auto,"company=Cisco, unique name, top of 2",2026-06-28
+leon schwarzaugl,Swarsel,confirm,auto,"corroborated: company=IMBA, orgs=['NixOS', 'Gregor-Mendel-In",2026-06-28
+sven krause,Barsch32,reject,auto,"common name, 3 cands, all low followers",2026-06-28
+valentin,ValentineFernandes,reject,auto,"single-name speaker, ambiguous (5 cands)",2026-06-28
+sebastian wittlich,swittlich,confirm,auto,"single cand, unique name, score=0",2026-06-28
+ulrika vincent,ulvincent,confirm,auto,"corroborated: company=Agical, orgs=['dnstapir']",2026-06-28
+amy o donnell,amyodonnell,confirm,auto,single cand + signals: company=Maestro,2026-06-28
+theodore tucker,tti0,confirm,auto,"unique name, top of 3 by flw=4",2026-06-28
+alex feyerke,espy,confirm,auto,"corroborated: orgs=['hoodiehq'], flw=114",2026-06-28
+ellen wittingen,Ellen-Wittingen,confirm,auto,"single cand, unique name, score=0",2026-06-28
+julius tens,juliuste,confirm,auto,"corroborated: has_bio, orgs=['okfde', 'codeforgermany'], flw",2026-06-28
+mikael kullberg,morkrost,confirm,auto,single cand + signals: company=Cat Herd AB,2026-06-28
+xavier lambein,xlambein,confirm,auto,"corroborated: company=@gigs, has_bio, flw=40",2026-06-28
+davide faconti,facontidavide,confirm,auto,"corroborated: has_bio, flw=1882",2026-06-28
+jerome sautret,jsautret,confirm,auto,"corroborated: company=ProcessOne, orgs=['processone'], flw=2",2026-06-28
+ben chisholm,Chish36,confirm,auto,"single cand, unique name, score=1",2026-06-28
+hannah kim,hannah-gkim,reject,auto,"top cand has different surname Gomez Kim, 5 cands",2026-06-28
+sam khouri,bkhouri,confirm,auto,"Bassam=Sam nickname, company=Apple, top of 3",2026-06-28
+enzo ghisoni,EnzoGhisoni,confirm,auto,"single cand, unique name, score=0",2026-06-28
+benjamin andre,bendersej,confirm,auto,"corroborated: has_bio, orgs=['SimplePDF'], flw=34",2026-06-28
+adam ivora,aivora-beamng,confirm,auto,"unique name, resolution login has company=BeamNG",2026-06-28
+cristian le,LecrisUT,reject,auto,"short surname, 5 cands, no corroboration",2026-06-28
+kashyap chamarthy,kashyapc,confirm,auto,"corroborated: company=Red Hat, flw=39",2026-06-28
+francesco napoleoni,cosmicfranz,confirm,auto,"single cand, unique name, score=0",2026-06-28
+evan wilde,etcwilde,confirm,auto,"corroborated: orgs=['apple', 'swiftlang'], flw=106",2026-06-28
+michael chiu,chiumichael,reject,auto,"common name, 5 cands, no signals",2026-06-28
+eldar kurtic,eldarkurtic,confirm,auto,"single cand + signals: orgs=['IST-DASLab'], flw=26",2026-06-28
+boris martin,martinovicdev,confirm,auto,"corroborated: company=Euroherc , flw=32",2026-06-28
+sotirios panagiotou,spanag,confirm,auto,single cand + signals: company=Neurocomputing Lab http://neu,2026-06-28
+payton yau,paytonyau,confirm,auto,"single cand + signals: has_bio, orgs=['Ed-DaSH-Training']",2026-06-28
+till prochaska,tillprochaska,confirm,auto,"single cand + signals: has_bio, flw=39",2026-06-28
+dimas ciputra,dimasciput,confirm,auto,"corroborated: company=@kartoza , has_bio, orgs=['kartoza'], ",2026-06-28
+andreas bertsatos,pr0m1th3as,confirm,auto,"corroborated: company=Science and Technology in Arch, has_bi",2026-06-28
+tony wasserka,neobrain,confirm,auto,"corroborated: has_bio, orgs=['dolphin-emu', 'citra-emu'], fl",2026-06-28
+malte schrader,alpha3141,confirm,auto,"single cand, unique name, score=0",2026-06-28
+georg c f greve,greve,confirm,auto,"corroborated: company=Vereign AG, has_bio",2026-06-28
+ildiko vancsa,ildikov,confirm,auto,single cand + signals: company=Open Infrastructure Foundatio,2026-06-28
+james bottomley,jejb,confirm,auto,"corroborated: company=Microsoft, flw=30",2026-06-28
+tom de moor,ctlaltdieliet,confirm,auto,"unique name, top of 2",2026-06-28
+thijs schreijer,Tieske,confirm,auto,"corroborated: has_bio, orgs=['keplerproject', 'lunarmodules'",2026-06-28
+pierre kil,pierrekil,confirm,auto,"corroborated: company=OpenRemote, orgs=['openremote']",2026-06-28
+syed usman ahmad,preyingrazor,confirm,auto,"unique name, aff=Grafana Labs, top of 2",2026-06-28
+emanuele giuseppe esposito,esposem,confirm,auto,"corroborated: company=Red Hat, has_bio",2026-06-28
+ferdinand schlatt,fschlatt,confirm,auto,"corroborated: has_bio, orgs=['webis-de', 'causenet-org'], fl",2026-06-28
+dmitry levin,ldv-alt,confirm,auto,"corroborated: orgs=['altlinux', 'strace'], flw=149",2026-06-28
+abderrahim kitouni,abderrahim,confirm,auto,"single cand, unique name, score=0",2026-06-28
+aurelien luciani,aurel-l,confirm,auto,single cand + signals: company=EMBL-EBI,2026-06-28
+ruth suehle,suehle,confirm,auto,"corroborated: company=@sassoftware, orgs=['RedHatOfficial'],",2026-06-28
+ilya boyandin,ilyabo,confirm,auto,"corroborated: has_bio, orgs=['freie-schule-bergmeilen', 'vis",2026-06-28
+desaintjan arthur,Einithorynque,confirm,auto,"single cand, unique name, score=0",2026-06-28
+tobias kremer,tbkr,confirm,auto,"corroborated: company=@ecmwf , has_bio",2026-06-28
+marek piku a,MarekPikula,confirm,auto,"corroborated: company=Samsung Research, has_bio, orgs=['ZSO1",2026-06-28
+thibault payet,monwarez,confirm,auto,"single cand, unique name, score=1",2026-06-28
+lukas trippe,lkstrp,confirm,auto,"corroborated: company=Technische Universität Berlin, orgs=['",2026-06-28
+lars,Lars,reject,auto,"single-name speaker, ambiguous (5 cands)",2026-06-28
+pavel machek,pavelmachek,confirm,auto,"single cand + signals: has_bio, flw=44",2026-06-28
+neil brown,neilbrown,confirm,auto,"corroborated: company=SUSE, has_bio, flw=96",2026-06-28
+rasmus frey,zorp,confirm,auto,"corroborated: company=OS2 - Offentlig Digitalisering, orgs=[",2026-06-28
+esteve fernandez,charlsef23,reject,auto,first name mismatch Carlos vs Esteve,2026-06-28
+sergey,Sergey,reject,auto,"single-name speaker, ambiguous (5 cands)",2026-06-28
+otto richter,fnetX,confirm,auto,"corroborated: company=Codeberg e.V., has_bio",2026-06-28
+martin storsjo,mstorsjo,confirm,auto,"corroborated: orgs=['FFmpeg', 'llvm'], flw=540",2026-06-28
+ruud van asseldonk,ruuda,confirm,auto,corroborated: flw=410,2026-06-28
+felixclc,FCLC,confirm,auto,"unique handle, bio=HPC/BLAS/AVX512, 36 flw",2026-06-28
+neil johnson,theneiljohnson,confirm,auto,"corroborated: company=Microsoft, has_bio, flw=62",2026-06-28
+harald fischer,Riquu,confirm,auto,"single cand, unique name, score=0",2026-06-28
+david konarik,dvdkon,confirm,auto,"single cand, unique name, score=0",2026-06-28
+thomas munro,macdice,confirm,auto,"corroborated: has_bio, flw=82",2026-06-28
+julian schauder,zesoup,confirm,auto,single cand + signals: company=ZenDiS GmbH,2026-06-28
+paul sonnentag,paulsonnentag,confirm,auto,"corroborated: has_bio, flw=202",2026-06-28
+aurore roma,AuroreRoma,confirm,auto,"single cand, unique name, score=0",2026-06-28
+cairo caplan,cairo-caplan,confirm,auto,single cand + signals: company=@openhwgroup @EclipseFdn,2026-06-28
+karel koci,Cynerd,confirm,auto,"corroborated: company=Elektroline a.s., has_bio, flw=23",2026-06-28
+daniele mingolla,mingolladaniele,confirm,auto,"unique name, top of 2, 28 flw",2026-06-28
+antoine oustry,aoustry,confirm,auto,"corroborated: company=RTE, has_bio",2026-06-28
+jos,jos,reject,auto,"single-name speaker, ambiguous (5 cands)",2026-06-28
+claire pershan,CPershan,confirm,auto,"corroborated: company=EU DisinfoLab, has_bio",2026-06-28
+bjorn ruytenberg,BjornRuytenberg,confirm,auto,"single cand + signals: orgs=['HyperDbg'], flw=40",2026-06-28
+charley mann,Charley-Mann,confirm,auto,"corroborated: company=CNCF, has_bio",2026-06-28
+guillermo sanchez,membriux,confirm,auto,"corroborated: has_bio, orgs=['MLH-Fellowship'], flw=64",2026-06-28
+sina karvandi,SinaKarvandi,confirm,auto,"corroborated: has_bio, orgs=['HyperDbg', 'rayanfam'], flw=96",2026-06-28
+anthony welte,TonyWelte,confirm,auto,"corroborated: company=Vitibot, has_bio",2026-06-28
+hannah aubry,haubles,confirm,auto,"single cand, unique name, score=0",2026-06-28
+arian van putten,arianvp,confirm,auto,"corroborated: orgs=['NixOS', 'haskell-servant'], flw=351",2026-06-28
+timothee gosselin,unteem,confirm,auto,"single cand + signals: orgs=['La-MYNE'], flw=22",2026-06-28
+pelin smines,PelinSmines,confirm,auto,"single cand, unique name, score=0",2026-06-28
+ondrej michal,martymichal,confirm,auto,"corroborated: has_bio, orgs=['containers'], flw=40",2026-06-28
+albert krewinkel,tarleb,confirm,auto,"corroborated: has_bio, orgs=['MetaMeute', 'Chaotikum'], flw=",2026-06-28
+jeremy jongepier,autostatic,confirm,auto,"unique name, top of 2, aff=SURF",2026-06-28
+lukas gerlach,monsterkrampe,confirm,auto,"corroborated: company=@knowsys , has_bio, orgs=['knowsys'], ",2026-06-28
+eve redero,everedero,confirm,auto,"unique name, top of 2, 19 flw",2026-06-28
+django doucet,django-dou7,confirm,auto,"corroborated: company=NAIT, has_bio",2026-06-28
+prankur gupta,gupta1001,reject,auto,"common name, 5 cands, 2 flw",2026-06-28
+benjamin w broersma,bwbroersma,confirm,auto,"single cand + signals: orgs=['openstate', 'wolbodo'], flw=40",2026-06-28
+petr penzin,ppenzin,confirm,auto,"corroborated: company=@tenstorrent, has_bio, orgs=['FreeWebO",2026-06-28
+florin hasler,florihas,confirm,auto,"corroborated: company=@bfh, has_bio",2026-06-28
+matthew suozzo,msuozzo,confirm,auto,"corroborated: orgs=['google'], flw=71",2026-06-28
+francisco miguel moreno,Butakus,confirm,auto,"single cand, unique name, score=1",2026-06-28
+abel samot,abelsamot,confirm,auto,"corroborated: company=>commit, has_bio",2026-06-28
+thomas van dijk,tcvdijk,confirm,auto,single cand + signals: company=TU Eindhoven,2026-06-28
+phillip tennen,codyd51,confirm,auto,"corroborated: has_bio, flw=402",2026-06-28
+david abdurachmanov,davidlt,confirm,auto,"single cand, unique name, score=1",2026-06-28
+shannon wray,shannondwray,confirm,auto,"corroborated: company=Open Collective, has_bio, flw=20",2026-06-28
+dorin geman,doringeman,confirm,auto,"single cand + signals: has_bio, flw=30",2026-06-28
+artem dyomin,Artemiy-d,confirm,auto,single cand + signals: company=The Qt Company,2026-06-28
+pep pla,peppla,confirm,auto,"very unique Catalan name, top of 2",2026-06-28
+nils petter skalerud,Didgy74,confirm,auto,"corroborated: company=The Qt Group, flw=20",2026-06-28
+alfonso sandoval rosas,alfsando,confirm,auto,single cand + signals: company=Cisco Systems,2026-06-28
+henrik brandle,HtoTheB,confirm,auto,"single cand, unique name, score=0",2026-06-28
+sam jewell,samjewell,confirm,auto,"corroborated: company=Grafana Labs, has_bio, flw=21",2026-06-28
+vsevolod stakhov,vstakhov,confirm,auto,"corroborated: orgs=['freebsd', 'rspamd'], flw=393",2026-06-28
+nick kossifidis,mickflemm,confirm,auto,"corroborated: orgs=['CARV-ICS-FORTH', 'UoC-Radio'], flw=59",2026-06-28
+benjamin alan jamie,orangesunny,confirm,auto,"corroborated: company=Weblate, orgs=['WeblateOrg']",2026-06-28
+thierry carrez,ttx,confirm,auto,"corroborated: company=OpenStack Foundation, orgs=['kata-cont",2026-06-28
+anirban ani sinha,anirban89,reject,auto,name mismatch: speaker 'Anirban (Ani) Sinha' vs cand 'Anirba,2026-06-28
+tomas hrcka,humaton,confirm,auto,"corroborated: company=Red Hat Czech, has_bio, orgs=['aeolusp",2026-06-28
+christine lemmer webber,cwebber,confirm,auto,"corroborated: has_bio, orgs=['hylang', 'xudd'], flw=230",2026-06-28
+jessica tallon,tsyesika,confirm,auto,"corroborated: orgs=['unitycoders', 'OAOSIDL'], flw=90",2026-06-28
+james lowden,jklowden,confirm,auto,"single cand + signals: company=Symas, Inc. ",2026-06-28
+salve j nilsen,sjn,confirm,auto,"corroborated: has_bio, orgs=['perl6', 'Raku'], flw=55",2026-06-28
+lancelot six,lancesix,confirm,auto,"very unique name, company=AMD, top of 2",2026-06-28
+ludovic courtes,civodul,confirm,auto,single cand + signals: flw=78,2026-06-28
+thomas woerner,t-woerner,confirm,auto,"corroborated: company=Red Hat, Inc., orgs=['freeipa'], flw=2",2026-06-28
+hugo cornelis,HugoCornelis,confirm,auto,"single cand, unique name, score=0",2026-06-28
+peter keller,petekeller2,reject,auto,"common name, 5 cands, no corroboration",2026-06-28
+andrew williams,AndrewILWilliams,confirm,auto,"corroborated: has_bio, flw=69",2026-06-28
+pierrick philippe,pierrick-philippe,confirm,auto,single cand + signals: company=Orange,2026-06-28
+marta rybczynska,mrybczyn,confirm,auto,single cand + signals: company=Ygreky,2026-06-28
+magnus kulke,mkulke,confirm,auto,"corroborated: company=@Microsoft, has_bio, orgs=['kinvolk'],",2026-06-28
+erwann roussy,eroussy,confirm,auto,"single cand, unique name, score=1",2026-06-28
+jeremy bennett,jeremybennett,confirm,auto,"corroborated: company=Embecosm, orgs=['openrisc', 'embecosm'",2026-06-28
+remi duraffort,ivoire,confirm,auto,"single cand, unique name, score=1",2026-06-28
+holger krekel,hpk42,confirm,auto,single cand + signals: company=merlinux,2026-06-28
+deb bryant,Debrant,reject,auto,name mismatch: speaker 'Deb Bryant' vs cand 'Nathan Bryant',2026-06-28
+lukas,lukas,reject,auto,"single-name speaker, ambiguous (5 cands)",2026-06-28
+iolanda pensa,iopensa,confirm,auto,"corroborated: company=SUPSI SUPSI University of Appl, has_bi",2026-06-28
+shirley bailes,shirleybailes,confirm,auto,single cand + signals: company=@intel,2026-06-28
+walt miner,waltminer,confirm,auto,"unique name, orgs=automotive-grade-linux, top of 2",2026-06-28
+thorsten behrens,thorstenb,confirm,auto,"corroborated: company=allotropia software GmbH, orgs=['tdf']",2026-06-28
+bryan o donoghue,0xB0D,confirm,auto,single cand + signals: company=Nexus Software,2026-06-28
+petr mensik,pemensik,confirm,auto,"corroborated: company=Red Hat, has_bio, orgs=['avahi'], flw=",2026-06-28
+dmitriy kostiuk,fiowro,confirm,auto,"unique name, top of 2, orgs=ngo-boost",2026-06-28
+thibault raffaillac,traffaillac,confirm,auto,"single cand, unique name, score=1",2026-06-28
+dcz,dcz,reject,auto,"single-name speaker, ambiguous (5 cands)",2026-06-28
+holger levsen,h01ger,confirm,auto,"single cand + signals: has_bio, flw=41",2026-06-28
+hans de goede,jwrdegoede,confirm,auto,corroborated: flw=280,2026-06-28
+ben bucksch,benbucksch,confirm,auto,"corroborated: company=Beonex, flw=40",2026-06-28
+johannes schlatow,jschlatow,confirm,auto,"corroborated: company=@genodelabs , orgs=['genodelabs'], flw",2026-06-28
+graziano casto,graz-dev,confirm,auto,"corroborated: company=Akamas, has_bio, flw=22",2026-06-28
+maximilian huber,maxhbr,confirm,auto,"corroborated: company=@TNG Technology Consulting Gmb, orgs=[",2026-06-28
+renzo davoli,rd235,confirm,auto,"corroborated: orgs=['virtualsquare'], flw=168",2026-06-28
+bradley m kuhn,bkuhn,confirm,auto,"corroborated: company=@conservancy , has_bio, flw=49",2026-06-28
+matthias kirschner,kirschner,confirm,auto,aff=FSFE matches company=Free Software Foundation Europe,2026-06-28
+matija suklje,silverhook,confirm,auto,"corroborated: company=@liferay, orgs=['liferay', 'kiberpipa'",2026-06-28
