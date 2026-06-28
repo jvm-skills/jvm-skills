@@ -883,3 +883,9 @@ lucia greco,luciagreco,reject,auto,"0 followers, empty profile, no JVM repos, no
 bhupendra mishra,mbhupendra,reject,auto,"company is Tech Mahindra not SiriusXM, no JVM repos",2026-06-28
 kieran murphy,daffster,reject,auto,"no bio/company/JVM repos, common name, no Grainger connection",2026-06-28
 daniel steinberg,dstein64,reject,auto,"no JVM repos, no Dim Sum Thinking bio/company, insufficient corroboration",2026-06-28
+lorenzo ferri,LorenzoFerri,reject,auto,5 candidates same name no JVM repos no bio no company no distinguishing signals,2026-06-28
+alex gavrilescu,MrLesk,confirm,auto,unique Romanian surname dominant candidate 149flw Vienna location consistent with Funstage GmbH,2026-06-28
+alessandro giagnorio,Devy99,confirm,auto,unique name single candidate PhD informatics bio consistent with USI affiliation,2026-06-28
+domagoj maric,doma150,confirm,auto,unique Croatian name single candidate IoT software dev consistent with JVM conf speaker,2026-06-28
+matteo orlandi,doranakan,reject,auto,bio explicitly shows React Native/Expo JS dev not JVM company mismatch Sygnum vs Welld,2026-06-28
+lorenzo verardo,lorenzoverardo,confirm,auto,rare Italian surname single candidate software engineer company may reflect job change,2026-06-28
