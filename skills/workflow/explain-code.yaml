@@ -1,0 +1,23 @@
+name: Explain Code
+description: >-
+  Explains code with everyday analogies, ASCII or Mermaid diagrams,
+  step-by-step walkthroughs with line-number references, and a called-out
+  gotcha. For non-Java code, includes Spring Boot equivalent mappings to
+  help JVM developers translate unfamiliar implementations into familiar
+  Spring ecosystem concepts.
+repo: adityamparikh/explain-code-skill
+skill_path: SKILL.md
+category: workflow
+tools:
+  - claude
+languages:
+  - java
+  - kotlin
+trust: community
+author: Aditya Parikh
+tags:
+  - code-explanation
+  - diagrams
+  - documentation
+  - spring-boot
+  - learning
