@@ -1,0 +1,30 @@
+name: Kubernetes Persistent Storage for JVM/Spring Applications
+description: >-
+  An opinionated workflow for teaching AI coding tools how to reason about,
+  review, and implement Kubernetes persistent-storage behavior for JVM and
+  Spring Boot workloads. Covers StorageClass capabilities, PVC usage, volume
+  expansion, snapshot policy, StatefulSet replica risk, backup targets,
+  non-root volume permissions, file-locking pitfalls, ephemeral storage
+  overflow, strict Spring property decoupling, blast-radius analysis, and safe
+  remediation planning.
+repo: nmj18txstate/infraspine
+category: workflow
+tools:
+  - claude
+  - cursor
+  - copilot
+languages:
+  - java
+trust: community
+author: Nityam Jigyasu
+tags:
+  - kubernetes
+  - spring-boot
+  - persistent-volumes
+  - pvc
+  - storageclass
+  - statefulset
+  - backup
+  - disaster-recovery
+  - reliability
+  - remediation
