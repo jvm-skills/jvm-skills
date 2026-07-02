@@ -1,0 +1,29 @@
+name: JVM Storage Architecture for Java/Spring Applications
+description: >-
+  Teaches AI coding tools how to reason about storage-aware software design,
+  capacity risk detection, backup and restore readiness, blast-radius analysis,
+  immutable Java record modeling, Spring service rule-engine isolation, typed
+  configuration, deterministic testing, and structured backup-first remediation
+  planning within JVM and Spring Boot applications.
+repo: nmj18txstate/infraspine
+category: workflow
+tools:
+  - claude
+  - cursor
+  - copilot
+languages:
+  - java
+trust: community
+author: Nityam Jigyasu
+tags:
+  - java
+  - spring-boot
+  - storage-architecture
+  - immutable-state
+  - java-records
+  - rule-engine
+  - configuration-properties
+  - backup
+  - disaster-recovery
+  - blast-radius
+  - remediation
