@@ -99,7 +99,7 @@ agata kabat,agatakabat,MED,Agata Kabat,,0,fullname,2026-06-28,2026-09-26
 heinz kabutz,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 radek kargul,rkargul,HIGH,Radek Kargul,,10,fullname+jvmrepo,2026-06-28,
 joseph katsioloudes,jkcso,HIGH,Joseph Katsioloudes,GitHub,182,fullname,2026-06-28,
-soroosh khodami,cmandesign,HIGH,Soroosh Khodami,CodeNomads,14,alias,2026-06-28,
+soroosh khodami,cmandesign,HIGH,Soroosh Khodami,CodeNomads,14,alias,2026-07-03,
 adam krol,adamkrol93,HIGH,Adam Król,,12,fullname+jvmrepo,2026-06-28,
 mateusz kulewicz,mmkay,HIGH,Mateusz Kulewicz,Canonical,25,fullname,2026-06-28,
 mateusz kwasniewski,PadreMateo8,MED,Mateusz Kwaśniewski,,0,fullname,2026-06-28,2026-09-26
@@ -661,7 +661,7 @@ nils engelke,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 nico enking,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 dan erez,danFromTelAviv,MED,Dan Erez,,25,fullname,2026-06-28,2026-09-26
 leon erkarslan,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
-lukas essig,kokosnuss,HIGH,Lukas Essig,@Atruvia,5,alias,2026-06-28,
+lukas essig,kokosnuss,HIGH,Lukas Essig,@Atruvia,5,alias,2026-07-03,
 pascal euhus,PacoVK,HIGH,Pascal Euhus,@Reservix,31,fullname,2026-06-28,
 claire fautsch,claireNeo,HIGH,Claire Fautsch,,0,alias,2026-06-28,
 johannes feige,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
@@ -725,7 +725,7 @@ stefan hildebrandt,hildebrandttk,HIGH,Stefan Hildebrandt,,11,fullname+jvmrepo,20
 thomas hinterwimmer,hiwit,HIGH,Thomas Hinterwimmer,AUDI AG,1,fullname,2026-06-28,
 sebastian hirschmeier,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 carsten hoffmann,Morl99,HIGH,Carsten Hoffmann,DB Systel GmbH,24,fullname,2026-06-28,
-michael hofmann,kmhofmann,HIGH,Michael Hofmann,,101,alias,2026-06-28,
+michael hofmann,kmhofmann,HIGH,Michael Hofmann,,102,alias,2026-07-03,
 jonas hofmann,dogtype,MED,Jonas Hofmann,,5,fullname,2026-06-28,2026-09-26
 alexander hofmann,a-a-hofmann,HIGH,Alexander Hofmann,,11,fullname+jvmrepo,2026-06-28,
 marius hofmeister,MariusHof,HIGH,Marius Hofmeister,,0,alias,2026-06-28,
@@ -736,7 +736,7 @@ alexander horch,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 lutz huhnken,lutzh,HIGH,Lutz Hühnken,#opentowork,137,fullname+jvmrepo,2026-06-28,
 lars hupel,larsrh,HIGH,Lars Hupel,Giesecke+Devrient,310,fullname+jvmrepo,2026-06-28,
 roland hu,ro14nd-talks,HIGH,Roland Huß' Presentations,,5,alias,2026-06-28,
-michael inden,Michaeli71,HIGH,Michael Inden,,39,alias,2026-06-28,
+michael inden,Michaeli71,HIGH,Michael Inden,,39,alias,2026-07-03,
 mirza iqbal,mjmirza,HIGH,Mirza Iqbal,,38,alias,2026-06-28,
 thorben janssen,thjanssen,HIGH,Thorben Janssen,Persistence Hub founder and Java persistence specialist,565,fullname,2026-06-28,
 michael jerger,,UNRESOLVED,,,,fullname,2026-06-28,2026-09-26
@@ -1553,7 +1553,7 @@ effie mouzeli,manjiki,HIGH,effie mouzeli,Wikimedia Foundation,12,fullname,2026-0
 ioannis nanas,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 penelope nastou,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 elias niaos,elniaos,HIGH,Elias Niaos,PRODYNA SE,1,fullname,2026-06-28,
-alyssa nicoll,alyssamichelle,MED,Alyssa Michelle Nicoll,,258,fullname,2026-06-28,2026-09-26
+alyssa nicoll,alyssamichelle,HIGH,Alyssa Michelle Nicoll,,258,alias,2026-07-03,
 tasos nikolaou,tase-nikol,MED,Tasos Nikolaou,,3,fullname,2026-06-28,2026-09-26
 giorgos nikolopoulos,g3orgios,HIGH,Giorgos Nikolopoulos,,1,fullname+jvmrepo,2026-06-28,
 karl henrik nilsson,karl-henrik,HIGH,Karl-Henrik Nilsson,GAC,11,fullname,2026-06-28,
@@ -1960,7 +1960,7 @@ anthony vallee dubois,anthonyvd,HIGH,Anthony Vallee-Dubois,Google,6,fullname-asc
 arne blankerts,theseer,HIGH,Arne Blankerts,thePHP.cc,391,fullname,2026-06-28,
 arvin singla,arvinsingla,MED,Arvin Singla,,25,fullname,2026-06-28,2026-09-26
 ashleigh lodge,shimmoril-zz,HIGH,Ashleigh Lodge,@Neovation ,1,fullname,2026-06-28,
-ben dechrai,bendechrai,MED,Ben Dechrai,,99,fullname,2026-06-28,2026-09-26
+ben dechrai,bendechrai,HIGH,Ben Dechrai,,99,alias,2026-07-03,
 benoit des ligneris,bligneri,MED,Benoît des Ligneris,Fractional CPO/CTO,3,fullname,2026-06-28,2026-09-26
 carl alexander,carlalexander,HIGH,Carl Alexander,,468,fullname+org,2026-06-28,
 carl lapierre,carllapierre,HIGH,Carl Lapierre,@Osedea ,15,fullname,2026-06-28,
@@ -2000,7 +2000,7 @@ joyce peralta,,UNRESOLVED,,,,broad,2026-06-28,2026-09-26
 julian egelstaff,jegelstaff,MED,Julian Egelstaff,,15,fullname,2026-06-28,2026-09-26
 justine gehring,justine-gehring,MED,justine-gehring,,0,fullname,2026-06-28,2026-09-26
 karol deland,karoldeland,MED,Karol Deland,,1,fullname,2026-06-28,2026-09-26
-kathryn grayson nanz,kathryngraysonnanz,MED,Kathryn Grayson Nanz,,47,fullname,2026-06-28,2026-09-26
+kathryn grayson nanz,kathryngraysonnanz,HIGH,Kathryn Grayson Nanz,,47,alias,2026-07-03,
 kilian valkhof,Kilian,HIGH,Kilian Valkhof,Polypane,543,fullname,2026-06-28,
 kito mann,kito99,HIGH,Kito D. Mann,"Virtua, Inc.",61,fullname,2026-06-28,
 loic trehin,LoicTrehin,HIGH,Loïc Tréhin,@esa-series,6,fullname,2026-06-28,
@@ -2029,7 +2029,7 @@ ralf westphal,ralfw,MED,Ralf Westphal,,86,fullname,2026-06-28,2026-09-26
 raphael rougeron,goldoraf,MED,Raphaël Rougeron,,36,fullname,2026-06-28,2026-09-26
 reza madabadi,MadReza,HIGH,Reza Madabadi,,51,fullname+jvmrepo,2026-06-28,
 rida al barazi,rbarazi,HIGH,Rida Al Barazi,@amidship ,105,fullname,2026-06-28,
-rob richardson,robrich,MED,Rob Richardson,,489,fullname,2026-06-28,2026-09-26
+rob richardson,robrich,HIGH,Rob Richardson,,489,alias,2026-07-03,
 robert hodges,hodgesrm,HIGH,Robert Hodges,"Altinity, Inc.",34,fullname,2026-06-28,
 rowdy rabouw,rowdyrabouw,MED,Rowdy Rabouw,rowdy.codes,41,fullname,2026-06-28,2026-09-26
 scott stroz,ScottStroz,HIGH,Scott Stroz,Oracle,0,fullname,2026-06-28,
@@ -4034,3 +4034,142 @@ nagarjuna vipparthi,Nagarjuna-Vipparthi,HIGH,Nagarjuna Vipparthi,Microsoft Corpo
 ron veen,,UNRESOLVED,,,,fullname,2026-07-03,2026-10-01
 sean li,seanli,HIGH,Sean Li,@magiclabs ,76,fullname+dominant,2026-07-03,
 brian matthews,bmatthews68,HIGH,Brian Matthews,Búraló Technologies,32,fullname,2026-07-03,
+adhithi ravichandran,adhithiravi,HIGH,Adhithi Ravichandran,"Surya Consulting, Inc.",391,fullname,2026-07-03,
+adrienne braganza tacke,adriennetacke,HIGH,Adrienne Braganza Tacke,@ViamRobotics,191,fullname,2026-07-03,
+amy norris,Silfron,HIGH,Amy Norris,Dimensional Innovations,1,fullname,2026-07-03,
+andreas erben,MSDNAndi,MED,Andreas Erben,,4,fullname,2026-07-03,2026-10-01
+andrew carlson,andrewicarlson,MED,Andrew Carlson,,24,fullname,2026-07-03,2026-10-01
+arthur doler,doleraj,HIGH,Arthur Doler,Aviture,16,fullname,2026-07-03,
+ash banaszek,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+avindra fernando,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+ben todd,benhtodd-bc,MED,Ben Todd,,0,fullname,2026-07-03,2026-10-01
+benjamin hindman,benh,HIGH,Benjamin Hindman,reboot.dev,226,fullname,2026-07-03,
+bill parrott,chimericdream,HIGH,Bill Parrott,Prescryptive Health,39,fullname,2026-07-03,
+bill udell,billudell,MED,Bill Udell,Don't Panic Labs,0,fullname,2026-07-03,2026-10-01
+bob walker,BobJWalker,HIGH,Bob Walker,Octopus Deploy,7,fullname,2026-07-03,
+bonnie why,bonniewhy,HIGH,Bonnie Why,,19,fullname+jvmrepo,2026-07-03,
+brandon minnick,TheCodeTraveler,HIGH,Brandon Minnick,"Code Traveler LLC, Formery @Microsoft, @XamarinHQ, @AWS",1200,fullname,2026-07-03,
+bree hall,breehall,HIGH,Bree Hall,HubSpot,69,fullname,2026-07-03,
+brent stewart,brentestewart,HIGH,Brent Stewart,"Alien Arc Technologies, LLC",12,fullname,2026-07-03,
+brian pope,bdpcollective,HIGH,Brian Pope,,1,fullname,2026-07-03,
+brian zimmer,bzimmer,MED,Brian Zimmer,,30,fullname,2026-07-03,2026-10-01
+burton smith,burtons,HIGH,Burton Smith,Microsoft,0,fullname,2026-07-03,
+caleb sutton,csutton6,MED,Caleb Sutton,,3,fullname,2026-07-03,2026-10-01
+carl chesser,cchesser,HIGH,Carl Chesser,@cerner,30,fullname+jvmrepo,2026-07-03,
+chris ayers,codebytes,HIGH,Chris Ayers,Microsoft,519,fullname,2026-07-03,
+chris harbert,harbertc,HIGH,Chris Harbert,@testery,0,fullname,2026-07-03,
+chris pipito,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+cory house,coryhouse,HIGH,Cory House,reactjsconsulting.com / Pluralsight,4639,fullname,2026-07-03,
+craigory coppola,AgentEnder,HIGH,Craigory Coppola,Nx / Nrwl,116,fullname,2026-07-03,
+danica fine,danicafine,HIGH,Danica Fine,@snowflakedb,31,fullname,2026-07-03,
+david giard,DavidGiard,MED,David Giard,,53,fullname,2026-07-03,2026-10-01
+david kerber,davekerber,HIGH,David Kerber,,42,fullname,2026-07-03,
+david nicholas,nrdavid,HIGH,Nicholas David,University of Michigan,5,fullname,2026-07-03,
+david whitney,davidwhitney,HIGH,David Whitney,Electric Head Software,298,fullname+dominant,2026-07-03,
+dean schuster,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+dennie declercq,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+dewan ahmed,dewan-ahmed,HIGH,Dewan Ishtiaque Ahmed,@harness,68,fullname,2026-07-03,
+doug durham,dnsdurham,MED,Doug Durham,Nebraska Global,12,fullname,2026-07-03,2026-10-01
+drew spencer,slugmandrew,HIGH,Drew Spencer,Formpipe,22,fullname+jvmrepo,2026-07-03,
+duan lightfoot,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+ed legault,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+eldert grootenboer,EldertGrootenboer,HIGH,Eldert Grootenboer,Microsoft,54,fullname,2026-07-03,
+elizabeth christensen,elizabeth-christensen,HIGH,Elizabeth Christensen,Crunchy Data,6,fullname,2026-07-03,
+eran kampf,ekampf,HIGH,Eran Kampf,@Twingate ,97,fullname,2026-07-03,
+fred deichler,ChiefD425,HIGH,Fred Deichler,,0,fullname+jvmrepo,2026-07-03,
+fred gruhn,fgruhn,HIGH,Fred Gruhn,@OutSystems,0,fullname,2026-07-03,
+ganesh kumar suresh,gsk145,MED,Ganesh Suresh Kumar,,0,fullname,2026-07-03,2026-10-01
+garo yeriazarian,garoyeri,MED,Garo Yeriazarian,,22,fullname,2026-07-03,2026-10-01
+gene gotimer,OtherDevOpsGene,HIGH,Gene Gotimer,,29,fullname,2026-07-03,
+george westwater,george-westwater,MED,George Westwater,Sogeti,2,fullname,2026-07-03,2026-10-01
+glenn f henriksen,henriksen,HIGH,Glenn F. Henriksen,Justify,59,fullname-ascii+dominant,2026-07-03,
+grey lovelace,grey-lovelace,HIGH,Austin Grey Lovelace,Source Allies,12,fullname,2026-07-03,
+guy royse,guyroyse,HIGH,Guy Royse,Redis,953,fullname,2026-07-03,
+heli helskyaho,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+isaac levin,isaacrlevin,HIGH,Isaac Levin,@JetBrains,229,fullname,2026-07-03,
+jacob orshalick,jorshali,HIGH,Jacob Orshalick,focus.dev,21,fullname,2026-07-03,
+jared rhodes,QiMata,MED,Jared Rhodes,QiMata Technologies,13,fullname,2026-07-03,2026-10-01
+jeff barczewski,jeffbski,HIGH,Jeff Barczewski,CodeWinds / Inspired Horizons,228,fullname+dominant,2026-07-03,
+jennifer wadella,tehfedaykin,HIGH,Jennifer Wadella,@bitovi ,220,fullname,2026-07-03,
+jeremy clark,jeremybytes,MED,Jeremy Clark,,431,fullname,2026-07-03,2026-10-01
+jim bennett,jimbobbennett,HIGH,Jim Bennett,Arize AI,703,fullname,2026-07-03,
+jimmy bogard,jbogard,HIGH,Jimmy Bogard,"Jimmy Bogard Consulting, LLC",6460,fullname,2026-07-03,
+jj asghar,jjasghar,HIGH,JJ Asghar,IBM,403,fullname,2026-07-03,
+jl heather,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+jodi jones,jodimj,MED,Jodi Jones,,4,fullname,2026-07-03,2026-10-01
+joey de villa,,UNRESOLVED,,,,fullname,2026-07-03,2026-10-01
+john alexander,JRAlexander,HIGH,John Alexander ,,37,fullname,2026-07-03,
+john sterrett,sterrettJD,MED,John Sterrett,,23,fullname,2026-07-03,2026-10-01
+jonathan segev,yonib05,MED,Jonathan Segev,,15,fullname,2026-07-03,2026-10-01
+jonathan j tower,jonathantower,HIGH,"Jonathan ""J."" Tower",Trailhead Technology Partners,96,fullname-ascii,2026-07-03,
+jordan thayer,DrSeabass,MED,"Jordan ""Seabass"" Thayer",Machine Reasoning Lab,13,fullname,2026-07-03,2026-10-01
+josh spiegel,jjspiegel,HIGH,Josh Spiegel,Oracle,10,fullname,2026-07-03,
+justin lee,evanchooly,HIGH,Justin Lee,@datadog,329,fullname,2026-07-03,
+kevin gao,gaokevin1,HIGH,Kevin J Gao,Descope,33,fullname,2026-07-03,
+kiah imani,blkgrlcto,MED,Kiah Imani,,3,fullname,2026-07-03,2026-10-01
+kyle jenkins,kjenkins19,MED,Kyle Jenkins,Improving Enterprises,2,fullname,2026-07-03,2026-10-01
+lara newsom,lara-newsom,HIGH,Lara Newsom,Cisco,63,fullname,2026-07-03,
+luis fernandez,luisfernandezbr,MED,Luis Fernandez,Lab52 / Mobiplus,111,fullname,2026-07-03,2026-10-01
+lukas durovsky,xdurovsk,MED,Lukas Durovsky,,0,fullname,2026-07-03,2026-10-01
+magnus stahre,magnusstahre,HIGH,Magnus Stahre,,55,fullname+jvmrepo,2026-07-03,
+mandi walls,lnxchk,MED,Mandi Walls,,42,fullname,2026-07-03,2026-10-01
+mandy hubbard,DevMandy,HIGH,Mandy Hubbard,,21,fullname,2026-07-03,
+mark gamble,Wellingborough,MED,Mark Gamble,Magnesium Consulting,1,fullname,2026-07-03,2026-10-01
+mark tinderholt,markti,HIGH,Mark Tinderholt,@microsoft,317,fullname,2026-07-03,
+mark volkmann,mvolkmann,HIGH,Mark Volkmann,"Object Computing, Inc.",313,fullname,2026-07-03,
+marko helskyaho,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+martijn goossens,MartijnG-Xebia,HIGH,Martijn Goossens,Qxperts - Proudly part of Xebia,0,fullname,2026-07-03,
+mary creason,marycreason-Wellsky,MED,Mary Creason,,0,fullname,2026-07-03,2026-10-01
+mateusz zajac,cojoj,MED,Mateusz Zając,Exadel,26,fullname,2026-07-03,2026-10-01
+michael stahnke,stahnma,MED,Michael Stahnke,,92,fullname,2026-07-03,2026-10-01
+mike hartington,mhartington,HIGH,Mike Hartington,@prisma,1454,fullname+dominant,2026-07-03,
+mitchel sellers,mitchelsellers,HIGH,Mitchel Sellers,@IowaComputerGurus ,108,fullname+dominant,2026-07-03,
+nathen harvey,nathenharvey,HIGH,Nathen Harvey,@dora-team,263,fullname,2026-07-03,
+nick nisi,nicknisi,HIGH,Nick Nisi,@WorkOS,1191,fullname,2026-07-03,
+nico vermeir,NVermeir,MED,Nico Vermeir,,1,fullname,2026-07-03,2026-10-01
+nicolas frankel,nfrankel,HIGH,Nicolas Fränkel,,650,fullname+org,2026-07-03,
+nocnica mellifera,serverless-mom,MED,Nočnica Mellifera,,45,fullname,2026-07-03,2026-10-01
+nuri halperin,naya-nuri,MED,Nuri Halperin,,0,fullname,2026-07-03,2026-10-01
+olha vovk,OliaVk,MED,Olha Vovk,VMLY&R,4,fullname,2026-07-03,2026-10-01
+otavio souza,offsouza,HIGH,Otávio Souza,Inter,26,fullname,2026-07-03,
+patrick meiler,patmeiler,MED,Patrick Meiler,,0,fullname,2026-07-03,2026-10-01
+peter oneill,peteroneilljr,HIGH,Peter ONeill,Teleport,41,fullname,2026-07-03,
+phil ledgerwood,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+poornima nayar,poornimanayar,MED,Poornima Nayar,,58,fullname,2026-07-03,2026-10-01
+prerit munjal,PreritMunjal,HIGH,Prerit Munjal,,18,fullname+jvmrepo,2026-07-03,
+preston chandler,pchandler858,MED,Preston Chandler,Preston's Projects,2,fullname,2026-07-03,2026-10-01
+rabimba karanjai,rabimba,HIGH,Rabimba Karanjai,@mozilla ,51,fullname+jvmrepo,2026-07-03,
+rhia dixon,risaco,HIGH,Rhia Dixon,,15,fullname,2026-07-03,
+richard campbell,RichardCampbell,MED,Richard Campbell,,130,fullname,2026-07-03,2026-10-01
+rik hepworth,rikhepworth,MED,Rik Hepworth,,42,fullname,2026-07-03,2026-10-01
+rolando masis obando,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+russell rutledge,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+ryan price,ryapric,HIGH,Ryan J. Price,Slalom Consulting,34,fullname,2026-07-03,
+sam basu,samidip,HIGH,Sam Basu,Uno Platform,93,fullname+dominant,2026-07-03,
+sam nasr,SamNasr,HIGH,"Sam Nasr, MCSA, MVP, MCT",http://www.nistechnologies.com/,11,fullname,2026-07-03,
+sam thompson,samt,HIGH,Sam Thompson,,88,fullname,2026-07-03,
+samuel gomez,Sierra-034,HIGH,Samuel Gómez Balderas,,15,fullname,2026-07-03,
+scott mcallister,stmcallister,MED,Scott McAllister,,72,fullname,2026-07-03,2026-10-01
+scott sauber,scottsauber,HIGH,Scott Sauber,@LeanTechniques,138,fullname,2026-07-03,
+shashank date,shanko,MED,Shashank Daté,"Reevik, Inc.",36,fullname,2026-07-03,2026-10-01
+siddharth vijay,siddvader333,HIGH,Siddharth Vijay,,7,fullname,2026-07-03,
+spencer schneidenbach,schneidenbach,HIGH,Spencer Schneidenbach,,235,fullname,2026-07-03,
+steven diamante,SDiamante13,HIGH,Steven Diamante,@ThisIsArtium,42,fullname,2026-07-03,
+sweta sinha,sweeta-sinha,MED,Sweta Sinha,Tatvasoft,2,fullname,2026-07-03,2026-10-01
+tadeh hakopian,thakopian,HIGH,Tadeh Hakopian,Amazon,52,fullname,2026-07-03,
+ted neward,tedneward,HIGH,Ted Neward,Neward & Associates,168,fullname,2026-07-03,
+tela wittig,twittt,MED,Tela Wittig,Leggett & Platt,2,fullname,2026-07-03,2026-10-01
+thomas haver,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+tim corey,TimCorey,HIGH,Tim Corey,IAmTimCorey,1471,fullname,2026-07-03,
+todd ginsberg,tginsberg,HIGH,Todd Ginsberg,,178,fullname+jvmrepo,2026-07-03,
+tony galati,tgalati,HIGH,Tony Galati,@naiccode ,1,fullname,2026-07-03,
+troy tuttle,troy-tuttle,MED,Troy Tuttle,,1,fullname,2026-07-03,2026-10-01
+tyler benfield,rtbenfield,HIGH,Tyler Benfield,Staff Software Engineer @Prisma,32,fullname,2026-07-03,
+yoseph radding,radding,HIGH,Yoseph Radding,NerdWallet,30,fullname,2026-07-03,
+zackery griesinger,zackerydev,HIGH,Zackery Griesinger,Trumid,21,fullname,2026-07-03,
+nikolaos bozovits,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+ioannis canellos,iocanel,HIGH,Ioannis Canellos,Cyber Ranges,237,fullname,2026-07-03,
+stavros kontopoulos,skonto,MED,Stavros Kontopoulos,,46,fullname,2026-07-03,2026-10-01
+evangelia mitsopoulou,evangelia-business,HIGH,Evangelia Mitsopoulou,Evangelia,2,fullname,2026-07-03,
+gerasimos rompolas,GerasimosR,HIGH,Gerasimos Rompolas,,7,fullname+jvmrepo,2026-07-03,
+patrycja wegrzynowicz,pwegrzynowicz,HIGH,Patrycja Wegrzynowicz,Yon Labs,18,fullname,2026-07-03,

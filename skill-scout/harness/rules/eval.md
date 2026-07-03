@@ -63,6 +63,38 @@ template like "demo repo" or "real SKILL.md".
 ## Learnings changelog
 
 <!-- The rule-refinement agent prepends dated entries here. -->
+- 2026-07-03 (KCDC 2025) — **A "strong JVM signal" tool/library name is not proof of JVM content
+  when that tool has official ports in other languages under the identical brand.** Testcontainers
+  (listed in the Strong JVM signals section below) ships officially-branded .NET, Node.js, Go, and
+  Python client libraries alongside the original Java one; a SKILL.md literally named `testcontainers`
+  can be entirely about one of those non-JVM ports. Don't let a signal-list keyword match substitute
+  for reading the concrete code — NuGet packages, `dotnet test`, `IAsyncLifetime`, xUnit fixtures mean
+  .NET, not JVM, despite the shared brand name. (e.g., tedneward/AgentSkills
+  `Uncategorized/skills/testcontainers/SKILL.md`: judge promoted citing "Testcontainers is a strong
+  JVM signal... 225 lines"; Opus recheck rejected because the actual content is .NET/C#/xUnit
+  Testcontainers guidance, not Java.)
+- 2026-07-03 (KCDC 2025) — **A `rejected.csv` row with `reason=review` whose `reasoning` field is the
+  bare unfilled instruction stub ("real SKILL.md — classify JVM vs off-topic") was never actually
+  judged or rechecked — treat it as unresolved, not as a confirmed reject.** Properly-processed
+  `review` rows read "Opus recheck rejected promotion: `<analysis>`. (judge: `<original reasoning>`)";
+  rows carrying only the bare template text (which the Reasoning requirement section above already
+  forbids as output) mean the judge/recheck pipeline silently skipped that row instead of producing a
+  verdict. This has recurred across multiple conferences — 9 rows total in `rejected.csv`, 6 from this
+  run alone (tedneward/AgentSkills: react-dev, react-patterns, react-ui-patterns, react-useeffect,
+  postgres-schema-design; nicknisi/ideation: retro) — re-run the judge on any such stub row before
+  trusting its reject status.
+- 2026-07-03 (JAX Hybrid 2025) — **A `0 found, 0 needs_review, 0 rejected` conference run can mean
+  full cross-conference dedup, not an empty roster — check `first_seen` dates before auditing "this
+  run's" judge calls.** All 23 resolved JAX Hybrid speakers (Thorben Janssen, Niko Köbler, Manfred
+  Steyer, Gernot Starke, dasniko, blues-man, etc.) are repeat JVM-circuit speakers whose repos were
+  already scanned and judged under an earlier conference (`first_seen` 2026-06-27/28, before this
+  roster's 2026-07-03 fetch date) — the JAX Hybrid scan itself added zero new rows to
+  `skill_files.csv`/`rejected.csv`/`bundles.csv`/`repos.csv`. This complements the existing J-Spring
+  2026 "zero is a valid outcome" note (which covers speakers with genuinely no skill files) with a
+  second, distinct cause of the same symptom. When asked to review "conference X's outcomes," filter
+  DB rows by `first_seen` >= that conference's `roster_fetched_at` (`db/conferences.csv`) before
+  treating any judge/recheck reasoning found under that speaker's login as new — old, already-reviewed
+  entries from a prior conference will otherwise be misattributed as this run's findings.
 - 2026-07-03 (Spring.io 2025) — **When a peek fails or is truncated, check the repo's primary language/metadata before hedging to `needs_review`.** The judge's fallback of "peek failed/truncated → mark needs_review per task instructions" is safe but not free: every one of this run's 4 peek-failure hedges (cdavisafc/slack-utils, dcaron/spring-cloud-gateway-tanzu-ui, mp911de/sg-ready-pi, mipo256/skills technical-presentations) needed an Opus recheck round-trip to discover non-JVM content (Python repo, Vue3/TS SPA, bare Pi-automation project-doc, Slidev/Vue.js) that a cheap repo-language check (`gh api repos/<login>/<repo>` → `language` field) would have caught immediately, without needing the file body at all. Try the repo-language signal first; only fall back to needs_review when that signal is itself JVM-plausible or unavailable.
 - 2026-07-03 (OpenSouthCode 2025) — **`jvm-collection` is reserved for genuine JVM-skill duplicates; a non-JVM duplicate sibling keeps the canonical's own reject reason, not `jvm-collection`.** The taxonomy defines `jvm-collection` as "a real JVM skill that is one member of a found collection" — when Rule 2's single-promotion dedup fires on an intra-repo copy whose content is itself non-JVM (off-topic-workflow, off-topic-tech, project-doc), tag the copy with that same underlying reason, not `jvm-collection`; mislabeling pollutes the reason for anyone later auditing `rejected.csv` by reason expecting promote-worthy JVM siblings. (e.g., deors/ecomputing-demo: 13 duplicate files — AGENTS.md, CLAUDE.md, and 10 generic workflow SKILL.md files (code-review, ci-cd, tdd, spec-driven-dev, etc.) — of the non-JVM `ecomputing-demo-en-vivo` collection were tagged `jvm-collection` even though none of the content is JVM-related; the correct reason is off-topic-workflow/project-doc, matching the canonical.)
 - 2026-07-03 (JCConf Taiwan 2025) — **A verdict that contradicts its own reasoning text must not be trusted at face value — treat the judge's hedge words as a stronger signal than its own status/score.** When the judge's own `reasoning`/`notes` field contains phrases like "language-agnostic", "context-free", "transferable methodology but [X]-focused, not JVM", or names non-JVM frameworks as equally applicable, that is the judge self-flagging the JVM-fit failure — override to reject even when it still emitted `status=found` (sometimes alongside `jvm_fit=high`, sometimes even alongside its own `jvm_fit=low`). This is a faster, purely textual complement to the content-based "JVM fit must be the subject, not an accident" rule: no need to re-read the file, just check whether the judge's own words already disqualify it. (e.g., humorless/arc-skills and humorless/clj-native-agent: judge wrote "mechanism/policy separation... applied to Clojure context-free mechanism" and "Language-agnostic with code examples" yet still scored `jvm_fit=high, status=found`; haoqunjiang/lightning-vue: judge wrote "Transferable methodology but frontend-focused, not JVM-specific" yet still emitted `status=found` alongside its own `jvm_fit=low`. 9 of 12 judge-`found` items in this run were self-contradicting this way; Opus recheck caught all 9.)

@@ -90,3 +90,6 @@ started_at,conference,speakers,resolved,scanned_repos,skipped_repos,found,parked
 2026-07-03,GIDS (Great Indian Developer Summit) 2025,85,39,313,0,0,46,"0 found, 0 needs_review, 0 bundle(s), 23 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
 2026-07-03,JDConf 2025,45,36,166,0,0,9,"0 found, 0 needs_review, 0 bundle(s), 37 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
 2026-07-03,JPoint 2025,43,1,25,0,0,42,"0 found, 0 needs_review, 0 bundle(s), 0 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
+2026-07-03,KCDC 2025,163,102,1562,0,0,61,"0 found, 0 needs_review, 0 bundle(s), 1426 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
+2026-07-03,JAX Hybrid 2025,35,23,51,0,0,12,"0 found, 0 needs_review, 0 bundle(s), 0 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
+2026-07-03,Voxxed Days Ioannina 2025,11,7,59,0,0,4,"0 found, 0 needs_review, 0 bundle(s), 1 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."

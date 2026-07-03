@@ -1124,3 +1124,45 @@ sumit shatwara,sumitshatwara,confirm,auto,"distinctive surname, sole candidate; 
 suvankar chakraborty,suvankar1983,confirm,auto,"bio topically matches (Azure, O365, IDM, PowerShell) EPAM Cloud Architect & Head of DevOps Engineering role despite common surname",2026-07-03
 vijay krishnamoorthy,vijayk0747,reject,auto,"bio 'Auburn 2023' suggests a recent university student, inconsistent with seniority of Target Senior Engineering Manager",2026-07-03
 jay lee,jay0lee,reject,auto,"wrong Jay Lee: this is the GAM (Google Apps Manager) creator, ex-Google Workspace/Chrome Enterprise, no Java/JVM repos; real JDConf speaker is Microsoft App Innovation Specialist (LinkedIn cloudnativejay) doing Azure/Kotlin/Java cloud-native work",2026-07-03
+andreas erben,MSDNAndi,confirm,auto,"CTO Applied AI at daenet, MS Regional Director/MVP; his own Sessionize slug is 'Andi', matching MSDNAndi's MSDN+Andi pattern",2026-07-03
+andrew carlson,andrewicarlson,reject,auto,"common name; no web evidence ties this account (49 repos, no company/org) to a 'Grapple' cofounder/CTO",2026-07-03
+ben todd,benhtodd-bc,reject,auto,"0 followers, no signal; no web presence found tying this login to a City Lifestyle data engineer",2026-07-03
+bill udell,billudell,confirm,auto,confirmed via dontpaniclabs.com blog author page (budell@dontpaniclabs.com); part of a verified Don't Panic Labs speaker cluster this KCDC roster,2026-07-03
+brian zimmer,bzimmer,confirm,auto,confirmed: dontpaniclabs.com/bzimmer links directly to github.com/bzimmer; Chief Product Officer at Don't Panic Labs,2026-07-03
+caleb sutton,csutton6,reject,auto,"no web evidence ties csutton6 to the H&R Block Caleb Sutton; common name, zero corroboration",2026-07-03
+chad green,chadgreen,confirm,auto,"prior alias chadutah (reused-from-db) looks wrong; real GH is chadgreen (MS MVP, Director Software Dev, organizer of Code PaLOUsa/Louisville .NET) - exact bio match. Correction to db/aliases.csv",2026-07-03
+david giard,DavidGiard,confirm,auto,"confirmed: 61 repos, Partner Solution Architect at Microsoft matches exactly; well-known long-time speaker/podcaster",2026-07-03
+doug durham,dnsdurham,confirm,auto,"confirmed CEO/co-founder of both Don't Panic Labs and Nebraska Global; gh_company 'Nebraska Global' is accurate, not a mismatch",2026-07-03
+ganesh kumar suresh,gsk145,reject,auto,"common Indian name pattern; zero followers/signal; several unrelated GH profiles with similar names found, none confirming gsk145",2026-07-03
+garo yeriazarian,garoyeri,confirm,auto,"confirmed: github.com/garoyeri (25 repos, .NET/AWS) matches Software Whisperer @ Accenture bio and his own Sessionize profile",2026-07-03
+george westwater,westwater,confirm,auto,"override: real login is 'westwater' (github.com/westwater, George, ties to Progress Chef) per direct confirmation; scout's top pick george-westwater was a false positive from a short display name",2026-07-03
+jared rhodes,QiMata,confirm,auto,"confirmed: his own LinkedIn vanity URL is linkedin.com/in/qimata, matching GH login exactly; EPAM Systems Principal Consultant confirmed",2026-07-03
+jeremy clark,jeremybytes,confirm,auto,"431 followers, dominant vs runner-up (45, >9x); well-known Pluralsight/.NET author matches 'Developer Betterer' persona",2026-07-03
+jodi jones,jodimj,confirm,auto,"confirmed via web: 'jodimj (Jodi Jones)' tied directly to Lean TECHniques Inc.; top pick is correct, not the alt '-lt' suffixed account",2026-07-03
+john sterrett,procuresql-johnsterrett,confirm,auto,"override: real account is procuresql-johnsterrett (CEO of ProcureSQL, presentations repo), confirmed directly; scout's top pick sterrettJD is an unrelated CU Boulder bioinformatics PhD with the same name",2026-07-03
+jonathan segev,yonib05,confirm,auto,org membership 'strands-agents' (AWS's own agent SDK) corroborates 'Software Engineering Manager at AWS',2026-07-03
+jordan thayer,DrSeabass,confirm,auto,"confirmed: her own LinkedIn vanity URL is jordan-seabass-thayer, matching gh_name 'Jordan Seabass Thayer' exactly; AI Practice Strategist at SEP confirmed",2026-07-03
+kiah imani,blkgrlcto,confirm,auto,confirmed: blkgrlcto.com is her own site/brand and Sessionize slug; Senior Dev Advocate at LocalStack matches affiliation exactly,2026-07-03
+kyle jenkins,kjenkins19,confirm,auto,"company 'Improving Enterprises' matches bio exactly ('Consultant for Improving'), a known KC-area consultancy",2026-07-03
+luis fernandez,luisfernandezbr,confirm,auto,confirmed: luisfernandezbr is his official GH per Gartner/VML bio references; Executive Director Technology at VML confirmed despite older gh_company listed,2026-07-03
+lukas durovsky,xdurovsk,confirm,auto,"confirmed real person (Thermo Fisher Scientific, Slovakia, LinkedIn ldurovsky); rare surname match, only candidate, aff matches exactly",2026-07-03
+mandi walls,lnxchk,confirm,auto,"dominant candidate (42 flw vs runner-up petridish 0); well-known DevOps Advocate figure, no conflicting person found",2026-07-03
+mark gamble,heymarkgamble,confirm,auto,override: 'heymarkgamble' is his self-chosen handle used on both the Couchbase blog author URL and his own Sessionize slug; scout's top pick Wellingborough (Magnesium Consulting) has no Couchbase tie,2026-07-03
+mary creason,marycreason-Wellsky,confirm,auto,"login suffix '-Wellsky' matches a real major KC-area healthcare software employer, consistent with 'KC Native' affiliation",2026-07-03
+mateusz zajac,cojoj,confirm,auto,"confirmed: github.com/cojoj is Mateusz Zajac based in Krakow, tied to Exadel, matching company field exactly",2026-07-03
+michael stahnke,stahnma,confirm,auto,confirmed VP Engineering at Flox matches affiliation exactly; well-known DevOps/Puppet/CircleCI community figure; only candidate,2026-07-03
+nico vermeir,NicoVermeir,confirm,auto,"override: real login is NicoVermeir (personal site nicovermeir.be links to github.com/NicoVermeir, XamlStyler etc.), Application Architect .NET at Inetum, MVP since 2014; scout's top pick NVermeir only won because NicoVermeir had a blank display name causing a false nm=false",2026-07-03
+nocnica mellifera,serverless-mom,confirm,auto,login itself encodes her own affiliation nickname 'Serverless Mom' exactly,2026-07-03
+nuri halperin,nurih,confirm,auto,"override: real GH is nurih (51 repos, confirmed via LinkedIn/Sessionize/X all using the nurih handle); candidate naya-nuri does not appear to be his account at all",2026-07-03
+olha vovk,OliaVk,confirm,auto,company 'VMLY&R' matches her confirmed prior role (Technology Lead at VMLY&R before PatientPoint); also KC-area (Software Testing KC Meetup organizer) matching KCDC's location,2026-07-03
+patrick meiler,patmeiler,confirm,auto,"confirmed as a real, distinctively-named AWS Solutions Architect/serverless advocate speaker (Build Stuff); single candidate, no conflicting person found",2026-07-03
+poornima nayar,poornimanayar,confirm,auto,"confirmed: github.com/poornimanayar matches her blog/MVP bio exactly (Umbraco + Microsoft MVP, .NET developer)",2026-07-03
+preston chandler,pchandler858,confirm,auto,"confirmed as real Global Lead Strategic Operations @ WPP / Centered; gh_company 'Preston's Projects' is self-branded, consistent with a personal account",2026-07-03
+richard campbell,RichardCampbell,confirm,auto,"org 'HTBox' = Humanitarian Toolbox, which Richard Campbell (host of .NET Rocks) co-founded; strong corroboration",2026-07-03
+rik hepworth,rikhepworth,confirm,auto,"confirmed: github.com/rikhepworth matches Azure MVP/Regional Director bio exactly (ResourceTemplates, Presentations repos)",2026-07-03
+scott mcallister,stmcallister,confirm,auto,"confirmed: github.com/stmcallister (Principal Developer Advocate, ex-PagerDuty/ngrok/vCluster) matches 'Sharer of Developer Knowledge' persona; dominant candidate (72 flw, >3x runner-up)",2026-07-03
+sweta sinha,sweeta-sinha,reject,auto,"sweeta-sinha profile (React dev, ~3yrs exp, Tatvasoft) is a junior/different person; real Sweta Sinha is Director/Head of AI at Ascend Learning with no matching GH found among candidates",2026-07-03
+tela wittig,twittt,confirm,auto,"confirmed directly: GitHub username is twittt; previously at Leggett & Platt R&D, now Moonshot AI - exact match",2026-07-03
+troy tuttle,troy-tuttle,confirm,auto,"confirmed real, prominent KC-based figure - founder of Lean Agile Kansas City conference (est. 2015), matching KCDC's own city; unique name, single candidate",2026-07-03
+shashank date,shanko,confirm,auto,"confirmed 'Reevik, Inc.' matches his own company (President/CEO of Reevik per web bio); rare accented-name match is itself corroboration",2026-07-03
+stavros kontopoulos,skonto,confirm,auto,"Greece-based Red Hat engineer (bio: OSS contributor, distributed/ML systems); non-fork Scala repos (research, trivento-summercamp-2016, scalamqtt) plus Java/Scala forks (flink, cassandra, spark) from earlier career predate his current Go/Python Knative-ML work, explaining jvm_repo=false on recent pushes",2026-07-03
