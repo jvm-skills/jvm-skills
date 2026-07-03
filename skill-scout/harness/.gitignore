@@ -8,6 +8,7 @@
 *_ckpt.json
 *_conf.json
 *_overlay.json
+*_peek_data.json
 recheck_*.json
 *_aliases_add.csv
 fetch_results.json

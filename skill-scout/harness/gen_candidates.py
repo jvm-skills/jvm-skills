@@ -22,7 +22,7 @@ L = []
 W = L.append
 W("# Skill Candidates — generated from `db/*.csv`\n")
 W("**Do not edit by hand** — regenerate with `gen_candidates.py` after each scout run. The CSVs in")
-W("`db/` are the system of record; this is a read-only view. Loop: `speaker-scout-loop.md`.\n")
+W("`db/` are the system of record; this is a read-only view. Loop: `README.md` (run `harness/overnight.workflow.js`).\n")
 W(f"State: {len(conf)} conferences · {len(spk)} speakers · "
   f"{sum(1 for r in res if r['confidence']=='HIGH')} HIGH / "
   f"{sum(1 for r in res if r['confidence']=='MED')} MED / "

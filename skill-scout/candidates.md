@@ -1,7 +1,7 @@
 # Skill Candidates — generated from `db/*.csv`
 
 **Do not edit by hand** — regenerate with `gen_candidates.py` after each scout run. The CSVs in
-`db/` are the system of record; this is a read-only view. Loop: `speaker-scout-loop.md`.
+`db/` are the system of record; this is a read-only view. Loop: `README.md` (run `harness/overnight.workflow.js`).
 
 State: 75 conferences · 3738 speakers · 1872 HIGH / 949 MED / 917 UNRESOLVED · 346 skills found.
 
