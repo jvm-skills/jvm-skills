@@ -5533,7 +5533,7 @@ Real SKILL.md files the auto-classifier could not judge JVM-vs-offtopic — read
 | 2026-07-03 | JAX Hybrid 2025 | 35 | 23 | 51 | 0 | 12 | 0 found, 0 needs_review, 0 bundle(s), 0 rejected. LLM-judged every non-bundle hit; bundles evaluated as units. |
 | 2026-07-03 | Voxxed Days Ioannina 2025 | 11 | 7 | 59 | 0 | 4 | 0 found, 0 needs_review, 0 bundle(s), 1 rejected. LLM-judged every non-bundle hit; bundles evaluated as units. |
 
-## 📅 Conferences (70 scanned / 5 queued)
+## 📅 Conferences (75 scanned / 0 queued)
 
 - ✅ **DevBcn 2026** — https://www.devbcn.com (scanned 2026-06-28)
 - ✅ **Devoxx Poland 2026** — https://devoxx.pl/ (scanned 2026-06-28)
@@ -5544,7 +5544,7 @@ Real SKILL.md files the auto-classifier could not judge JVM-vs-offtopic — read
 - ✅ **Code Remix Summit 2026** — https://coderemix.ai/ (scanned 2026-06-28)
 - ✅ **Devoxx UK 2026** — https://www.devoxx.co.uk (scanned 2026-06-28)
 - ✅ **GeeCON 2026** — https://2026.geecon.org/ (scanned 2026-06-28)
-- ⏳ **JAlba 2026** — https://jalba.scot/ (queued)
+- ✅ **JAlba 2026** — https://jalba.scot/ (scanned excluded:no-roster)
 - ✅ **JAX 2026** — https://jax.de/mainz/ (scanned 2026-06-28)
 - ✅ **JCON Slovenia 2026** — https://slovenia.jcon.one/ (scanned 2026-06-28)
 - ✅ **JJUG CCC 2026 Spring** — https://ccc2026spring.java-users.jp/ (scanned 2026-06-28)
@@ -5560,7 +5560,7 @@ Real SKILL.md files the auto-classifier could not judge JVM-vs-offtopic — read
 - ✅ **Devnexus 2026** — https://devnexus.com/ (scanned 2026-06-28)
 - ✅ **Digital Crafts Day 2026** — https://dc-nordoberpfalz.de/DigitalCraftsDay/2026 (scanned 2026-06-28)
 - ✅ **JavaLand 2026** — https://www.javaland.eu/ (scanned 2026-06-28)
-- ⏳ **JavaOne 2026** — https://www.oracle.com/javaone/ (queued)
+- ✅ **JavaOne 2026** — https://www.oracle.com/javaone/ (scanned excluded:no-roster)
 - ✅ **Voxxed Days Zurich 2026** — https://zurich.voxxeddays.ch/ (scanned 2026-06-28)
 - ✅ **ConFoo 2026** — https://confoo.ca/en/2026 (scanned 2026-06-28)
 - ✅ **FOSDEM 2026** — https://fosdem.org/2026/ (scanned 2026-06-28)
@@ -5595,10 +5595,10 @@ Real SKILL.md files the auto-classifier could not judge JVM-vs-offtopic — read
 - ✅ **Java Forum Stuttgart 2025** — https://www.java-forum-stuttgart.de/ (scanned 2026-07-03)
 - ✅ **JConf Dominicana 2025** — https://jconfdominicana.org/ (scanned 2026-07-03)
 - ✅ **betterCode() Spring 2025** — https://spring.bettercode.eu/index.php (scanned 2026-07-03)
-- ⏳ **JConf Mexico 2025** — https://jconf.mx/ (queued)
+- ✅ **JConf Mexico 2025** — https://jconf.mx/ (scanned excluded:no-roster)
 - ✅ **JJUG CCC 2025 Spring** — https://ccc2025spring.java-users.jp/ (scanned 2026-07-03)
-- ⏳ **JOnsen 2025** — https://www.jonsen.jp/ (queued)
-- ⏳ **JSail 2025** — https://jsail.ijug.eu/ (queued)
+- ✅ **JOnsen 2025** — https://www.jonsen.jp/ (scanned excluded:no-roster)
+- ✅ **JSail 2025** — https://jsail.ijug.eu/ (scanned excluded:no-roster)
 - ✅ **OpenSouthCode 2025** — https://www.opensouthcode.org/conferences/opensouthcode2025 (scanned 2026-07-03)
 - ✅ **JAX Hybrid 2025** — https://jax.de/mainz (scanned 2026-07-03)
 - ✅ **JCON OpenBlend Slovenia 2025** — https://slovenia.jcon.one (scanned 2026-07-03)
