@@ -9,6 +9,7 @@
 *_conf.json
 *_overlay.json
 *_peek_data.json
+*_peek_results.json
 recheck_*.json
 *_aliases_add.csv
 fetch_results.json
