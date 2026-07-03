@@ -249,10 +249,11 @@ shun watanabe,shika358,reject,auto,"common JP name; no company (speaker=NRI), no
 stephen chin,steveonjava,confirm,auto,login steveonjava strong JVM signal; orgs: JFXtras/visage-lang/scalafx/NightHacking/RaspberryPiWithJava confirm Java community figure,2026-06-27
 takeshi miyajima,miyazi777,reject,auto,"no company, no bio, no JVM repos; speaker from SunArch not reflected in profile",2026-06-27
 takumi endo,ENDOTAKUMI,reject,auto,"no company, no JVM repos; endo-cariot (company=Cariot Inc.) is a better match for speaker from Cariot",2026-06-27
-toru takahashi,toru-takahashi,reject,auto,"bio: Director Customer Experience at Treasure Data; speaker says Backend Engineer; common JP name, no JVM repos",2026-06-27
+takumi endo,endo-cariot,confirm,auto,CORRECTION 2026-07-03: company=Cariot Inc. exact match to speaker aff 株式会社キャリオット; has forked Java/Spring-MVC repo (spring-mvc-fulfillment-base); name takumi.endo matches,2026-07-03
+toru takahashi,toru-takahashi,confirm,auto,CORRECTION 2026-07-03: verified via GH API - authored (non-fork) Java Embulk plugin embulk-filter-concat matches bio's stated Fluentd/Embulk/Digdag OSS work; highest followers of 5 same-name candidates; Japan location,2026-07-03
 wagyu,mukamikou,reject,auto,bio content is troll-like/concerning; no JVM repos; no corroboration,2026-06-27
 yohei kajiro,y-kajiro,reject,auto,"0 followers, no bio, no company, no JVM repos; cannot confirm",2026-06-27
-yoshihiko minami,nannany,reject,auto,"no company match (STORES not in profile), no JVM repos",2026-06-27
+yoshihiko minami,nannany,confirm,auto,"CORRECTION 2026-07-03: prior reject was WRONG - verified via GH API, nannany has 39+ Java repos incl Spring Boot/Spring-DI/JPA/WebFlux/RabbitMQ/Spring-Actuator (2018-2023); genuine professional JVM/Spring engineer, the earlier 'no JVM repos' claim missed older repos outside the recent-push scan window",2026-07-03
 yuji nakagawa,yuji1919,reject,auto,"0 followers, no bio, no company, no JVM repos; common JP name",2026-06-27
 yusuke saito,ysaito8015,reject,auto,common JP name; WealthNavi not in profile; no JVM repos,2026-06-27
 yuya296,yuya296,confirm,auto,speaker handle yuya296 = GitHub login yuya296 (direct identity); affiliation: Enterprise Java Engineer in Financial Systems,2026-06-27
@@ -1048,3 +1049,78 @@ andreas larsen,larsenwork,reject,auto,"Common name; larsenwork is Danish type-de
 elise kristiansen,elisekrist,confirm,auto,Confirmed Variant frontend dev; JZ2025 lightning talk on ARIA matches accessibility-focused GH profile,2026-07-03
 jan greger hemb,JGH153,confirm,auto,"GH bio confirms full name, Norway, personal studio hembstudios.no; JZ2025 lightning talk Frontend/DevOps/Organization matches frontend/mobile repos",2026-07-03
 vegard haugstvedt,it-vegard,confirm,auto,GH bio company Rubberduck matches aff exactly; accessibility/WCAG/ARIA focus matches JZ2023 and JZ2025 talks,2026-07-03
+sam wang,samwang0723,confirm,auto,Taipei location matches conf; SoftLeader Java/Spring R&D aff matches OTP/Spring Authorization Server talk topic; has old Java repos,2026-07-03
+ruei,fatfingererr,confirm,auto,Taipei Taiwan location matches conf; clojure-tw/emacs-tw JVM-adjacent tech-community orgs; only plausible name-matching candidate,2026-07-03
+jiayun zhou,jiayun,confirm,auto,exact name match; has Kotlin repo intellij-mcp; Taiwan location; @104corp Taiwan company; on official JCConf2025 speaker list,2026-07-03
+ethan,ethanflower1903,reject,auto,SF location vs Taiwan conf; 93/100 repos are forks (bot-like collector); no JVM signal; speaker talk is Java/Spring ReBAC but profile shows no backend/JVM work,2026-07-03
+frank tsai,ju5td0m7m1nd,reject,auto,"speaker is senior architect w/ 15yr .NET/Java at Cathay Financial; candidate repos are JS/TS/Rust indie side-projects, no Java/.NET signal, profile mismatch",2026-07-03
+samson,samswag,reject,auto,Samson Goddy is Nigeria-based Sugar Labs FOSS advocate; speaker is Cathay Financial Holdings Spring AI architect in Taiwan; no overlap,2026-07-03
+andy lu,andyluss,reject,auto,"陆仕桑 profile is web/indie-game dev (Vue/JS/ActionScript), zero Kotlin/Java; speaker talk is Kotlin+AI app dev, wrong candidate despite higher followers",2026-07-03
+andy lu,andyludeveloper,confirm,auto,"Taipei Android/Flutter dev at TransIoT; 20 Kotlin + 6 Java repos; matches speaker bio 'App developer, passionate about Kotlin' and Kotlin+AI talk",2026-07-03
+pino,jofpin,reject,auto,Jose Pino is a security researcher w/ no JVM repos and mismatched first name; speaker is Cathay backend engineer giving a Java IntelliJ-plugin talk,2026-07-03
+justin,jart,reject,auto,"Justin Tunney is a famous C/asm systems programmer (Cosmopolitan/llamafile) based in Mountain View, CA; speaker is a Taiwan Java dev giving a Guava/Java talk, no JVM overlap",2026-07-03
+recca chao,recca-chao-104,confirm,auto,"verified via pretalx JCConf2025 speaker bio: Taiwan Kotlin User Group admin, Laravel/Ktor/Kotlin backend engineer, talk on Ktor non-blocking pitfalls matches",2026-07-03
+vincent huang,vincent178,reject,auto,Shanghai-based Go/Lua/Rust dev with no Kotlin/Java repos; real speaker identified externally as Jian-Min-Huang,2026-07-03
+vincent huang,Jian-Min-Huang,confirm,auto,"黃健旻 Vincent Huang, Taipei; 8 Java + 3 Kotlin repos; bio 'JVM Backend and DevOps' matches talk 'AI Driven Development with Java & Kotlin' verified via jianminhuang.cc/Medium",2026-07-03
+archie,ArchishmanSengupta,reject,auto,"India-based ML engineer (EddieHubCommunity); speaker is CTBC Bank backend engineer in Taiwan doing Spring Boot/QueryDSL/GraphQL, no overlap",2026-07-03
+martin kunitzsch,maku05,confirm,auto,Dresden-based ostec GmbH is a Java-stack web shop matching affiliation; GH location Dresden matches Saxony region,2026-07-03
+philipp schneider,pinguinonice,reject,auto,common name with 5 low-flw candidates none showing tracetronic; bio is geospatial/remote-sensing unrelated to conference topic,2026-07-03
+ilja bauer,iljabauer,confirm,auto,Dresden-based; web search confirms he gave 'Impact statt Output' talk at JUG Saxony Day 2025; DevBoost/EntwicklerHeld CTO matches,2026-07-03
+oliver bohm,OliverBhm,reject,auto,"no bio/company, only TypeScript hobby repos; real Optica/JUGS-Stuttgart speaker Oliver Boehm is a different person (github oboehm) not among candidates",2026-07-03
+govinda fichtner,Govinda-Fichtner,confirm,auto,"rare name sole candidate, 69 flw, has Javalin(Java) repo plus many docker/testing workshop-speaker repos consistent with conference speaker profile",2026-07-03
+sven hesse,DrMcCoy,reject,auto,"Likely wrong person: DrMcCoy is a C/C++ open-source game-engine dev (xoreos lead, Braunschweig), no JVM repos or Java signal; common name, insufficient corroboration",2026-07-03
+michael sperber,programmersdigest,reject,auto,"Wrong person: real Michael Sperber (Active Group CEO, functional programming/Scheme) is github.com/mikesperber; programmersdigest has unrelated C# repos, no Active Group link",2026-07-03
+marijn van geest,marijnvg-tng,confirm,auto,Login suffix -tng matches TNG Technology Consulting employee naming convention (same pattern as confirmed mobptng=Michael Oberparleiter TNG); only repo is fork of TNG TechDay workshop,2026-07-03
+tobias vo,tobiaslvoss,confirm,auto,"Bio explicitly states Java developer at @viadee, website java.viadee.de; matches speaker aff/topic directly",2026-07-03
+jose rafael almonte cabrera,xjralmontec,confirm,auto,Unique exact 4-token full name match; login xjralmontec derives from same name; 0 repos/no bio but GH is dominant sole candidate; external search confirms real JConf Java/Neo4j speaker,2026-07-03
+lofi dewanto,blasiuslofidewantodevk,confirm,auto,bio twitter link matches known JCON/JAX/OOP Java+GWT speaker Lofi Dewanto (same twitter handle as his active lofidewanto acct w/ 71 Java repos); dormant employer acct but confirmed same person,2026-07-03
+francisco picolini,francjp,confirm,auto,Talk 'Nube Soberana y Open Source' matches GH bio/company OpenNebula sovereign cloud exactly,2026-07-03
+fernando oleo blanco,Irvise,confirm,auto,Distinctive 3-token name exact match; libre software/engineering bio fits Ada/SPARK formal verification talk,2026-07-03
+ricardo guzman velasco,gn-ricardo-gv,confirm,auto,"Exact distinctive 3-token Spanish name match, only candidate found",2026-07-03
+sergio valverde,svg153,confirm,auto,Dominant candidate (180 flw vs 12); IMDEA Software/ETSIINF academic org fits co-talk w/ Jorge Hidalgo,2026-07-03
+jurgen,JStumpp,reject,auto,"Speaker registered under first name only, common name; AMAI GmbH has no topical/geo tie to beginner OSS talk, follower dominance under 3x threshold",2026-07-03
+amalia gomez,AmaliaGM,confirm,auto,"Full name match (Amalia Gomez Moro), only candidate found, no contradicting info for AI-agents talk",2026-07-03
+estefania rios,ebautista07,confirm,auto,"Exact first+last name match (Estefania Bautista Rios), only candidate found for MCP talk",2026-07-03
+anastasiia zvenigorodskaia,zvenigorodskaia,confirm,auto,Rare distinctive surname exact match; 'OpenSource advocate' bio matches 'Making Open Source Profitable' talk,2026-07-03
+ivan sanchez ortega,IvanSanchez,confirm,auto,"Well-known FLOSS/Leaflet.js creator, exact rare 3-token name match, 502 followers, OSGeo/OpenStreetMap bio fits open-source conf",2026-07-03
+isaric,ISARICResearch,reject,auto,"Talk is 'The Open Source Smart Garden' hobbyist IoT project; ISARICResearch is a health-research consortium org account, topic mismatch, org-account caution",2026-07-03
+braulio,braulio94,reject,auto,"Speaker registered under first name only; ambiguous vs similarly-followed brauliodiez (Lemoncode/React, arguably better fit for Astro web-framework talk); no strong corroboration for top pick",2026-07-03
+elena ortega,elenaorfe,confirm,auto,Bio 'Frontend Engineer' precisely matches talk 'Beyond Words: impact of images in web performance',2026-07-03
+gregory schiano,gregory-schiano,confirm,auto,Distinctive French name exact match; Canonical (open-source co.) fits observability talk at open-source conf,2026-07-03
+alejandro santisteban,alesancor1,confirm,auto,Company+org @canonical matches talk 'UbuCon: Slicing Ubuntu Containers' exactly,2026-07-03
+ales kravos,AKravos,confirm,auto,LinkedIn confirms Aleš Kravos at The RIGHT THING Solutions - exact company match; distinctive Slovenian name; conference is in Slovenia (GH location=Slovenia),2026-07-03
+tomasz ziss,zizu1985,confirm,auto,gh_company 'Acceture' is a typo of aff's Accenture Enkitec Group; active blog + repos incl. Oracle/PLSQL and Java-adjacent cloud content fit a cloud advisory consultant,2026-07-03
+federico venturin,barretbse,confirm,auto,"web search confirms Federico Venturin is Oracle ACE Associate & Principal Consultant at Rittman Mead, matching gh_company @RittmanMead and aff EMEA Analytics Specialist",2026-07-03
+domen dolar,domen-dolar,confirm,auto,"web search confirms Domen Dolar is Head of Application Development (Vodja aplikativnega razvoja) at ZPIZ - exact aff match; single candidate, no conflicting signals",2026-07-03
+christian gohmann,tvdgoh,confirm,auto,Trivadis was acquired by Accenture in 2021 and joined Accenture's Data & AI team; gh_company Trivadis GmbH is the pre-acquisition employer name matching aff's Accenture Data Eng role; location Germany fits,2026-07-03
+julian frey,JulFrey,reject,auto,"real speaker is Oracle ACE Director & founder of CITE GmbH in Switzerland (confirmed via LinkedIn/Sessionize handle JulianFreyCH); GH candidate's company is University of Freiburg with forestry/LiDAR tree-segmentation repos - different person, same name",2026-07-03
+alex nuijten,alexnuijten,confirm,auto,"well-known Oracle APEX community figure; PLSQL/APEX repos (loggerutil, Logger, apex-sert, conference-manager) match aff allAPEX",2026-07-03
+philippe fierens,pfierensoracle,confirm,auto,login itself embeds 'oracle'; aff is Product Manager in the MAA team (Oracle Maximum Availability Architecture) - self-identifying Oracle employee login,2026-07-03
+ilmar kerm,ilmarkerm,confirm,auto,"repos overwhelmingly Oracle DB admin tooling (ansible-oracle-*, oracle-rac-scripts, oracle-db-appdev-monitoring fork) matching aff Senior Database Administrator",2026-07-03
+miha petric,mihapetricc,reject,auto,"profile is an empty GitHub-profile-README repo only, no company/bio/location/followers; web search found no link between this account and the Generali DWH speaker; common enough name to need stronger evidence",2026-07-03
+radovan bacovic,radovanbacovic,confirm,auto,"web search confirms Staff Data Engineer at GitLab based in Novi Sad, Serbia, matching GH location Novi Sad and aff Staff Data Enginer at GitLab exactly",2026-07-03
+mihael skarabot,mskarabot,confirm,auto,"web search confirms owner/founder of Cloudvenia d.o.o. in Kranj, Slovenia, matching aff exactly; GH blog skarabot.eu matches company site",2026-07-03
+david senica,davidsenica,confirm,auto,repo quarkus-angular-starter contains real Java/Quarkus code (11.6KB Java) - a genuine JVM repo missed by the scout's jvm_repo flag; distinctive Slovenian name,2026-07-03
+sergei chernov,seregamorph,confirm,auto,real login found via research: company Miro exact match extensive Java/Gradle repos matches Spring IO 2025 improving-spring-boot-test-efficiency talk,2026-07-03
+vaibhav choudhary,vaibhavchoudhary,confirm,auto,official JavaFest'25 speaker page links this github; forks jdk25u/jdk25u-dev/javafest confirm JVM engineer @ Salesforce; top cand chanakya-vc is unrelated Boston Univ grad student,2026-07-03
+jigar shah,shahjigar556,reject,auto,"common name; repos are student/JS-Python-Dart coding practice, no JVM repos, no DataOrb/company match; real DataOrb Director of Eng speaker's github not found among candidates",2026-07-03
+bharath kumar b,bharath-398,reject,auto,common Indian name; top cand bio 'Devops Enginner' doesn't corroborate Head of Marketing/CX at Zoho; no jvm repo/org/company signal,2026-07-03
+adhavan s,adhavan18,reject,auto,weak bio 'discipline'; gh_name has extra tokens (Tamil...S K); no company/org/jvm-repo corroboration for Zoho Solutions Consulting Manager,2026-07-03
+ajay ghanti,aghanti7,confirm,auto,only GitHub account matching this distinctive name (single candidate); no conflicting evidence,2026-07-03
+anand subramanian,AntixK,reject,auto,"common name; bio 'Senior ML Engineer' does not corroborate Chief Solutions Officer at KANINI; no jvm repo, company, or org match despite follower count",2026-07-03
+bindu priya,baw117,reject,auto,"common Indian name, empty bio/company, several similarly-named accounts, no corroboration for Wells Fargo Distinguished Engineer",2026-07-03
+birgitta boeckeler,bboeckeler,confirm,auto,"distinctive name, sole candidate; gh company 'Accenture' matches employer post Accenture-ThoughtWorks acquisition (2025)",2026-07-03
+kamal batra,iamkbatra,reject,auto,"bio describes academic computational scientist (CNRS/TU Dresden), doesn't corroborate OpenText Director of Learning Services; ambiguous vs 2nd near-duplicate candidate",2026-07-03
+mani chandrasekaran,cmanikandan1,reject,auto,"generic 'Techie based in Bangalore' bio, 0 followers, no company/org/jvm-repo signal for AWS Principal Solutions Architect",2026-07-03
+nurul khan,nurulquamar,reject,auto,"empty bio/company, only 2 followers, no corroboration for Twilio Staff AI Engineer beyond a loose name-token match",2026-07-03
+nyah macklin,MacklinEngineering,confirm,auto,"distinctive name, sole candidate; DevRel-style bio (@Couchbase, builds developer products) plausible prior role before Neo4j Developer Advocate",2026-07-03
+perwez khan,perwezkhan4,reject,auto,"empty bio/company, 0 followers, indistinguishable from near-duplicate salmanperwezkhan, no corroboration for EPAM Director of Enterprise Architecture",2026-07-03
+pratiksha anand,anandpratiksha,confirm,auto,"dominant candidate (29 vs 0 followers, only 2 candidates) for a distinctive name; product-focused bio consistent with Google Cloud Customer Engineer",2026-07-03
+raghav singh,raghavgithub06,reject,auto,"very common name with many similarly-named accounts; top cand bio is a blockchain/Solidity dev, doesn't match Apryse Solutions Engineering Manager",2026-07-03
+raghavan narasimhan,raghavanns,confirm,auto,"highly distinctive 3-part name (Raghavan Narasimhan Srinivasa), sole candidate; @Maersk plausible prior employer before Lloyds Technology Centre",2026-07-03
+shivay lamba,shivaylamba,confirm,auto,"prominent OSS profile (1918 followers, GSoC mentor, member of @jenkinsci/@kubeflow/@cncf) fits Developer Evangelist role; jenkinsci is a JVM project",2026-07-03
+siva katamreddy,kssreddy433,confirm,auto,"distinctive surname (Katamreddy), sole GitHub match for the full name; no conflicting evidence",2026-07-03
+sumit shatwara,sumitshatwara,confirm,auto,"distinctive surname, sole candidate; 'Cognition AI' plausible recent move from Neo4j Senior Solution Architect role (AI coding startup)",2026-07-03
+suvankar chakraborty,suvankar1983,confirm,auto,"bio topically matches (Azure, O365, IDM, PowerShell) EPAM Cloud Architect & Head of DevOps Engineering role despite common surname",2026-07-03
+vijay krishnamoorthy,vijayk0747,reject,auto,"bio 'Auburn 2023' suggests a recent university student, inconsistent with seniority of Target Senior Engineering Manager",2026-07-03
+jay lee,jay0lee,reject,auto,"wrong Jay Lee: this is the GAM (Google Apps Manager) creator, ex-Google Workspace/Chrome Enterprise, no Java/JVM repos; real JDConf speaker is Microsoft App Innovation Specialist (LinkedIn cloudnativejay) doing Azure/Kotlin/Java cloud-native work",2026-07-03
