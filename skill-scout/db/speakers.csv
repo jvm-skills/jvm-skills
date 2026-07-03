@@ -35,7 +35,7 @@ Julian Burr,julian burr,
 Julien Topçu,julien topcu,Shodo
 Kai Nitsch,kai nitsch,Senior Developer at GK Software
 Kellyn Gorman,kellyn gorman,Advocate and Engineer
-Kevin Dubois,kevin dubois,IBM
+Kevin Dubois,kevin dubois,Red Hat IBM
 Luis Fraile,luis fraile,DevOps Consultant at Plain Concepts + CTO B!Play
 "Mauricio ""Salaboy"" Salatino",mauricio salaboy salatino,OSS Software and Ecosystem Engineer @Diagrid / Java Champion / Cloud Native Ambassador
 Mauro Gioberti,mauro gioberti,.NET Software Engineer | Devs Mentor
@@ -51,7 +51,7 @@ Serge Harb,serge harb,"Software Engineer, Preply"
 Sergi Almar,sergi almar,
 Sofia Lescano Carroll,sofia lescano carroll,Senior Software Engineer - Alan
 Sofia Santos,sofia santos,Mews - Staff Service Designer
-Steve Poole,steve poole,Java SDK Expert & Open Source Project Contributor
+Steve Poole,steve poole,
 Suzanne Daniels,suzanne daniels,Senior Chief Developer Advisor at Microsoft
 Thomas Hugle,thomas hugle,
 Tiffany Souterre,tiffany souterre,Senior Developer Advocate @AWS
@@ -84,7 +84,7 @@ Mario Fusco,mario fusco,IBM
 Jakub Gajski,jakub gajski,j-labs
 Willem Jan Glerum,willem jan glerum,Principal Software Engineer @ Lunatech
 Michał Gniadek,micha gniadek,Ten Square Games
-Sergès Goma,serges goma,Software Developer
+Sergès Goma,serges goma,
 Gerrit Grunwald,gerrit grunwald,Senior Developer Advocate at Azul Systems
 Misko Hevery,misko hevery,Roblox
 Sander Hoogendoorn,sander hoogendoorn,iBOOD.com
@@ -339,7 +339,7 @@ Lucía Conde-Moreno,lucia conde moreno,Info Support B.V. / Aigency
 Michael Coté,michael cote,cote.io
 Catherine Edelveis,catherine edelveis,BellSoft
 Michaël Hompus,michael hompus,Architect @ Info Support | Microsoft MVP
-Josh Long,josh long,"Josh Long Java Champion & führender Spring-Experte für Reactive Systems, Microservices und Cloud-Native Development"
+Josh Long,josh long,
 Bouke Nijhuis,bouke nijhuis,CTO @ CINQ ICT
 Andrei Shakirin,andrei shakirin,Amazon Web Services
 Marc Buma,marc buma,Owner - Bumos
@@ -517,7 +517,7 @@ Jules May,jules may,22 Consulting Ltd
 Jonas Mayer,jonas mayer,TNG Technology Consulting
 Paulo Menon,paulo menon,Red Hat
 Derek Mortimer,derek mortimer,CECG
-Maarten Mulders,maarten mulders,Info Support
+Maarten Mulders,maarten mulders,
 Frank Munz,frank munz,Databricks
 Alexey Naiden,alexey naiden,Cloud Linux
 Diana Nanuti,diana nanuti,Chainalysis
@@ -555,13 +555,13 @@ Adam Dudczak,adam dudczak,Computational systems and people engineering practitio
 Ahmed Hassanien,ahmed hassanien,"Engineering Manager with experience in software architecture, leadership, and AI/ML"
 Arjen Poutsma,arjen poutsma,Software engineer who spent nearly 20 years shaping the Spring Framework and now advises Embabel
 Artur Kęska,artur keska,Java dev on daily basis
-Artur Skowronski,artur skowronski,
+Artur Skowronski,artur skowronski,VirtusLab
 Aviva Peisach,aviva peisach,Head of Wix Backend & Wix-Identity
 Christian Tzolov,christian tzolov,Broadcom
 Dariusz Jędrzejczyk,dariusz jedrzejczyk,Broadcom
 Dominik Cebula,dominik cebula,"Cloud Software Principal Engineer at HSBC, Udemy instructor, book author"
 Dylan Beattie,dylan beattie,
-Ivar Grimstad,ivar grimstad,Jakarta EE Developer Advocate
+Ivar Grimstad,ivar grimstad,Eclipse Foundation
 Jakub Nabrdalik,jakub nabrdalik,
 Josef Goldstein,josef goldstein,The Data & Culture Guy
 Konrad Szałkowski,konrad sza kowski,Java enthusiast
@@ -1455,7 +1455,7 @@ Steve RIGANO,steve rigano,Crédit Agricole Technologies & Services
 David ROBIN,david robin,JFrog
 Johan ROUVE,johan rouve,Comet
 Romain ROZEWICZ,romain rozewicz,ARGIOS
-Lize Raes,lize raes,Oracle
+Lize Raes,lize raes,Naboo.ai
 Johann Rakotoharisoa,johann rakotoharisoa,Comet
 Alain Regnier,alain regnier,Kubo Labs
 René Ribaud,rene ribaud,Red Hat
@@ -1607,7 +1607,7 @@ Marc Philipp,marc philipp,JUnit
 Nupur Agarwal,nupur agarwal,ING
 Markus Kett,markus kett,"CEO at MicroStream, Editor in Chief at JAVAPRO Magazine"
 Dominika Tasarz,dominika tasarz,Payara
-Mary Grygleski,mary grygleski,AI Collective
+Mary Grygleski,mary grygleski,Callibrity
 Grace Robinson,grace robinson,IBM
 Frank Delporte,frank delporte,Azul
 Sharat Chander,sharat chander,Oracle
@@ -3273,7 +3273,7 @@ Arjan Tijms,arjan tijms,Director OmniFish
 Rijo Sam,rijo sam,ABN AMRO Bank
 Roald Nefs,roald nefs,Chief Technology Officer at Warpnet
 Tonny Garić,tonny garic,Java DevOps Engineer @ Flink Software
-Rafael Winterhalter,rafael winterhalter,software consultant at Scienta in Oslo
+Rafael Winterhalter,rafael winterhalter,
 Jan Ouwens,jan ouwens,Java juggler at Yoink
 Ted Vinke,ted vinke,First8 Conclusion
 Peter Schuler,peter schuler,Senior Java Developer @ Rabobank
@@ -3323,7 +3323,7 @@ Ivan Pesenti,ivan pesenti,CrowdStrike
 Badr El Houari,badr el houari,xHub
 Pavlos Tzianos,pavlos tzianos,
 Chaimaa BRITEL,chaimaa britel,Deloitte
-Anshika Koul,anshika koul,Posten Norge
+Anshika Koul,anshika koul,Posten Bring
 Abdelhadi GANNOUNE,abdelhadi gannoune,Societe Generale Africa Technologies & Services
 Amine Chouki,amine chouki,Journify
 Badr Molato,badr molato,Capgemini
@@ -3741,3 +3741,40 @@ Kai Schmidt,kai schmidt,Software-engineer and -architect
 Richard Groß,richard gro,Head of Software Archaeology
 Sebastian Meyer,sebastian meyer,Dirk Rossmann GmbH
 Gabriel Winkler,gabriel winkler,Enterprise Architect - OPEN KNOWLEDGE GmbH
+Morten Bukkøy Kjetland,morten bukk y kjetland,Sonat
+Øyvind Vevang,yvind vevang,TV 2
+Jan Henrik Gundelsby,jan henrik gundelsby,Knowit
+Nils Brede Moe,nils brede moe,SINTEF Digital
+Asbjørn Ulsberg,asbj rn ulsberg,
+Ramtin Hafezinejad,ramtin hafezinejad,
+Martin Berg Nilsen,martin berg nilsen,
+Lukasz Palt,lukasz palt,
+Dr Heinz M. Kabutz,dr heinz m kabutz,Java Specialists
+Geoffrey Rekier,geoffrey rekier,
+Isak Kyrre Lichtwarck Bjugn,isak kyrre lichtwarck bjugn,SpareBank 1 Utvikling
+Morten Udnæs,morten udn s,Fremtind Forsikring
+Terje Heen,terje heen,Telenor
+Hege Marie Sivertsen Brown,hege marie sivertsen brown,Telenor
+Vegard Aasen,vegard aasen,Posten Bring AS
+Stian Steinbakken,stian steinbakken,Webstep
+Jørgen Sølvernes Sandnes,j rgen s lvernes sandnes,Husbanken
+Christer Olsen,christer olsen,Husbanken
+Christoffer Vig,christoffer vig,
+Louis Dieffenthaler,louis dieffenthaler,NAV
+Johannes Brodwall,johannes brodwall,Gnist
+Andreas Larsen,andreas larsen,Kantega
+Jarle Hansen,jarle hansen,Systek
+Kristian Berg,kristian berg,KS Digital
+Ruth Merethe Granevang,ruth merethe granevang,Aschehoug
+Anna Blechingberg,anna blechingberg,
+Nikolai Norman Andersen,nikolai norman andersen,
+Tomas Hensrud Gulla,tomas hensrud gulla,Novacare
+Elise Kristiansen,elise kristiansen,Variant
+Jean Tuffier,jean tuffier,Entur
+Marina Santos Haugen,marina santos haugen,Kodemaker
+Jan Greger Hemb,jan greger hemb,
+Stian Cornelis Alsos,stian cornelis alsos,Kodemaker
+Peter Norstein,peter norstein,Kantega AS
+Vegard Haugstvedt,vegard haugstvedt,Rubberduck
+Alexandre Gallice,alexandre gallice,
+Henrik Wilskow Jenssen,henrik wilskow jenssen,FINN.no

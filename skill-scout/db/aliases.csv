@@ -1040,3 +1040,11 @@ martina staffa,MartinaLinn,reject,auto,"web developer / c't webdev speaker, no J
 kai schmidt,kaikalii,reject,auto,"Rust developer / uiua-lang creator, no JVM; common name with multiple candidates",2026-06-28
 sebastian meyer,bastimeyer,reject,auto,"Streamlink/Python developer, no JVM repos, no Dirk Rossmann GmbH link; common name",2026-06-28
 gabriel winkler,misternono,reject,auto,"GitHub name is Noah-Gabriel Winkler not Gabriel Winkler, no company/JVM/OPEN KNOWLEDGE match",2026-06-28
+ramtin hafezinejad,RamtinHaf,confirm,auto,Oslo-region DevSecOps/security workshop presenter at JZ2025; GH bio/Flipper-Zero-BadUSB repo matches security topic,2026-07-03
+geoffrey rekier,agilxpgeoffrey,confirm,auto,JZ2025 talk is Kotlin Multiplatform/Compose; matches Medium article by same name on same topic; Norway location,2026-07-03
+isak kyrre lichtwarck bjugn,isakbjugn,confirm,auto,Unique full name; tech lead at SpareBank 1 Utvikling (matches aff) doing Kotlin/Spring Boot; own site fagord.no,2026-07-03
+christoffer vig,babadofar,confirm,auto,"Long-running JavaZone speaker (2015 ELK talk, JZ2025 Kubernetes/agile talk); unique name match",2026-07-03
+andreas larsen,larsenwork,reject,auto,"Common name; larsenwork is Danish type-designer/frontend dev at leoilab, unrelated to Kantega; JZ2025 talk is Excel/CSV/DB tools, inconsistent with font/frontend profile",2026-07-03
+elise kristiansen,elisekrist,confirm,auto,Confirmed Variant frontend dev; JZ2025 lightning talk on ARIA matches accessibility-focused GH profile,2026-07-03
+jan greger hemb,JGH153,confirm,auto,"GH bio confirms full name, Norway, personal studio hembstudios.no; JZ2025 lightning talk Frontend/DevOps/Organization matches frontend/mobile repos",2026-07-03
+vegard haugstvedt,it-vegard,confirm,auto,GH bio company Rubberduck matches aff exactly; accessibility/WCAG/ARIA focus matches JZ2023 and JZ2025 talks,2026-07-03

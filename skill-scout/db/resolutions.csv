@@ -84,7 +84,7 @@ mario fusco,mariofusco,HIGH,Mario Fusco,IBM,1228,fullname,2026-06-28,
 jakub gajski,jakubgajski,MED,Jakub Gajski,,0,fullname,2026-06-28,2026-09-26
 willem jan glerum,wjglerum,HIGH,Willem Jan Glerum,@lunatech-labs ,31,fullname,2026-06-28,
 micha gniadek,MichalGniadek,HIGH,Michał Gniadek,,25,alias,2026-06-28,
-serges goma,sergesgoma,HIGH,Sergès Goma,,2,alias,2026-06-28,
+serges goma,sergesgoma,HIGH,Sergès Goma,,2,alias,2026-07-03,
 gerrit grunwald,HanSolo,HIGH,Gerrit Grunwald,Azul Systems,1023,fullname,2026-06-28,
 misko hevery,mhevery,HIGH,Miško Hevery,Builder.io,6259,fullname+dominant,2026-06-28,
 sander hoogendoorn,aahoogendoorn,HIGH,Sander Hoogendoorn,www.sanderhoogendoorn.com,53,fullname,2026-06-28,
@@ -3737,3 +3737,40 @@ kai schmidt,kaikalii,MED,Kai Schmidt,,221,fullname,2026-06-28,2026-09-26
 richard gro,Richargh,HIGH,Richard Groß,,10,fullname+jvmrepo,2026-06-28,
 sebastian meyer,bastimeyer,MED,Sebastian Meyer,,156,fullname,2026-06-28,2026-09-26
 gabriel winkler,misternono,MED,Noah-Gabriel Winkler,,6,fullname,2026-06-28,2026-09-26
+morten bukk y kjetland,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+yvind vevang,ovevang,HIGH,Øyvind Vevang,TV 2,6,fullname+jvmrepo,2026-07-03,
+jan henrik gundelsby,janhenrik,HIGH,Jan Henrik Gundelsby,Knowit,18,fullname,2026-07-03,
+nils brede moe,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+asbj rn ulsberg,asbjornu,HIGH,Asbjørn Ulsberg,@Ludenso  ,200,fullname+dominant,2026-07-03,
+ramtin hafezinejad,RamtinHaf,MED,Ramtin Hafezinejad,,9,fullname,2026-07-03,2026-10-01
+martin berg nilsen,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+lukasz palt,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+dr heinz m kabutz,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+geoffrey rekier,agilxpgeoffrey,MED,Geoffrey Rekier,Agilxp,0,fullname,2026-07-03,2026-10-01
+isak kyrre lichtwarck bjugn,isakbjugn,MED,Isak Kyrre Lichtwarck Bjugn,,10,fullname,2026-07-03,2026-10-01
+morten udn s,mudnaes,HIGH,Morten Udnæs,,14,fullname+jvmrepo,2026-07-03,
+terje heen,tlheen,HIGH,Terje Heen,Telenor,13,fullname,2026-07-03,
+hege marie sivertsen brown,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+vegard aasen,vegaasen,HIGH,Vegard Aasen,Webstep,24,fullname+jvmrepo,2026-07-03,
+stian steinbakken,stianste,HIGH,Stian Steinbakken,,15,fullname+jvmrepo,2026-07-03,
+j rgen s lvernes sandnes,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+christer olsen,colsen1991,HIGH,Christer Olsen,Husbanken,7,fullname,2026-07-03,
+christoffer vig,babadofar,MED,Christoffer Vig,CoWork,23,fullname,2026-07-03,2026-10-01
+louis dieffenthaler,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+johannes brodwall,jhannes,HIGH,Johannes Brodwall,Gnist Consulting,343,fullname,2026-07-03,
+andreas larsen,larsenwork,MED,Andreas Larsen,@leoilab ,343,fullname,2026-07-03,2026-10-01
+jarle hansen,jarlehansen,HIGH,Jarle Hansen,,43,fullname+jvmrepo,2026-07-03,
+kristian berg,RasmanTuta,HIGH,Kristian Berg,@ks-no,16,fullname+jvmrepo,2026-07-03,
+ruth merethe granevang,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+anna blechingberg,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+nikolai norman andersen,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+tomas hensrud gulla,tomahg,HIGH,Tomas Hensrud Gulla,Novacare,13,fullname,2026-07-03,
+elise kristiansen,elisekrist,MED,Elise Kristiansen,,17,fullname,2026-07-03,2026-10-01
+jean tuffier,jeantuffier,HIGH,Jean Tuffier,Entur,9,fullname,2026-07-03,
+marina santos haugen,marinahaugen,HIGH,Marina Santos Haugen,Kodemaker,6,fullname,2026-07-03,
+jan greger hemb,JGH153,MED,Jan Greger Hemb,Hemb Studios,10,fullname,2026-07-03,2026-10-01
+stian cornelis alsos,stiancor,HIGH,Stian Cornelis Alsos,Kodemaker,11,fullname,2026-07-03,
+peter norstein,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01
+vegard haugstvedt,it-vegard,MED,Vegard Haugstvedt,,13,fullname,2026-07-03,2026-10-01
+alexandre gallice,aldettinger,HIGH,Alexandre Gallice,Red Hat,15,fullname+jvmrepo,2026-07-03,
+henrik wilskow jenssen,,UNRESOLVED,,,,broad,2026-07-03,2026-10-01

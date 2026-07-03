@@ -74,3 +74,4 @@ started_at,conference,speakers,resolved,scanned_repos,skipped_repos,found,parked
 2026-06-28,JCON USA @ IBM TechXchange 2025,16,14,56,0,0,2,"0 found, 0 needs_review, 0 bundle(s), 1 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
 2026-06-28,Confitura 2025,66,35,300,0,0,31,"0 found, 0 needs_review, 0 bundle(s), 1 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
 2026-06-28,Java Forum Nord 2025,36,21,88,0,0,15,"0 found, 0 needs_review, 0 bundle(s), 9 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
+2026-07-03,JavaZone 2025,55,33,249,0,0,22,"0 found, 0 needs_review, 0 bundle(s), 21 rejected. LLM-judged every non-bundle hit; bundles evaluated as units."
