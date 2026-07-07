@@ -11,6 +11,7 @@ description: >-
   repository knowledge after service-layer, business-logic, README,
   configuration, YAML, Docker, Kubernetes, and build changes.
 repo: nmj18txstate/spring-boot-agent-wiki
+skill_path: skills/spring-boot-agent-wiki/SKILL.md
 category: tool
 tools:
   - claude
