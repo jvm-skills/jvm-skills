@@ -1,0 +1,23 @@
+name: Quarkus Extension Development
+description: >-
+  Quarkus extension development guidance with build-time/runtime separation,
+  extension structure, version-specific behavior, and verified LTS deltas.
+repo: zbendhiba/my-open-skills
+skill_path: "quarkus-extensions-developer/SKILL.md"
+category: framework
+tools:
+  - claude
+languages:
+  - java
+trust: curated
+author: Zineb Bendhiba
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: focused
+tech:
+  - quarkus
+tags:
+  - quarkus
+  - extensions
+  - build-time
+  - runtime

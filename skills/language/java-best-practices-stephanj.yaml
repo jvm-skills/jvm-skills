@@ -1,0 +1,25 @@
+name: Java 21 Best Practices
+description: >-
+  Comprehensive Java 21 best-practices guidance with verified APIs,
+  opinionated implementation rules, and a broad pattern catalog that supersedes
+  weaker code-quality and design-pattern listings.
+repo: stephanj/claude-code-collections
+skill_path: "skills/java-best-practices/SKILL.md"
+category: language
+tools:
+  - claude
+languages:
+  - java
+trust: curated
+author: Stephan Janssen
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: comprehensive
+tech:
+  - java-21
+tags:
+  - java
+  - best-practices
+  - code-quality
+  - design-patterns
+  - refactoring

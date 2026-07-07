@@ -1,0 +1,24 @@
+name: Gemini Java SDK
+description: >-
+  Typed Gemini Java SDK usage from the SDK author, with Java examples and
+  SDK-native interaction patterns rather than generic REST operations.
+repo: glaforge/gemini-interactions-api-sdk
+skill_path: "skills/gemini-interactions-java-api/SKILL.md"
+category: framework
+tools:
+  - claude
+languages:
+  - java
+trust: official
+author: Guillaume Laforge
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: focused
+tech:
+  - gemini
+  - java-sdk
+tags:
+  - ai
+  - sdk
+  - gemini
+  - java

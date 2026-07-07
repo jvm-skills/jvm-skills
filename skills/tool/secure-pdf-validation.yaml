@@ -1,0 +1,24 @@
+name: Malicious PDF Validation
+description: >-
+  JVM PDF security validation with Apache PDFBox, covering attachments, XFA,
+  JavaScript, launch and GoToR links, import actions, concatenation detection,
+  and file-size safeguards.
+repo: righettod/code-assistant-skills-security-utils
+skill_path: ".claude/skills/secure-pdf-validation/SKILL.md"
+category: tool
+tools:
+  - claude
+languages:
+  - java
+trust: community
+author: Dominique Righetto
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: focused
+tech:
+  - pdfbox
+tags:
+  - security
+  - pdf
+  - pdfbox
+  - validation

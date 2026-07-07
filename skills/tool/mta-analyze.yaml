@@ -1,0 +1,27 @@
+name: Konveyor MTA Migration Analysis
+description: >-
+  Java codebase migration assessment using Konveyor MTA and kantra, including
+  custom rules, target platform analysis, blocker detection, and effort
+  estimation for JVM migrations.
+repo: sshaaf/mta-skill
+skill_path: "mta-analyze/SKILL.md"
+category: tool
+tools:
+  - claude
+languages:
+  - java
+trust: community
+author: sshaaf
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: focused
+tech:
+  - konveyor
+  - mta
+  - kantra
+tags:
+  - migration
+  - analysis
+  - java-ee
+  - quarkus
+  - spring-boot

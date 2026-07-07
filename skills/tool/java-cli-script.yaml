@@ -1,0 +1,24 @@
+name: Java 25 Single-File Scripting
+description: >-
+  Zero-dependency Java 25 single-file scripting guidance with shebang
+  execution, PATH installation, and practical CLI patterns without a build
+  tool.
+repo: AdamBien/airails
+skill_path: "java/java-cli-script/SKILL.md"
+category: tool
+tools:
+  - claude
+languages:
+  - java
+trust: curated
+author: Adam Bien
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: focused
+tech:
+  - java-25
+tags:
+  - java
+  - cli
+  - scripting
+  - single-file

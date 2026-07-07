@@ -1,0 +1,25 @@
+name: Spring Batch 6 Migration
+description: >-
+  Version-pinned Spring Batch 6 guidance for writing new batch jobs, migrating
+  from 5.x, reviewing API changes, and debugging Spring Batch applications.
+repo: antonarhipov/agentskills
+skill_path: "spring-batch-6/SKILL.md"
+category: framework
+tools:
+  - claude
+languages:
+  - java
+  - kotlin
+trust: curated
+author: Anton Arhipov
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: focused
+tech:
+  - spring-batch
+  - spring-framework
+tags:
+  - spring-batch
+  - migration
+  - batch
+  - spring

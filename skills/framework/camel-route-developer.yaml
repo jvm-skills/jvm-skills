@@ -1,0 +1,24 @@
+name: Camel Route Developer
+description: >-
+  Apache Camel route development guidance from a Camel committer, covering
+  route design, integration patterns, endpoint configuration, and practical
+  implementation checks for JVM integration applications.
+repo: zbendhiba/camel-route-developer
+skill_path: "camel-route-developer/SKILL.md"
+category: framework
+tools:
+  - claude
+languages:
+  - java
+trust: official
+author: Zineb Bendhiba
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: focused
+tech:
+  - apache-camel
+tags:
+  - camel
+  - integration
+  - routes
+  - enterprise-integration-patterns

@@ -1,0 +1,24 @@
+name: Kotlin 2.2/2.3 Language Features
+description: >-
+  Kotlin language-feature guidance covering recent Kotlin 2.2 and 2.3
+  behavior, with verified feature details and practical usage advice for
+  modern Kotlin/JVM code.
+repo: antonarhipov/kotlinconf-sdd
+skill_path: ".claude/skills/kotlin-language-features/SKILL.md"
+category: language
+tools:
+  - claude
+languages:
+  - kotlin
+trust: curated
+author: Anton Arhipov
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: focused
+tech:
+  - kotlin-2
+tags:
+  - kotlin
+  - language-features
+  - migration
+  - kotlin-2

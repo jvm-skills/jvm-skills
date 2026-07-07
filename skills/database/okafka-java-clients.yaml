@@ -1,0 +1,24 @@
+name: Oracle OKafka Java Clients
+description: >-
+  Oracle OKafka Java-client guidance with JVM-specific client configuration,
+  examples, and integration patterns for Oracle Database-backed Kafka APIs.
+repo: anders-swanson/oracle-database-code-samples
+skill_path: "skills/okafka-java-code/SKILL.md"
+category: database
+tools:
+  - claude
+languages:
+  - java
+trust: curated
+author: Anders Swanson
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: focused
+tech:
+  - oracle-database
+  - okafka
+tags:
+  - oracle
+  - kafka
+  - database
+  - java-client

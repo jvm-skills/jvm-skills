@@ -1,0 +1,32 @@
+name: jabrena JVM Collection
+description: >-
+  Curated JVM skill collection covering Quarkus, Micronaut, modern Java,
+  Maven, testing, observability, profiling, and related framework practices.
+  Uses self-contained skill directories with co-located references and
+  verified APIs.
+repo: jabrena/cursor-rules-java
+skill_path: ""
+category: framework
+tools:
+  - cursor
+  - claude
+languages:
+  - java
+trust: curated
+author: Juan Antonio Breña
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: comprehensive
+tech:
+  - quarkus
+  - micronaut
+  - maven
+  - testing
+  - observability
+tags:
+  - java
+  - framework
+  - collection
+  - quarkus
+  - micronaut
+  - maven

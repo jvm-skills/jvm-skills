@@ -1,0 +1,27 @@
+name: macOS Notarization for JavaFX and jpackage
+description: >-
+  Transferable macOS signing and notarization workflow for JavaFX/jpackage
+  applications, including jlink, notarytool, and JVM-native crash-diagnostic
+  considerations.
+repo: brunoborges/fx2048
+skill_path: "skills/notarized-javafx-macos/SKILL.md"
+category: tool
+tools:
+  - claude
+languages:
+  - java
+trust: curated
+author: Bruno Borges
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: focused
+tech:
+  - javafx
+  - jpackage
+  - macos
+tags:
+  - notarization
+  - signing
+  - javafx
+  - jpackage
+  - macos

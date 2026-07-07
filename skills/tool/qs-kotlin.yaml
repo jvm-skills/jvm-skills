@@ -1,0 +1,24 @@
+name: qs-kotlin
+description: >-
+  Guidance for using the qs-kotlin query-string library with its verified
+  defaults and source-backed API behavior, focused on Kotlin/JVM request
+  serialization and parsing.
+repo: techouse/qs-kotlin
+skill_path: "skills/qs-kotlin/SKILL.md"
+category: tool
+tools:
+  - claude
+languages:
+  - kotlin
+trust: official
+author: Techouse
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: focused
+tech:
+  - qs-kotlin
+tags:
+  - kotlin
+  - query-string
+  - serialization
+  - http

@@ -1,0 +1,26 @@
+name: jstall JVM Live Diagnostics
+description: >-
+  JVM live diagnostics with jstall: deadlock detection, flame graphs, GC and
+  classloader analysis, JIT queue inspection, and focused commands for
+  investigating running Java processes.
+repo: parttimenerd/jstall
+skill_path: "mcp/skills/jstall/SKILL.md"
+category: tool
+tools:
+  - claude
+languages:
+  - java
+trust: official
+author: Johannes Bechberger
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: focused
+tech:
+  - jstall
+  - jvm
+tags:
+  - diagnostics
+  - profiling
+  - deadlocks
+  - flamegraphs
+  - gc

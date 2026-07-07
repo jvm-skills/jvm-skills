@@ -1,0 +1,25 @@
+name: JFR Recording Analysis
+description: >-
+  Java Flight Recorder analysis workflow for offline .jfr recordings, covering
+  event-type semantics, native jfr CLI usage, lock contention, allocation, GC,
+  and noise-filtering strategies.
+repo: victorrentea/performance-profiling
+skill_path: ".claude/skills/jfr-analyzer/SKILL.md"
+category: tool
+tools:
+  - claude
+languages:
+  - java
+trust: curated
+author: Victor Rentea
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: focused
+tech:
+  - jfr
+  - jvm
+tags:
+  - profiling
+  - jfr
+  - performance
+  - diagnostics

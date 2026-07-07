@@ -1,0 +1,26 @@
+name: Spec-Driven Development Bundle
+description: >-
+  Six-step spec-driven development workflow bundle for turning a proposal into
+  acceptance criteria, rules, review, task plans, and execution checkpoints.
+  Listed as a cohesive workflow bundle rather than isolated generic workflow
+  singles.
+repo: antonarhipov/agentskills
+skill_path: ""
+category: workflow
+tools:
+  - claude
+languages:
+  - java
+  - kotlin
+trust: curated
+author: Anton Arhipov
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: comprehensive
+tech: []
+tags:
+  - specification
+  - acceptance-criteria
+  - workflow
+  - planning
+  - implementation

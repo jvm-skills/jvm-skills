@@ -1,0 +1,25 @@
+name: Jakarta EE / MicroProfile Server
+description: >-
+  Adam Bien's guidance for building Jakarta EE and MicroProfile servers,
+  filling the directory's Jakarta EE gap with concise, practical JVM server
+  conventions.
+repo: AdamBien/airails
+skill_path: "bce/microprofile-server/SKILL.md"
+category: framework
+tools:
+  - claude
+languages:
+  - java
+trust: curated
+author: Adam Bien
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: focused
+tech:
+  - jakarta-ee
+  - microprofile
+tags:
+  - jakarta-ee
+  - microprofile
+  - server
+  - java

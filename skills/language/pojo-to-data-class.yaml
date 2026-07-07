@@ -1,0 +1,25 @@
+name: POJO to Data-Class Refactor Safety
+description: >-
+  Kotlin refactoring guidance for safely converting Java POJOs to data
+  classes, including componentN ordering, public API compatibility, sensitive
+  toString exposure, and field-order hazards.
+repo: jbaruch/kotlin-tutor
+skill_path: "skills/pojoify-to-dataclass/SKILL.md"
+category: language
+tools:
+  - claude
+languages:
+  - java
+  - kotlin
+trust: curated
+author: Baruch Sadogursky
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: focused
+tech:
+  - kotlin
+tags:
+  - kotlin
+  - refactoring
+  - data-class
+  - java

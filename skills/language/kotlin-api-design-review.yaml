@@ -1,0 +1,24 @@
+name: Kotlin API Design Review
+description: >-
+  Kotlin API design and binary-compatibility review guidance, including
+  default-argument ABI behavior, @JvmOverloads limits, @PublishedApi,
+  explicit API mode, and compatibility validation.
+repo: jbaruch/kotlin-tutor
+skill_path: "skills/kotlin-api-review/SKILL.md"
+category: language
+tools:
+  - claude
+languages:
+  - kotlin
+trust: curated
+author: Baruch Sadogursky
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: focused
+tech:
+  - kotlin
+tags:
+  - kotlin
+  - api-design
+  - binary-compatibility
+  - code-review

@@ -1,0 +1,28 @@
+name: Java LTS Upgrade Guides 8→25
+description: >-
+  A curated bundle of Java LTS upgrade guides covering 8→11, 11→17, 17→21,
+  and 21→25 with JEP-by-JEP migration guidance and worked code examples.
+repo: brunoborges/gh-appmod
+skill_path: "skills/java-8-to-11/SKILL.md"
+category: language
+tools:
+  - claude
+languages:
+  - java
+trust: curated
+author: Bruno Borges
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: comprehensive
+tech:
+  - java-8
+  - java-11
+  - java-17
+  - java-21
+  - java-25
+tags:
+  - java
+  - upgrade
+  - migration
+  - lts
+  - jep

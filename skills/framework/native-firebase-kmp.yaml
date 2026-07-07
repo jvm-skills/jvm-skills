@@ -1,0 +1,26 @@
+name: Native Firebase in KMP
+description: >-
+  Kotlin Multiplatform Firebase integration using native Android and iOS SDKs
+  through an interface-injection pattern, avoiding third-party KMP wrappers
+  while keeping shared contracts clean.
+repo: dyor/skills
+skill_path: "implement-native-firebase-kmp/SKILL.md"
+category: framework
+tools:
+  - claude
+languages:
+  - kotlin
+trust: community
+author: dyor
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: focused
+tech:
+  - kotlin-multiplatform
+  - firebase
+tags:
+  - kmp
+  - firebase
+  - android
+  - ios
+  - architecture

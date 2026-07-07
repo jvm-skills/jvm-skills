@@ -1,0 +1,24 @@
+name: Quarkus + LangChain4j Scaffolding
+description: >-
+  Quarkus and LangChain4j scaffolding guidance with real in-directory
+  templates for building JVM agentic applications on Quarkus.
+repo: eldermoraes/quarkus-agentic-scaffolding
+skill_path: "skills/quarkus-langchain4j-scaffolding/SKILL.md"
+category: framework
+tools:
+  - claude
+languages:
+  - java
+trust: curated
+author: Elder Moraes
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: focused
+tech:
+  - quarkus
+  - langchain4j
+tags:
+  - quarkus
+  - langchain4j
+  - agents
+  - scaffolding

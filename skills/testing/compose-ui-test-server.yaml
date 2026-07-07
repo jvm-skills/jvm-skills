@@ -1,0 +1,25 @@
+name: Compose Desktop UI Testing
+description: >-
+  Compose Desktop UI testing through an HTTP control server, using a real
+  Maven Central library and reusable testing patterns without project-specific
+  Release Wizard coupling.
+repo: Mr3zee/Release-Wizard
+skill_path: ".claude/skills/compose-ui-test-server/SKILL.md"
+category: testing
+tools:
+  - claude
+languages:
+  - kotlin
+trust: curated
+author: Mr3zee
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: focused
+tech:
+  - compose-desktop
+  - ui-testing
+tags:
+  - compose
+  - desktop
+  - testing
+  - ui

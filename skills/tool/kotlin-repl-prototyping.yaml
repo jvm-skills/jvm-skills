@@ -1,0 +1,24 @@
+name: Kotlin REPL Prototyping
+description: >-
+  Kotlin REPL prototyping workflow using kotlinc -Xrepl and focused
+  experimentation techniques for Kotlin/JVM code before committing changes.
+repo: nomisRev/koog-workshop
+skill_path: ".agents/skills/kotlin-repl/SKILL.md"
+category: tool
+tools:
+  - claude
+languages:
+  - kotlin
+trust: curated
+author: Simon Vergauwen
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: focused
+tech:
+  - kotlin
+  - repl
+tags:
+  - kotlin
+  - repl
+  - prototyping
+  - experimentation

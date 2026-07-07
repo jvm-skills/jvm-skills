@@ -1,0 +1,23 @@
+name: Java 25 Conventions
+description: >-
+  Dense, opinionated Java 25 coding conventions for modern Java applications,
+  including concrete style, API, and implementation rules from Adam Bien.
+repo: AdamBien/airails
+skill_path: "java/java-conventions/SKILL.md"
+category: language
+tools:
+  - claude
+languages:
+  - java
+trust: curated
+author: Adam Bien
+version: "1.0.0"
+last_updated: "2026-07-03"
+scope: focused
+tech:
+  - java-25
+tags:
+  - java
+  - conventions
+  - clean-code
+  - style
