@@ -1,0 +1,24 @@
+name: Spring Boot Version-Aware Development
+description: >-
+  Version-aware Spring Boot coding across the 3.5.x↔4.0.x boundary — detects
+  Boot/Java versions and applies the right APIs (Jackson 2/3, @MockitoBean vs
+  @MockBean, built-in @GetMapping versioning), plus virtual-thread discipline,
+  JSpecify/NullAway build wiring (Maven + Gradle), and Micrometer/OpenTelemetry
+  observability. Delegates deep migration/JSpecify to sibling skills.
+repo: adityamparikh/spring-boot-skill
+skill_path: SKILL.md
+category: framework
+tools:
+  - claude
+languages:
+  - java
+trust: community
+author: Aditya Parikh
+tags:
+  - spring-boot
+  - spring
+  - version-detection
+  - virtual-threads
+  - nullaway
+  - observability
+  - backend

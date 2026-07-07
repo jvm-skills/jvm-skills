@@ -9,7 +9,7 @@ description: >-
   and debugging with checkpoint/log/ReactorDebugAgent/BlockHound.
 repo: adityamparikh/project-reactor-skill
 skill_path: SKILL.md
-category: web
+category: framework
 tools:
   - claude
 languages:

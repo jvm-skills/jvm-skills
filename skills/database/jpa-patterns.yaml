@@ -11,6 +11,8 @@ languages:
   - java
 trust: community
 author: Piotr Minkowski
+status: duplicate
+superseded_by: adityamparikh/hibernate-jpa-validator-skill
 version: "1.0.0"
 last_updated: "2026-03-27"
 scope: focused

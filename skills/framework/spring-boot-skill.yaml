@@ -1,11 +1,13 @@
-name: Spring Boot 4.x
+name: Spring Boot 4.x (SivaLabs scaffolding)
 description: >-
-  Spring Boot 4.x with Spring Modulith boundaries, Thymeleaf server-side
-  rendering, ArchUnit architecture tests, and Docker Compose dev services.
-  Opinionated package structure and Maven configuration.
+  Opinionated Spring Boot 4.x modular-monolith scaffolding (SivaLabs style):
+  package-by-feature + Spring Modulith boundaries, Thymeleaf server-side
+  rendering, ArchUnit/Taikai architecture tests, Docker Compose dev services,
+  and a Maven build-quality setup (Spotless, JaCoCo gate, buildpacks).
+  Maven-only, Boot 4.x.
 repo: sivaprasadreddy/sivalabs-agent-skills
 skill_path: "skills/spring-boot/SKILL.md"
-category: web
+category: framework
 languages:
   - java
   - kotlin
