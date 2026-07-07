@@ -11,10 +11,17 @@ export const meta = {
   ],
 }
 
-const H = '/Users/tschuehly/IdeaProjects/jvm-skills/skill-scout/harness'
-// Defensive: args may arrive as an object OR a JSON-encoded string. Parse either so `limit` always applies.
-const A = (typeof args === 'string') ? (args ? JSON.parse(args) : {}) : (args || {})
-const TODAY = A.today || '2026-06-26'
+// Defensive: args may arrive as an object OR a JSON-encoded string. Parse either so `limit` always
+// applies — and guard JSON.parse so a malformed string degrades to {} instead of aborting the run.
+let A = {}
+if (typeof args === 'string') { try { A = args ? JSON.parse(args) : {} } catch (e) { log(`args was an unparseable string (${(e && e.message) || e}); ignoring it.`); A = {} } }
+else if (args) A = args
+// Repo-relative paths (agents run Bash from the repo root). Override with A.repo for a non-standard cwd.
+const REPO = A.repo || '.'
+const H = `${REPO}/skill-scout/harness`
+// `today` stamps the CSVs — REQUIRE it (never silently backdate to a hardcoded date).
+const TODAY = A.today
+if (!TODAY || !/^\d{4}-\d{2}-\d{2}$/.test(TODAY)) throw new Error(`skill-scout: pass args.today as "YYYY-MM-DD" (got ${JSON.stringify(A.today)}); refusing to stamp CSVs with a hardcoded/absent date.`)
 const LIMIT = A.limit || 999
 const ONLY = Array.isArray(A.slugs) ? new Set(A.slugs) : null // optional explicit slug allowlist
 const CHUNK = 22 // speakers per scout.py call — under the 10-min Bash timeout; bigger = fewer scan agents
@@ -24,7 +31,6 @@ const MECH = { model: 'haiku', effort: 'low' } // pure command-runner agents (ru
 const EVAL_ONLY = Array.isArray(A.evalOnly) && A.evalOnly.length ? A.evalOnly : null // [{slug,name,url}] reuse existing *_scout.json
 const DRY_APPLY = !!A.dryApply // apply.py --dry (render, don't mutate the CSVs) — for fast tests
 const AUTO_COMMIT = !!A.autoCommit // opt-in: final step commits ONLY skill-scout outputs (db/, candidates.md, review.html, rules/*.md)
-const REPO = '/Users/tschuehly/IdeaProjects/jvm-skills'
 const MAX_SPEAKERS = A.maxSpeakers || 0 // optional per-conference speaker cap (small trials); 0 = full roster
 
 const QUEUE_SCHEMA = { type: 'object', required: ['confs'], properties: { confs: { type: 'array', items: {
@@ -169,7 +175,7 @@ log(`Scan complete: ${scanned.length} conferences scanned.`)
 // ---------------- Phase 4: eval — bundle-aware, rules-driven, self-refining ----------------
 phase('Eval')
 const JUDGE_BATCH = 40 // files per judge agent — bigger = fewer agents (Haiku has the context budget)
-const DBDIR = '/Users/tschuehly/IdeaProjects/jvm-skills/skill-scout/db'
+const DBDIR = `${REPO}/skill-scout/db`
 const EVAL_RULES = `${H}/rules/eval.md`, MATCH_RULES = `${H}/rules/matching.md`
 
 // 4a) prep per conf: detect bundles, then prefilter (excluding bundle members). One agent per conf.

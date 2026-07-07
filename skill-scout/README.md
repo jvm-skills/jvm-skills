@@ -20,7 +20,7 @@ per conference across many subagents and checkpoints to disk, so a relaunch resu
 
 ```
 Workflow({
-  scriptPath: "/Users/tschuehly/IdeaProjects/jvm-skills/skill-scout/harness/overnight.workflow.js",
+  scriptPath: "skill-scout/harness/overnight.workflow.js",
   args: { limit: 25, today: "YYYY-MM-DD" }
 })
 ```
@@ -32,7 +32,7 @@ Workflow({
 
 | Arg | Default | Meaning |
 |---|---|---|
-| `today` | `2026-06-26` | run date, stamped into the CSVs — **always pass the real date** |
+| `today` | **required** | run date (`YYYY-MM-DD`), stamped into the CSVs — the run errors out if absent, so **always pass the real date** |
 | `limit` | `999` | max conferences to scan this run (batches of ~25 are the tested size) |
 | `slugs` | — | explicit slug allowlist, e.g. `["javazone"]`, to run/resume specific confs |
 | `recheckModel` | `sonnet` | adversarial-recheck model; pass `"opus"` for a high-stakes pass |

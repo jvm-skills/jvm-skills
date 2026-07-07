@@ -2,8 +2,11 @@
 """Regenerate candidates.md as a human view of db/*.csv (system of record)."""
 import csv, os
 from skilldedup import dedup_found, found_keys, skill_name
-DB = "/Users/tschuehly/IdeaProjects/jvm-skills/skill-scout/db"
-OUT = "/Users/tschuehly/IdeaProjects/jvm-skills/skill-scout/candidates.md"
+# Portable: resolve db/ and the output file relative to this script, with env overrides.
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_SS = os.path.dirname(_HERE)  # skill-scout/
+DB = os.environ.get("SKILL_SCOUT_DB") or os.path.join(_HERE, "..", "db")
+OUT = os.environ.get("SKILL_SCOUT_CANDIDATES_MD") or os.path.join(_SS, "candidates.md")
 def load(n): return list(csv.DictReader(open(os.path.join(DB, n))))
 conf = load("conferences.csv"); spk = load("speakers.csv"); sc = load("speaker_conferences.csv")
 res = load("resolutions.csv"); repos = load("repos.csv"); sf = load("skill_files.csv"); runs = load("runs.csv")

@@ -23,7 +23,7 @@ Launch the skill-scout loop over the unscanned conference queue. Full design + p
 3. **Launch the Workflow** (one batch, self-committing):
    ```
    Workflow({
-     scriptPath: "/Users/tschuehly/IdeaProjects/jvm-skills/skill-scout/harness/overnight.workflow.js",
+     scriptPath: "skill-scout/harness/overnight.workflow.js",
      args: { limit: 25, today: "<today>", autoCommit: true }
    })
    ```

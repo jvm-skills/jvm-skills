@@ -3,8 +3,11 @@
 Shows every decision with its reasoning: found / needs-review / reviewable non-JVM /
 promote-worthy JVM-collection / vendored leads / manual-confirm / parked / filtered noise."""
 import csv, os, html, datetime
-DB = "/Users/tschuehly/IdeaProjects/jvm-skills/skill-scout/db"
-OUT = "/Users/tschuehly/IdeaProjects/jvm-skills/skill-scout/review.html"
+# Portable: resolve db/ and the output file relative to this script, with env overrides.
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_SS = os.path.dirname(_HERE)  # skill-scout/
+DB = os.environ.get("SKILL_SCOUT_DB") or os.path.join(_HERE, "..", "db")
+OUT = os.environ.get("SKILL_SCOUT_REVIEW_HTML") or os.path.join(_SS, "review.html")
 TODAY = datetime.date.today().isoformat()
 def load(n):
     p = os.path.join(DB, n)

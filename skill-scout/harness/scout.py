@@ -3,9 +3,13 @@
 Usage: scout.py <speakers.json> <out.json>
 Reads db/speakers.csv + db/resolutions.csv for dedupe/reuse. Does NOT write the db.
 """
-import json, subprocess, re, time, unicodedata, sys, csv, os
+import json, subprocess, re, time, unicodedata, sys, csv, os, hashlib
 
-DB = "/Users/tschuehly/IdeaProjects/jvm-skills/skill-scout/db"
+# Portable paths: resolve relative to this script (harness/ -> skill-scout/db, repo/skills),
+# with env overrides for non-standard layouts / CI.
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_ROOT = os.path.dirname(os.path.dirname(_HERE))  # skill-scout/harness -> skill-scout -> repo root
+DB = os.environ.get("SKILL_SCOUT_DB") or os.path.join(_HERE, "..", "db")
 # Two modes:
 #   scout.py <speakers.json> <out.json>          resolve roster + scan HIGH handles
 #   scout.py --logins a,b,c <out.json>           scan only these logins (investigate-accepted MEDs)
@@ -24,6 +28,14 @@ SKILL_RE = re.compile(r"(^|/)(SKILL\.md|AGENTS\.md|CLAUDE\.md|\.cursorrules)$", 
 def norm(s):
     s = unicodedata.normalize("NFKD", s or ""); s = "".join(c for c in s if not unicodedata.combining(c))
     return re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
+def key(s):
+    """Stable identity/cache key. norm() collapses non-Latin names (Cyrillic, CJK, …) to "",
+    which would make every such speaker collide on norm_name="" and reuse the wrong resolution.
+    Fall back to a deterministic hash of the original so distinct names get distinct keys."""
+    n = norm(s)
+    if n: return n
+    raw = re.sub(r"\s+", "", (s or "").strip().lower())
+    return ("u:" + hashlib.sha1(raw.encode("utf-8")).hexdigest()[:12]) if raw else ""
 def gh(args):
     try:
         o = subprocess.run(["gh"]+args, capture_output=True, text=True, timeout=60)
@@ -66,13 +78,13 @@ res_db = {r["norm_name"]: r for r in load_csv("resolutions.csv")}
 # alias ledger (authoritative human/auto overrides). confirm -> force login HIGH; reject -> never pick.
 ALIAS, REJECT = {}, {}
 for a in load_csv("aliases.csv"):
-    nn = norm(a.get("norm_name","")); lg = (a.get("github_login") or "").strip()
+    nn = key(a.get("norm_name","")); lg = (a.get("github_login") or "").strip()
     if not nn or not lg: continue
     if a.get("decision") == "confirm": ALIAS[nn] = lg
     elif a.get("decision") == "reject": REJECT.setdefault(nn, set()).add(lg)
 
 # EXCLUDE: repos already listed in skills/**/*.yaml (so the loop never re-promotes them)
-SKILLS_DIR = "/Users/tschuehly/IdeaProjects/jvm-skills/skills"
+SKILLS_DIR = os.environ.get("SKILL_SCOUT_SKILLS_DIR") or os.path.join(_ROOT, "skills")
 EXCLUDE = set()
 for root, _, files in os.walk(SKILLS_DIR):
     for fn in files:
@@ -85,7 +97,7 @@ CAND_KEYS = ("login","name","company","bio","flw","nm","am","orgs","jvm_repo")
 def _cand_out(c): return {k: c.get(k) for k in CAND_KEYS if k in c}
 
 def resolve(name, aff):
-    nn = norm(name)
+    nn = key(name)
     # 1) alias ledger is authoritative — force the confirmed login (HIGH), one enrich for display fields
     if nn in ALIAS:
         c = enrich(ALIAS[nn]) or {}

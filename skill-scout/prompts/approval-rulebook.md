@@ -1,7 +1,7 @@
 # Prompt — jvm-skills Approval Rulebook + Strict Candidate Review
 
-Paste everything below into a **fresh** Claude Code session opened at the repo root
-(`/Users/tschuehly/IdeaProjects/jvm-skills`). Run it with the **strongest available model
+Paste everything below into a **fresh** Claude Code session opened at the repo root (the
+`jvm-skills` checkout). Run it with the **strongest available model
 (Opus) at high/max reasoning effort** — the judging step depends on it. It is self-contained; it
 assumes no prior context.
 

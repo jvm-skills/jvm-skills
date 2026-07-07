@@ -13,7 +13,9 @@ Pass --dry to print the diff without writing.
 """
 import json, csv, os, sys, datetime, io
 
-DB = "/Users/tschuehly/IdeaProjects/jvm-skills/skill-scout/db"
+# Portable: resolve db/ relative to this script, with an env override for CI / non-standard layouts.
+_HERE = os.path.dirname(os.path.abspath(__file__))
+DB = os.environ.get("SKILL_SCOUT_DB") or os.path.join(_HERE, "..", "db")
 DRY = "--dry" in sys.argv
 CHECKPOINT = "--checkpoint" in sys.argv  # write only speakers/speaker_conferences/resolutions for cross-conf dedup; skip stamp/skills/rejected/ledger
 cfg = json.load(open([a for a in sys.argv[1:] if not a.startswith("-")][0]))

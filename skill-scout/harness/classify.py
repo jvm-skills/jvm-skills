@@ -20,7 +20,11 @@ reason vocabulary
 """
 import re, os
 
-SKILLS_DIR = "/Users/tschuehly/IdeaProjects/jvm-skills/skills"
+# Portable: repo-root skills/ resolved relative to this script (harness/ -> skill-scout -> repo),
+# with an env override for CI / non-standard layouts.
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_ROOT = os.path.dirname(os.path.dirname(_HERE))
+SKILLS_DIR = os.environ.get("SKILL_SCOUT_SKILLS_DIR") or os.path.join(_ROOT, "skills")
 
 def load_exclude():
     ex = set()
