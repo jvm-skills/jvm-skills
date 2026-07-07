@@ -12,7 +12,6 @@ tools:
   - claude
   - cursor
   - copilot
-  - codex
 languages:
   - java
 trust: community
