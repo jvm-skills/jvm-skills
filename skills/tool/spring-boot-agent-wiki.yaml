@@ -17,10 +17,8 @@ tools:
   - claude
   - cursor
   - copilot
-  - codex
 languages:
   - java
-  - markdown
 trust: community
 author: Nityam Jigyasu
 tags:
