@@ -28,13 +28,18 @@ SKILL_RE = re.compile(r"(^|/)(SKILL\.md|AGENTS\.md|CLAUDE\.md|\.cursorrules)$", 
 def norm(s):
     s = unicodedata.normalize("NFKD", s or ""); s = "".join(c for c in s if not unicodedata.combining(c))
     return re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
+_KEYRE = re.compile(r"^u:[0-9a-f]{12}$")
 def key(s):
     """Stable identity/cache key. norm() collapses non-Latin names (Cyrillic, CJK, …) to "",
     which would make every such speaker collide on norm_name="" and reuse the wrong resolution.
-    Fall back to a deterministic hash of the original so distinct names get distinct keys."""
+    Fall back to a deterministic hash of the original so distinct names get distinct keys.
+    Idempotent: a value that is ALREADY a hashed key (e.g. read back from aliases.csv) is
+    returned verbatim — re-normalizing it would turn "u:3efc…" into "u 3efc…" and break lookups."""
+    s = s or ""
+    if _KEYRE.match(s): return s
     n = norm(s)
     if n: return n
-    raw = re.sub(r"\s+", "", (s or "").strip().lower())
+    raw = re.sub(r"\s+", "", s.strip().lower())
     return ("u:" + hashlib.sha1(raw.encode("utf-8")).hexdigest()[:12]) if raw else ""
 def gh(args):
     try:
