@@ -1,30 +1,33 @@
 name: Kubernetes Persistent Storage for JVM/Spring Applications
 description: >-
-  An opinionated workflow for teaching AI coding tools how to reason about,
-  review, and implement Kubernetes persistent-storage behavior for JVM and
-  Spring Boot workloads. Covers StorageClass capabilities, PVC usage, volume
-  expansion, snapshot policy, StatefulSet replica risk, backup targets,
-  non-root volume permissions, file-locking pitfalls, ephemeral storage
-  overflow, strict Spring property decoupling, blast-radius analysis, and safe
-  remediation planning.
-repo: nmj18txstate/infraspine
+  Teaches AI coding tools how JVM applications behave on Kubernetes persistent
+  and ephemeral volumes: container memory sizing with -XX:MaxRAMPercentage,
+  java.nio file I/O and FileLock risks on shared PVCs, ShedLock-style
+  coordination, JVM temp-dir, heap-dump, and GC-log placement, PVC access-mode
+  implications, typed Spring storage configuration, and backup-first remediation.
+repo: nmj18txstate/kubernetes-persistent-storage-jvm-skill
+skill_path: skills/kubernetes-persistent-storage-jvm/SKILL.md
 category: workflow
 tools:
   - claude
   - cursor
   - copilot
+  - codex
 languages:
   - java
 trust: community
 author: Nityam Jigyasu
 tags:
-  - kubernetes
+  - java
+  - jvm
   - spring-boot
-  - persistent-volumes
+  - kubernetes
   - pvc
-  - storageclass
-  - statefulset
-  - backup
-  - disaster-recovery
-  - reliability
+  - persistent-volumes
+  - ephemeral-storage
+  - java-nio
+  - file-locking
+  - shedlock
+  - container-memory
+  - heap-dumps
   - remediation
