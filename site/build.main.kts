@@ -51,7 +51,8 @@ data class SkillInfo(
     val languages: List<String>,
     val tech: List<String>,
     val tags: List<String>,
-    val eval: String  // path to benchmark.json relative to repo root, empty if none
+    val eval: String,  // path to benchmark.json relative to repo root, empty if none
+    val status: String  // "duplicate" → superseded listing, hidden from the site
 )
 
 // Parsed eval summary for rendering
@@ -87,7 +88,8 @@ for (category in categories) {
             languages = (skill["languages"] as? List<*>)?.map { it.toString() } ?: emptyList(),
             tech = (skill["tech"] as? List<*>)?.map { it.toString() } ?: emptyList(),
             tags = (skill["tags"] as? List<*>)?.map { it.toString() } ?: emptyList(),
-            eval = skill["eval"]?.toString() ?: ""
+            eval = skill["eval"]?.toString() ?: "",
+            status = skill["status"]?.toString() ?: ""
         )
     }
 }
@@ -162,6 +164,7 @@ val skillCards = buildString {
         for (yamlFile in yamlFiles) {
             val key = "$category/${yamlFile.nameWithoutExtension}"
             val skill = skillsMap[key] ?: continue
+            if (skill.status == "duplicate") continue  // superseded listing, hidden from site
 
             val langsCsv = skill.languages.joinToString(",")
             val techCsv = skill.tech.joinToString(",")
