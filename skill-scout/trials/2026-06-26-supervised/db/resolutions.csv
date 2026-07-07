@@ -1,0 +1,94 @@
+norm_name,github_login,confidence,gh_name,gh_company,followers,method,resolved_at,recheck_after
+anton arhipov,antonarhipov,HIGH,Anton Arhipov,JetBrains,614,fullname,2026-06-26,
+alex soto,lordofthejars,HIGH,Alex Soto,IBM,602,fullname,2026-06-26,
+dan vega,danvega,MED,Dan Vega,"Code Monkey, LLC",4406,fullname,2026-06-26,2026-09-24
+gerrit grunwald,HanSolo,HIGH,Gerrit Grunwald,Azul Systems,1023,fullname,2026-06-26,
+kenneth kousen,,UNRESOLVED,,,,broad,2026-06-26,2026-09-24
+milen dyankov,azzazzel,MED,Milen Dyankov,,79,fullname,2026-06-26,2026-09-24
+victor rentea,victorrentea,HIGH,Victor Rentea,Independent,1464,fullname,2026-06-26,
+roberto cortez,radcortez,HIGH,Roberto Cortez,Red Hat,365,fullname,2026-06-26,
+ioannis kolaxis,ikolaxis,MED,Ioannis Kolaxis,Accenture,1,fullname,2026-06-26,2026-09-24
+jonathan vila lopez,,UNRESOLVED,,,,broad,2026-06-26,2026-09-24
+venkat subramaniam,venkats,HIGH,Venkat Subramaniam,"Agile Developer, Inc.",498,fullname,2026-06-26,
+marit van dijk,mlvandijk,HIGH,Marit van Dijk,JetBrains,171,fullname,2026-06-26,
+stefan angelov,stefan50,MED,Stefan Angelov,,28,fullname,2026-06-26,2026-09-24
+ivan yonkov,RoYaLBG,HIGH,Ivan Yonkov,@CodexioLtd ,166,fullname,2026-06-26,
+cay horstmann,,UNRESOLVED,,,,broad,2026-06-26,2026-09-24
+piotr przyby,pioorg,HIGH,Piotr Przybył,Elastic,63,fullname,2026-06-26,
+johannes bechberger,parttimenerd,HIGH,Johannes Bechberger,SAP SE,206,fullname,2026-06-26,
+hinse ter schuur,coduinix,MED,Hinse ter Schuur,SDB Professionals,3,fullname,2026-06-26,2026-09-24
+christian heitzmann,,UNRESOLVED,,,,broad,2026-06-26,2026-09-24
+willem jan glerum,wjglerum,MED,Willem Jan Glerum,@lunatech-labs ,31,fullname,2026-06-26,2026-09-24
+marcin chrost,chrosciu,MED,Marcin Chrost,Sages / Bottega IT Minds,28,fullname,2026-06-26,2026-09-24
+vadym kazulkin,Vadym79,HIGH,Vadym Kazulkin,ip.labs,84,fullname,2026-06-26,
+emanuel trandafir,etrandafir93,MED,Emanuel Trandafir,,16,fullname,2026-06-26,2026-09-24
+arnaud jean,jean-developer,MED,Jean Carlos Arnaud B.,@SoutLogic,13,fullname,2026-06-26,2026-09-24
+panche chavkovski,,UNRESOLVED,,,,broad,2026-06-26,2026-09-24
+kristiyan stoyanov,KrisKStoyanov,MED,Kristiyan Stoyanov,,3,fullname,2026-06-26,2026-09-24
+lyubomir bozhinov,lyubomir-bozhinov,MED,Lyubomir Bozhinov,,16,fullname,2026-06-26,2026-09-24
+viktoriya kutsarova,viktoriya-kutsarova,MED,Viktoriya Kutsarova,,3,fullname,2026-06-26,2026-09-24
+kevin dubois,kdubois,HIGH,Kevin Dubois,IBM,126,fullname,2026-06-26,
+jordan jovkov,jordanjovkov-gojiinvestments,MED,Jordan Jovkov,Goji Investments,0,fullname,2026-06-26,2026-09-24
+francois martin,martinfrancois,HIGH,François Martin,@karakun,65,fullname,2026-06-26,
+thanos stratikopoulos,stratika,MED,Thanos Stratikopoulos,The University of Manchester,24,fullname,2026-06-26,2026-09-24
+sergi almar,salmar,MED,Sergi Almar,,317,fullname,2026-06-26,2026-09-24
+nayden gochev,gochev,MED,Nayden Gochev,,61,fullname,2026-06-26,2026-09-24
+josh long,joshlong,HIGH,Josh Long,the Spring team (https://spring.io) ,10002,fullname,2026-06-26,
+juergen hoeller,jhoeller,HIGH,Juergen Hoeller,Broadcom,1828,fullname,2026-06-26,
+dave syer,dsyer,HIGH,Dave Syer,Broadcom,4278,fullname,2026-06-26,
+oliver drotbohm,odrotbohm,HIGH,Oliver Drotbohm,Spring Open Source Engineering,3993,fullname,2026-06-26,
+sebastien deleuze,sdeleuze,HIGH,Sébastien Deleuze,Broadcom,1355,fullname,2026-06-26,
+thomas vitale,ThomasVitale,HIGH,Thomas Vitale,Systematic A/S,1246,fullname,2026-06-26,
+siva prasad reddy katamreddy,,UNRESOLVED,,,,broad,2026-06-26,2026-09-24
+mark pollack,markpollack,HIGH,Mark Pollack,VMware,483,fullname,2026-06-26,
+christian tzolov,tzolov,HIGH,Christian Tzolov,@spring-io ,748,fullname,2026-06-26,
+daniel garnier moiroux,Kehrlann,HIGH,Daniel Garnier-Moiroux,@broadcom ,797,fullname-ascii,2026-06-26,
+rod johnson,johnsonr,HIGH,Rod Johnson,Embabel,562,fullname,2026-06-26,
+tim te beek,timtebeek,HIGH,Tim te Beek,@moderneinc ,282,fullname,2026-06-26,
+marcin grzejszczak,marcingrzejszczak,HIGH,Marcin Grzejszczak,HeroDevs,889,fullname,2026-06-26,
+jonatan ivanov,jonatan-ivanov,HIGH,Jonatan Ivanov,@broadcom,436,fullname,2026-06-26,
+rossen stoyanchev,rstoyanchev,HIGH,Rossen Stoyanchev,Broadcom,1606,fullname,2026-06-26,
+thorben janssen,thjanssen,HIGH,Thorben Janssen,Persistence Hub founder and Java persistence specialist,565,fullname,2026-06-26,
+mauricio salatino,,UNRESOLVED,,,,fullname,2026-06-26,2026-09-24
+james ward,jamesward,HIGH,James Ward,@aws,1923,fullname,2026-06-26,
+alina yurenko,alina-yur,HIGH,Alina Yurenko,Oracle,360,fullname,2026-06-26,
+mark paluch,mp911de,MED,Mark Paluch,,1389,fullname,2026-06-26,2026-09-24
+stephen chin,steveonjava,MED,Stephen Chin,,214,fullname,2026-06-26,2026-09-24
+viktor gamov,gAmUssA,HIGH,Viktor Gamov,Confluent,610,fullname,2026-06-26,
+baruch sadogursky,jbaruch,MED,Baruch Sadogursky,,451,fullname,2026-06-26,2026-09-24
+markus eisele,myfear,HIGH,Markus Eisele,@jboss ,388,fullname,2026-06-26,
+ivar grimstad,ivargrimstad,MED,Ivar Grimstad,,374,fullname,2026-06-26,2026-09-24
+jennifer reif,JMHReif,HIGH,Jennifer Reif,Neo4j,137,fullname,2026-06-26,
+simon ritter,speakjava,HIGH,Simon Ritter,Oracle,55,fullname,2026-06-26,
+daniel oh,danieloh30,HIGH,Daniel Oh,IBM,195,fullname,2026-06-26,
+nathaniel schutta,,UNRESOLVED,,,,fullname,2026-06-26,2026-09-24
+rustam mehmandarov,mehmandarov,MED,Rustam Mehmandarov,,162,fullname,2026-06-26,2026-09-24
+raphael de lio,raphaeldelio,HIGH,Raphael De Lio,Developer Advocate @ Redis,64,fullname,2026-06-26,
+pasha finkelshteyn,asm0dey,HIGH,Pasha Finkelshteyn,@bell-sw,171,fullname,2026-06-26,
+brian vermeer,bmvermeer,HIGH,Brian Vermeer,@snyk,106,fullname,2026-06-26,
+cedric clyburn,cedricclyburn,HIGH,Cedric Clyburn,Red Hat,76,fullname,2026-06-26,
+ted m young,tedyoung,HIGH,Ted M. Young,"Spiral Learning, LLC",309,fullname-ascii,2026-06-26,
+billy korando,wkorando,HIGH,Billy Korando,Oracle,217,fullname,2026-06-26,
+chandra guntur,c-guntur,MED,Chandra Guntur,,241,fullname,2026-06-26,2026-09-24
+douglas hawkins,dougqh,MED,Douglas Q Hawkins,,110,fullname,2026-06-26,2026-09-24
+olena kutsenko,anelook,MED,Olena Kutsenko,,45,fullname,2026-06-26,2026-09-24
+david vlijmincx,davidtos,MED,David Vlijmincx,,18,fullname,2026-06-26,2026-09-24
+adam bien,AdamBien,HIGH,Adam Bien,adam-bien.com,3077,fullname,2026-06-26,
+adam warski,adamw,HIGH,Adam Warski,https://www.softwaremill.com,797,fullname,2026-06-26,
+charles nutter,headius,HIGH,Charles Oliver Nutter,Headius Enterprises,1291,fullname,2026-06-26,
+heinz kabutz,,UNRESOLVED,,,,broad,2026-06-26,2026-09-24
+jaroslav tulach,jtulach,MED,Jaroslav Tulach,Personal account,100,fullname,2026-06-26,2026-09-24
+maurice naftalin,MauriceNaftalin,MED,Maurice Naftalin,,34,fullname,2026-06-26,2026-09-24
+nicolas frankel,nfrankel,MED,Nicolas Fränkel,,649,fullname,2026-06-26,2026-09-24
+otavio santana,otaviojava,HIGH,Otávio Santana,@eclipse @soujava @apache,1312,fullname,2026-06-26,
+mohamed taman,mohamed-taman,HIGH,Mohamed Taman,Magna International ,922,fullname,2026-06-26,
+dmytro vyazelenko,vyazelenko,MED,Dmytro Vyazelenko,,82,fullname,2026-06-26,2026-09-24
+bazlur rahman,rokon12,HIGH,A N M Bazlur Rahman ,Hammerspace,650,fullname,2026-06-26,
+andrzej grzesik,,UNRESOLVED,,,,fullname,2026-06-26,2026-09-24
+natan silnitsky,natansil,MED,Natan Silnitsky,Wix,36,fullname,2026-06-26,2026-09-24
+tomer gabel,holograph,HIGH,Tomer Gabel,Substrate Software Services,56,fullname,2026-06-26,
+andrus adamchik,andrus,HIGH,Andrus Adamchik,ObjectStyle,100,fullname,2026-06-26,
+mete atamel,meteatamel,HIGH,Mete Atamel,Google,434,fullname,2026-06-26,
+ron veen,,UNRESOLVED,,,,fullname,2026-06-26,2026-09-24
+nick palmer,Palmr,MED,Nick Palmer,,81,fullname,2026-06-26,2026-09-24
+artur skowronski,ArturSkowronski,HIGH,Artur Skowronski,@VirtusLab,65,fullname,2026-06-26,

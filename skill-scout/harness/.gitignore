@@ -1,0 +1,17 @@
+# run artifacts written here by the loop (per-conference caches)
+*_speakers.json
+*_scout*.json
+*_chunk*.json
+*_prefilter.json
+*_bundles.json
+*_verdicts*.json
+*_ckpt.json
+*_conf.json
+*_overlay.json
+*_peek_data.json
+*_peek_results.json
+recheck_*.json
+*_aliases_add.csv
+fetch_results.json
+peek_results.txt
+__pycache__/
