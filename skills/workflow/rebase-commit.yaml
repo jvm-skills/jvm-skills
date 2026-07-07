@@ -1,0 +1,23 @@
+name: Rebase Commit
+description: >-
+  Rebase non-pushed commits and uncommitted changes into clean logical feature
+  commits using vertical-slice grouping. Preserves incremental slices as
+  separate commits while merging related fixes.
+repo: jvm-skills/jvm-skills
+skill_path: ".claude/skills/rebase-commit/SKILL.md"
+category: workflow
+languages:
+  - kotlin
+  - java
+  - groovy
+trust: curated
+author: jvm-skills
+version: "1.1.0"
+last_updated: "2026-04-15"
+scope: focused
+tech: []
+tags:
+  - git
+  - rebase
+  - commit
+  - version-control

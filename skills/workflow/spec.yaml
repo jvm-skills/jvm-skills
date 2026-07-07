@@ -1,0 +1,23 @@
+name: Spec
+description: >-
+  Generate a feature spec with user stories from conversation context and
+  codebase exploration. Proactively resolves unknowns by mining conversation,
+  exploring code, and reading docs — no interview needed.
+repo: jvm-skills/jvm-skills
+skill_path: ".claude/skills/spec/SKILL.md"
+category: workflow
+languages:
+  - kotlin
+  - java
+  - groovy
+trust: curated
+author: jvm-skills
+version: "1.1.0"
+last_updated: "2026-04-15"
+scope: focused
+tech: []
+tags:
+  - spec
+  - planning
+  - user-stories
+  - requirements
