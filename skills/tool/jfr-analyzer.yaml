@@ -4,6 +4,7 @@ description: >-
   event-type semantics, native jfr CLI usage, lock contention, allocation, GC,
   and noise-filtering strategies.
 repo: victorrentea/performance-profiling
+branch: master
 skill_path: ".claude/skills/jfr-analyzer/SKILL.md"
 category: tool
 tools:

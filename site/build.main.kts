@@ -45,6 +45,7 @@ data class SkillInfo(
     val name: String,
     val description: String,
     val repo: String,
+    val branch: String,
     val skillPath: String,
     val author: String,
     val trust: String,
@@ -82,6 +83,7 @@ for (category in categories) {
             name = skill["name"]?.toString() ?: "",
             description = skill["description"]?.toString() ?: "",
             repo = skill["repo"]?.toString() ?: "",
+            branch = skill["branch"]?.toString() ?: "main",
             skillPath = skill["skill_path"]?.toString() ?: "",
             author = skill["author"]?.toString() ?: "",
             trust = skill["trust"]?.toString() ?: "community",
@@ -181,9 +183,9 @@ val skillCards = buildString {
             append("</div>\n")
             append("""<div class="card-body">""")
             append("\n")
-            val skillUrl = if (skill.skillPath.isNotEmpty()) "https://github.com/${htmlEscape(skill.repo)}/blob/main/${htmlEscape(skill.skillPath)}" else "https://github.com/${htmlEscape(skill.repo)}"
+            val skillUrl = if (skill.skillPath.isNotEmpty()) "https://github.com/${htmlEscape(skill.repo)}/blob/${htmlEscape(skill.branch)}/${htmlEscape(skill.skillPath)}" else "https://github.com/${htmlEscape(skill.repo)}"
             val skillDir = if (skill.skillPath.contains("/")) skill.skillPath.substringBeforeLast("/") else ""
-            val skillDirUrl = if (skillDir.isNotEmpty()) "https://github.com/${skill.repo}/tree/main/$skillDir" else "https://github.com/${skill.repo}"
+            val skillDirUrl = if (skillDir.isNotEmpty()) "https://github.com/${skill.repo}/tree/${skill.branch}/$skillDir" else "https://github.com/${skill.repo}"
             val skillSlug = if (skillDir.isNotEmpty()) skillDir.substringAfterLast("/") else skill.repo.substringAfterLast("/")
             val installText = "Fetch the skill from $skillDirUrl and save all files to .claude/skills/$skillSlug/"
 
@@ -392,7 +394,7 @@ if (blogPosts.isNotEmpty()) {
                 append("""<div class="related-skills-grid">""")
                 for (skillRef in post.skills) {
                     val skill = skillsMap[skillRef] ?: continue
-                    val skillUrl = if (skill.skillPath.isNotEmpty()) "https://github.com/${htmlEscape(skill.repo)}/blob/main/${htmlEscape(skill.skillPath)}" else "https://github.com/${htmlEscape(skill.repo)}"
+                    val skillUrl = if (skill.skillPath.isNotEmpty()) "https://github.com/${htmlEscape(skill.repo)}/blob/${htmlEscape(skill.branch)}/${htmlEscape(skill.skillPath)}" else "https://github.com/${htmlEscape(skill.repo)}"
                     val langsHtml = skill.languages.joinToString("") { """<span>$it</span>""" }
                     append("""<div class="related-skill-card">""")
                     append("""<h4><a href="$skillUrl" aria-label="View skill ${htmlEscape(skill.name)}"><button class="nav-link" type="button" style="padding: 4px 8px; font-size: 0.75rem; border: none; width: 100%; justify-content: flex-start;">${htmlEscape(skill.name)}</button></a></h4>""")
