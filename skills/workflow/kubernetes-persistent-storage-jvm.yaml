@@ -16,6 +16,10 @@ languages:
   - java
 trust: community
 author: Nityam Jigyasu
+version: "1.0.0"
+last_updated: "2026-07-09"
+scope: focused
+tech: []
 tags:
   - java
   - jvm
