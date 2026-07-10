@@ -11,16 +11,20 @@ description: >-
   repository knowledge after service-layer, business-logic, README,
   configuration, YAML, Docker, Kubernetes, and build changes.
 repo: nmj18txstate/spring-boot-agent-wiki
-skill_path: skills/spring-boot-agent-wiki/SKILL.md
+skill_path: "skills/spring-boot-agent-wiki/SKILL.md"
 category: tool
-tools:
-  - claude
-  - cursor
-  - copilot
 languages:
   - java
 trust: community
 author: Nityam Jigyasu
+version: "1.0.0"
+last_updated: "2026-07-09"
+min_java: "21"
+scope: focused
+tech:
+  - spring-boot
+  - maven
+  - markdown
 tags:
   - java
   - spring-boot
