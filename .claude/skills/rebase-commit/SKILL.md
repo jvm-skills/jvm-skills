@@ -1,3 +1,8 @@
+---
+name: rebase-commit
+description: Rebase all non-pushed commits and uncommitted changes into clean logical feature commits.
+---
+
 # Rebase Commit Skill
 
 Rebase all non-pushed commits and uncommitted changes into clean logical feature commits.
