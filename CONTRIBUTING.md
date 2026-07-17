@@ -24,9 +24,6 @@ The easiest way to contribute is to add a new skill listing.
      Be specific about the technologies and patterns covered.
    repo: your-username/your-skill-repo
    category: database
-   tools:
-     - claude
-     - cursor
    languages:
      - kotlin
      - java
@@ -37,7 +34,7 @@ The easiest way to contribute is to add a new skill listing.
      - tags
    ```
 
-   Optional fields: `maintainer`, `version`, `last_updated`, `min_spring_boot`, `screenshots`
+   Optional fields: `tools`, `maintainer`, `version`, `last_updated`, `min_spring_boot`, `screenshots`
 
 4. **Open a PR** — CI will automatically validate your YAML
 
@@ -49,10 +46,10 @@ The easiest way to contribute is to add a new skill listing.
 | `description` | yes | One paragraph, shown on the card |
 | `repo` | yes | GitHub `owner/repo` where the skill lives |
 | `category` | yes | One of: framework, language, database, testing, fullstack, web, workflow, tool |
-| `tools` | yes | AI tools: claude, cursor, copilot, windsurf, aider |
 | `languages` | yes | kotlin, java, or both |
 | `trust` | yes | `community` for PR submissions (`official` and `curated` assigned by maintainers) |
 | `author` | yes | Person or org who created the skill |
+| `tools` | no | AI tools the skill is written for: claude, cursor, copilot, windsurf, aider |
 | `tags` | no | Freeform tags for filtering |
 
 ### Trust Levels
