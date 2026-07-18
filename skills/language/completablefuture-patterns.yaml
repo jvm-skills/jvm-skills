@@ -1,0 +1,32 @@
+name: CompletableFuture Patterns
+description: >-
+  CompletableFuture best practices for asynchronous Java pipelines: operator
+  selection (supplyAsync, thenApply, thenCompose, thenCombine, allOf, anyOf),
+  the two-phase launch/join pattern, anti-patterns (blocking inside the
+  pipeline, shared mutable state), dedicated executors with named
+  ThreadFactory, bounding in-flight tasks with Semaphore and
+  Gatherers.mapConcurrent (Java 24+), error handling with exceptionally/
+  handle/whenComplete, timeouts with orTimeout/completeOnTimeout, and
+  sealed response types for modeling failure as data in fan-in reductions.
+repo: nuriaruiz/completablefuture-patterns-skill
+skill_path: SKILL.md
+category: language
+languages:
+  - java
+trust: community
+author: Nuria Ruiz
+version: "1.0.0"
+last_updated: "2026-07-18"
+scope: focused
+tech:
+  - completablefuture
+  - java-21
+tags:
+  - completablefuture
+  - async
+  - concurrency
+  - threading
+  - executor
+  - error-handling
+  - code-review
+  - pipelines
