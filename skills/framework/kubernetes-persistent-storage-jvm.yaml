@@ -18,7 +18,7 @@ languages:
 trust: community
 author: Nityam Jigyasu
 version: "1.0.0"
-last_updated: "2026-07-17"
+last_updated: "2026-07-21"
 scope: focused
 tech:
   - spring-boot
