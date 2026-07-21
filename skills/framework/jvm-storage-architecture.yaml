@@ -6,8 +6,8 @@ description: >-
   JVM temp-dir, heap-dump, and GC-log placement, typed Spring storage
   configuration, and backup-first remediation planning.
 repo: nmj18txstate/jvm-storage-architecture-skill
-skill_path: skills/jvm-storage-architecture/SKILL.md
-category: workflow
+skill_path: "skills/jvm-storage-architecture/SKILL.md"
+category: framework
 tools:
   - claude
   - cursor
