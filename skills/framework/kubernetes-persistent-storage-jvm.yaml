@@ -1,0 +1,42 @@
+name: Kubernetes Persistent Storage for JVM/Spring Applications
+description: >-
+  Teaches AI coding tools how JVM/Spring applications should reason about
+  Kubernetes-specific storage behavior: PVC access modes, ReadWriteOncePod,
+  ReadWriteMany shared-path risks, emptyDir size limits, ephemeral-storage
+  eviction, StorageClass expansion and snapshot capability, StatefulSet volume
+  identity, Kubernetes Lease coordination, Spring Integration LockRegistry, and
+  ShedLock-scoped scheduled work on shared volumes.
+repo: nmj18txstate/kubernetes-persistent-storage-jvm-skill
+skill_path: "skills/kubernetes-persistent-storage-jvm/SKILL.md"
+category: framework
+tools:
+  - claude
+  - cursor
+  - copilot
+languages:
+  - java
+trust: community
+author: Nityam Jigyasu
+version: "1.0.0"
+last_updated: "2026-07-17"
+scope: focused
+tech:
+  - spring-boot
+  - kubernetes
+  - shedlock
+  - java-nio
+tags:
+  - java
+  - jvm
+  - spring-boot
+  - kubernetes
+  - pvc
+  - persistent-volumes
+  - ephemeral-storage
+  - storageclass
+  - statefulset
+  - readwriteoncepod
+  - shared-volumes
+  - shedlock
+  - lockregistry
+  - remediation
