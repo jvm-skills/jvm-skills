@@ -27,6 +27,9 @@ val blogIndexTemplate = File(siteDir, "blog-index-template.html")
 val evalViewerTemplate = File(siteDir, "eval-viewer-template.html")
 val distDir = File(rootDir, "dist")
 val outputFile = File(distDir, "index.html")
+val skillsMarkdownFile = File(distDir, "skills.md")
+val llmsFile = File(distDir, "llms.txt")
+val skillPagesDir = File(distDir, "skills")
 val blogDistDir = File(distDir, "blog")
 val evalsDistDir = File(distDir, "evals")
 
@@ -40,6 +43,26 @@ fun htmlEscape(s: String): String = s
     .replace(">", "&gt;")
     .replace("\"", "&quot;")
 
+fun skillFileUrl(skill: SkillInfo): String = if (skill.skillPath.isNotEmpty()) {
+    "https://github.com/${skill.repo}/blob/${skill.branch}/${skill.skillPath}"
+} else {
+    "https://github.com/${skill.repo}"
+}
+
+fun skillDirectoryUrl(skill: SkillInfo): String {
+    val directory = skill.skillPath.substringBeforeLast("/", "")
+    return if (directory.isNotEmpty()) {
+        "https://github.com/${skill.repo}/tree/${skill.branch}/$directory"
+    } else {
+        "https://github.com/${skill.repo}"
+    }
+}
+
+fun skillInstallName(skill: SkillInfo): String {
+    val directory = skill.skillPath.substringBeforeLast("/", "")
+    return if (directory.isNotEmpty()) directory.substringAfterLast("/") else skill.repo.substringAfterLast("/")
+}
+
 // ── Parse all skills into a map for cross-referencing ──
 data class SkillInfo(
     val name: String,
@@ -49,6 +72,10 @@ data class SkillInfo(
     val skillPath: String,
     val author: String,
     val trust: String,
+    val version: String,
+    val lastUpdated: String,
+    val scope: String,
+    val tools: List<String>,
     val languages: List<String>,
     val tech: List<String>,
     val tags: List<String>,
@@ -87,6 +114,10 @@ for (category in categories) {
             skillPath = skill["skill_path"]?.toString() ?: "",
             author = skill["author"]?.toString() ?: "",
             trust = skill["trust"]?.toString() ?: "community",
+            version = skill["version"]?.toString() ?: "",
+            lastUpdated = skill["last_updated"]?.toString() ?: "",
+            scope = skill["scope"]?.toString() ?: "",
+            tools = (skill["tools"] as? List<*>)?.map { it.toString() } ?: emptyList(),
             languages = (skill["languages"] as? List<*>)?.map { it.toString() } ?: emptyList(),
             tech = (skill["tech"] as? List<*>)?.map { it.toString() } ?: emptyList(),
             tags = (skill["tags"] as? List<*>)?.map { it.toString() } ?: emptyList(),
@@ -148,7 +179,7 @@ for ((key, skill) in skillsMap) {
 // ── Build skill card HTML ──
 var totalSkills = 0
 val skillCards = buildString {
-    for (category in categories) {
+    for ((categoryIndex, category) in categories.withIndex()) {
         val catDir = File(skillsDir, category)
         if (!catDir.isDirectory) continue
 
@@ -158,7 +189,9 @@ val skillCards = buildString {
 
         append("""<section class="category-section" data-category="$category">""")
         append("\n")
-        append("""<h2 class="category-header"><span class="prompt">~/skills/$category/</span> <span class="ls-marker">ls</span></h2>""")
+        val categoryNumber = (categoryIndex + 1).toString().padStart(2, '0')
+        val categoryLabel = category.replaceFirstChar { it.uppercase() }
+        append("""<h2 class="category-header"><span class="category-index">$categoryNumber</span><span class="prompt">$categoryLabel</span><span class="ls-marker">JVM skills</span></h2>""")
         append("\n")
         append("""<div class="skills-grid">""")
         append("\n")
@@ -183,11 +216,20 @@ val skillCards = buildString {
             append("</div>\n")
             append("""<div class="card-body">""")
             append("\n")
-            val skillUrl = if (skill.skillPath.isNotEmpty()) "https://github.com/${htmlEscape(skill.repo)}/blob/${htmlEscape(skill.branch)}/${htmlEscape(skill.skillPath)}" else "https://github.com/${htmlEscape(skill.repo)}"
+            val skillUrl = htmlEscape(skillFileUrl(skill))
             val skillDir = if (skill.skillPath.contains("/")) skill.skillPath.substringBeforeLast("/") else ""
-            val skillDirUrl = if (skillDir.isNotEmpty()) "https://github.com/${skill.repo}/tree/${skill.branch}/$skillDir" else "https://github.com/${skill.repo}"
-            val skillSlug = if (skillDir.isNotEmpty()) skillDir.substringAfterLast("/") else skill.repo.substringAfterLast("/")
-            val installText = "Fetch the skill from $skillDirUrl and save all files to .claude/skills/$skillSlug/"
+            val skillDirUrl = skillDirectoryUrl(skill)
+            val detailUrl = "https://jvmskills.com/skills/$key.md"
+            val installCommand = "npx skills add $skillDirUrl"
+            val agentPrompt = """Evaluate ${skill.name} for this project before installing it.
+
+1. Inspect the repository's build files, versions, architecture, tests, conventions, and existing agent instructions.
+2. Read $detailUrl and the linked skill source.
+3. Explain whether the skill fits this project and the work we actually do. Call out overlaps or conflicts with existing skills and instructions.
+4. Identify project-specific context that would make the skill more effective, such as test commands, architecture boundaries, framework versions, fixtures, or team conventions.
+5. Recommend the smallest maintainable way to provide that context. Prefer a project-local reference, overlay, or companion instruction over editing the upstream skill directly.
+
+Do not install or modify anything until I approve. If I approve, follow the guide's installation instructions and preserve every supporting file."""
 
             append("""<h3 class="skill-name"><a href="$skillUrl">${htmlEscape(skill.name)}</a></h3>""")
             append("\n")
@@ -195,7 +237,7 @@ val skillCards = buildString {
             append("\n")
             append("""<div class="skill-meta">""")
             append("""<span class="skill-author">by ${htmlEscape(skill.author)}</span>""")
-            append("""<button class="copy-install" data-install="${htmlEscape(installText)}" type="button" title="Copy install instruction">install</button>""")
+            append("""<button class="copy-install" data-install-command="${htmlEscape(installCommand)}" data-agent-prompt="${htmlEscape(agentPrompt)}" data-guide-url="${htmlEscape(detailUrl)}" type="button" title="Install or evaluate this skill">install</button>""")
             append("</div>\n")
             append("""<div class="skill-languages">$langsHtml</div>""")
             append("\n")
@@ -457,6 +499,131 @@ val output = template
 distDir.mkdirs()
 outputFile.writeText(output)
 
+// ── Generate the agent-readable skill index, detail pages, and discovery file ──
+val visibleSkills = skillsMap
+    .filterValues { it.status != "duplicate" }
+    .toSortedMap(compareBy<String> { categories.indexOf(it.substringBefore("/")) }.thenBy { it })
+
+fun skillPageUrl(key: String): String = "https://jvmskills.com/skills/$key.md"
+
+val skillIndexSections = buildString {
+    for (category in categories) {
+        val categorySkills = visibleSkills.filterKeys { it.substringBefore("/") == category }
+        if (categorySkills.isEmpty()) continue
+
+        appendLine()
+        appendLine("## ${category.replaceFirstChar { it.uppercase() }}")
+
+        for ((key, skill) in categorySkills) {
+            val description = skill.description.replace(Regex("\\s+"), " ").trim()
+            appendLine("- [${skill.name}](${skillPageUrl(key)}): $description")
+        }
+    }
+}
+
+val skillsMarkdown = """# JVM Skills reference
+
+> Discover and install AI coding skills from engineers who build the JVM ecosystem.
+
+Use this file as a compact skill catalog. Each entry provides the skill's invocation description and links to a dedicated page with matching signals, provenance, source files, and installation instructions. Open only the detail pages relevant to the user's codebase and goal.
+
+Before recommending skills, inspect the repository's build files, language and framework versions, tests, database access, frontend stack, and existing agent instructions. Recommend the smallest useful set. Do not install anything until the user asks.
+$skillIndexSections"""
+
+skillsMarkdownFile.writeText(skillsMarkdown)
+
+skillPagesDir.deleteRecursively()
+skillPagesDir.mkdirs()
+
+for ((key, skill) in visibleSkills) {
+    val category = key.substringBefore("/")
+    val listingSlug = key.substringAfter("/")
+    val installName = skillInstallName(skill)
+    val description = skill.description.replace(Regex("\\s+"), " ").trim()
+    val isCollection = skill.skillPath.isEmpty()
+    val page = buildString {
+        appendLine("# ${skill.name}")
+        appendLine()
+        appendLine("## What it does")
+        appendLine()
+        appendLine(description)
+        appendLine()
+        appendLine(if (isCollection) "## When to use this listing" else "## When to load it")
+        appendLine()
+        appendLine("Recommend this skill when the user's goal matches the description and the repository provides supporting evidence. Do not recommend it from a language or tag match alone.")
+        appendLine()
+        appendLine("- Category: `$category`${if (skill.scope.isNotEmpty()) "; scope: `${skill.scope}`" else ""}")
+        appendLine("- Languages: ${skill.languages.joinToString(", ") { "`$it`" }}")
+        if (skill.tech.isNotEmpty()) appendLine("- Technologies: ${skill.tech.joinToString(", ") { "`$it`" }}")
+        if (skill.tags.isNotEmpty()) appendLine("- Task signals: ${skill.tags.joinToString(", ") { "`$it`" }}")
+        if (skill.tools.isNotEmpty()) appendLine("- Declared agent compatibility: ${skill.tools.joinToString(", ") { "`$it`" }}")
+        appendLine()
+        if (isCollection) {
+            appendLine("Each contained skill's `SKILL.md` is authoritative for its invocation rules and task instructions. Select and install only the contained skills that match the user's request.")
+        } else {
+            appendLine("The installed skill's `SKILL.md` is authoritative for its invocation rules and task instructions. Load it when the user's request matches its description, and resolve referenced files relative to the installed skill directory.")
+        }
+        appendLine()
+        appendLine("## Source and provenance")
+        appendLine()
+        appendLine("- Author: ${skill.author}")
+        appendLine("- Trust: `${skill.trust}`")
+        if (skill.version.isNotEmpty()) appendLine("- Listed version: `${skill.version}`")
+        if (skill.lastUpdated.isNotEmpty()) appendLine("- Last updated: `${skill.lastUpdated}`")
+        appendLine("- Repository: [${skill.repo}](https://github.com/${skill.repo})")
+        if (!isCollection) {
+            appendLine("- Skill entrypoint: [${skill.skillPath}](${skillFileUrl(skill)})")
+            appendLine("- Skill source directory: ${skillDirectoryUrl(skill)}")
+        }
+        evalSummaries[key]?.let { eval ->
+            val withPct = (eval.withSkillPassRate * 100).toInt()
+            val withoutPct = (eval.withoutSkillPassRate * 100).toInt()
+            appendLine("- Evaluation: ${withPct}% pass rate with the skill vs ${withoutPct}% without it across ${eval.evalsCount} tests ([details](https://jvmskills.com/evals/${eval.slug}/))")
+        }
+        appendLine()
+        appendLine("## Project context review")
+        appendLine()
+        appendLine("Before installing, inspect the repository and explain whether this skill fits its actual stack, architecture, workflow, and current goal. Check for overlap or conflict with existing skills and agent instructions.")
+        appendLine()
+        appendLine("Identify context that would make the skill more effective in this project, such as exact build and test commands, framework versions, architecture boundaries, fixtures, domain terminology, and team conventions. Recommend the smallest maintainable way to provide it. Prefer a project-local reference, overlay, or companion instruction over editing the upstream skill directly, and ask before creating it.")
+        appendLine()
+        appendLine("## Installation instructions for agents")
+        appendLine()
+        if (isCollection) {
+            appendLine("This listing is a collection or bundle, not one directly installable skill. Inspect [the repository](https://github.com/${skill.repo}) and identify the contained skill directories that match the user's goal. Do not copy the repository root into one skill directory.")
+            appendLine()
+            appendLine("For every selected skill, copy its complete directory—including `SKILL.md` and referenced scripts, references, templates, and assets—into the user's supported skill location. Preserve relative paths and verify that each installed directory has its own `SKILL.md`.")
+        } else {
+            appendLine("1. Ask whether the user wants project-level or personal installation if they have not specified the scope.")
+            appendLine("2. Use the coding agent's native skill directory. For cross-client project installation, use `.agents/skills/$installName/`. For Claude Code project installation, use `.claude/skills/$installName/`. Personal locations use the corresponding directory under the user's home directory.")
+            appendLine("3. Download the contents of [the complete skill source directory](${skillDirectoryUrl(skill)}) from branch `${skill.branch}`. Copy `SKILL.md` and every supporting file belonging to the skill; preserve their relative paths. Do not copy only `SKILL.md` when it references other files.")
+            appendLine("4. Verify that `<target>/$installName/SKILL.md` exists, then read its frontmatter and instructions. Do not execute the skill or make unrelated repository changes unless the user requested that work.")
+            appendLine()
+            appendLine("After installation, agents can activate the skill automatically from its description. In clients with slash-command invocation, the project installation above is invoked as `/$installName` unless the client applies its own naming rules.")
+        }
+    }
+
+    val categoryDir = File(skillPagesDir, category)
+    categoryDir.mkdirs()
+    File(categoryDir, "$listingSlug.md").writeText(page)
+}
+
+val llmsText = """# jvm-skills
+
+> AI coding skills from the engineers who build the JVM ecosystem.
+
+jvm-skills is a curated directory for finding installable skill instructions that match a JVM codebase and the user's development goal.
+
+## Agent resources
+
+- [JVM Skills reference](https://jvmskills.com/skills.md): Compact catalog with invocation descriptions and links to installation guides.
+- [Browse the human-facing directory](https://jvmskills.com/): Search and filter all published skills.
+- [Contribute a skill](https://github.com/jvm-skills/jvm-skills/blob/main/CONTRIBUTING.md): Current listing requirements and contribution workflow.
+$skillIndexSections"""
+
+llmsFile.writeText(llmsText)
+println("✓ Built dist/skills.md, dist/llms.txt, and ${visibleSkills.size} agent-readable skill pages")
+
 // Patch generated date into blog files (date only, no time)
 val generatedDateOnly = DateTimeFormatter.ofPattern("yyyy-MM-dd")
     .withZone(ZoneOffset.UTC)
@@ -505,6 +672,12 @@ if (previewSrc.exists()) {
     previewSrc.copyTo(File(distDir, "preview.webp"), overwrite = true)
 }
 
+// Copy the shared Big Sky-inspired JVM Skills theme.
+val sharedTheme = File(siteDir, "jvm-skills-theme.css")
+if (sharedTheme.exists()) {
+    sharedTheme.copyTo(File(distDir, "jvm-skills-theme.css"), overwrite = true)
+}
+
 // ── Generate Spring I/O landing page ──
 val springIoTemplate = File(siteDir, "spring-io-template.html")
 if (springIoTemplate.exists()) {
@@ -527,6 +700,23 @@ val learnMd = File(siteDir, "learn.md")
 if (learnMd.exists()) {
     learnMd.copyTo(File(distDir, "spring-io-2026/learn.md"), overwrite = true)
     println("✓ Copied learn.md → dist/spring-io-2026/learn.md")
+}
+
+// ── Generate Big Sky Dev Conf landing page ──
+val bigSkyTemplate = File(siteDir, "big-sky-template.html")
+if (bigSkyTemplate.exists()) {
+    val bigSkyDir = File(distDir, "big-sky-2026")
+    bigSkyDir.mkdirs()
+    File(bigSkyDir, "index.html").writeText(bigSkyTemplate.readText())
+    println("✓ Built dist/big-sky-2026/index.html")
+}
+
+// ── Copy Big Sky Dev Conf talk slides ──
+val bigSkySlidesSrc = File(siteDir, "big-sky-2026-slides")
+if (bigSkySlidesSrc.isDirectory) {
+    val bigSkySlidesDest = File(distDir, "big-sky-2026/slides")
+    bigSkySlidesSrc.copyRecursively(bigSkySlidesDest, overwrite = true)
+    println("✓ Copied ${bigSkySlidesSrc.name}/ → dist/big-sky-2026/slides/")
 }
 
 // ── Generate 404 page ──

@@ -18,6 +18,12 @@ General skill directories exist (playbooks.com, skills.sh, skillsdirectory.com),
 
 Visit **[jvmskills.com](https://jvmskills.com)** to browse all skills, filter by AI tool, language, and category.
 
+To get recommendations for a repository, tell your coding agent:
+
+> Inspect this codebase, then read https://jvmskills.com/skills.md and recommend the smallest useful set of matching skills. Open the linked detail page for every recommendation and explain it using evidence from the repository. Do not install anything yet.
+
+Agents can also discover the catalog through [`/llms.txt`](https://jvmskills.com/llms.txt).
+
 ### Categories
 
 | Category | Scope |

@@ -779,11 +779,44 @@
     .modal-body {
       padding: 20px;
     }
+    .modal-modes {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .modal-mode {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: transparent;
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
+    .modal-mode:hover,
+    .modal-mode.active {
+      color: var(--green);
+      border-color: var(--green-dim);
+      background: var(--green-glow);
+    }
     .modal-hint {
       font-family: var(--font-mono);
       font-size: 0.8rem;
       color: var(--text-secondary);
       margin-bottom: 12px;
+    }
+    .modal-note {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      margin-top: 10px;
+    }
+    .modal-guide {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      margin-top: 14px;
     }
     .modal-code-wrap {
       position: relative;
@@ -1183,8 +1216,9 @@
       .cursor-blink { animation: none; opacity: 1; }
     }
   </style>
+  <link rel="stylesheet" href="/jvm-skills-theme.css">
 </head>
-<body>
+<body class="directory-page">
   <!-- ═══════════ HEADER ═══════════ -->
   <header role="banner">
     <div class="container header-inner">
@@ -1192,11 +1226,9 @@
         <span class="prompt-char">$</span> jvm-skills
       </a>
       <div class="header-actions">
+        <a class="nav-link" href="/skills.md" aria-label="Agent-readable skill catalog">For agents</a>
         <a href="/blog/" aria-label="Blog">
           <button class="nav-link" type="button">Blog</button>
-        </a>
-        <a href="/spring-io-2026/" aria-label="Spring I/O 2026 resources">
-          <button class="nav-link" type="button">Spring I/O</button>
         </a>
         <a href="https://github.com/jvm-skills/jvm-skills/issues/new?template=submit-skill.yml&title=%5BSkill%5D+My+Skill+Name" aria-label="Submit a new skill">
           <button class="submit-skill-link" type="button">+ Submit Skill</button>
@@ -1220,92 +1252,60 @@
 
       <!-- ═══════════ HERO ═══════════ -->
       <section class="hero" aria-label="Introduction">
-        <div class="hero-terminal" role="img" aria-label="Terminal showing jvm-skills commands">
-          <div class="hero-titlebar">
-            <div class="dots"><span></span><span></span><span></span></div>
-            <span class="title-text">jvmskills.com</span>
-          </div>
-          <div class="hero-body">
-            <span class="hero-line">
-              <span class="prompt-symbol">$</span>
-              <span class="cmd">cat</span> <span class="string">README.md</span>
-            </span>
-            <span class="hero-output">AI coding skills from the engineers who build the JVM ecosystem.</span>
-            <span class="hero-output">Expert-maintained. Battle-tested. JVM-native.</span>
-            <span class="hero-line" style="margin-top: 8px;">
-              <span class="prompt-symbol">$</span>
-              <span class="cmd">ls</span> <span class="flag">-la</span> <span class="string">skills/</span>
-            </span>
-            <span class="hero-output">framework/ language/ database/ testing/ fullstack/ web/ workflow/ tool/</span>
-            <div class="hero-filter" role="search" aria-label="Filter skills">
-              <span class="hero-line" style="margin-top: 8px;">
-                <span class="prompt-symbol">$</span>
-                <label for="searchInput" class="cmd" aria-hidden="true">grep</label>
-                <input
-                  type="search"
-                  id="searchInput"
-                  class="search-input"
-                  placeholder="search skills..."
-                  aria-label="Search skills by name, description, author, or tags"
-                  autocomplete="off"
-                >
-              </span>
+        <div class="hero-stage">
+          <span class="hero-kicker">Agent-ready JVM expertise</span>
+          <h1 class="hero-heading">JVM <span>Skills</span></h1>
+          <p class="hero-intro">Focused coding-agent skills from the engineers who build the JVM ecosystem. Current practices for Java, Kotlin, Spring, Gradle, databases, testing, and delivery.</p>
 
-              <div class="filter-groups">
-                <div class="filter-group" role="group" aria-labelledby="filter-lang-label">
-                  <span class="filter-label" id="filter-lang-label">--lang</span>
-                  <div class="filter-options">
-                    <button class="filter-chip" data-filter="lang" data-value="java" aria-pressed="false" type="button">java</button>
-                    <button class="filter-chip" data-filter="lang" data-value="kotlin" aria-pressed="false" type="button">kotlin</button>
-                    <button class="filter-chip" data-filter="lang" data-value="groovy" aria-pressed="false" type="button">groovy</button>
+          <div class="hero-terminal" aria-label="Search and filter JVM skills">
+            <div class="hero-titlebar">
+              <div class="dots"><span></span><span></span><span></span></div>
+              <span class="title-text">SEARCH THE CATALOG</span>
+            </div>
+            <div class="hero-body">
+              <div class="hero-filter" role="search" aria-label="Filter skills">
+                <span class="hero-line">
+                  <span class="prompt-symbol">$</span>
+                  <label for="searchInput" class="cmd" aria-hidden="true">grep</label>
+                  <input
+                    type="search"
+                    id="searchInput"
+                    class="search-input"
+                    placeholder="search by skill, framework, author, or tag..."
+                    aria-label="Search skills by name, description, author, or tags"
+                    autocomplete="off"
+                  >
+                </span>
+
+                <div class="filter-groups">
+                  <div class="filter-group" role="group" aria-labelledby="filter-lang-label">
+                    <span class="filter-label" id="filter-lang-label">--lang</span>
+                    <div class="filter-options">
+                      <button class="filter-chip" data-filter="lang" data-value="java" aria-pressed="false" type="button">java</button>
+                      <button class="filter-chip" data-filter="lang" data-value="kotlin" aria-pressed="false" type="button">kotlin</button>
+                      <button class="filter-chip" data-filter="lang" data-value="groovy" aria-pressed="false" type="button">groovy</button>
+                    </div>
+                  </div>
+                  <div class="filter-group" role="group" aria-labelledby="filter-tech-label">
+                    <span class="filter-label" id="filter-tech-label">--tech</span>
+                    <div class="filter-options">
+                      <button class="filter-chip" data-filter="tech" data-value="spring-boot" aria-pressed="false" type="button">spring-boot</button>
+                      <button class="filter-chip" data-filter="tech" data-value="postgresql" aria-pressed="false" type="button">postgresql</button>
+                      <button class="filter-chip" data-filter="tech" data-value="gradle" aria-pressed="false" type="button">gradle</button>
+                    </div>
                   </div>
                 </div>
-                <div class="filter-group" role="group" aria-labelledby="filter-tech-label">
-                  <span class="filter-label" id="filter-tech-label">--tech</span>
-                  <div class="filter-options">
-                    <button class="filter-chip" data-filter="tech" data-value="spring-boot" aria-pressed="false" type="button">spring-boot</button>
-                    <button class="filter-chip" data-filter="tech" data-value="postgresql" aria-pressed="false" type="button">postgresql</button>
-                    <button class="filter-chip" data-filter="tech" data-value="gradle" aria-pressed="false" type="button">gradle</button>
-                  </div>
-                </div>
-              </div>
 
-              <div class="results-count" role="status" aria-live="polite">
-                <span class="count-num" id="resultCount">0</span> skills found
-                <button class="clear-filters" id="clearFilters" type="button" style="display:none;">clear filters</button>
+                <div class="results-count" role="status" aria-live="polite">
+                  <span class="count-num" id="resultCount">0</span> skills found
+                  <button class="clear-filters" id="clearFilters" type="button" style="display:none;">clear filters</button>
+                </div>
               </div>
             </div>
           </div>
+          <p class="hero-tagline">Opinionated by default — tell your agent to adjust any skill to your stack.</p>
         </div>
-        <p class="hero-tagline">
-          Opinionated by default — tell your agent to adjust any skill to your stack.
-        </p>
       </section>
-
-      <!-- ═══════════ HIRING BANNER ═══════════ -->
-      <details class="hiring-banner">
-        <summary class="hiring-toggle">
-          <span class="toggle-prompt">$</span>
-          Looking to level up your team with <span class="toggle-highlight">coding agents?</span> I'm available — <span class="toggle-cta">hire me</span>.
-          <span class="toggle-arrow">&#9654;</span>
-        </summary>
-        <div class="hiring-details">
-          <p class="hiring-headline">I turn Vibe Coding into a production-grade engineering workflow.</p>
-          <p>Not just prompting — structured skills, automated evals, feedback loops that catch bugs before they ship.</p>
-          <p>I help JVM teams get there, or I join yours and ship products end-to-end. Full lifecycle, founder experience.</p>
-          <div class="hiring-ctas">
-            <a href="https://www.linkedin.com/in/tschuehly/" aria-label="Connect on LinkedIn">
-              <button class="cta-button" type="button">Connect on LinkedIn</button>
-            </a>
-            <a href="https://github.com/tschuehly" aria-label="GitHub Profile">
-              <button class="cta-button cta-secondary" type="button">GitHub</button>
-            </a>
-            <a href="mailto:thomas@photoquest.wedding" aria-label="Send email">
-              <button class="cta-button cta-secondary" type="button">Mail me</button>
-            </a>
-          </div>
-        </div>
-      </details>
 
       <p class="submit-cta">Know what works in production? <a href="https://github.com/jvm-skills/jvm-skills/issues/new?template=submit-skill.yml&title=%5BSkill%5D+My+Skill+Name">+ Submit a skill</a></p>
 
@@ -1322,38 +1322,6 @@
         <p class="no-results-hint">Try adjusting your filters or search term.</p>
       </div>
 
-      <!-- ═══════════ VISION ═══════════ -->
-      <section class="vision" aria-label="Project vision">
-        <h2 class="vision-heading">
-          <span class="prompt">$</span> cat <span class="string">ROADMAP.md</span>
-        </h2>
-
-        <div class="vision-grid">
-          <div class="vision-card">
-            <h3 class="vision-card-title">One-liner bootstrap</h3>
-            <p class="vision-card-text">
-              <code>curl -fsSL jvmskills.com/install | sh</code> — auto-detects your stack from build files, picks matching skills, and generates AI config. Zero dependencies.
-            </p>
-          </div>
-
-          <div class="vision-card">
-            <h3 class="vision-card-title">Compose, don't duplicate</h3>
-            <p class="vision-card-text">
-              Skills compose from a base + language/database overlays. Detect jOOQ + Kotlin + PostgreSQL? You get the base skill plus only the overlays that matter.
-            </p>
-          </div>
-
-          <div class="vision-card">
-            <h3 class="vision-card-title">Every AI tool</h3>
-            <p class="vision-card-text">
-              Claude Code is the v1 target. The same skill content compiles to Cursor, Copilot, Windsurf, Aider, and Codex formats — one source of truth, every editor.
-            </p>
-          </div>
-
-
-        </div>
-      </section>
-
     </div>
   </main>
 
@@ -1366,11 +1334,17 @@
         <button class="modal-close" id="modalClose" type="button" aria-label="Close">&times;</button>
       </div>
       <div class="modal-body">
-        <p class="modal-hint">Paste this into your AI coding agent:</p>
+        <div class="modal-modes" role="tablist" aria-label="Installation method">
+          <button class="modal-mode active" type="button" role="tab" aria-selected="true" data-install-mode="cli">CLI install</button>
+          <button class="modal-mode" type="button" role="tab" aria-selected="false" data-install-mode="agent">Agent review</button>
+        </div>
+        <p class="modal-hint" id="modalHint"></p>
         <div class="modal-code-wrap">
           <pre class="modal-code" id="modalCode"></pre>
           <button class="modal-copy" id="modalCopy" type="button">copy</button>
         </div>
+        <p class="modal-note" id="modalNote">Requires Node.js. The skills CLI auto-detects supported agents and may collect anonymous installation telemetry.</p>
+        <a class="modal-guide" id="modalGuide" href="#">Read installation guide →</a>
       </div>
     </div>
   </div>
@@ -1386,6 +1360,10 @@
         &middot; <a href="https://www.linkedin.com/in/tschuehly/">Connect on LinkedIn</a>
         &middot; <a href="https://github.com/jvm-skills/jvm-skills">source</a>
         &middot; <a href="https://github.com/jvm-skills/jvm-skills/blob/main/LICENSE">license</a>
+        <br>
+        <span class="green">$</span> Conference archive:
+        <a href="/spring-io-2026/">Spring I/O 2026</a>
+        &middot; <a href="/big-sky-2026/">Big Sky Dev Conf 2026</a>
       </div>
       <div class="footer-build">
         built {{GENERATED_DATE}} // jvmskills.com
@@ -1569,11 +1547,32 @@
       var modalCode = document.getElementById('modalCode');
       var modalCopy = document.getElementById('modalCopy');
       var modalClose = document.getElementById('modalClose');
+      var modalHint = document.getElementById('modalHint');
+      var modalNote = document.getElementById('modalNote');
+      var modalGuide = document.getElementById('modalGuide');
+      var modalModes = Array.from(document.querySelectorAll('.modal-mode'));
+      var installData = { cli: '', agent: '' };
 
-      function openModal(text) {
-        modalCode.textContent = text;
+      function setInstallMode(mode) {
+        var isCli = mode === 'cli';
+        modalCode.textContent = installData[mode];
+        modalHint.textContent = isCli
+          ? 'Run from the project directory. The CLI asks which detected agent and scope to use.'
+          : 'Paste this into your coding agent to check project fit and missing context before installation.';
+        modalNote.style.display = isCli ? 'block' : 'none';
+        modalModes.forEach(function (button) {
+          var active = button.getAttribute('data-install-mode') === mode;
+          button.classList.toggle('active', active);
+          button.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
         modalCopy.textContent = 'copy';
         modalCopy.classList.remove('copied');
+      }
+      function openModal(button) {
+        installData.cli = button.getAttribute('data-install-command');
+        installData.agent = button.getAttribute('data-agent-prompt');
+        modalGuide.setAttribute('href', button.getAttribute('data-guide-url'));
+        setInstallMode('cli');
         modal.setAttribute('aria-hidden', 'false');
       }
       function closeModal() {
@@ -1582,7 +1581,12 @@
 
       document.addEventListener('click', function (e) {
         var btn = e.target.closest('.copy-install');
-        if (btn) openModal(btn.getAttribute('data-install'));
+        if (btn) openModal(btn);
+      });
+      modalModes.forEach(function (button) {
+        button.addEventListener('click', function () {
+          setInstallMode(button.getAttribute('data-install-mode'));
+        });
       });
       modalClose.addEventListener('click', closeModal);
       modal.addEventListener('click', function (e) {
