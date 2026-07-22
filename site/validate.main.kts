@@ -84,6 +84,20 @@ brandedTemplates.forEach { templateName ->
     }
 }
 
+val previewTemplates = listOf(
+    "template.html",
+    "blog-index-template.html",
+    "blog-post-template.html",
+    "big-sky-template.html",
+    "spring-io-template.html"
+)
+previewTemplates.forEach { templateName ->
+    val html = File(siteDir, templateName).readText()
+    if (!html.contains(".png?v={{PREVIEW_VERSION}}")) {
+        errors.add("site/$templateName: OG image URL must include the generated preview version")
+    }
+}
+
 if (errors.isNotEmpty()) {
     println("Validation errors:")
     errors.forEach { println("  ✗ $it") }
