@@ -1,0 +1,29 @@
+name: Grill with Docs Bundle
+description: >-
+  Three-skill planning and domain-modeling bundle that grills a design one
+  decision at a time, checks facts against the codebase, sharpens shared domain
+  language, and records durable glossary entries and architectural decisions.
+  Install grill-with-docs together with its grilling and domain-modeling
+  dependencies.
+repo: mattpocock/skills
+skill_path: ""
+category: workflow
+tools:
+  - claude
+languages:
+  - java
+  - kotlin
+  - groovy
+trust: curated
+author: Matt Pocock
+version: "1.0.0"
+last_updated: "2026-07-10"
+scope: comprehensive
+tech: []
+tags:
+  - planning
+  - domain-modeling
+  - ubiquitous-language
+  - architecture-decisions
+  - requirements
+  - workflow
