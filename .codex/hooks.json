@@ -1,0 +1,25 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'/Users/tschuehly/IdeaProjects/jvm-skills/.codex/hooks/git-guardrails.sh'"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "'/Users/tschuehly/IdeaProjects/jvm-skills/.codex/hooks/session-start.sh'"
+          }
+        ]
+      }
+    ]
+  }
+}
