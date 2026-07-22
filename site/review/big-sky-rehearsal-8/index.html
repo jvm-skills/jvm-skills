@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Big Sky rehearsal 8</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #070709;
+      --surface: #101014;
+      --line: rgba(203, 213, 225, .24);
+      --text: #f8fafc;
+      --muted: #a1a1aa;
+      --cyan: #22d3ee;
+      --pink: #f472b6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 18% 0%, rgba(34, 211, 238, .10), transparent 34rem),
+        radial-gradient(circle at 86% 8%, rgba(244, 114, 182, .10), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    main { width: min(1200px, calc(100% - 32px)); margin: 0 auto; padding: 28px 0 42px; }
+    header { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 18px; }
+    h1 { margin: 0; font-size: clamp(1.4rem, 3vw, 2.35rem); line-height: 1.05; }
+    .eyebrow { margin: 0 0 8px; color: var(--cyan); font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; }
+    .duration { flex: 0 0 auto; color: var(--muted); font-size: .86rem; }
+    .stage {
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border: 1px solid var(--line);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, .45), 0 0 42px rgba(34, 211, 238, .08);
+    }
+    iframe { display: block; width: 100%; height: 100%; border: 0; }
+    .controls {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 14px;
+      padding: 16px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-top: 0;
+    }
+    button {
+      width: 46px;
+      height: 42px;
+      border: 1px solid rgba(34, 211, 238, .5);
+      border-radius: 8px;
+      background: rgba(34, 211, 238, .10);
+      color: var(--text);
+      font: inherit;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover { background: rgba(34, 211, 238, .18); }
+    button:focus-visible, input:focus-visible { outline: 3px solid var(--pink); outline-offset: 2px; }
+    input[type="range"] { width: 100%; accent-color: var(--cyan); cursor: pointer; }
+    output { min-width: 9.2rem; color: var(--muted); font-size: .82rem; text-align: right; font-variant-numeric: tabular-nums; }
+    .prompt { margin: 16px 2px 0; color: var(--muted); font-size: .88rem; line-height: 1.55; }
+    .prompt strong { color: var(--text); }
+    .status { min-height: 1.4em; margin: 8px 2px 0; color: #fca5a5; font-size: .82rem; }
+    audio { display: none; }
+    @media (max-width: 640px) {
+      main { width: min(100% - 20px, 1200px); padding-top: 18px; }
+      header { align-items: start; flex-direction: column; gap: 8px; }
+      .controls { grid-template-columns: auto 1fr; }
+      output { grid-column: 1 / -1; text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <p class="eyebrow">Agentic Engineering for JVM Developers</p>
+        <h1>Big Sky rehearsal 8</h1>
+      </div>
+      <div class="duration" id="durationLabel">Loading recording…</div>
+    </header>
+
+    <div class="stage">
+      <iframe id="deck" src="deck/index.html" title="Synchronized conference slides" allowfullscreen></iframe>
+    </div>
+
+    <div class="controls">
+      <button id="play" type="button" aria-label="Play rehearsal">▶</button>
+      <input id="seek" type="range" min="0" max="1000" value="0" aria-label="Rehearsal position">
+      <output id="time">00:00 / 00:00</output>
+    </div>
+
+    <p class="prompt"><strong>Feedback:</strong> Please note the timestamp whenever something feels unclear, missing, or too detailed.</p>
+    <p class="status" id="status" role="status"></p>
+    <audio id="audio" preload="metadata" src="rehearsal.m4a"></audio>
+  </main>
+
+  <script>
+    const REHEARSAL = "rehearsal-2026-07-22T16-13-08Z";
+    const audio = document.querySelector('#audio');
+    const deck = document.querySelector('#deck');
+    const play = document.querySelector('#play');
+    const seek = document.querySelector('#seek');
+    const time = document.querySelector('#time');
+    const status = document.querySelector('#status');
+    const durationLabel = document.querySelector('#durationLabel');
+    let events = [];
+    let eventIndex = -1;
+    let animationFrame = 0;
+
+    function formatTime(seconds, roundUp = false) {
+      const safeSeconds = Number.isFinite(seconds) ? Math.max(0, seconds) : 0;
+      const wholeSeconds = roundUp ? Math.ceil(safeSeconds) : Math.floor(safeSeconds);
+      const minutes = Math.floor(wholeSeconds / 60);
+      const remainder = wholeSeconds % 60;
+      return String(minutes).padStart(2, '0') + ':' + String(remainder).padStart(2, '0');
+    }
+
+    function latestEventIndex(milliseconds) {
+      let low = 0;
+      let high = events.length - 1;
+      let result = 0;
+      while (low <= high) {
+        const middle = Math.floor((low + high) / 2);
+        if (events[middle].elapsedMs <= milliseconds) {
+          result = middle;
+          low = middle + 1;
+        } else {
+          high = middle - 1;
+        }
+      }
+      return result;
+    }
+
+    function revealApi() {
+      try { return deck.contentWindow && deck.contentWindow.Reveal; }
+      catch (_) { return null; }
+    }
+
+    function syncDeck(force = false) {
+      if (events.length === 0) return;
+      const nextIndex = latestEventIndex(audio.currentTime * 1000);
+      const reveal = revealApi();
+      if (!reveal || !reveal.isReady || !reveal.isReady()) return;
+      const event = events[nextIndex];
+      const current = reveal.getIndices();
+      const currentFragment = Number.isInteger(current.f) ? current.f : -1;
+      const alreadySynchronized = current.h === event.h && current.v === event.v && currentFragment === event.f;
+      if (!force && nextIndex === eventIndex && alreadySynchronized) return;
+      reveal.slide(event.h, event.v, event.f);
+      eventIndex = nextIndex;
+    }
+
+    function paint() {
+      const duration = Number.isFinite(audio.duration) ? audio.duration : 0;
+      seek.value = duration > 0 ? String(Math.round(audio.currentTime / duration * 1000)) : '0';
+      time.value = formatTime(audio.currentTime) + ' / ' + formatTime(duration, true);
+      syncDeck();
+      if (!audio.paused && !audio.ended) animationFrame = requestAnimationFrame(paint);
+    }
+
+    function configureDeck() {
+      const reveal = revealApi();
+      if (!reveal || !reveal.isReady || !reveal.isReady()) {
+        setTimeout(configureDeck, 50);
+        return;
+      }
+      reveal.configure({ controls: false, progress: false, keyboard: false, touch: false, hash: false, transition: 'none', backgroundTransition: 'none' });
+      syncDeck(true);
+    }
+
+    Promise.all([
+      fetch('timeline.json').then((response) => {
+        if (!response.ok) throw new Error('Timeline failed to load.');
+        return response.json();
+      }),
+      new Promise((resolve) => audio.addEventListener('loadedmetadata', resolve, { once: true }))
+    ]).then(([timeline]) => {
+      events = timeline.events;
+      durationLabel.textContent = formatTime(audio.duration, true) + ' · complete, uncut rehearsal';
+      status.textContent = '';
+      paint();
+      configureDeck();
+    }).catch((error) => {
+      status.textContent = error.message || 'The rehearsal could not be loaded.';
+    });
+
+    deck.addEventListener('load', configureDeck);
+    setInterval(() => syncDeck(), 250);
+    audio.addEventListener('play', () => {
+      play.textContent = '❚❚';
+      play.setAttribute('aria-label', 'Pause rehearsal');
+      cancelAnimationFrame(animationFrame);
+      paint();
+    });
+    audio.addEventListener('pause', () => {
+      play.textContent = '▶';
+      play.setAttribute('aria-label', 'Play rehearsal');
+      cancelAnimationFrame(animationFrame);
+      paint();
+    });
+    audio.addEventListener('ended', () => {
+      play.textContent = '↻';
+      play.setAttribute('aria-label', 'Replay rehearsal');
+      paint();
+    });
+    audio.addEventListener('error', () => {
+      status.textContent = 'The rehearsal audio could not be loaded.';
+    });
+    play.addEventListener('click', () => {
+      if (audio.ended) audio.currentTime = 0;
+      if (audio.paused) audio.play().catch(() => { status.textContent = 'Press play again to start the recording.'; });
+      else audio.pause();
+    });
+    seek.addEventListener('input', () => {
+      if (!Number.isFinite(audio.duration)) return;
+      audio.currentTime = Number(seek.value) / 1000 * audio.duration;
+      eventIndex = -1;
+      syncDeck(true);
+      paint();
+    });
+    document.title = "Big Sky rehearsal 8" + ' · ' + REHEARSAL;
+  </script>
+</body>
+</html>

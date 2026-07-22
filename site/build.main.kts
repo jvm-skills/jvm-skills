@@ -719,6 +719,14 @@ if (bigSkySlidesSrc.isDirectory) {
     println("✓ Copied ${bigSkySlidesSrc.name}/ → dist/big-sky-2026/slides/")
 }
 
+// ── Copy unlisted review pages ──
+val reviewSrc = File(siteDir, "review")
+if (reviewSrc.isDirectory) {
+    val reviewDest = File(distDir, "review")
+    reviewSrc.copyRecursively(reviewDest, overwrite = true)
+    println("✓ Copied review/ → dist/review/")
+}
+
 // ── Generate 404 page ──
 val notFoundTemplate = File(siteDir, "404-template.html")
 if (notFoundTemplate.exists()) {
