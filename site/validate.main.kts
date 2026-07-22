@@ -68,6 +68,22 @@ sharedThemeTemplates.forEach { templateName ->
     }
 }
 
+val brandAssets = listOf("preview.png", "preview.webp", "favicon.svg", "apple-touch-icon.png")
+brandAssets.forEach { assetName ->
+    val asset = File(siteDir, assetName)
+    if (!asset.isFile || asset.length() == 0L) {
+        errors.add("site/$assetName: required brand asset is missing or empty")
+    }
+}
+
+val brandedTemplates = sharedThemeTemplates + listOf("big-sky-template.html", "spring-io-template.html")
+brandedTemplates.forEach { templateName ->
+    val html = File(siteDir, templateName).readText()
+    if (!html.contains("href=\"/favicon.svg\"") || !html.contains("href=\"/apple-touch-icon.png\"")) {
+        errors.add("site/$templateName: must reference the shared favicon and Apple touch icon")
+    }
+}
+
 if (errors.isNotEmpty()) {
     println("Validation errors:")
     errors.forEach { println("  ✗ $it") }

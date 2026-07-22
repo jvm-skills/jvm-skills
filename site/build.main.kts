@@ -310,22 +310,29 @@ fun generateOgImage(post: BlogPost, outputFile: File) {
     g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON)
     g.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON)
 
-    // Background
-    g.color = Color.decode("#0a0e14")
+    // Big Sky background
+    g.color = Color.decode("#070709")
     g.fillRect(0, 0, width, height)
 
-    // Decorative logo ">_"
-    g.color = Color.decode("#00ff41")
-    g.font = Font("Monospaced", Font.BOLD, 60)
-    g.drawString(">_", 60, 100)
+    // Horizon and sparse conference-grid details
+    g.color = Color.decode("#29172f")
+    g.drawLine(0, 470, width, 470)
+    for (x in 0..width step 120) g.drawLine(width / 2, 470, x, height)
+    for (y in 500..height step 42) g.drawLine(0, y, width, y)
 
-    // Website name
-    g.color = Color.decode("#8b949e")
-    g.font = Font("Monospaced", Font.PLAIN, 24)
-    g.drawString("jvmskills.com / blog", 160, 92)
+    g.color = Color.decode("#22d3ee")
+    g.fillRect(60, 68, 68, 3)
+    g.font = Font("Monospaced", Font.BOLD, 20)
+    g.drawString("AGENT-READY JVM EXPERTISE", 150, 78)
+
+    g.color = Color.decode("#f8fafc")
+    g.font = Font("Monospaced", Font.BOLD, 44)
+    g.drawString("JVM", 60, 145)
+    g.color = Color.decode("#f472b6")
+    g.drawString("SKILLS / BLOG", 165, 145)
 
     // Title
-    g.color = Color.decode("#c9d1d9")
+    g.color = Color.decode("#f8fafc")
     val titleFont = Font("SansSerif", Font.BOLD, 72)
     g.font = titleFont
     
@@ -356,8 +363,8 @@ fun generateOgImage(post: BlogPost, outputFile: File) {
         y += metrics.height + 10
     }
 
-    // Author and Date
-    g.color = Color.decode("#8b949e")
+    // Author and date
+    g.color = Color.decode("#94a3b8")
     g.font = Font("SansSerif", Font.PLAIN, 32)
     g.drawString("${post.author} • ${post.date}", padding, height - 100)
 
@@ -702,10 +709,10 @@ if (evalSummaries.isNotEmpty() && evalViewerTemplate.exists()) {
     println("✓ Built ${evalSummaries.size} eval viewer page(s) in dist/evals/")
 }
 
-// Copy preview.webp to dist/
-val previewSrc = File(siteDir, "preview.webp")
-if (previewSrc.exists()) {
-    previewSrc.copyTo(File(distDir, "preview.webp"), overwrite = true)
+// Copy shared brand assets to dist/.
+listOf("preview.png", "preview.webp", "favicon.svg", "apple-touch-icon.png").forEach { assetName ->
+    val asset = File(siteDir, assetName)
+    if (asset.exists()) asset.copyTo(File(distDir, assetName), overwrite = true)
 }
 
 // Copy the shared Big Sky-inspired JVM Skills theme.

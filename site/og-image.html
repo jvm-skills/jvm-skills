@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style>
+    @font-face {
+      font-family: 'Jersey 15';
+      src: url('./big-sky-2026-slides/assets/fonts/big-sky/jersey15-latin.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Source Code Pro';
+      src: url('./big-sky-2026-slides/assets/fonts/big-sky/source-code-pro-var.woff2') format('woff2');
+    }
+    * { box-sizing: border-box; }
+    html, body { width: 1200px; height: 630px; margin: 0; overflow: hidden; }
+    body {
+      position: relative;
+      color: #f8fafc;
+      background:
+        radial-gradient(circle at 15% 12%, rgba(168, 85, 247, .14), transparent 310px),
+        radial-gradient(circle at 86% 22%, rgba(34, 211, 238, .11), transparent 330px),
+        #070709;
+      font-family: 'Source Code Pro', monospace;
+    }
+    .stars, .stars::before, .stars::after {
+      position: absolute;
+      inset: 0;
+      content: '';
+      background-image:
+        radial-gradient(circle, rgba(248, 250, 252, .55) 0 1.2px, transparent 1.7px),
+        radial-gradient(circle, rgba(34, 211, 238, .6) 0 1px, transparent 1.6px),
+        radial-gradient(circle, rgba(244, 114, 182, .52) 0 1px, transparent 1.6px);
+      background-position: 70px 55px, 210px 125px, 355px 72px;
+      background-size: 285px 210px, 360px 245px, 440px 290px;
+    }
+    .horizon {
+      position: absolute;
+      left: -100px;
+      right: -100px;
+      top: 420px;
+      height: 260px;
+      border-top: 2px solid rgba(244, 114, 182, .34);
+      background-image:
+        linear-gradient(rgba(34, 211, 238, .12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(168, 85, 247, .16) 1px, transparent 1px);
+      background-size: 100% 46px, 100px 100%;
+      transform: perspective(270px) rotateX(55deg);
+      transform-origin: top;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.9), transparent 82%);
+    }
+    .content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 64px 72px 54px;
+    }
+    .kicker {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      color: #22d3ee;
+      font-size: 17px;
+      font-weight: 850;
+      letter-spacing: .18em;
+    }
+    .kicker::before { width: 72px; height: 3px; content: ''; background: #22d3ee; box-shadow: 0 0 14px rgba(34, 211, 238, .55); }
+    h1 {
+      margin: 38px 0 10px;
+      font-family: 'Jersey 15', Impact, sans-serif;
+      font-size: 158px;
+      font-weight: 400;
+      line-height: .77;
+      letter-spacing: .015em;
+      text-transform: uppercase;
+      text-shadow: 0 0 26px rgba(34, 211, 238, .12);
+    }
+    h1 span { color: #f472b6; text-shadow: 0 0 24px rgba(244, 114, 182, .34); }
+    .description {
+      width: 790px;
+      margin: 30px 0 0;
+      color: #cbd5e1;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.45;
+    }
+    .footer {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      margin-top: auto;
+      padding-top: 22px;
+      border-top: 1px solid #30384a;
+      color: #8490a3;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+    .url { color: #22d3ee; }
+    .signal { color: #f472b6; text-transform: uppercase; letter-spacing: .14em; }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="horizon"></div>
+  <main class="content">
+    <div class="kicker">AGENT-READY JVM EXPERTISE</div>
+    <h1>JVM <span>SKILLS</span></h1>
+    <p class="description">Focused coding-agent skills from the engineers who build the JVM ecosystem.</p>
+    <div class="footer">
+      <span class="url">jvmskills.com</span>
+      <span class="signal">Java · Kotlin · Spring · Gradle</span>
+    </div>
+  </main>
+</body>
+</html>
