@@ -12,6 +12,7 @@ val validTrust = setOf("official", "curated", "community")
 
 val rootDir = __FILE__.absoluteFile.parentFile.parentFile
 val skillsDir = File(rootDir, "skills")
+val siteDir = File(rootDir, "site")
 val yaml = Yaml()
 val errors = mutableListOf<String>()
 
@@ -51,11 +52,27 @@ skillsDir.walk()
         }
     }
 
+val sharedThemeTemplates = listOf(
+    "template.html",
+    "blog-index-template.html",
+    "blog-post-template.html",
+    "eval-viewer-template.html",
+    "404-template.html"
+)
+val versionedThemeReference = "/jvm-skills-theme.css?v={{THEME_VERSION}}"
+
+sharedThemeTemplates.forEach { templateName ->
+    val template = File(siteDir, templateName)
+    if (!template.readText().contains(versionedThemeReference)) {
+        errors.add("site/$templateName: shared theme URL must include the generated content version")
+    }
+}
+
 if (errors.isNotEmpty()) {
     println("Validation errors:")
     errors.forEach { println("  ✗ $it") }
     exitProcess(1)
 } else {
     val count = skillsDir.walk().count { it.isFile && (it.extension == "yaml" || it.extension == "yml") }
-    println("✓ All $count skill YAML files valid")
+    println("✓ All $count skill YAML files and shared site assets valid")
 }

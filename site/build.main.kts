@@ -14,6 +14,7 @@ import java.awt.Color
 import java.awt.Font
 import java.awt.RenderingHints
 import java.awt.image.BufferedImage
+import java.security.MessageDigest
 import javax.imageio.ImageIO
 
 val siteDir = __FILE__.absoluteFile.parentFile
@@ -32,6 +33,13 @@ val llmsFile = File(distDir, "llms.txt")
 val skillPagesDir = File(distDir, "skills")
 val blogDistDir = File(distDir, "blog")
 val evalsDistDir = File(distDir, "evals")
+val sharedTheme = File(siteDir, "jvm-skills-theme.css")
+val themeVersion = MessageDigest.getInstance("SHA-256")
+    .digest(sharedTheme.readBytes())
+    .joinToString("") { "%02x".format(it) }
+    .take(12)
+
+fun applyThemeVersion(template: String): String = template.replace("{{THEME_VERSION}}", themeVersion)
 
 val categories = listOf("framework", "language", "database", "testing", "fullstack", "web", "workflow", "tool")
 
@@ -423,8 +431,8 @@ blogPosts.sortByDescending { it.date }
 if (blogPosts.isNotEmpty()) {
     blogDistDir.mkdirs()
 
-    val postTemplate = blogPostTemplate.readText()
-    val indexTemplate = blogIndexTemplate.readText()
+    val postTemplate = applyThemeVersion(blogPostTemplate.readText())
+    val indexTemplate = applyThemeVersion(blogIndexTemplate.readText())
 
     // Generate individual post pages
     for (post in blogPosts) {
@@ -516,7 +524,7 @@ val technologyFilters = filterSkills.values
     .toList()
     .sortedWith(compareByDescending<Pair<String, Int>> { it.second }.thenBy { it.first })
 
-val template = templateFile.readText()
+val template = applyThemeVersion(templateFile.readText())
 val output = template
     .replace("{{SKILL_CARDS}}", skillCards)
     .replace("{{CATEGORY_FILTERS}}", filterButtons(categoryFilters, "category"))
@@ -671,7 +679,7 @@ if (blogPosts.isNotEmpty()) {
 
 // ── Generate eval viewer pages ──
 if (evalSummaries.isNotEmpty() && evalViewerTemplate.exists()) {
-    val viewerTemplate = evalViewerTemplate.readText()
+    val viewerTemplate = applyThemeVersion(evalViewerTemplate.readText())
 
     for ((key, evalSum) in evalSummaries) {
         val skill = skillsMap[key] ?: continue
@@ -701,7 +709,6 @@ if (previewSrc.exists()) {
 }
 
 // Copy the shared Big Sky-inspired JVM Skills theme.
-val sharedTheme = File(siteDir, "jvm-skills-theme.css")
 if (sharedTheme.exists()) {
     sharedTheme.copyTo(File(distDir, "jvm-skills-theme.css"), overwrite = true)
 }
@@ -758,7 +765,7 @@ if (reviewSrc.isDirectory) {
 // ── Generate 404 page ──
 val notFoundTemplate = File(siteDir, "404-template.html")
 if (notFoundTemplate.exists()) {
-    File(distDir, "404.html").writeText(notFoundTemplate.readText())
+    File(distDir, "404.html").writeText(applyThemeVersion(notFoundTemplate.readText()))
     println("✓ Built dist/404.html")
 }
 
