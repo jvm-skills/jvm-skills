@@ -1259,46 +1259,52 @@
 
           <div class="hero-terminal" aria-label="Search and filter JVM skills">
             <div class="hero-titlebar">
-              <div class="dots"><span></span><span></span><span></span></div>
-              <span class="title-text">SEARCH THE CATALOG</span>
+              <div class="control-heading">
+                <span class="control-index">01</span>
+                <span class="title-text">Find a JVM skill</span>
+              </div>
+              <span class="control-status"><span aria-hidden="true"></span>live index</span>
             </div>
             <div class="hero-body">
               <div class="hero-filter" role="search" aria-label="Filter skills">
-                <span class="hero-line">
-                  <span class="prompt-symbol">$</span>
-                  <label for="searchInput" class="cmd" aria-hidden="true">grep</label>
+                <div class="hero-line search-control">
+                  <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
+                  <label for="searchInput" class="visually-hidden">Search the JVM skill catalog</label>
                   <input
                     type="search"
                     id="searchInput"
                     class="search-input"
-                    placeholder="search by skill, framework, author, or tag..."
+                    placeholder="Search the catalog"
                     aria-label="Search skills by name, description, author, or tags"
                     autocomplete="off"
                   >
-                </span>
+                  <kbd class="search-shortcut" aria-label="Press slash to search">/</kbd>
+                </div>
 
                 <div class="filter-groups">
-                  <div class="filter-group" role="group" aria-labelledby="filter-lang-label">
-                    <span class="filter-label" id="filter-lang-label">--lang</span>
+                  <div class="filter-group" role="group" aria-labelledby="filter-category-label">
+                    <span class="filter-label" id="filter-category-label">Category</span>
                     <div class="filter-options">
-                      <button class="filter-chip" data-filter="lang" data-value="java" aria-pressed="false" type="button">java</button>
-                      <button class="filter-chip" data-filter="lang" data-value="kotlin" aria-pressed="false" type="button">kotlin</button>
-                      <button class="filter-chip" data-filter="lang" data-value="groovy" aria-pressed="false" type="button">groovy</button>
+                      {{CATEGORY_FILTERS}}
+                    </div>
+                  </div>
+                  <div class="filter-group" role="group" aria-labelledby="filter-lang-label">
+                    <span class="filter-label" id="filter-lang-label">Language</span>
+                    <div class="filter-options">
+                      {{LANGUAGE_FILTERS}}
                     </div>
                   </div>
                   <div class="filter-group" role="group" aria-labelledby="filter-tech-label">
-                    <span class="filter-label" id="filter-tech-label">--tech</span>
+                    <span class="filter-label" id="filter-tech-label">Popular tech</span>
                     <div class="filter-options">
-                      <button class="filter-chip" data-filter="tech" data-value="spring-boot" aria-pressed="false" type="button">spring-boot</button>
-                      <button class="filter-chip" data-filter="tech" data-value="postgresql" aria-pressed="false" type="button">postgresql</button>
-                      <button class="filter-chip" data-filter="tech" data-value="gradle" aria-pressed="false" type="button">gradle</button>
+                      {{TECH_FILTERS}}
                     </div>
                   </div>
                 </div>
 
                 <div class="results-count" role="status" aria-live="polite">
-                  <span class="count-num" id="resultCount">0</span> skills found
-                  <button class="clear-filters" id="clearFilters" type="button" style="display:none;">clear filters</button>
+                  <span><span class="count-num" id="resultCount">0</span> <span id="resultLabel">matching skills</span></span>
+                  <button class="clear-filters" id="clearFilters" type="button" style="display:none;">Reset all</button>
                 </div>
               </div>
             </div>
@@ -1412,6 +1418,7 @@
       const searchInput = document.getElementById('searchInput');
       const clearBtn = document.getElementById('clearFilters');
       const resultCount = document.getElementById('resultCount');
+      const resultLabel = document.getElementById('resultLabel');
       const noResults = document.getElementById('noResults');
       const container = document.getElementById('skillsContainer');
       const cards = Array.from(container.querySelectorAll('.skill-card'));
@@ -1421,6 +1428,7 @@
       // Active filters
       var filters = {
         search: '',
+        category: [],
         lang: [],
         tech: [],
         trust: []
@@ -1432,6 +1440,7 @@
         if (!hash) return;
         var params = new URLSearchParams(hash);
         filters.search = params.get('q') || '';
+        filters.category = params.get('category') ? params.get('category').split(',') : [];
         filters.lang = params.get('lang') ? params.get('lang').split(',') : [];
         filters.tech = params.get('tech') ? params.get('tech').split(',') : [];
         filters.trust = params.get('trust') ? params.get('trust').split(',') : [];
@@ -1452,6 +1461,7 @@
       function writeHash() {
         var params = new URLSearchParams();
         if (filters.search) params.set('q', filters.search);
+        if (filters.category.length) params.set('category', filters.category.join(','));
         if (filters.lang.length) params.set('lang', filters.lang.join(','));
         if (filters.tech.length) params.set('tech', filters.tech.join(','));
         if (filters.trust.length) params.set('trust', filters.trust.join(','));
@@ -1462,9 +1472,10 @@
       function applyFilters() {
         var query = filters.search.toLowerCase();
         var visibleCount = 0;
-        var hasActiveFilters = query || filters.lang.length || filters.tech.length || filters.trust.length;
+        var hasActiveFilters = query || filters.category.length || filters.lang.length || filters.tech.length || filters.trust.length;
 
         cards.forEach(function (card) {
+          var category = card.getAttribute('data-category') || '';
           var langs = (card.getAttribute('data-languages') || '').split(',');
           var techs = (card.getAttribute('data-tech') || '').split(',');
           var trust = card.getAttribute('data-trust') || '';
@@ -1473,14 +1484,15 @@
           var desc = (card.querySelector('.skill-description') || {}).textContent || '';
           var author = (card.querySelector('.skill-author') || {}).textContent || '';
 
-          var searchText = (name + ' ' + desc + ' ' + author + ' ' + tags.join(' ') + ' ' + techs.join(' ')).toLowerCase();
+          var searchText = (name + ' ' + desc + ' ' + author + ' ' + category + ' ' + tags.join(' ') + ' ' + techs.join(' ')).toLowerCase();
           var matchSearch = !query || searchText.indexOf(query) !== -1;
 
+          var matchCategory = !filters.category.length || filters.category.indexOf(category) !== -1;
           var matchLang = !filters.lang.length || filters.lang.some(function (l) { return langs.indexOf(l) !== -1; });
           var matchTech = !filters.tech.length || filters.tech.some(function (f) { return techs.indexOf(f) !== -1; });
           var matchTrust = !filters.trust.length || filters.trust.indexOf(trust) !== -1;
 
-          var visible = matchSearch && matchLang && matchTech && matchTrust;
+          var visible = matchSearch && matchCategory && matchLang && matchTech && matchTrust;
           card.classList.toggle('hidden', !visible);
           if (visible) visibleCount++;
         });
@@ -1492,6 +1504,7 @@
         });
 
         resultCount.textContent = visibleCount;
+        resultLabel.textContent = visibleCount === 1 ? 'matching skill' : 'matching skills';
         noResults.classList.toggle('visible', visibleCount === 0);
         clearBtn.style.display = hasActiveFilters ? 'inline' : 'none';
 
@@ -1532,7 +1545,7 @@
 
       // Clear filters
       clearBtn.addEventListener('click', function () {
-        filters = { search: '', lang: [], tech: [], trust: [] };
+        filters = { search: '', category: [], lang: [], tech: [], trust: [] };
         searchInput.value = '';
         chips.forEach(function (chip) {
           chip.setAttribute('aria-pressed', 'false');
@@ -1594,6 +1607,10 @@
       });
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') closeModal();
+        if (e.key === '/' && !e.metaKey && !e.ctrlKey && !e.altKey && !/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) {
+          e.preventDefault();
+          searchInput.focus();
+        }
       });
       modalCopy.addEventListener('click', function () {
         navigator.clipboard.writeText(modalCode.textContent).then(function () {

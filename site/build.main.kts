@@ -209,7 +209,7 @@ val skillCards = buildString {
             val techHtml = skill.tech.joinToString("") { "<span>${htmlEscape(it)}</span>" }
             val tagsHtml = skill.tags.joinToString("") { "<span>${htmlEscape(it)}</span>" }
 
-            append("""<article class="skill-card" data-languages="$langsCsv" data-tech="$techCsv" data-trust="${skill.trust}" data-tags="$tagsCsv">""")
+            append("""<article class="skill-card" data-category="$category" data-languages="$langsCsv" data-tech="$techCsv" data-trust="${skill.trust}" data-tags="$tagsCsv">""")
             append("\n")
             append("""<div class="card-titlebar">""")
             append("""<span class="card-dots"><span></span><span></span><span></span></span>""")
@@ -491,9 +491,37 @@ val generatedDate = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm 'UTC'")
     .withZone(ZoneOffset.UTC)
     .format(Instant.now())
 
+val filterSkills = skillsMap.filterValues { it.status != "duplicate" }
+
+fun filterButtons(values: List<Pair<String, Int>>, filter: String): String = values.joinToString("\n") { (value, count) ->
+    val label = value.replace('-', ' ')
+    """<button class="filter-chip" data-filter="$filter" data-value="${htmlEscape(value)}" aria-pressed="false" type="button"><span>${htmlEscape(label)}</span><span class="filter-chip-count" aria-label="$count skills">$count</span></button>"""
+}
+
+val categoryFilters = categories.mapNotNull { category ->
+    val count = filterSkills.count { it.key.substringBefore('/') == category }
+    if (count > 0) category to count else null
+}
+val languageFilters = filterSkills.values
+    .flatMap { it.languages.distinct() }
+    .groupingBy { it }
+    .eachCount()
+    .toList()
+    .sortedWith(compareByDescending<Pair<String, Int>> { it.second }.thenBy { it.first })
+val technologyFilters = filterSkills.values
+    .flatMap { it.tech.distinct() }
+    .groupingBy { it }
+    .eachCount()
+    .filter { (technology, count) -> count >= 2 && languageFilters.none { it.first == technology } }
+    .toList()
+    .sortedWith(compareByDescending<Pair<String, Int>> { it.second }.thenBy { it.first })
+
 val template = templateFile.readText()
 val output = template
     .replace("{{SKILL_CARDS}}", skillCards)
+    .replace("{{CATEGORY_FILTERS}}", filterButtons(categoryFilters, "category"))
+    .replace("{{LANGUAGE_FILTERS}}", filterButtons(languageFilters, "lang"))
+    .replace("{{TECH_FILTERS}}", filterButtons(technologyFilters, "tech"))
     .replace("{{GENERATED_DATE}}", generatedDate)
 
 distDir.mkdirs()
