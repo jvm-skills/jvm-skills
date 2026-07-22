@@ -1,0 +1,43 @@
+name: Spring Boot Agent Wiki
+description: >-
+  Teaches AI coding tools how to use and maintain agent-ready Spring Boot
+  repository wikis for safer code changes. Guides agents to consult generated
+  architecture, Spring layer, data access, testing, operations, build, and
+  safe-change documentation before modifying code. Covers deterministic static
+  scanning, source-linked markdown pages, annotation-aware component discovery,
+  configuration and dependency summaries, idempotency guardrails, Java record
+  serialization guidance, time-safe design with java.time.Clock, and
+  architectural guardrails for AI-assisted development. Helps agents refresh
+  repository knowledge after service-layer, business-logic, README,
+  configuration, YAML, Docker, Kubernetes, and build changes.
+repo: nmj18txstate/spring-boot-agent-wiki
+skill_path: "skills/spring-boot-agent-wiki/SKILL.md"
+category: tool
+languages:
+  - java
+trust: community
+author: Nityam Jigyasu
+version: "1.0.0"
+last_updated: "2026-07-09"
+min_java: "21"
+scope: focused
+tech:
+  - spring-boot
+  - maven
+  - markdown
+tags:
+  - java
+  - spring-boot
+  - coding-agents
+  - agent-wiki
+  - repository-documentation
+  - static-analysis
+  - markdown
+  - architecture
+  - safe-change
+  - deterministic-testing
+  - java-records
+  - configuration-properties
+  - observability
+  - kubernetes
+  - ai-coding
