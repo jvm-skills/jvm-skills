@@ -1,0 +1,30 @@
+name: JVM Storage Architecture for Java/Spring Applications
+description: >-
+  Teaches AI coding tools how JVM applications interact with persistent and
+  ephemeral storage: container memory sizing with -XX:MaxRAMPercentage,
+  java.nio file I/O and locking behavior on local and networked volumes,
+  JVM temp-dir, heap-dump, and GC-log placement, typed Spring storage
+  configuration, and backup-first remediation planning.
+repo: nmj18txstate/jvm-storage-architecture-skill
+skill_path: "skills/jvm-storage-architecture/SKILL.md"
+category: framework
+tools:
+  - claude
+  - cursor
+  - copilot
+languages:
+  - java
+trust: community
+author: Nityam Jigyasu
+tags:
+  - java
+  - jvm
+  - spring-boot
+  - java-nio
+  - file-locking
+  - container-memory
+  - heap-dumps
+  - temp-files
+  - storage-architecture
+  - backup
+  - remediation
